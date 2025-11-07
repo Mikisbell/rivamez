@@ -10,17 +10,17 @@ const megaMenuData = {
       {
         title: 'Construcción',
         links: [
-          { name: 'Construcción Residencial', href: '#servicios', desc: 'Viviendas y edificios multifamiliares' },
-          { name: 'Proyectos Comerciales', href: '#servicios', desc: 'Centros comerciales y oficinas' },
-          { name: 'Proyectos Institucionales', href: '#servicios', desc: 'Hospitales y centros educativos' },
+          { name: 'Construcción Residencial', href: '/servicios', desc: 'Viviendas y edificios multifamiliares' },
+          { name: 'Proyectos Comerciales', href: '/servicios', desc: 'Centros comerciales y oficinas' },
+          { name: 'Proyectos Institucionales', href: '/servicios', desc: 'Hospitales y centros educativos' },
         ]
       },
       {
         title: 'Servicios Especializados',
         links: [
-          { name: 'Remodelación', href: '#servicios', desc: 'Transformación de espacios' },
-          { name: 'Consultoría', href: '#servicios', desc: 'Gerencia de proyectos' },
-          { name: 'Diseño & Arquitectura', href: '#servicios', desc: 'Planos y visualización 3D' },
+          { name: 'Remodelación', href: '/servicios', desc: 'Transformación de espacios' },
+          { name: 'Consultoría', href: '/servicios', desc: 'Gerencia de proyectos' },
+          { name: 'Diseño & Arquitectura', href: '/servicios', desc: 'Planos y visualización 3D' },
         ]
       }
     ],
@@ -29,7 +29,7 @@ const megaMenuData = {
       image: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=300&q=80',
       desc: 'Más de 15 años construyendo proyectos de excelencia en Huancayo',
       cta: 'Ver todos los servicios',
-      href: '#servicios'
+      href: '/servicios'
     }
   },
   proyectos: {
@@ -37,17 +37,17 @@ const megaMenuData = {
       {
         title: 'Proyectos Destacados',
         links: [
-          { name: 'Torres del Valle', href: '#proyectos', desc: '72 departamentos premium' },
-          { name: 'Plaza San Carlos', href: '#proyectos', desc: 'Centro comercial moderno' },
-          { name: 'Condominio Los Portales', href: '#proyectos', desc: '42 casas de lujo' },
+          { name: 'Torres del Valle', href: '/proyectos', desc: '72 departamentos premium' },
+          { name: 'Plaza San Carlos', href: '/proyectos', desc: 'Centro comercial moderno' },
+          { name: 'Condominio Los Portales', href: '/proyectos', desc: '42 casas de lujo' },
         ]
       },
       {
         title: 'Por Categoría',
         links: [
-          { name: 'Residencial', href: '#proyectos', desc: 'Viviendas y departamentos' },
-          { name: 'Comercial', href: '#proyectos', desc: 'Locales y oficinas' },
-          { name: 'Institucional', href: '#proyectos', desc: 'Hospitales y colegios' },
+          { name: 'Residencial', href: '/proyectos', desc: 'Viviendas y departamentos' },
+          { name: 'Comercial', href: '/proyectos', desc: 'Locales y oficinas' },
+          { name: 'Institucional', href: '/proyectos', desc: 'Hospitales y colegios' },
         ]
       }
     ],
@@ -56,7 +56,7 @@ const megaMenuData = {
       image: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=300&q=80',
       desc: '285+ proyectos completados con éxito en Huancayo y Junín',
       cta: 'Ver todos los proyectos',
-      href: '#proyectos'
+      href: '/proyectos'
     }
   }
 };
@@ -77,6 +77,14 @@ export default function NavbarNew() {
 
   const scrollToSection = (e, href) => {
     e.preventDefault();
+    
+    // Si el href empieza con /, es una ruta, navegar normalmente
+    if (href.startsWith('/')) {
+      window.location.href = href;
+      return;
+    }
+    
+    // Si es un anchor (#), hacer scroll
     const element = document.querySelector(href);
     if (element) {
       const offset = 80;
@@ -167,8 +175,8 @@ export default function NavbarNew() {
 
               {/* Nosotros */}
               <a
-                href="#nosotros"
-                onClick={(e) => scrollToSection(e, '#nosotros')}
+                href="/nosotros"
+                onClick={(e) => scrollToSection(e, '/nosotros')}
                 className="px-4 py-2 text-sm font-semibold text-gray-700 hover:text-rivamez-navy transition-colors"
               >
                 Nosotros
@@ -176,8 +184,8 @@ export default function NavbarNew() {
 
               {/* Contacto */}
               <a
-                href="#contacto"
-                onClick={(e) => scrollToSection(e, '#contacto')}
+                href="/contacto"
+                onClick={(e) => scrollToSection(e, '/contacto')}
                 className="px-4 py-2 text-sm font-semibold text-gray-700 hover:text-rivamez-navy transition-colors"
               >
                 Contacto
@@ -196,8 +204,8 @@ export default function NavbarNew() {
                 +51 943 818 788
               </a>
               <a
-                href="#contacto"
-                onClick={(e) => scrollToSection(e, '#contacto')}
+                href="/contacto"
+                onClick={(e) => scrollToSection(e, '/contacto')}
                 className="px-6 py-2.5 bg-gradient-to-r from-rivamez-navy to-rivamez-cyan text-white text-sm font-semibold rounded-lg hover:shadow-xl hover:shadow-rivamez-cyan/30 hover:scale-105 transition-all duration-300"
               >
                 Solicitar Cotización
@@ -325,36 +333,36 @@ export default function NavbarNew() {
                 {/* Mobile Links */}
                 <nav className="space-y-2">
                   <a
-                    href="#inicio"
-                    onClick={(e) => scrollToSection(e, '#inicio')}
+                    href="/"
+                    onClick={(e) => scrollToSection(e, '/')}
                     className="block px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg font-semibold transition-colors"
                   >
                     Inicio
                   </a>
                   <a
-                    href="#servicios"
-                    onClick={(e) => scrollToSection(e, '#servicios')}
+                    href="/servicios"
+                    onClick={(e) => scrollToSection(e, '/servicios')}
                     className="block px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg font-semibold transition-colors"
                   >
                     Servicios
                   </a>
                   <a
-                    href="#proyectos"
-                    onClick={(e) => scrollToSection(e, '#proyectos')}
+                    href="/proyectos"
+                    onClick={(e) => scrollToSection(e, '/proyectos')}
                     className="block px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg font-semibold transition-colors"
                   >
                     Proyectos
                   </a>
                   <a
-                    href="#nosotros"
-                    onClick={(e) => scrollToSection(e, '#nosotros')}
+                    href="/nosotros"
+                    onClick={(e) => scrollToSection(e, '/nosotros')}
                     className="block px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg font-semibold transition-colors"
                   >
                     Nosotros
                   </a>
                   <a
-                    href="#contacto"
-                    onClick={(e) => scrollToSection(e, '#contacto')}
+                    href="/contacto"
+                    onClick={(e) => scrollToSection(e, '/contacto')}
                     className="block px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg font-semibold transition-colors"
                   >
                     Contacto
@@ -370,8 +378,8 @@ export default function NavbarNew() {
                     +51 943 818 788
                   </a>
                   <a
-                    href="#contacto"
-                    onClick={(e) => scrollToSection(e, '#contacto')}
+                    href="/contacto"
+                    onClick={(e) => scrollToSection(e, '/contacto')}
                     className="block px-6 py-3 bg-gradient-to-r from-rivamez-navy to-rivamez-cyan text-white text-center font-semibold rounded-lg hover:shadow-lg transition-all"
                   >
                     Solicitar Cotización
