@@ -1,7 +1,7 @@
 // components/InteractiveTabs.js
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const tabsData = [
@@ -16,7 +16,11 @@ const tabsData = [
       'Condominios cerrados con amenidades completas',
       'Certificaciones de eficiencia energética'
     ],
-    image: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=600&q=80',
+    slides: [
+      { image: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=600&q=80', caption: 'Torres residenciales premium' },
+      { image: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=80', caption: 'Casas de lujo personalizadas' },
+      { image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=80', caption: 'Interiores de alta gama' }
+    ],
     stats: [
       { value: '72', label: 'Departamentos' },
       { value: '15', label: 'Pisos máximo' },
@@ -34,7 +38,11 @@ const tabsData = [
       'Diseño sostenible certificado LEED',
       'Tecnología de automatización integrada'
     ],
-    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&q=80',
+    slides: [
+      { image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&q=80', caption: 'Edificios corporativos AAA' },
+      { image: 'https://images.unsplash.com/photo-1555636222-cae831e670b3?w=600&q=80', caption: 'Centros comerciales modernos' },
+      { image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80', caption: 'Oficinas inteligentes' }
+    ],
     stats: [
       { value: '95', label: 'Locales' },
       { value: '8', label: 'Pisos' },
@@ -52,7 +60,11 @@ const tabsData = [
       'Equipamiento médico integrado',
       'Cumplimiento de normativas internacionales'
     ],
-    image: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=600&q=80',
+    slides: [
+      { image: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=600&q=80', caption: 'Hospitales de última generación' },
+      { image: 'https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=600&q=80', caption: 'Centros educativos modernos' },
+      { image: 'https://images.unsplash.com/photo-1632833239869-a37e3a5806d2?w=600&q=80', caption: 'Clínicas especializadas' }
+    ],
     stats: [
       { value: '80', label: 'Camas' },
       { value: '6', label: 'Quirófanos' },
@@ -70,7 +82,11 @@ const tabsData = [
       'Modernización de fachadas',
       'Reforzamiento estructural certificado'
     ],
-    image: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=600&q=80',
+    slides: [
+      { image: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=600&q=80', caption: 'Remodelación de interiores' },
+      { image: 'https://images.unsplash.com/photo-1484154218962-a197022b5858?w=600&q=80', caption: 'Modernización de espacios' },
+      { image: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600&q=80', caption: 'Ampliaciones modernas' }
+    ],
     stats: [
       { value: '100+', label: 'Remodelaciones' },
       { value: '30%', label: 'Ahorro energético' },
@@ -81,8 +97,26 @@ const tabsData = [
 
 export default function InteractiveTabs() {
   const [activeTab, setActiveTab] = useState(tabsData[0].id);
+  const [currentSlide, setCurrentSlide] = useState(0);
 
   const activeContent = tabsData.find(tab => tab.id === activeTab);
+
+  // Auto-play slides
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => {
+        const maxSlides = activeContent?.slides?.length || 0;
+        return prev >= maxSlides - 1 ? 0 : prev + 1;
+      });
+    }, 3500); // Cambiar cada 3.5 segundos
+
+    return () => clearInterval(interval);
+  }, [activeContent]);
+
+  // Reset slide cuando cambia el tab
+  useEffect(() => {
+    setCurrentSlide(0);
+  }, [activeTab]);
 
   return (
     <section className="py-24 px-4 bg-gradient-to-br from-gray-50 via-white to-gray-50">
@@ -193,34 +227,54 @@ export default function InteractiveTabs() {
                 </motion.a>
               </div>
 
-              {/* Right Image */}
-              <div className="relative h-full min-h-[400px] lg:min-h-[600px]">
-                <motion.div
-                  initial={{ opacity: 0, scale: 1.1 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.6 }}
-                  className="absolute inset-0"
-                >
-                  <img
-                    src={activeContent.image}
-                    alt={activeContent.title}
-                    className="w-full h-full object-cover"
-                  />
-                  {/* Overlay gradient */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-rivamez-navy/20 via-transparent to-transparent" />
-                </motion.div>
+              {/* Right Carousel */}
+              <div className="relative h-full min-h-[400px] lg:min-h-[600px] overflow-hidden">
+                <AnimatePresence mode="wait">
+                  <motion.div
+                    key={currentSlide}
+                    initial={{ opacity: 0, x: 100 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: -100 }}
+                    transition={{ duration: 0.7 }}
+                    className="absolute inset-0"
+                  >
+                    <img
+                      src={activeContent.slides[currentSlide].image}
+                      alt={activeContent.slides[currentSlide].caption}
+                      className="w-full h-full object-cover"
+                    />
+                    {/* Overlay gradient */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-rivamez-navy/20 via-transparent to-transparent" />
+                  </motion.div>
+                </AnimatePresence>
 
-                {/* Floating badge */}
+                {/* Caption */}
                 <motion.div
+                  key={`caption-${currentSlide}`}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.4 }}
-                  className="absolute top-8 right-8 px-4 py-2 bg-white/95 backdrop-blur-sm rounded-full shadow-lg"
+                  transition={{ delay: 0.3 }}
+                  className="absolute bottom-8 left-8 right-8 px-6 py-3 bg-white/95 backdrop-blur-sm rounded-xl shadow-lg"
                 >
                   <span className="text-sm font-semibold text-rivamez-navy">
-                    Proyecto {activeContent.label.split(' ')[0]}
+                    {activeContent.slides[currentSlide].caption}
                   </span>
                 </motion.div>
+
+                {/* Slide Indicators */}
+                <div className="absolute top-8 right-8 flex gap-2">
+                  {activeContent.slides.map((_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setCurrentSlide(index)}
+                      className={`h-2 rounded-full transition-all duration-300 ${
+                        index === currentSlide
+                          ? 'w-8 bg-white'
+                          : 'w-2 bg-white/50 hover:bg-white/75'
+                      }`}
+                    />
+                  ))}
+                </div>
               </div>
             </div>
           </motion.div>
