@@ -78,9 +78,9 @@ export default function Hero() {
         }} />
       </div>
 
-      {/* Hospital Blueprint Background */}
+      {/* Hospital Blueprint Background - Hidden on mobile */}
       <div 
-        className="absolute inset-0 opacity-5"
+        className="absolute inset-0 opacity-0 md:opacity-5"
         style={{
           backgroundImage: 'url(/images/hospital-blueprint.svg)',
           backgroundSize: 'cover',
@@ -94,7 +94,7 @@ export default function Hero() {
       <div className="absolute bottom-0 left-0 w-64 h-64 md:w-96 md:h-96 bg-rivamez-cyan/10 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '10s', animationDelay: '2s' }} />
 
       {/* Content */}
-      <div className="relative h-full flex items-center justify-center px-4">
+      <div className="relative h-full flex items-center justify-center px-6 md:px-4">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Column - Text Content */}
@@ -110,7 +110,7 @@ export default function Hero() {
               <div className="w-2 h-2 bg-rivamez-cyan rounded-full animate-pulse" />
               <div className="absolute inset-0 w-2 h-2 bg-rivamez-cyan rounded-full animate-ping opacity-75" />
             </div>
-            <span className="text-white text-sm font-semibold tracking-wide">Construyendo el futuro de Huancayo desde 2009</span>
+            <span className="text-white text-xs md:text-sm font-semibold tracking-wide">El futuro de Huancayo desde 2009</span>
             <svg className="w-4 h-4 ml-2 text-white/70 group-hover:text-white group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
@@ -148,7 +148,7 @@ export default function Hero() {
           >
             <a
               href="#proyectos"
-              className="group relative px-8 py-4 bg-white text-rivamez-navy font-semibold rounded-xl hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-cyan-500/50 flex items-center gap-2 overflow-hidden"
+              className="w-full sm:w-auto group relative px-6 md:px-8 py-3 md:py-4 bg-white text-rivamez-navy font-semibold rounded-xl hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-cyan-500/50 flex items-center justify-center gap-2 overflow-hidden"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-rivamez-cyan to-rivamez-navy opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <span className="relative z-10 group-hover:text-white transition-colors">Ver Proyectos</span>
@@ -158,7 +158,7 @@ export default function Hero() {
             </a>
             <a
               href="#contacto"
-              className="group px-8 py-4 bg-transparent border-2 border-white text-white font-semibold rounded-xl hover:bg-white hover:text-rivamez-navy hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-white/30"
+              className="w-full sm:w-auto group px-6 md:px-8 py-3 md:py-4 bg-transparent border-2 border-white text-white font-semibold rounded-xl hover:bg-white hover:text-rivamez-navy hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-white/30 text-center"
             >
               Solicitar Cotización
             </a>
