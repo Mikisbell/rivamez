@@ -38,7 +38,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section id="inicio" className="relative min-h-screen overflow-hidden pb-16 md:pb-0">
+    <section id="inicio" className="relative min-h-screen overflow-hidden flex flex-col">
       {/* Animated Gradient Background */}
       <div 
         className="absolute inset-0"
@@ -94,9 +94,9 @@ export default function Hero() {
       <div className="absolute bottom-0 left-0 w-64 h-64 md:w-96 md:h-96 bg-rivamez-cyan/10 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '10s', animationDelay: '2s' }} />
 
       {/* Content */}
-      <div className="relative h-full flex items-center justify-center px-6 md:px-4">
+      <div className="relative flex-1 flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-24 md:pt-28 pb-32 md:pb-40">
         <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Left Column - Text Content */}
             <div className="text-center lg:text-left">
           {/* Badge - Dataiku Style */}
@@ -104,13 +104,13 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="inline-flex items-center px-4 md:px-5 py-2 md:py-2.5 bg-white/10 backdrop-blur-md border border-white/30 rounded-full mb-6 md:mb-8 shadow-lg hover:bg-white/15 transition-all duration-300 group"
+            className="inline-flex items-center px-5 py-2.5 bg-white/10 backdrop-blur-md border border-white/30 rounded-full mb-8 shadow-lg hover:bg-white/15 transition-all duration-300 group"
           >
             <div className="relative mr-3">
               <div className="w-2 h-2 bg-rivamez-cyan rounded-full animate-pulse" />
               <div className="absolute inset-0 w-2 h-2 bg-rivamez-cyan rounded-full animate-ping opacity-75" />
             </div>
-            <span className="text-white text-xs md:text-sm font-semibold tracking-wide">El futuro de Huancayo desde 2009</span>
+            <span className="text-white text-xs sm:text-sm font-semibold tracking-wide">Construyendo el futuro de Huancayo desde 2009</span>
             <svg className="w-4 h-4 ml-2 text-white/70 group-hover:text-white group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
@@ -121,7 +121,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-4xl md:text-6xl lg:text-8xl font-bold text-white mb-4 md:mb-6 leading-tight"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white mb-6 leading-tight"
           >
             <span className="block">Construimos</span>
             <span className="block bg-gradient-to-r from-rivamez-cyan to-rivamez-green bg-clip-text text-transparent">
@@ -134,7 +134,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-lg md:text-xl lg:text-2xl text-gray-200 mb-8 md:mb-12 max-w-xl mx-auto lg:mx-0 font-light"
+            className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-200 mb-10 max-w-2xl mx-auto lg:mx-0 font-light leading-relaxed"
           >
             Desarrollo de proyectos residenciales y comerciales de alta gama en Huancayo, Perú
           </motion.p>
@@ -144,11 +144,11 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center lg:justify-start items-center lg:items-start mb-8 md:mb-12"
+            className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-stretch sm:items-center"
           >
             <a
               href="#proyectos"
-              className="w-full sm:w-auto group relative px-6 md:px-8 py-3 md:py-4 bg-white text-rivamez-navy font-semibold rounded-xl hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-cyan-500/50 flex items-center justify-center gap-2 overflow-hidden"
+              className="w-full sm:w-auto group relative px-8 py-4 bg-white text-rivamez-navy font-semibold rounded-xl hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-cyan-500/50 flex items-center justify-center gap-2 overflow-hidden"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-rivamez-cyan to-rivamez-navy opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <span className="relative z-10 group-hover:text-white transition-colors">Ver Proyectos</span>
@@ -158,7 +158,7 @@ export default function Hero() {
             </a>
             <a
               href="#contacto"
-              className="w-full sm:w-auto group px-6 md:px-8 py-3 md:py-4 bg-transparent border-2 border-white text-white font-semibold rounded-xl hover:bg-white hover:text-rivamez-navy hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-white/30 text-center"
+              className="w-full sm:w-auto group px-8 py-4 bg-transparent border-2 border-white text-white font-semibold rounded-xl hover:bg-white hover:text-rivamez-navy hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-white/30 text-center"
             >
               Solicitar Cotización
             </a>
@@ -192,29 +192,29 @@ export default function Hero() {
       </div>
 
       {/* Stats - Moved below */}
-      <div className="absolute bottom-20 md:bottom-32 left-0 right-0 z-10">
+      <div className="absolute bottom-8 sm:bottom-12 md:bottom-16 left-0 right-0 z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1 }}
           className="max-w-6xl mx-auto px-4"
         >
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 bg-white/10 backdrop-blur-md rounded-xl md:rounded-2xl p-4 md:p-8 border border-white/20">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 bg-white/10 backdrop-blur-md rounded-2xl p-6 md:p-8 border border-white/20">
             <div className="text-center">
-              <div className="text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-white to-rivamez-cyan bg-clip-text text-transparent mb-1 md:mb-2">15+</div>
-              <div className="text-gray-200 text-xs md:text-sm font-medium">Años de Experiencia</div>
+              <div className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-white to-rivamez-cyan bg-clip-text text-transparent mb-2">15+</div>
+              <div className="text-gray-200 text-xs sm:text-sm font-medium">Años de Experiencia</div>
             </div>
             <div className="text-center md:border-x border-white/20">
-              <div className="text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-white to-rivamez-cyan bg-clip-text text-transparent mb-1 md:mb-2">285+</div>
-              <div className="text-gray-200 text-xs md:text-sm font-medium">Proyectos Completados</div>
+              <div className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-white to-rivamez-cyan bg-clip-text text-transparent mb-2">285+</div>
+              <div className="text-gray-200 text-xs sm:text-sm font-medium">Proyectos Completados</div>
             </div>
             <div className="text-center md:border-r border-white/20">
-              <div className="text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-white to-rivamez-green bg-clip-text text-transparent mb-1 md:mb-2">250+</div>
-              <div className="text-gray-200 text-xs md:text-sm font-medium">Clientes Satisfechos</div>
+              <div className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-white to-rivamez-green bg-clip-text text-transparent mb-2">250+</div>
+              <div className="text-gray-200 text-xs sm:text-sm font-medium">Clientes Satisfechos</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-white to-rivamez-cyan bg-clip-text text-transparent mb-1 md:mb-2">62+</div>
-              <div className="text-gray-200 text-xs md:text-sm font-medium">Profesionales</div>
+              <div className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-white to-rivamez-cyan bg-clip-text text-transparent mb-2">62+</div>
+              <div className="text-gray-200 text-xs sm:text-sm font-medium">Profesionales</div>
             </div>
           </div>
         </motion.div>
@@ -225,7 +225,7 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5, duration: 1 }}
-        className="absolute bottom-2 md:bottom-8 left-1/2 transform -translate-x-1/2 hidden md:flex"
+        className="absolute bottom-4 left-1/2 transform -translate-x-1/2 hidden md:flex"
       >
         <div className="flex flex-col items-center gap-2">
           <span className="text-white/60 text-sm">Scroll para explorar</span>
