@@ -117,8 +117,7 @@ export default function NavbarNew() {
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <a 
-              href="#inicio" 
-              onClick={(e) => scrollToSection(e, '#inicio')}
+              href="/" 
               className="flex items-center space-x-3 group z-10"
             >
               <img 
@@ -138,15 +137,6 @@ export default function NavbarNew() {
 
             {/* Desktop Menu */}
             <div className="hidden lg:flex items-center space-x-1">
-              {/* Inicio */}
-              <a
-                href="#inicio"
-                onClick={(e) => scrollToSection(e, '#inicio')}
-                className="px-4 py-2 text-sm font-semibold text-gray-700 hover:text-rivamez-navy transition-colors"
-              >
-                Inicio
-              </a>
-
               {/* Servicios - Mega Menu */}
               <div 
                 className="relative"
@@ -332,13 +322,6 @@ export default function NavbarNew() {
 
                 {/* Mobile Links */}
                 <nav className="space-y-2">
-                  <a
-                    href="/"
-                    onClick={(e) => scrollToSection(e, '/')}
-                    className="block px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg font-semibold transition-colors"
-                  >
-                    Inicio
-                  </a>
                   <a
                     href="/servicios"
                     onClick={(e) => scrollToSection(e, '/servicios')}
