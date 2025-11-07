@@ -105,12 +105,10 @@ export default function NavbarNew() {
       <motion.nav
         initial={{ y: -100 }}
         animate={{ y: 0 }}
-        transition={{ duration: 0.5, ease: 'easeOut' }}
-        onMouseLeave={() => setActiveMenu(null)}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          scrolled 
-            ? 'bg-white/98 backdrop-blur-lg shadow-lg' 
-            : 'bg-white/95 backdrop-blur-md shadow-md'
+          scrolled
+            ? 'bg-white/95 backdrop-blur-md shadow-lg'
+            : 'bg-white shadow-sm'
         }`}
       >
         <div className="container mx-auto px-6">
@@ -123,7 +121,7 @@ export default function NavbarNew() {
               <img 
                 src="/images/logo.png" 
                 alt="GRUPO RIVAMEZ" 
-                className="h-14 w-auto transition-transform group-hover:scale-105"
+                className="h-10 md:h-14 w-auto transition-transform group-hover:scale-105"
               />
               <div className="hidden lg:flex flex-col">
                 <span className="font-bold text-xl leading-tight text-rivamez-navy">
@@ -304,7 +302,7 @@ export default function NavbarNew() {
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
               transition={{ type: 'tween', duration: 0.3 }}
-              className="fixed top-0 right-0 bottom-0 w-80 bg-white shadow-2xl z-50 lg:hidden overflow-y-auto"
+              className="fixed top-0 right-0 bottom-0 w-full max-w-sm bg-white shadow-2xl z-50 lg:hidden overflow-y-auto"
             >
               <div className="p-6">
                 {/* Close Button */}

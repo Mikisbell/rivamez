@@ -96,7 +96,7 @@ export default function Hero() {
       {/* Content */}
       <div className="relative h-full flex items-center justify-center px-6 md:px-4">
         <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             {/* Left Column - Text Content */}
             <div className="text-center lg:text-left">
           {/* Badge - Dataiku Style */}
@@ -104,7 +104,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="inline-flex items-center px-5 py-2.5 bg-white/10 backdrop-blur-md border border-white/30 rounded-full mb-8 shadow-lg hover:bg-white/15 transition-all duration-300 group"
+            className="inline-flex items-center px-4 md:px-5 py-2 md:py-2.5 bg-white/10 backdrop-blur-md border border-white/30 rounded-full mb-6 md:mb-8 shadow-lg hover:bg-white/15 transition-all duration-300 group"
           >
             <div className="relative mr-3">
               <div className="w-2 h-2 bg-rivamez-cyan rounded-full animate-pulse" />
@@ -182,10 +182,10 @@ export default function Hero() {
                 className="relative w-full max-w-lg h-auto drop-shadow-2xl animate-robot-dance"
               />
               
-              {/* Partículas decorativas animadas */}
-              <div className="absolute top-10 left-10 w-3 h-3 bg-rivamez-cyan rounded-full animate-ping" />
-              <div className="absolute bottom-20 right-10 w-2 h-2 bg-rivamez-green rounded-full animate-pulse" style={{ animationDelay: '1s' }} />
-              <div className="absolute top-1/2 left-5 w-2 h-2 bg-yellow-400 rounded-full animate-bounce" style={{ animationDelay: '2s' }} />
+              {/* Partículas decorativas animadas - Hidden on mobile */}
+              <div className="hidden lg:block absolute top-10 left-10 w-3 h-3 bg-rivamez-cyan rounded-full animate-ping" />
+              <div className="hidden lg:block absolute bottom-20 right-10 w-2 h-2 bg-rivamez-green rounded-full animate-pulse" style={{ animationDelay: '1s' }} />
+              <div className="hidden lg:block absolute top-1/2 left-5 w-2 h-2 bg-yellow-400 rounded-full animate-bounce" style={{ animationDelay: '2s' }} />
             </motion.div>
           </div>
         </div>
