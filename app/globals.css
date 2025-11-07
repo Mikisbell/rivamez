@@ -80,9 +80,9 @@ body { margin: 0; }
 }
 
 .animate-robot-dance {
-  animation: robotDance 5s ease-in-out infinite;
+  animation: robotDance 15s ease-in-out infinite;
 }
 
 .animate-glow-pulse {
-  animation: glowPulse 5s ease-in-out infinite;
+  animation: glowPulse 15s ease-in-out infinite;
 }
