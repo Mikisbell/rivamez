@@ -1,0 +1,5 @@
+tree fc11ffdf2c42efbfab3a18a3883f1dcc8824c2e5
+author Mateo <mateo@rivamez.com> 1762474849 -0500
+committer Mateo <mateo@rivamez.com> 1762474849 -0500
+
+feat: Añade sección Proyectos con animaciones GSAP/ScrollTrigger
