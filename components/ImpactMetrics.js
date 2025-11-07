@@ -281,12 +281,245 @@ export default function ImpactMetrics() {
           </div>
         </motion.div>
 
-        {/* CTA */}
+        {/* 1. Comparación con Industria */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
+          className="mt-20"
+        >
+          <h3 className="text-3xl md:text-4xl font-bold text-rivamez-navy text-center mb-12">
+            Comparación con la Industria
+          </h3>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {[
+              { metric: "Entrega Puntual", rivamez: 98, industria: 75, unit: "%" },
+              { metric: "Satisfacción Cliente", rivamez: 96, industria: 82, unit: "%" },
+              { metric: "Proyectos Sostenibles", rivamez: 85, industria: 45, unit: "%" },
+              { metric: "Adopción BIM", rivamez: 100, industria: 38, unit: "%" }
+            ].map((item, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100"
+              >
+                <h4 className="text-lg font-bold text-gray-900 mb-4">{item.metric}</h4>
+                
+                {/* RIVAMEZ Bar */}
+                <div className="mb-4">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-sm font-semibold text-rivamez-cyan">RIVAMEZ</span>
+                    <span className="text-lg font-bold text-rivamez-navy">{item.rivamez}{item.unit}</span>
+                  </div>
+                  <div className="h-4 bg-gray-100 rounded-full overflow-hidden">
+                    <motion.div
+                      initial={{ width: 0 }}
+                      whileInView={{ width: `${item.rivamez}%` }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 1, delay: index * 0.1 + 0.3 }}
+                      className="h-full bg-gradient-to-r from-rivamez-cyan to-rivamez-green rounded-full"
+                    />
+                  </div>
+                </div>
+
+                {/* Industria Bar */}
+                <div>
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-sm font-semibold text-gray-500">Promedio Industria</span>
+                    <span className="text-lg font-bold text-gray-600">{item.industria}{item.unit}</span>
+                  </div>
+                  <div className="h-4 bg-gray-100 rounded-full overflow-hidden">
+                    <motion.div
+                      initial={{ width: 0 }}
+                      whileInView={{ width: `${item.industria}%` }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 1, delay: index * 0.1 + 0.5 }}
+                      className="h-full bg-gray-300 rounded-full"
+                    />
+                  </div>
+                </div>
+
+                {/* Diferencia */}
+                <div className="mt-4 pt-4 border-t border-gray-100">
+                  <div className="flex items-center gap-2">
+                    <span className="text-2xl">📈</span>
+                    <span className="text-sm text-green-600 font-semibold">
+                      +{item.rivamez - item.industria}{item.unit} mejor que el promedio
+                    </span>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* 2. Timeline Interactiva de Hitos */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.5 }}
+          className="mt-20"
+        >
+          <h3 className="text-3xl md:text-4xl font-bold text-rivamez-navy text-center mb-12">
+            Hitos de Crecimiento
+          </h3>
+
+          <div className="relative">
+            {/* Timeline Line */}
+            <div className="absolute top-8 left-0 right-0 h-1 bg-gradient-to-r from-rivamez-cyan via-rivamez-green to-rivamez-navy hidden md:block" />
+
+            {/* Milestones */}
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+              {[
+                { year: "2009", value: "3", label: "Proyectos", icon: "🏁" },
+                { year: "2012", value: "25", label: "Proyectos", icon: "📈" },
+                { year: "2015", value: "75", label: "Proyectos", icon: "🚀" },
+                { year: "2020", value: "150", label: "Proyectos", icon: "💯" },
+                { year: "2025", value: "285+", label: "Proyectos", icon: "🏆" }
+              ].map((milestone, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="relative bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 text-center group cursor-pointer border-2 border-transparent hover:border-rivamez-cyan"
+                >
+                  {/* Dot on timeline */}
+                  <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-rivamez-navy rounded-full border-4 border-white shadow-lg hidden md:block group-hover:scale-150 transition-transform" />
+
+                  <div className="text-4xl mb-3 group-hover:scale-110 transition-transform">{milestone.icon}</div>
+                  <div className="text-3xl font-bold text-rivamez-navy mb-1">{milestone.value}</div>
+                  <div className="text-sm text-gray-600 mb-2">{milestone.label}</div>
+                  <div className="text-xs font-semibold text-rivamez-cyan">{milestone.year}</div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </motion.div>
+
+        {/* 3. Mapa de Calor de Proyectos */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.6 }}
+          className="mt-20"
+        >
+          <h3 className="text-3xl md:text-4xl font-bold text-rivamez-navy text-center mb-12">
+            Densidad de Proyectos en Huancayo
+          </h3>
+
+          <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100">
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              {/* Heatmap Grid */}
+              <div className="space-y-3">
+                {[
+                  { distrito: "El Tambo", proyectos: 92, density: 100 },
+                  { distrito: "Huancayo Centro", proyectos: 85, density: 92 },
+                  { distrito: "Chilca", proyectos: 48, density: 52 },
+                  { distrito: "Pilcomayo", proyectos: 22, density: 24 },
+                  { distrito: "Huancán", proyectos: 18, density: 20 },
+                  { distrito: "San Agustín", proyectos: 12, density: 13 },
+                  { distrito: "Concepción", proyectos: 8, density: 9 }
+                ].map((zona, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, x: -30 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: index * 0.05 }}
+                    className="group cursor-pointer"
+                  >
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="font-semibold text-gray-900">{zona.distrito}</span>
+                      <span className="text-sm font-bold text-rivamez-navy">{zona.proyectos} proyectos</span>
+                    </div>
+                    <div className="h-10 bg-gray-100 rounded-lg overflow-hidden relative">
+                      <motion.div
+                        initial={{ width: 0 }}
+                        whileInView={{ width: `${zona.density}%` }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 1, delay: index * 0.05 + 0.3 }}
+                        className={`h-full rounded-lg transition-all duration-300 ${
+                          zona.density > 80 ? 'bg-gradient-to-r from-red-500 to-orange-500' :
+                          zona.density > 50 ? 'bg-gradient-to-r from-orange-400 to-yellow-500' :
+                          zona.density > 20 ? 'bg-gradient-to-r from-yellow-400 to-green-500' :
+                          'bg-gradient-to-r from-green-400 to-blue-500'
+                        }`}
+                        style={{ 
+                          boxShadow: zona.density > 80 ? '0 0 20px rgba(239, 68, 68, 0.4)' : 'none'
+                        }}
+                      />
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <span className="text-xs font-bold text-white drop-shadow-lg">
+                          {zona.density > 15 && `${Math.round(zona.density)}%`}
+                        </span>
+                      </div>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+
+              {/* Legend & Stats */}
+              <div className="space-y-6">
+                <div className="bg-gradient-to-br from-rivamez-navy to-rivamez-cyan rounded-2xl p-6 text-white">
+                  <h4 className="text-2xl font-bold mb-4">📊 Análisis de Densidad</h4>
+                  <div className="space-y-3 text-sm">
+                    <div className="flex items-center gap-3">
+                      <div className="w-4 h-4 bg-gradient-to-r from-red-500 to-orange-500 rounded" />
+                      <span>Alta densidad (80%+)</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <div className="w-4 h-4 bg-gradient-to-r from-orange-400 to-yellow-500 rounded" />
+                      <span>Media-alta (50-80%)</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <div className="w-4 h-4 bg-gradient-to-r from-yellow-400 to-green-500 rounded" />
+                      <span>Media (20-50%)</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <div className="w-4 h-4 bg-gradient-to-r from-green-400 to-blue-500 rounded" />
+                      <span>Baja (&lt;20%)</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="bg-gray-50 rounded-xl p-4 text-center">
+                    <div className="text-3xl font-bold text-rivamez-navy">7</div>
+                    <div className="text-sm text-gray-600">Distritos</div>
+                  </div>
+                  <div className="bg-gray-50 rounded-xl p-4 text-center">
+                    <div className="text-3xl font-bold text-rivamez-cyan">285</div>
+                    <div className="text-sm text-gray-600">Proyectos</div>
+                  </div>
+                  <div className="bg-gray-50 rounded-xl p-4 text-center">
+                    <div className="text-3xl font-bold text-rivamez-green">41</div>
+                    <div className="text-sm text-gray-600">Promedio/Distrito</div>
+                  </div>
+                  <div className="bg-gray-50 rounded-xl p-4 text-center">
+                    <div className="text-3xl font-bold text-orange-500">🔥</div>
+                    <div className="text-sm text-gray-600">El Tambo Líder</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* CTA */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.7 }}
           className="text-center mt-16"
         >
           <div className="inline-flex flex-col sm:flex-row gap-4">
