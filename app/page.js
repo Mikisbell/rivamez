@@ -27,11 +27,6 @@ export default function Home() {
         <InteractiveTabs />
         <Values />
         <ImpactMetrics />
-        <Certifications />
-        <Team />
-        <Timeline />
-        <NewsBlog />
-        <CoverageMap />
         <About />
         <Services />
         <Projects />

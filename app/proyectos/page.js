@@ -6,6 +6,7 @@ import { useState } from 'react';
 import Navbar from '@/components/NavbarNew';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
+import CoverageMap from '@/components/CoverageMap';
 
 const categories = ['Todos', 'Residencial', 'Comercial', 'Institucional', 'Remodelación'];
 
@@ -270,6 +271,9 @@ export default function ProyectosPage() {
             </div>
           </div>
         </section>
+
+        {/* Mapa de Cobertura */}
+        <CoverageMap />
 
         {/* CTA Section */}
         <section className="py-20 px-4 bg-gradient-to-r from-rivamez-navy to-rivamez-cyan text-white">

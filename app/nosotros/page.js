@@ -5,6 +5,9 @@ import { motion } from 'framer-motion';
 import Navbar from '@/components/NavbarNew';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
+import Team from '@/components/Team';
+import Timeline from '@/components/Timeline';
+import Certifications from '@/components/Certifications';
 
 const leadership = [
   {
@@ -307,6 +310,11 @@ export default function NosotrosPage() {
             </div>
           </div>
         </section>
+
+        {/* Nuevos Componentes */}
+        <Team />
+        <Timeline />
+        <Certifications />
 
         {/* CTA Section */}
         <section className="py-20 px-4 bg-gradient-to-r from-rivamez-navy to-rivamez-cyan text-white">

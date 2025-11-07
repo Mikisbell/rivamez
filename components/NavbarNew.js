@@ -179,6 +179,15 @@ export default function NavbarNew() {
                 Nosotros
               </a>
 
+              {/* Noticias */}
+              <a
+                href="/noticias"
+                onClick={(e) => scrollToSection(e, '/noticias')}
+                className="px-4 py-2 text-sm font-semibold text-gray-700 hover:text-rivamez-navy transition-colors"
+              >
+                Noticias
+              </a>
+
               {/* Contacto */}
               <a
                 href="/contacto"
@@ -356,6 +365,13 @@ export default function NavbarNew() {
                     className="block px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg font-semibold transition-colors"
                   >
                     Nosotros
+                  </a>
+                  <a
+                    href="/noticias"
+                    onClick={(e) => scrollToSection(e, '/noticias')}
+                    className="block px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg font-semibold transition-colors"
+                  >
+                    Noticias
                   </a>
                   <a
                     href="/contacto"
