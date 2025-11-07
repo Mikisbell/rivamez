@@ -5,16 +5,84 @@
 html, body, #__next { height: 100%; }
 body { margin: 0; }
 
-/* Float animation for robot */
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0px);
+/* Complex Robot Animation - Multiple movements every 5 seconds */
+@keyframes robotDance {
+  0% {
+    transform: translateX(0) translateY(0) rotate(0deg) scale(1);
+    opacity: 1;
   }
-  50% {
-    transform: translateY(-20px);
+  
+  /* Aparece y sube */
+  10% {
+    transform: translateX(0) translateY(-30px) rotate(0deg) scale(1.05);
+    opacity: 1;
+  }
+  
+  /* Se mueve a la derecha y rota */
+  25% {
+    transform: translateX(30px) translateY(-20px) rotate(5deg) scale(1.1);
+    opacity: 1;
+  }
+  
+  /* Vuelve al centro con bounce */
+  40% {
+    transform: translateX(0) translateY(-10px) rotate(0deg) scale(1);
+    opacity: 1;
+  }
+  
+  /* Desaparece parcialmente y se mueve a la izquierda */
+  55% {
+    transform: translateX(-30px) translateY(-25px) rotate(-5deg) scale(0.95);
+    opacity: 0.3;
+  }
+  
+  /* Reaparece en el centro */
+  70% {
+    transform: translateX(0) translateY(-15px) rotate(0deg) scale(1.05);
+    opacity: 1;
+  }
+  
+  /* Sacudida rápida (celebración) */
+  80% {
+    transform: translateX(-5px) translateY(-20px) rotate(-3deg) scale(1);
+    opacity: 1;
+  }
+  
+  85% {
+    transform: translateX(5px) translateY(-20px) rotate(3deg) scale(1);
+    opacity: 1;
+  }
+  
+  /* Vuelve suavemente a posición inicial */
+  100% {
+    transform: translateX(0) translateY(0) rotate(0deg) scale(1);
+    opacity: 1;
   }
 }
 
-.animate-float {
-  animation: float 6s ease-in-out infinite;
+/* Brillo pulsante para el glow */
+@keyframes glowPulse {
+  0%, 100% {
+    opacity: 0.3;
+    filter: blur(60px);
+  }
+  50% {
+    opacity: 0.6;
+    filter: blur(80px);
+  }
+}
+
+/* Animación de herramientas (opcional para elementos dentro del SVG) */
+@keyframes toolWiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-15deg); }
+  75% { transform: rotate(15deg); }
+}
+
+.animate-robot-dance {
+  animation: robotDance 5s ease-in-out infinite;
+}
+
+.animate-glow-pulse {
+  animation: glowPulse 5s ease-in-out infinite;
 }

@@ -161,15 +161,20 @@ export default function Hero() {
               transition={{ duration: 1, delay: 0.5 }}
               className="relative hidden lg:flex justify-center items-center"
             >
-              {/* Glow effect behind robot */}
-              <div className="absolute inset-0 bg-gradient-to-r from-rivamez-cyan/20 to-rivamez-green/20 rounded-full blur-3xl" />
+              {/* Glow effect behind robot - con animación pulsante */}
+              <div className="absolute inset-0 bg-gradient-to-r from-rivamez-cyan/20 to-rivamez-green/20 rounded-full animate-glow-pulse" />
               
-              {/* Robot Image */}
+              {/* Robot Image - con animación compleja */}
               <img 
                 src="/images/robot-ingeniero.svg" 
                 alt="Robot Ingeniero RIVAMEZ - Tecnología en Construcción" 
-                className="relative w-full max-w-lg h-auto drop-shadow-2xl animate-float"
+                className="relative w-full max-w-lg h-auto drop-shadow-2xl animate-robot-dance"
               />
+              
+              {/* Partículas decorativas animadas */}
+              <div className="absolute top-10 left-10 w-3 h-3 bg-rivamez-cyan rounded-full animate-ping" />
+              <div className="absolute bottom-20 right-10 w-2 h-2 bg-rivamez-green rounded-full animate-pulse" style={{ animationDelay: '1s' }} />
+              <div className="absolute top-1/2 left-5 w-2 h-2 bg-yellow-400 rounded-full animate-bounce" style={{ animationDelay: '2s' }} />
             </motion.div>
           </div>
         </div>
