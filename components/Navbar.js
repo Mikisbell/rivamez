@@ -4,17 +4,69 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const navLinks = [
-  { name: 'Inicio', href: '#inicio' },
-  { name: 'Nosotros', href: '#nosotros' },
-  { name: 'Proyectos', href: '#proyectos' },
-  { name: 'Servicios', href: '#servicios' },
-  { name: 'Contacto', href: '#contacto' },
-];
+const megaMenuData = {
+  servicios: {
+    title: 'Nuestros Servicios',
+    sections: [
+      {
+        title: 'Construcción',
+        links: [
+          { name: 'Construcción Residencial', href: '#servicios', desc: 'Viviendas y edificios multifamiliares' },
+          { name: 'Proyectos Comerciales', href: '#servicios', desc: 'Centros comerciales y oficinas' },
+          { name: 'Proyectos Institucionales', href: '#servicios', desc: 'Hospitales y centros educativos' },
+        ]
+      },
+      {
+        title: 'Servicios Especializados',
+        links: [
+          { name: 'Remodelación', href: '#servicios', desc: 'Transformación de espacios' },
+          { name: 'Consultoría', href: '#servicios', desc: 'Gerencia de proyectos' },
+          { name: 'Diseño & Arquitectura', href: '#servicios', desc: 'Planos y visualización 3D' },
+        ]
+      }
+    ],
+    featured: {
+      title: 'Por qué elegirnos',
+      image: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=300&q=80',
+      desc: 'Más de 15 años construyendo proyectos de excelencia en Huancayo',
+      cta: 'Ver todos los servicios',
+      href: '#servicios'
+    }
+  },
+  proyectos: {
+    title: 'Nuestros Proyectos',
+    sections: [
+      {
+        title: 'Proyectos Destacados',
+        links: [
+          { name: 'Torres del Valle', href: '#proyectos', desc: '72 departamentos premium' },
+          { name: 'Plaza San Carlos', href: '#proyectos', desc: 'Centro comercial moderno' },
+          { name: 'Condominio Los Portales', href: '#proyectos', desc: '42 casas de lujo' },
+        ]
+      },
+      {
+        title: 'Por Categoría',
+        links: [
+          { name: 'Residencial', href: '#proyectos', desc: 'Viviendas y departamentos' },
+          { name: 'Comercial', href: '#proyectos', desc: 'Locales y oficinas' },
+          { name: 'Institucional', href: '#proyectos', desc: 'Hospitales y colegios' },
+        ]
+      }
+    ],
+    featured: {
+      title: 'Portafolio Completo',
+      image: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=300&q=80',
+      desc: '285+ proyectos completados con éxito en Huancayo y Junin',
+      cta: 'Ver todos los proyectos',
+      href: '#proyectos'
+    }
+  }
+};
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [activeMenu, setActiveMenu] = useState(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -47,14 +99,15 @@ export default function Navbar() {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.5, ease: 'easeOut' }}
+        onMouseLeave={() => setActiveMenu(null)}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           scrolled 
-            ? 'bg-white/95 backdrop-blur-md shadow-lg py-4' 
-            : 'bg-transparent py-6'
+            ? 'bg-white/98 backdrop-blur-lg shadow-lg' 
+            : 'bg-white/95 backdrop-blur-md shadow-md'
         }`}
       >
-        <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between">
+        <div className="container mx-auto px-6">
+          <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <a 
               href="#inicio" 
@@ -63,19 +116,15 @@ export default function Navbar() {
             >
               <img 
                 src="/images/logo.png" 
-                alt="GRUPO RIVAMEZ Logo" 
-                className="h-12 w-auto transition-transform group-hover:scale-105"
+                alt="GRUPO RIVAMEZ" 
+                className="h-14 w-auto transition-transform group-hover:scale-105"
               />
-              <div className="hidden sm:flex flex-col">
-                <span className={`font-bold text-lg leading-tight transition-colors ${
-                  scrolled ? 'text-rivamez-navy' : 'text-white'
-                }`}>
+              <div className="hidden lg:flex flex-col">
+                <span className="font-bold text-xl leading-tight text-rivamez-navy">
                   GRUPO RIVAMEZ
                 </span>
-                <span className={`text-xs leading-tight transition-colors ${
-                  scrolled ? 'text-gray-600' : 'text-gray-200'
-                }`}>
-                  Constructora & Inmobiliaria
+                <span className="text-xs leading-tight text-gray-600">
+                  Construyendo el futuro
                 </span>
               </div>
             </a>
@@ -179,28 +228,140 @@ export default function Navbar() {
                   </button>
                 </div>
 
-                {/* Navigation Links */}
-                <nav className="space-y-2 mb-8">
-                  {navLinks.map((link) => (
-                    <a
-                      key={link.name}
-                      href={link.href}
-                      onClick={(e) => scrollToSection(e, link.href)}
-                      className="block px-4 py-3 text-gray-700 hover:bg-rivamez-cyan/10 hover:text-rivamez-cyan rounded-lg font-medium transition-colors"
-                    >
-                      {link.name}
-                    </a>
-                  ))}
-                </nav>
+                {/* Desktop Menu */}
+                <div className="hidden lg:flex items-center space-x-1">
+                  {/* Inicio */}
+                  <a
+                    href="#inicio"
+                    onClick={(e) => scrollToSection(e, '#inicio')}
+                    className="px-4 py-2 text-sm font-semibold text-gray-700 hover:text-rivamez-navy transition-colors"
+                  >
+                    Inicio
+                  </a>
 
-                {/* CTA Button */}
-                <a
-                  href="#contacto"
-                  onClick={(e) => scrollToSection(e, '#contacto')}
-                  className="block w-full px-6 py-4 bg-rivamez-cyan text-white text-center font-semibold rounded-lg hover:bg-rivamez-navy transition-colors shadow-lg"
-                >
-                  Cotizar Proyecto
-                </a>
+                  {/* Servicios - Mega Menu */}
+                  <div 
+                    className="relative"
+                    onMouseEnter={() => setActiveMenu('servicios')}
+                  >
+                    <button className="px-4 py-2 text-sm font-semibold text-gray-700 hover:text-rivamez-navy transition-colors flex items-center gap-1">
+                      Servicios
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </button>
+                    {activeMenu === 'servicios' && (
+                      <div className="absolute top-full left-0 w-96 bg-white shadow-lg p-6">
+                        <h4 className="text-lg font-bold text-gray-900 mb-4">Servicios</h4>
+                        <div className="grid grid-cols-3 gap-4">
+                          <div>
+                            <h5 className="text-sm font-bold text-gray-900 mb-2">Residencial</h5>
+                            <ul>
+                              <li className="text-sm text-gray-600 mb-2">Construcción de viviendas</li>
+                              <li className="text-sm text-gray-600 mb-2">Reformas y remodelaciones</li>
+                              <li className="text-sm text-gray-600 mb-2">Diseño de interiores</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <h5 className="text-sm font-bold text-gray-900 mb-2">Comercial</h5>
+                            <ul>
+                              <li className="text-sm text-gray-600 mb-2">Construcción de locales comerciales</li>
+                              <li className="text-sm text-gray-600 mb-2">Reformas y remodelaciones</li>
+                              <li className="text-sm text-gray-600 mb-2">Diseño de espacios comerciales</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <h5 className="text-sm font-bold text-gray-900 mb-2">Institucional</h5>
+                            <ul>
+                              <li className="text-sm text-gray-600 mb-2">Construcción de edificios institucionales</li>
+                              <li className="text-sm text-gray-600 mb-2">Reformas y remodelaciones</li>
+                              <li className="text-sm text-gray-600 mb-2">Diseño de espacios institucionales</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Proyectos - Mega Menu */}
+                  <div 
+                    className="relative"
+                    onMouseEnter={() => setActiveMenu('proyectos')}
+                  >
+                    <button className="px-4 py-2 text-sm font-semibold text-gray-700 hover:text-rivamez-navy transition-colors flex items-center gap-1">
+                      Proyectos
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </button>
+                    {activeMenu === 'proyectos' && (
+                      <div className="absolute top-full left-0 w-96 bg-white shadow-lg p-6">
+                        <h4 className="text-lg font-bold text-gray-900 mb-4">Proyectos</h4>
+                        <div className="grid grid-cols-3 gap-4">
+                          <div>
+                            <h5 className="text-sm font-bold text-gray-900 mb-2">Proyectos Destacados</h5>
+                            <ul>
+                              <li className="text-sm text-gray-600 mb-2">Torres del Valle</li>
+                              <li className="text-sm text-gray-600 mb-2">Plaza San Carlos</li>
+                              <li className="text-sm text-gray-600 mb-2">Condominio Los Portales</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <h5 className="text-sm font-bold text-gray-900 mb-2">Proyectos en Curso</h5>
+                            <ul>
+                              <li className="text-sm text-gray-600 mb-2">Proyecto 1</li>
+                              <li className="text-sm text-gray-600 mb-2">Proyecto 2</li>
+                              <li className="text-sm text-gray-600 mb-2">Proyecto 3</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <h5 className="text-sm font-bold text-gray-900 mb-2">Proyectos Finalizados</h5>
+                            <ul>
+                              <li className="text-sm text-gray-600 mb-2">Proyecto 1</li>
+                              <li className="text-sm text-gray-600 mb-2">Proyecto 2</li>
+                              <li className="text-sm text-gray-600 mb-2">Proyecto 3</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Nosotros */}
+                  <a
+                    href="#nosotros"
+                    onClick={(e) => scrollToSection(e, '#nosotros')}
+                    className="px-4 py-2 text-sm font-semibold text-gray-700 hover:text-rivamez-navy transition-colors"
+                  >
+                    Nosotros
+                  </a>
+
+                  {/* Contacto */}
+                  <a
+                    href="#contacto"
+                    onClick={(e) => scrollToSection(e, '#contacto')}
+                    className="px-4 py-2 text-sm font-semibold text-gray-700 hover:text-rivamez-navy transition-colors"
+                  >
+                    Contacto
+                  </a>
+                </div>
+
+                {/* CTAs */}
+                <div className="hidden lg:flex items-center gap-3">
+                  <a
+                    href="tel:+51943818788"
+                    className="px-5 py-2.5 text-sm font-semibold text-rivamez-navy hover:text-rivamez-cyan transition-colors"
+                  >
+                    +51 943 818 788
+                  </a>
+                  <a
+                    href="#contacto"
+                    onClick={(e) => scrollToSection(e, '#contacto')}
+                    className="px-6 py-2.5 bg-gradient-to-r from-rivamez-navy to-rivamez-cyan text-white text-sm font-semibold rounded-lg hover:shadow-xl hover:shadow-rivamez-cyan/30 hover:scale-105 transition-all duration-300"
+                  >
+                    Solicitar Cotización
+                  </a>
+                </div>
 
                 {/* Contact Info */}
                 <div className="mt-8 pt-8 border-t border-gray-200">
