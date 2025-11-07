@@ -38,7 +38,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section id="inicio" className="relative h-screen overflow-hidden">
+    <section id="inicio" className="relative min-h-screen overflow-hidden pb-16 md:pb-0">
       {/* Animated Gradient Background */}
       <div 
         className="absolute inset-0"
@@ -90,8 +90,8 @@ export default function Hero() {
       />
 
       {/* Blurred Circles */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '8s' }} />
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-rivamez-cyan/10 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '10s', animationDelay: '2s' }} />
+      <div className="absolute top-0 right-0 w-64 h-64 md:w-96 md:h-96 bg-white/5 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '8s' }} />
+      <div className="absolute bottom-0 left-0 w-64 h-64 md:w-96 md:h-96 bg-rivamez-cyan/10 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '10s', animationDelay: '2s' }} />
 
       {/* Content */}
       <div className="relative h-full flex items-center justify-center px-4">
@@ -121,7 +121,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 leading-tight"
+            className="text-4xl md:text-6xl lg:text-8xl font-bold text-white mb-4 md:mb-6 leading-tight"
           >
             <span className="block">Construimos</span>
             <span className="block bg-gradient-to-r from-rivamez-cyan to-rivamez-green bg-clip-text text-transparent">
@@ -134,7 +134,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-xl md:text-2xl text-gray-200 mb-12 max-w-xl mx-auto lg:mx-0 font-light"
+            className="text-lg md:text-xl lg:text-2xl text-gray-200 mb-8 md:mb-12 max-w-xl mx-auto lg:mx-0 font-light"
           >
             Desarrollo de proyectos residenciales y comerciales de alta gama en Huancayo, Perú
           </motion.p>
@@ -144,7 +144,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center lg:items-start mb-12"
+            className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center lg:justify-start items-center lg:items-start mb-8 md:mb-12"
           >
             <a
               href="#proyectos"
@@ -192,29 +192,29 @@ export default function Hero() {
       </div>
 
       {/* Stats - Moved below */}
-      <div className="absolute bottom-32 left-0 right-0 z-10">
+      <div className="absolute bottom-20 md:bottom-32 left-0 right-0 z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1 }}
           className="max-w-6xl mx-auto px-4"
         >
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 bg-white/10 backdrop-blur-md rounded-xl md:rounded-2xl p-4 md:p-8 border border-white/20">
             <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-white to-rivamez-cyan bg-clip-text text-transparent mb-2">15+</div>
-              <div className="text-gray-200 text-sm font-medium">Años de Experiencia</div>
+              <div className="text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-white to-rivamez-cyan bg-clip-text text-transparent mb-1 md:mb-2">15+</div>
+              <div className="text-gray-200 text-xs md:text-sm font-medium">Años de Experiencia</div>
             </div>
             <div className="text-center md:border-x border-white/20">
-              <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-white to-rivamez-cyan bg-clip-text text-transparent mb-2">285+</div>
-              <div className="text-gray-200 text-sm font-medium">Proyectos Completados</div>
+              <div className="text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-white to-rivamez-cyan bg-clip-text text-transparent mb-1 md:mb-2">285+</div>
+              <div className="text-gray-200 text-xs md:text-sm font-medium">Proyectos Completados</div>
             </div>
             <div className="text-center md:border-r border-white/20">
-              <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-white to-rivamez-green bg-clip-text text-transparent mb-2">250+</div>
-              <div className="text-gray-200 text-sm font-medium">Clientes Satisfechos</div>
+              <div className="text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-white to-rivamez-green bg-clip-text text-transparent mb-1 md:mb-2">250+</div>
+              <div className="text-gray-200 text-xs md:text-sm font-medium">Clientes Satisfechos</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-white to-rivamez-cyan bg-clip-text text-transparent mb-2">62+</div>
-              <div className="text-gray-200 text-sm font-medium">Profesionales</div>
+              <div className="text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-white to-rivamez-cyan bg-clip-text text-transparent mb-1 md:mb-2">62+</div>
+              <div className="text-gray-200 text-xs md:text-sm font-medium">Profesionales</div>
             </div>
           </div>
         </motion.div>
@@ -225,7 +225,7 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5, duration: 1 }}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+        className="absolute bottom-2 md:bottom-8 left-1/2 transform -translate-x-1/2 hidden md:flex"
       >
         <div className="flex flex-col items-center gap-2">
           <span className="text-white/60 text-sm">Scroll para explorar</span>
