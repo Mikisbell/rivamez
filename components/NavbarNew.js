@@ -116,19 +116,19 @@ export default function NavbarNew() {
             {/* Logo */}
             <a 
               href="/" 
-              className="flex items-center space-x-3 group z-10"
+              className="flex items-center space-x-2 md:space-x-3 group z-10"
             >
               <img 
                 src="/images/logo.png" 
                 alt="GRUPO RIVAMEZ" 
                 className="h-10 md:h-14 w-auto transition-transform group-hover:scale-105"
               />
-              <div className="hidden lg:flex flex-col">
-                <span className="font-bold text-xl leading-tight text-rivamez-navy">
+              <div className="flex flex-col">
+                <span className="font-bold text-sm md:text-lg lg:text-xl leading-tight text-rivamez-navy">
                   GRUPO RIVAMEZ
                 </span>
-                <span className="text-xs leading-tight text-gray-600">
-                  Construyendo el futuro
+                <span className="text-[10px] md:text-xs leading-tight text-gray-600">
+                  Constructora & Inmobiliaria
                 </span>
               </div>
             </a>
