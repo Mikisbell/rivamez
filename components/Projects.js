@@ -8,29 +8,71 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
-  { 
-    id: 1, 
-    title: 'Residencial Los Álamos', 
-    type: 'Vivienda', 
-    location: 'Huancayo, Perú',
-    area: '2,500 m²',
-    year: '2023'
+  {
+    id: 1,
+    title: 'Torres del Valle',
+    location: 'Av. Ferrocarril, Huancayo',
+    area: '3,850 m²',
+    year: '2024',
+    category: 'Residencial',
+    description: 'Complejo de 2 torres con 72 departamentos premium de 2 y 3 dormitorios. Incluye gimnasio, sala de eventos, juegos infantiles y estacionamiento techado. Vista panorámica al Valle del Mantaro.',
+    image: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=80',
+    features: ['Gimnasio equipado', 'Seguridad 24/7', 'Áreas verdes', '2 ascensores por torre']
   },
-  { 
-    id: 2, 
-    title: 'Torre Corporativa Delta', 
-    type: 'Oficinas', 
-    location: 'Huancayo, Perú',
-    area: '5,000 m²',
-    year: '2024'
+  {
+    id: 2,
+    title: 'Plaza Comercial San Carlos',
+    location: 'El Tambo, Huancayo',
+    area: '5,200 m²',
+    year: '2023',
+    category: 'Comercial',
+    description: 'Centro comercial de 4 niveles con 95 locales comerciales, food court con capacidad para 300 personas, cines multiplex y estacionamiento para 180 vehículos. Diseño moderno y sostenible.',
+    image: 'https://images.unsplash.com/photo-1555636222-cae831e670b3?w=800&q=80',
+    features: ['95 locales', 'Food court', 'Cines', 'Estacionamiento 180 autos']
   },
-  { 
-    id: 3, 
-    title: 'Centro Comercial Oasis', 
-    type: 'Comercial', 
-    location: 'Huancayo, Perú',
-    area: '8,000 m²',
-    year: '2023'
+  {
+    id: 3,
+    title: 'Condominio Los Portales',
+    location: 'Chilca, Huancayo',
+    area: '6,400 m²',
+    year: '2024',
+    category: 'Residencial',
+    description: 'Exclusivo condominio de 42 casas de 2 y 3 pisos con diseño contemporáneo. Casa club, piscina temperada, cancha multideportiva, parque infantil y circuito de jogging. Máxima privacidad y confort.',
+    image: 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&q=80',
+    features: ['Casa club', 'Piscina', 'Cancha deportiva', 'Seguridad privada']
+  },
+  {
+    id: 4,
+    title: 'Hospital Clínica Central',
+    location: 'Av. Real, Huancayo',
+    area: '4,600 m²',
+    year: '2023',
+    category: 'Institucional',
+    description: 'Moderna clínica de 5 pisos con 80 camas, quirófanos de última generación, UCI, emergencia y laboratorio clínico. Equipamiento médico de primer nivel y tecnología avanzada.',
+    image: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&q=80',
+    features: ['80 camas', '6 quirófanos', 'UCI completa', 'Laboratorio']
+  },
+  {
+    id: 5,
+    title: 'Oficinas Corporativas Mantaro',
+    location: 'San Carlos, Huancayo',
+    area: '3,200 m²',
+    year: '2024',
+    category: 'Comercial',
+    description: 'Edificio de oficinas AAA con 8 pisos, 64 oficinas ejecutivas, salas de reuniones, auditorio para 120 personas, terraza lounge y estacionamiento exclusivo. Certificación LEED.',
+    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80',
+    features: ['Certificación LEED', 'Auditorio 120 personas', 'Terraza lounge', '64 oficinas']
+  },
+  {
+    id: 6,
+    title: 'Centro Educativo Los Andes',
+    location: 'Pilcomayo, Huancayo',
+    area: '7,800 m²',
+    year: '2023',
+    category: 'Educativo',
+    description: 'Complejo educativo de nivel inicial, primaria y secundaria con capacidad para 1,200 alumnos. Laboratorios, biblioteca, auditorio, coliseo deportivo, canchas y áreas recreativas.',
+    image: 'https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=800&q=80',
+    features: ['1,200 alumnos', 'Laboratorios', 'Coliseo deportivo', 'Biblioteca']
   },
 ];
 

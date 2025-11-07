@@ -61,11 +61,11 @@ export default function Navbar() {
               onClick={(e) => scrollToSection(e, '#inicio')}
               className="flex items-center space-x-3 group"
             >
-              <div className="relative">
-                <div className="w-12 h-12 bg-gradient-to-br from-rivamez-navy via-rivamez-cyan to-rivamez-green rounded-lg flex items-center justify-center shadow-lg group-hover:shadow-xl transition-shadow">
-                  <span className="text-white font-bold text-xl">R</span>
-                </div>
-              </div>
+              <img 
+                src="/images/logo.png" 
+                alt="GRUPO RIVAMEZ Logo" 
+                className="h-12 w-auto transition-transform group-hover:scale-105"
+              />
               <div className="hidden sm:flex flex-col">
                 <span className={`font-bold text-lg leading-tight transition-colors ${
                   scrolled ? 'text-rivamez-navy' : 'text-white'
@@ -158,13 +158,15 @@ export default function Navbar() {
               <div className="p-6">
                 {/* Close Button */}
                 <div className="flex justify-between items-center mb-8">
-                  <div className="flex items-center space-x-2">
-                    <div className="w-10 h-10 bg-gradient-to-br from-rivamez-navy via-rivamez-cyan to-rivamez-green rounded-lg flex items-center justify-center">
-                      <span className="text-white font-bold text-lg">R</span>
-                    </div>
+                  <div className="flex items-center gap-3">
+                    <img 
+                      src="/images/logo.png" 
+                      alt="GRUPO RIVAMEZ Logo" 
+                      className="h-12 w-auto"
+                    />
                     <div>
-                      <div className="font-bold text-rivamez-navy text-sm">GRUPO RIVAMEZ</div>
-                      <div className="text-xs text-gray-600">Constructora</div>
+                      <div className="font-bold text-xl text-gray-900">GRUPO RIVAMEZ</div>
+                      <div className="text-xs text-gray-600">Constructora & Inmobiliaria</div>
                     </div>
                   </div>
                   <button

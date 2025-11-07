@@ -18,15 +18,19 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Logo y Slogan */}
           <div className="md:col-span-1">
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 bg-gradient-to-br from-rivamez-navy via-rivamez-cyan to-rivamez-green rounded" />
+            <div className="flex items-center space-x-3 mb-4">
+              <img 
+                src="/images/logo.png" 
+                alt="GRUPO RIVAMEZ Logo" 
+                className="h-10 w-auto"
+              />
               <div className="flex flex-col">
                 <span className="font-bold text-lg leading-tight">GRUPO RIVAMEZ</span>
                 <span className="text-xs text-gray-400 leading-tight">Constructora & Inmobiliaria</span>
               </div>
             </div>
-            <p className="text-gray-400 text-sm">
-              Construimos sueños sólidos con calidad y compromiso.
+            <p className="text-gray-400 text-sm leading-relaxed">
+              Transformando espacios, construyendo futuro. Más de 15 años de experiencia y excelencia en Huancayo.
             </p>
           </div>
 

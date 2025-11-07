@@ -128,19 +128,23 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="mt-20 grid grid-cols-3 gap-8 max-w-3xl mx-auto"
+            className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"
           >
             <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-white mb-2">15+</div>
-              <div className="text-gray-300 text-sm">Años de Experiencia</div>
+              <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-white to-rivamez-cyan bg-clip-text text-transparent mb-2">15+</div>
+              <div className="text-gray-200 text-sm font-medium">Años de Experiencia</div>
             </div>
-            <div className="text-center border-x border-white/20">
-              <div className="text-4xl md:text-5xl font-bold text-white mb-2">120+</div>
-              <div className="text-gray-300 text-sm">Proyectos Completados</div>
+            <div className="text-center md:border-x border-white/20">
+              <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-white to-rivamez-cyan bg-clip-text text-transparent mb-2">285+</div>
+              <div className="text-gray-200 text-sm font-medium">Proyectos Completados</div>
+            </div>
+            <div className="text-center md:border-r border-white/20">
+              <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-white to-rivamez-green bg-clip-text text-transparent mb-2">250+</div>
+              <div className="text-gray-200 text-sm font-medium">Clientes Satisfechos</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-white mb-2">98%</div>
-              <div className="text-gray-300 text-sm">Satisfacción</div>
+              <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-white to-rivamez-cyan bg-clip-text text-transparent mb-2">62+</div>
+              <div className="text-gray-200 text-sm font-medium">Profesionales</div>
             </div>
           </motion.div>
         </div>
