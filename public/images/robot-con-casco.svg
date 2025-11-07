@@ -1,0 +1,78 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1680 2000" preserveAspectRatio="xMidYMid meet">
+  
+  <!-- Tu robot original -->
+  <image x="0" y="200" width="1680" height="1800" xlink:href="/images/robot.svg"/>
+  
+  <!-- Casco de Seguridad encima del robot -->
+  <g id="casco-seguridad">
+    <!-- Sombra del casco -->
+    <ellipse cx="840" cy="320" rx="480" ry="100" fill="#000000" opacity="0.15"/>
+    
+    <!-- Base inferior del casco (ala) -->
+    <ellipse cx="840" cy="300" rx="500" ry="120" fill="#FFA500" opacity="0.3"/>
+    <path d="M 340 300 Q 340 280 380 270 L 1300 270 Q 1340 280 1340 300 Z" fill="#FFB732" opacity="0.8"/>
+    
+    <!-- Cuerpo principal del casco -->
+    <path d="M 380 300 Q 380 50 840 40 Q 1300 50 1300 300" fill="#FF8C00"/>
+    <path d="M 400 300 Q 400 80 840 70 Q 1280 80 1280 300" fill="#FFA500"/>
+    
+    <!-- Parte superior redondeada -->
+    <ellipse cx="840" cy="120" rx="420" ry="90" fill="#FFB732"/>
+    
+    <!-- Franja reflectiva (característica importante de cascos de construcción) -->
+    <rect x="420" y="180" width="840" height="60" fill="#FFEB3B" opacity="0.9" rx="10"/>
+    <rect x="430" y="190" width="820" height="40" fill="#FFF176" opacity="0.7" rx="8"/>
+    
+    <!-- Borde del casco -->
+    <path d="M 360 300 Q 360 290 370 285 L 1310 285 Q 1320 290 1320 300" fill="#FF6F00" opacity="0.6"/>
+    
+    <!-- Detalles de ventilación (ranuras) -->
+    <g fill="#E65100" opacity="0.4">
+      <circle cx="640" cy="160" r="20"/>
+      <circle cx="740" cy="160" r="20"/>
+      <circle cx="840" cy="160" r="20"/>
+      <circle cx="940" cy="160" r="20"/>
+      <circle cx="1040" cy="160" r="20"/>
+    </g>
+    
+    <!-- Logo RIVAMEZ en el frente del casco -->
+    <g id="logo-casco">
+      <rect x="720" y="220" width="240" height="50" fill="#FFFFFF" opacity="0.9" rx="5"/>
+      <text x="840" y="252" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#FF8C00" text-anchor="middle">RIVAMEZ</text>
+    </g>
+    
+    <!-- Ajuste trasero del casco (correas) -->
+    <g opacity="0.7">
+      <rect x="340" y="260" width="30" height="40" rx="5" fill="#333333"/>
+      <rect x="1310" y="260" width="30" height="40" rx="5" fill="#333333"/>
+      <circle cx="355" cy="280" r="8" fill="#666666"/>
+      <circle cx="1325" cy="280" r="8" fill="#666666"/>
+    </g>
+    
+    <!-- Reflejos de luz en el casco -->
+    <ellipse cx="700" cy="140" rx="120" ry="40" fill="#FFFFFF" opacity="0.3"/>
+    <ellipse cx="950" cy="120" rx="80" ry="30" fill="#FFFFFF" opacity="0.2"/>
+    
+    <!-- Textura de brillo -->
+    <path d="M 500 100 Q 600 80 700 100" stroke="#FFFFFF" stroke-width="8" opacity="0.4" fill="none" stroke-linecap="round"/>
+    <path d="M 980 110 Q 1050 95 1120 110" stroke="#FFFFFF" stroke-width="6" opacity="0.3" fill="none" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Elementos adicionales para construcción -->
+  <g id="elementos-construccion" opacity="0.6">
+    <!-- Advertencia de seguridad pequeña -->
+    <g transform="translate(1400, 150)">
+      <polygon points="0,-60 52,-30 52,30 0,60 -52,30 -52,-30" fill="#FFEB3B" stroke="#FF8C00" stroke-width="6"/>
+      <text x="0" y="10" font-family="Arial" font-size="48" font-weight="bold" fill="#FF6F00" text-anchor="middle">!</text>
+    </g>
+    
+    <!-- Estrella de certificación -->
+    <g transform="translate(280, 180)">
+      <path d="M 0,-50 L 12,-15 L 50,-15 L 20,5 L 32,40 L 0,20 L -32,40 L -20,5 L -50,-15 L -12,-15 Z" fill="#059669" opacity="0.8"/>
+      <circle cx="0" cy="0" r="15" fill="#10B981"/>
+      <text x="0" y="8" font-family="Arial" font-size="20" font-weight="bold" fill="#FFFFFF" text-anchor="middle">✓</text>
+    </g>
+  </g>
+</svg>
