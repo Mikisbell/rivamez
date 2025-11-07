@@ -7,8 +7,9 @@ export const metadata = {
   title: "Grupo Rivamez - Constructora & Inmobiliaria",
   description: "Empresa líder en construcción residencial, comercial y remodelación. Más de 15 años de experiencia transformando proyectos en realidad con calidad y compromiso.",
   icons: {
-    icon: '/favicon.svg',
-    apple: '/favicon.svg',
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+    apple: '/favicon.ico',
   },
 };
 
