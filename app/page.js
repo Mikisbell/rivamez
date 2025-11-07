@@ -19,6 +19,7 @@ export default function Home() {
         <Features />
         <InteractiveTabs />
         <Values />
+        <ImpactMetrics />
         <About />
         <Services />
         <Projects />
