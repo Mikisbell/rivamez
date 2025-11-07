@@ -39,18 +39,34 @@ export default function Hero() {
 
   return (
     <section id="inicio" className="relative h-screen overflow-hidden">
-      {/* Background Image with Parallax */}
+      {/* Animated Gradient Background */}
       <div 
-        className="absolute inset-0 bg-cover bg-center"
+        className="absolute inset-0"
         style={{
-          backgroundImage: 'linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 58, 138, 0.85) 50%, rgba(6, 182, 212, 0.7) 100%)',
+          background: 'linear-gradient(135deg, #0F172A 0%, #1E3A8A 50%, #06B6D4 100%)',
           transform: `translateY(${scrollY * 0.5}px)`
         }}
       />
       
+      {/* Mesh Gradient Overlay */}
+      <div className="absolute inset-0" style={{
+        background: `
+          radial-gradient(at 20% 30%, rgba(6, 182, 212, 0.3) 0px, transparent 50%),
+          radial-gradient(at 80% 0%, rgba(30, 58, 138, 0.3) 0px, transparent 50%),
+          radial-gradient(at 80% 80%, rgba(6, 182, 212, 0.2) 0px, transparent 50%),
+          radial-gradient(at 0% 80%, rgba(15, 23, 42, 0.3) 0px, transparent 50%)
+        `
+      }} />
+
+      {/* Dot Pattern */}
+      <div className="absolute inset-0" style={{
+        backgroundImage: 'radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px)',
+        backgroundSize: '32px 32px'
+      }} />
+      
       {/* Geometric Pattern Overlay */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 opacity-10" style={{
+        <div className="absolute inset-0 opacity-5" style={{
           backgroundImage: `
             linear-gradient(30deg, #06B6D4 12%, transparent 12.5%, transparent 87%, #06B6D4 87.5%, #06B6D4),
             linear-gradient(150deg, #06B6D4 12%, transparent 12.5%, transparent 87%, #06B6D4 87.5%, #06B6D4),
@@ -61,6 +77,10 @@ export default function Hero() {
           backgroundPosition: '0 0, 0 0, 40px 70px, 40px 70px'
         }} />
       </div>
+
+      {/* Blurred Circles */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '8s' }} />
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-rivamez-cyan/10 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '10s', animationDelay: '2s' }} />
 
       {/* Content */}
       <div className="relative h-full flex items-center justify-center px-4">

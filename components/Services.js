@@ -137,8 +137,26 @@ export default function Services() {
     <section 
       id="servicios"
       ref={sectionRef} 
-      className="py-20 px-4 bg-rivamez-dark text-white"
+      className="py-20 px-4 bg-gradient-to-br from-rivamez-dark via-gray-900 to-rivamez-navy text-white relative overflow-hidden"
     >
+      {/* Circuit Pattern */}
+      <div className="absolute inset-0 opacity-10">
+        <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <pattern id="circuit-services" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
+              <circle cx="25" cy="25" r="2" fill="rgba(6, 182, 212, 0.4)" />
+              <circle cx="75" cy="75" r="2" fill="rgba(6, 182, 212, 0.4)" />
+              <line x1="25" y1="25" x2="75" y2="25" stroke="rgba(6, 182, 212, 0.3)" strokeWidth="0.5" />
+              <line x1="75" y1="25" x2="75" y2="75" stroke="rgba(6, 182, 212, 0.3)" strokeWidth="0.5" />
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#circuit-services)" />
+        </svg>
+      </div>
+
+      {/* Animated Blobs */}
+      <div className="absolute top-20 right-20 w-96 h-96 bg-rivamez-cyan/10 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '7s' }} />
+      <div className="absolute bottom-20 left-20 w-96 h-96 bg-rivamez-green/10 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '9s', animationDelay: '1s' }} />
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
           <span className="inline-block px-4 py-2 bg-rivamez-cyan/20 text-rivamez-cyan text-sm font-semibold rounded-full mb-4">

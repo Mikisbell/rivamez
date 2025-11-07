@@ -56,10 +56,20 @@ const features = [
 
 export default function Features() {
   return (
-    <section className="py-20 px-4 bg-white relative overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute top-0 left-0 w-96 h-96 bg-rivamez-cyan/5 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-rivamez-navy/5 rounded-full blur-3xl" />
+    <section className="py-20 px-4 bg-gradient-to-b from-white via-gray-50 to-white relative overflow-hidden">
+      {/* Grid Pattern */}
+      <div className="absolute inset-0" style={{
+        backgroundImage: `
+          linear-gradient(rgba(6, 182, 212, 0.05) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(6, 182, 212, 0.05) 1px, transparent 1px)
+        `,
+        backgroundSize: '60px 60px'
+      }} />
+
+      {/* Blurred Circles */}
+      <div className="absolute top-0 left-0 w-96 h-96 bg-rivamez-cyan/10 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-rivamez-navy/10 rounded-full blur-3xl" />
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-rivamez-green/8 rounded-full blur-3xl" />
 
       <div className="container mx-auto max-w-7xl relative z-10">
         {/* Header */}

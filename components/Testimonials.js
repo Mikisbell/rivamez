@@ -95,10 +95,22 @@ export default function Testimonials() {
   }, []);
 
   return (
-    <section id="testimonios" ref={sectionRef} className="py-24 px-4 bg-white relative overflow-hidden">
+    <section id="testimonios" ref={sectionRef} className="py-24 px-4 bg-gradient-to-b from-gray-100 via-white to-gray-50 relative overflow-hidden">
+      {/* Line Pattern */}
+      <div className="absolute inset-0 opacity-10" style={{
+        backgroundImage: `repeating-linear-gradient(
+          45deg,
+          transparent,
+          transparent 10px,
+          rgba(6, 182, 212, 0.3) 10px,
+          rgba(6, 182, 212, 0.3) 11px
+        )`
+      }} />
+
       {/* Background decoration */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-rivamez-navy/5 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-rivamez-cyan/5 rounded-full blur-3xl" />
+      <div className="absolute top-0 right-0 w-96 h-96 bg-rivamez-navy/8 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '8s' }} />
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-rivamez-cyan/8 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '10s', animationDelay: '2s' }} />
+      <div className="absolute top-1/2 right-1/4 w-64 h-64 bg-rivamez-green/5 rounded-full blur-3xl" />
 
       <div className="container mx-auto max-w-7xl relative z-10">
         {/* Header */}

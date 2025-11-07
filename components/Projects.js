@@ -129,8 +129,21 @@ export default function Projects() {
     <section 
       id="proyectos"
       ref={sectionRef} 
-      className="py-24 px-4 bg-gray-50"
+      className="py-24 px-4 bg-gradient-to-b from-white via-gray-50 to-gray-100 relative overflow-hidden"
     >
+      {/* Dot Pattern */}
+      <div className="absolute inset-0" style={{
+        backgroundImage: 'radial-gradient(circle, rgba(6, 182, 212, 0.08) 1px, transparent 1px)',
+        backgroundSize: '24px 24px'
+      }} />
+
+      {/* Mesh Gradient */}
+      <div className="absolute inset-0" style={{
+        background: `
+          radial-gradient(at 10% 20%, rgba(6, 182, 212, 0.08) 0px, transparent 50%),
+          radial-gradient(at 90% 80%, rgba(15, 23, 42, 0.05) 0px, transparent 50%)
+        `
+      }} />
       <div className="container mx-auto max-w-7xl">
         {/* Header */}
         <div ref={titleRef} className="text-center mb-16">

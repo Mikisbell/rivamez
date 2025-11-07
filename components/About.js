@@ -65,10 +65,20 @@ export default function About() {
   }, []);
 
   return (
-    <section id="nosotros" ref={sectionRef} className="py-24 px-4 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
+    <section id="nosotros" ref={sectionRef} className="py-24 px-4 bg-gradient-to-b from-white via-gray-50 to-white relative overflow-hidden">
+      {/* Geometric Pattern */}
+      <div className="absolute inset-0 opacity-5" style={{
+        backgroundImage: `
+          linear-gradient(30deg, #06B6D4 12%, transparent 12.5%, transparent 87%, #06B6D4 87.5%, #06B6D4),
+          linear-gradient(150deg, #06B6D4 12%, transparent 12.5%, transparent 87%, #06B6D4 87.5%, #06B6D4)
+        `,
+        backgroundSize: '80px 140px'
+      }} />
+
       {/* Decorative elements */}
-      <div className="absolute top-0 left-0 w-96 h-96 bg-rivamez-cyan/5 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-rivamez-navy/5 rounded-full blur-3xl" />
+      <div className="absolute top-0 left-0 w-96 h-96 bg-rivamez-cyan/10 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '10s' }} />
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-rivamez-navy/10 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '12s', animationDelay: '2s' }} />
+      <div className="absolute top-1/2 left-1/4 w-64 h-64 bg-rivamez-green/8 rounded-full blur-3xl" />
 
       <div className="container mx-auto max-w-7xl relative z-10">
         {/* Header */}
