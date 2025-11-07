@@ -138,14 +138,14 @@ export default function About() {
               <div
                 key={value.id}
                 ref={(el) => (cardsRef.current[index] = el)}
-                className="bg-white p-6 rounded-xl border-2 border-gray-100 hover:border-rivamez-cyan hover:shadow-lg transition-all duration-300 opacity-0"
+                className="group bg-white p-8 rounded-2xl border border-gray-200 hover:border-rivamez-cyan hover:shadow-xl hover:shadow-rivamez-cyan/10 hover:-translate-y-1 transition-all duration-300 opacity-0"
               >
-                <div className="w-12 h-12 bg-rivamez-cyan/10 rounded-lg flex items-center justify-center mb-4">
-                  <svg className="w-6 h-6 text-rivamez-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-16 h-16 bg-gradient-to-br from-rivamez-cyan via-rivamez-navy to-rivamez-green rounded-full flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg">
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={value.icon} />
                   </svg>
                 </div>
-                <h4 className="text-lg font-bold text-gray-900 mb-2">{value.title}</h4>
+                <h4 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-rivamez-navy transition-colors">{value.title}</h4>
                 <p className="text-sm text-gray-600 leading-relaxed">{value.description}</p>
               </div>
             ))}

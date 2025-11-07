@@ -65,15 +65,21 @@ export default function Hero() {
       {/* Content */}
       <div className="relative h-full flex items-center justify-center px-4">
         <div className="max-w-6xl mx-auto text-center">
-          {/* Badge */}
+          {/* Badge - Dataiku Style */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full mb-6"
+            className="inline-flex items-center px-5 py-2.5 bg-white/10 backdrop-blur-md border border-white/30 rounded-full mb-8 shadow-lg hover:bg-white/15 transition-all duration-300 group"
           >
-            <div className="w-2 h-2 bg-rivamez-cyan rounded-full mr-2 animate-pulse" />
-            <span className="text-white text-sm font-medium">Más de 15 años construyendo excelencia</span>
+            <div className="relative mr-3">
+              <div className="w-2 h-2 bg-rivamez-cyan rounded-full animate-pulse" />
+              <div className="absolute inset-0 w-2 h-2 bg-rivamez-cyan rounded-full animate-ping opacity-75" />
+            </div>
+            <span className="text-white text-sm font-semibold tracking-wide">Construyendo el futuro de Huancayo desde 2009</span>
+            <svg className="w-4 h-4 ml-2 text-white/70 group-hover:text-white group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
           </motion.div>
 
           {/* Main Title */}
@@ -108,16 +114,17 @@ export default function Hero() {
           >
             <a
               href="#proyectos"
-              className="group px-8 py-4 bg-white text-rivamez-navy font-semibold rounded-lg hover:bg-rivamez-cyan hover:text-white transition-all duration-300 shadow-2xl hover:shadow-cyan-500/50 flex items-center gap-2"
+              className="group relative px-8 py-4 bg-white text-rivamez-navy font-semibold rounded-xl hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-cyan-500/50 flex items-center gap-2 overflow-hidden"
             >
-              Ver Proyectos
-              <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="absolute inset-0 bg-gradient-to-r from-rivamez-cyan to-rivamez-navy opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <span className="relative z-10 group-hover:text-white transition-colors">Ver Proyectos</span>
+              <svg className="relative z-10 w-5 h-5 group-hover:translate-x-1 transition-transform group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
             </a>
             <a
               href="#contacto"
-              className="px-8 py-4 bg-transparent border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-rivamez-navy transition-all duration-300"
+              className="group px-8 py-4 bg-transparent border-2 border-white text-white font-semibold rounded-xl hover:bg-white hover:text-rivamez-navy hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-white/30"
             >
               Solicitar Cotización
             </a>

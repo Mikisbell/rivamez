@@ -151,7 +151,7 @@ export default function Projects() {
             <div
               key={project.id}
               ref={(el) => (cardsRef.current[index] = el)}
-              className="group relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 opacity-0"
+              className="group relative bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl hover:shadow-rivamez-cyan/20 hover:-translate-y-2 transition-all duration-500 opacity-0 border border-gray-100 hover:border-rivamez-cyan/30"
             >
               {/* Image Placeholder */}
               <div className="relative h-72 bg-gradient-to-br from-gray-300 via-gray-200 to-gray-100 overflow-hidden">

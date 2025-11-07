@@ -126,7 +126,7 @@ export default function Testimonials() {
             <div
               key={testimonial.id}
               ref={(el) => (cardsRef.current[index] = el)}
-              className="bg-gradient-to-br from-gray-50 to-white p-8 rounded-2xl border-2 border-gray-100 hover:border-rivamez-cyan hover:shadow-xl transition-all duration-300 opacity-0"
+              className="group bg-white p-8 rounded-2xl border border-gray-200 hover:border-rivamez-cyan hover:shadow-2xl hover:shadow-rivamez-cyan/10 hover:-translate-y-2 transition-all duration-500 opacity-0"
             >
               {/* Rating */}
               <div className="flex gap-1 mb-4">
