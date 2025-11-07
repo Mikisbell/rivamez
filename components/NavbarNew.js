@@ -161,6 +161,15 @@ export default function NavbarNew() {
                 </button>
               </div>
 
+              {/* Valores */}
+              <a
+                href="#valores"
+                onClick={(e) => scrollToSection(e, '#valores')}
+                className="px-4 py-2 text-sm font-semibold text-gray-700 hover:text-rivamez-navy transition-colors"
+              >
+                Valores
+              </a>
+
               {/* Nosotros */}
               <a
                 href="/nosotros"
@@ -333,6 +342,13 @@ export default function NavbarNew() {
                     className="block px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg font-semibold transition-colors"
                   >
                     Proyectos
+                  </a>
+                  <a
+                    href="#valores"
+                    onClick={(e) => scrollToSection(e, '#valores')}
+                    className="block px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg font-semibold transition-colors"
+                  >
+                    Valores
                   </a>
                   <a
                     href="/nosotros"

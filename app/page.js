@@ -18,6 +18,7 @@ export default function Home() {
         <Hero />
         <Features />
         <InteractiveTabs />
+        <Values />
         <About />
         <Services />
         <Projects />
