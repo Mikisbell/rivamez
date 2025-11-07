@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
+import VideoModal from './VideoModal';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -30,6 +31,7 @@ const wordVariants = {
 
 export default function Hero() {
   const [scrollY, setScrollY] = useState(0);
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
@@ -163,6 +165,28 @@ export default function Hero() {
               Solicitar Cotización
             </a>
           </motion.div>
+
+          {/* Video CTA */}
+          <motion.button
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
+            onClick={() => setIsVideoOpen(true)}
+            className="group flex items-center gap-3 text-white/90 hover:text-white transition-colors mt-8"
+          >
+            <div className="relative">
+              <div className="w-14 h-14 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center border border-white/20 group-hover:bg-white/20 transition-all duration-300 group-hover:scale-110">
+                <svg className="w-6 h-6 ml-0.5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </div>
+              <div className="absolute inset-0 bg-white/20 rounded-full animate-ping" />
+            </div>
+            <div className="text-left">
+              <div className="text-sm font-semibold">Ver Video Corporativo</div>
+              <div className="text-xs text-white/70">Descubre quiénes somos</div>
+            </div>
+          </motion.button>
             </div>
 
             {/* Right Column - Robot Ingeniero */}
@@ -238,6 +262,15 @@ export default function Hero() {
           </motion.div>
         </div>
       </motion.div>
+
+      {/* Video Modal */}
+      <VideoModal
+        isOpen={isVideoOpen}
+        onClose={() => setIsVideoOpen(false)}
+        videoUrl="" // Dejar vacío hasta tener el video en YouTube/Vimeo
+        title="RIVAMEZ - Construyendo Huancayo"
+        duration="3:00"
+      />
     </section>
   );
 }
