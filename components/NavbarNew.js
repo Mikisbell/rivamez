@@ -179,13 +179,13 @@ export default function NavbarNew() {
                 Nosotros
               </a>
 
-              {/* Noticias */}
+              {/* Blog */}
               <a
-                href="/noticias"
-                onClick={(e) => scrollToSection(e, '/noticias')}
+                href="/blog"
+                onClick={(e) => scrollToSection(e, '/blog')}
                 className="px-4 py-2 text-sm font-semibold text-gray-700 hover:text-rivamez-navy transition-colors"
               >
-                Noticias
+                Blog
               </a>
 
               {/* Contacto */}
@@ -367,11 +367,11 @@ export default function NavbarNew() {
                     Nosotros
                   </a>
                   <a
-                    href="/noticias"
-                    onClick={(e) => scrollToSection(e, '/noticias')}
+                    href="/blog"
+                    onClick={(e) => scrollToSection(e, '/blog')}
                     className="block px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg font-semibold transition-colors"
                   >
-                    Noticias
+                    Blog
                   </a>
                   <a
                     href="/contacto"
