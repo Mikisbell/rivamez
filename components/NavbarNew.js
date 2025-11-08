@@ -210,8 +210,10 @@ export default function NavbarNew() {
               </div>
             </a>
 
-            {/* Desktop Menu */}
-            <div className="hidden md:flex items-center space-x-0 lg:space-x-0.5 xl:space-x-1">
+            {/* Desktop Menu + CTA juntos */}
+            <div className="hidden md:flex items-center gap-2 lg:gap-4 xl:gap-6">
+              {/* Menu Links */}
+              <div className="flex items-center space-x-0 lg:space-x-0.5 xl:space-x-1">
               {/* Empresa - Mega Menu */}
               <div 
                 className="relative"
@@ -281,10 +283,9 @@ export default function NavbarNew() {
               >
                 Contacto
               </a>
-            </div>
+              </div>
 
-            {/* CTA - Un solo botón unificado */}
-            <div className="hidden md:flex items-center gap-1 lg:gap-2 xl:gap-3">
+              {/* CTA - Botón unificado */}
               <a
                 href="https://wa.me/51943818788?text=Hola,%20quiero%20solicitar%20una%20cotización%20para%20mi%20proyecto%20de%20construcción"
                 target="_blank"
