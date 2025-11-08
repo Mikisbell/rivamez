@@ -10,5 +10,14 @@ const nextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: '/noticias',
+        destination: '/blog',
+        permanent: true,
+      },
+    ];
+  },
 };
 export default nextConfig;
