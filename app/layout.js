@@ -5,9 +5,9 @@ import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import PageTransition from '@/components/PageTransition';
 import ServiceWorkerRegister from '@/components/ServiceWorkerRegister';
-import { ThemeProvider } from '@/components/ThemeProvider';
-import ThemeToggle from '@/components/ThemeToggle';
 import GlobalSearch from '@/components/GlobalSearch';
+// import { ThemeProvider } from '@/components/ThemeProvider';
+// import ThemeToggle from '@/components/ThemeToggle';
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -47,17 +47,15 @@ export default function RootLayout({ children }) {
         <meta name="apple-mobile-web-app-title" content="RIVAMEZ" />
       </head>
       <body className={inter.className}>
-        <ThemeProvider>
-          <ServiceWorkerRegister />
-          <Navbar />
-          <GlobalSearch />
-          <ThemeToggle />
-          <PageTransition>
-            <main>{children}</main>
-          </PageTransition>
-          <Footer />
-          <WhatsAppButton />
-        </ThemeProvider>
+        <ServiceWorkerRegister />
+        <Navbar />
+        <GlobalSearch />
+        {/* <ThemeToggle /> */}
+        <PageTransition>
+          <main>{children}</main>
+        </PageTransition>
+        <Footer />
+        <WhatsAppButton />
       </body>
     </html>
   );
