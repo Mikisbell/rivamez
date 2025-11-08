@@ -2,7 +2,7 @@
 import Navbar from '@/components/NavbarNew';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
-import BlogList from '@/components/BlogList';
+import BlogListNew from '@/components/BlogListNew';
 import { getAllPosts, getFeaturedPost, getAllCategories } from '@/lib/sanity';
 
 // Revalidar cada 60 segundos (ISR)
@@ -25,7 +25,7 @@ export default async function BlogPage() {
     <>
       <Navbar />
       <main>
-        <BlogList 
+        <BlogListNew 
           initialPosts={posts}
           initialFeaturedPost={featuredPost}
           initialCategories={categories}
