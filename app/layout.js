@@ -87,8 +87,8 @@ export default function RootLayout({ children }) {
           </PageTransition>
           <Footer />
           <WhatsAppButton />
-          <ChatBot />
           <ClientOnly>
+            <ChatBot />
             <ExitIntentModal />
           </ClientOnly>
         </ThemeProvider>

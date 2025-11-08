@@ -6,16 +6,23 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 export default function ChatBot() {
   const [isOpen, setIsOpen] = useState(false);
-  const [messages, setMessages] = useState([
-    {
-      type: 'bot',
-      text: '¡Hola! 👋 Soy el asistente virtual de RIVAMEZ. ¿En qué puedo ayudarte?',
-      time: new Date().toLocaleTimeString('es-PE', { hour: '2-digit', minute: '2-digit' })
-    }
-  ]);
+  const [messages, setMessages] = useState([]);
   const [inputText, setInputText] = useState('');
   const [isTyping, setIsTyping] = useState(false);
   const messagesEndRef = useRef(null);
+  
+  // Inicializar mensaje de bienvenida solo en el cliente
+  useEffect(() => {
+    if (messages.length === 0) {
+      setMessages([
+        {
+          type: 'bot',
+          text: '¡Hola! 👋 Soy el asistente virtual de RIVAMEZ. ¿En qué puedo ayudarte?',
+          time: new Date().toLocaleTimeString('es-PE', { hour: '2-digit', minute: '2-digit' })
+        }
+      ]);
+    }
+  }, []);
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
