@@ -170,9 +170,9 @@ export default function NavbarNew() {
   // Función para obtener las clases del link
   const getLinkClasses = (href) => {
     if (isActive(href)) {
-      return "px-2 md:px-3 lg:px-4 py-2 text-xs md:text-sm font-bold bg-gradient-to-r from-rivamez-navy to-rivamez-cyan text-white rounded-lg shadow-lg transition-all";
+      return "px-1.5 sm:px-2 md:px-2.5 lg:px-3 xl:px-4 py-1.5 md:py-2 text-[10px] sm:text-xs md:text-xs lg:text-sm font-bold bg-gradient-to-r from-rivamez-navy to-rivamez-cyan text-white rounded-lg shadow-lg transition-all";
     }
-    return "px-2 md:px-3 lg:px-4 py-2 text-xs md:text-sm font-semibold text-gray-700 hover:text-rivamez-navy hover:bg-gray-50 rounded-lg transition-all";
+    return "px-1.5 sm:px-2 md:px-2.5 lg:px-3 xl:px-4 py-1.5 md:py-2 text-[10px] sm:text-xs md:text-xs lg:text-sm font-semibold text-gray-700 hover:text-rivamez-navy hover:bg-gray-50 rounded-lg transition-all";
   };
 
   return (
@@ -189,7 +189,7 @@ export default function NavbarNew() {
       >
         <div className="relative">
           <div className="container mx-auto px-4 md:px-6">
-            <div className="flex items-center justify-between h-16 md:h-18 lg:h-20">
+            <div className="flex items-center justify-between h-14 sm:h-15 md:h-16 lg:h-18 xl:h-20">
             {/* Logo */}
             <a 
               href="/" 
@@ -198,26 +198,26 @@ export default function NavbarNew() {
               <img 
                 src="/images/logo.png" 
                 alt="GRUPO RIVAMEZ" 
-                className="h-9 md:h-11 lg:h-14 w-auto transition-transform group-hover:scale-105"
+                className="h-8 sm:h-9 md:h-10 lg:h-12 xl:h-14 w-auto transition-transform group-hover:scale-105"
               />
               <div className="flex flex-col">
-                <span className="font-bold text-sm md:text-base lg:text-xl leading-tight text-rivamez-navy">
+                <span className="font-bold text-xs sm:text-sm md:text-sm lg:text-lg xl:text-xl leading-tight text-rivamez-navy">
                   GRUPO RIVAMEZ
                 </span>
-                <span className="text-[9px] md:text-[10px] lg:text-xs leading-tight text-gray-600">
+                <span className="text-[8px] sm:text-[9px] md:text-[9px] lg:text-[10px] xl:text-xs leading-tight text-gray-600">
                   Constructora & Inmobiliaria
                 </span>
               </div>
             </a>
 
             {/* Desktop Menu */}
-            <div className="hidden md:flex items-center space-x-0.5 lg:space-x-1">
+            <div className="hidden md:flex items-center space-x-0 lg:space-x-0.5 xl:space-x-1">
               {/* Empresa - Mega Menu */}
               <div 
                 className="relative"
                 onMouseEnter={() => setActiveMenu('empresa')}
               >
-                <button className="px-2 md:px-3 lg:px-4 py-2 text-xs md:text-sm font-semibold text-gray-700 hover:text-rivamez-navy transition-colors flex items-center gap-1">
+                <button className="px-1.5 sm:px-2 md:px-2.5 lg:px-3 xl:px-4 py-1.5 md:py-2 text-[10px] sm:text-xs md:text-xs lg:text-sm font-semibold text-gray-700 hover:text-rivamez-navy transition-colors flex items-center gap-0.5 md:gap-1">
                   Empresa
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -230,7 +230,7 @@ export default function NavbarNew() {
                 className="relative"
                 onMouseEnter={() => setActiveMenu('expertise')}
               >
-                <button className="px-2 md:px-3 lg:px-4 py-2 text-xs md:text-sm font-semibold text-gray-700 hover:text-rivamez-navy transition-colors flex items-center gap-1">
+                <button className="px-1.5 sm:px-2 md:px-2.5 lg:px-3 xl:px-4 py-1.5 md:py-2 text-[10px] sm:text-xs md:text-xs lg:text-sm font-semibold text-gray-700 hover:text-rivamez-navy transition-colors flex items-center gap-0.5 md:gap-1">
                   Capacidades
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -243,7 +243,7 @@ export default function NavbarNew() {
                 className="relative"
                 onMouseEnter={() => setActiveMenu('servicios')}
               >
-                <button className="px-2 md:px-3 lg:px-4 py-2 text-xs md:text-sm font-semibold text-gray-700 hover:text-rivamez-navy transition-colors flex items-center gap-1">
+                <button className="px-1.5 sm:px-2 md:px-2.5 lg:px-3 xl:px-4 py-1.5 md:py-2 text-[10px] sm:text-xs md:text-xs lg:text-sm font-semibold text-gray-700 hover:text-rivamez-navy transition-colors flex items-center gap-0.5 md:gap-1">
                   Servicios
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -256,7 +256,7 @@ export default function NavbarNew() {
                 className="relative"
                 onMouseEnter={() => setActiveMenu('proyectos')}
               >
-                <button className="px-2 md:px-3 lg:px-4 py-2 text-xs md:text-sm font-semibold text-gray-700 hover:text-rivamez-navy transition-colors flex items-center gap-1">
+                <button className="px-1.5 sm:px-2 md:px-2.5 lg:px-3 xl:px-4 py-1.5 md:py-2 text-[10px] sm:text-xs md:text-xs lg:text-sm font-semibold text-gray-700 hover:text-rivamez-navy transition-colors flex items-center gap-0.5 md:gap-1">
                   Proyectos
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -284,23 +284,25 @@ export default function NavbarNew() {
             </div>
 
             {/* CTAs */}
-            <div className="hidden md:flex items-center gap-2 lg:gap-3">
+            <div className="hidden md:flex items-center gap-1.5 lg:gap-2 xl:gap-3">
               <a
                 href="tel:+51943818788"
-                className="px-2 md:px-3 lg:px-5 py-2 md:py-2.5 text-xs md:text-sm font-semibold text-rivamez-navy hover:text-rivamez-cyan transition-colors flex items-center gap-1 md:gap-2"
+                className="px-1.5 md:px-2 lg:px-3 xl:px-5 py-1.5 md:py-2 lg:py-2.5 text-[10px] md:text-xs lg:text-sm font-semibold text-rivamez-navy hover:text-rivamez-cyan transition-colors flex items-center gap-0.5 md:gap-1 lg:gap-2"
               >
-                <svg className="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-3.5 h-3.5 md:w-4 md:h-4 lg:w-5 lg:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
-                <span className="hidden lg:inline">+51 943 818 788</span>
-                <span className="md:inline lg:hidden">943 818 788</span>
+                <span className="hidden xl:inline">+51 943 818 788</span>
+                <span className="hidden lg:inline xl:hidden">943 818 788</span>
+                <span className="md:inline lg:hidden">943..</span>
               </a>
               <a
                 href="/contacto"
                 onClick={(e) => scrollToSection(e, '/contacto')}
-                className="px-3 md:px-4 lg:px-6 py-2 md:py-2.5 bg-gradient-to-r from-rivamez-navy to-rivamez-cyan text-white text-xs md:text-sm font-semibold rounded-lg hover:shadow-xl hover:shadow-rivamez-cyan/30 hover:scale-105 transition-all duration-300"
+                className="px-2 md:px-2.5 lg:px-4 xl:px-6 py-1.5 md:py-2 lg:py-2.5 bg-gradient-to-r from-rivamez-navy to-rivamez-cyan text-white text-[10px] md:text-xs lg:text-sm font-semibold rounded-lg hover:shadow-xl hover:shadow-rivamez-cyan/30 hover:scale-105 transition-all duration-300"
               >
-                <span className="hidden lg:inline">Solicitar Cotización</span>
+                <span className="hidden xl:inline">Solicitar Cotización</span>
+                <span className="hidden lg:inline xl:hidden">Cotización</span>
                 <span className="md:inline lg:hidden">Cotizar</span>
               </a>
             </div>

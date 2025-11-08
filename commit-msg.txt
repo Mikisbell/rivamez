@@ -1,0 +1,36 @@
+fix: Reducir drasticamente tamanos para tablets - Navbar ultra compacto
+
+CAMBIOS AGRESIVOS PARA TABLETS (768px-1023px):
+
+Logo:
+- Mobile: h-8 (32px)
+- Tablet: h-10 (40px) - MAS PEQUEÑO
+- Desktop: h-12 (48px)
+- XL: h-14 (56px)
+
+Texto GRUPO RIVAMEZ:
+- Mobile: text-xs (12px)
+- Tablet: text-sm (14px) - MAS PEQUEÑO
+- Desktop: text-lg (18px)
+- XL: text-xl (20px)
+
+Menu:
+- Tablet: text-xs (12px) - MAS PEQUEÑO
+- Padding: px-2.5 (10px) - MINIMO
+- Sin espaciado: space-x-0
+
+CTAs:
+- Telefono tablet: 943.. - ULTRA CORTO
+- Telefono desktop: 943 818 788
+- Telefono XL: +51 943 818 788
+- Boton tablet: Cotizar
+- Boton desktop: Cotizacion
+- Boton XL: Solicitar Cotizacion
+
+Navbar:
+- Mobile: h-14 (56px)
+- Tablet: h-16 (64px) - MAS BAJO
+- Desktop: h-18 (72px)
+- XL: h-20 (80px)
+
+Todo reducido al minimo para tablets
