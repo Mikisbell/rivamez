@@ -161,9 +161,9 @@ export default function BlogListPro({ initialPosts = [], initialFeaturedPost = n
   return (
     <div className="min-h-screen bg-white">
       {/* Top Bar - Categorías */}
-      <div className="border-b border-gray-200 bg-white sticky top-0 z-40 shadow-sm">
+      <div className="border-b-2 border-gray-200 bg-white sticky top-16 z-30 shadow-md">
         <div className="max-w-[1400px] mx-auto px-6">
-          <div className="flex items-center gap-1 overflow-x-auto py-3 scrollbar-hide">
+          <div className="flex items-center gap-2 overflow-x-auto py-4 scrollbar-hide">
             <button
               onClick={() => setActiveCategory('all')}
               className={`px-4 py-2 text-sm font-semibold whitespace-nowrap transition-colors rounded ${
@@ -410,7 +410,7 @@ export default function BlogListPro({ initialPosts = [], initialFeaturedPost = n
 
           {/* Sidebar */}
           <aside className="lg:col-span-4">
-            <div className="sticky top-24 space-y-8">
+            <div className="sticky top-32 space-y-8">
               {/* Trending Now */}
               <div className="bg-gray-50 rounded-lg p-6">
                 <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
