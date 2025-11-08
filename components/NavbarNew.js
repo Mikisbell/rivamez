@@ -6,57 +6,115 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { usePathname } from 'next/navigation';
 
 const megaMenuData = {
-  servicios: {
+  empresa: {
     sections: [
       {
-        title: 'Construcción',
+        title: 'Compañía',
         links: [
-          { name: 'Construcción Residencial', href: '/servicios', desc: 'Viviendas y edificios multifamiliares' },
-          { name: 'Proyectos Comerciales', href: '/servicios', desc: 'Centros comerciales y oficinas' },
-          { name: 'Proyectos Institucionales', href: '/servicios', desc: 'Hospitales y centros educativos' },
+          { name: 'Nosotros', href: '/nosotros', desc: 'Historia y visión de RIVAMEZ' },
+          { name: 'Liderazgo', href: '/nosotros#liderazgo', desc: 'Nuestro equipo directivo' },
+          { name: 'Valores & Cultura', href: '/nosotros#valores', desc: 'Lo que nos define' },
+          { name: 'Certificaciones', href: '/nosotros#certificaciones', desc: 'ISO y reconocimientos' },
         ]
       },
       {
-        title: 'Servicios Especializados',
+        title: 'Reconocimientos',
         links: [
-          { name: 'Remodelación', href: '/servicios', desc: 'Transformación de espacios' },
-          { name: 'Consultoría', href: '/servicios', desc: 'Gerencia de proyectos' },
-          { name: 'Diseño & Arquitectura', href: '/servicios', desc: 'Planos y visualización 3D' },
+          { name: 'Premios', href: '/nosotros#premios', desc: 'Galardones nacionales' },
+          { name: 'Logros', href: '/nosotros#logros', desc: 'Hitos importantes' },
+          { name: 'Responsabilidad Social', href: '/nosotros#rse', desc: 'Impacto comunitario' },
         ]
       }
     ],
     featured: {
-      title: 'Por qué elegirnos',
+      title: 'Más de 15 años',
+      image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=300&q=80',
+      desc: 'Liderando la construcción sostenible en Perú con excelencia e innovación',
+      cta: 'Conocer más',
+      href: '/nosotros'
+    }
+  },
+  expertise: {
+    sections: [
+      {
+        title: 'Disciplinas',
+        links: [
+          { name: 'Arquitectura', href: '/servicios#arquitectura', desc: 'Diseño arquitectónico innovador' },
+          { name: 'Ingeniería', href: '/servicios#ingenieria', desc: 'Ingeniería estructural y civil' },
+          { name: 'Construcción', href: '/servicios#construccion', desc: 'Ejecución de obra con calidad' },
+          { name: 'Gestión de Proyectos', href: '/servicios#gestion', desc: 'PMI y metodologías ágiles' },
+        ]
+      },
+      {
+        title: 'Especialidades',
+        links: [
+          { name: 'BIM & Tecnología', href: '/servicios#bim', desc: 'Building Information Modeling' },
+          { name: 'Sostenibilidad', href: '/servicios#sostenibilidad', desc: 'Construcción verde LEED' },
+          { name: 'Consultoría', href: '/servicios#consultoria', desc: 'Asesoría técnica experta' },
+        ]
+      }
+    ],
+    featured: {
+      title: 'Expertise Integral',
+      image: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=300&q=80',
+      desc: 'Soluciones 360° desde el concepto hasta la entrega final',
+      cta: 'Ver capacidades',
+      href: '/servicios'
+    }
+  },
+  servicios: {
+    sections: [
+      {
+        title: 'Por Sector',
+        links: [
+          { name: 'Residencial', href: '/servicios#residencial', desc: 'Torres y viviendas premium' },
+          { name: 'Comercial', href: '/servicios#comercial', desc: 'Centros comerciales y oficinas' },
+          { name: 'Industrial', href: '/servicios#industrial', desc: 'Naves y almacenes' },
+          { name: 'Institucional', href: '/servicios#institucional', desc: 'Hospitales y educación' },
+        ]
+      },
+      {
+        title: 'Servicios Adicionales',
+        links: [
+          { name: 'Remodelación', href: '/servicios#remodelacion', desc: 'Renovación integral' },
+          { name: 'Mantenimiento', href: '/servicios#mantenimiento', desc: 'Post-construcción' },
+          { name: 'Valuaciones', href: '/servicios#valuaciones', desc: 'Tasación técnica' },
+        ]
+      }
+    ],
+    featured: {
+      title: 'Soluciones Llave en Mano',
       image: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=300&q=80',
-      desc: 'Más de 15 años construyendo proyectos de excelencia en Huancayo',
-      cta: 'Ver todos los servicios',
+      desc: 'Gestión completa de tu proyecto de principio a fin',
+      cta: 'Explorar servicios',
       href: '/servicios'
     }
   },
   proyectos: {
     sections: [
       {
-        title: 'Proyectos Destacados',
+        title: 'Portfolio',
         links: [
-          { name: 'Torres del Valle', href: '/proyectos', desc: '72 departamentos premium' },
-          { name: 'Plaza San Carlos', href: '/proyectos', desc: 'Centro comercial moderno' },
-          { name: 'Condominio Los Portales', href: '/proyectos', desc: '42 casas de lujo' },
+          { name: 'Proyectos Destacados', href: '/proyectos#destacados', desc: 'Nuestros mejores trabajos' },
+          { name: 'En Construcción', href: '/proyectos#en-construccion', desc: 'Obras actuales' },
+          { name: 'Completados', href: '/proyectos#completados', desc: 'Proyectos finalizados' },
+          { name: 'Portfolio Completo', href: '/proyectos', desc: '285+ proyectos exitosos' },
         ]
       },
       {
         title: 'Por Categoría',
         links: [
-          { name: 'Residencial', href: '/proyectos', desc: 'Viviendas y departamentos' },
-          { name: 'Comercial', href: '/proyectos', desc: 'Locales y oficinas' },
-          { name: 'Institucional', href: '/proyectos', desc: 'Hospitales y colegios' },
+          { name: 'Residencial', href: '/proyectos?categoria=residencial', desc: 'Viviendas y departamentos' },
+          { name: 'Comercial', href: '/proyectos?categoria=comercial', desc: 'Locales y oficinas' },
+          { name: 'Institucional', href: '/proyectos?categoria=institucional', desc: 'Hospitales y colegios' },
         ]
       }
     ],
     featured: {
-      title: 'Portafolio Completo',
+      title: '285+ Proyectos',
       image: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=300&q=80',
-      desc: '285+ proyectos completados con éxito en Huancayo y Junín',
-      cta: 'Ver todos los proyectos',
+      desc: 'Transformando Huancayo y Junín con construcciones de clase mundial',
+      cta: 'Ver portfolio',
       href: '/proyectos'
     }
   }
@@ -151,6 +209,32 @@ export default function NavbarNew() {
 
             {/* Desktop Menu */}
             <div className="hidden lg:flex items-center space-x-1">
+              {/* Empresa - Mega Menu */}
+              <div 
+                className="relative"
+                onMouseEnter={() => setActiveMenu('empresa')}
+              >
+                <button className="px-4 py-2 text-sm font-semibold text-gray-700 hover:text-rivamez-navy transition-colors flex items-center gap-1">
+                  Empresa
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+              </div>
+
+              {/* Expertise - Mega Menu */}
+              <div 
+                className="relative"
+                onMouseEnter={() => setActiveMenu('expertise')}
+              >
+                <button className="px-4 py-2 text-sm font-semibold text-gray-700 hover:text-rivamez-navy transition-colors flex items-center gap-1">
+                  Expertise
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+              </div>
+
               {/* Servicios - Mega Menu */}
               <div 
                 className="relative"
@@ -176,24 +260,6 @@ export default function NavbarNew() {
                   </svg>
                 </button>
               </div>
-
-              {/* Valores */}
-              <a
-                href="#valores"
-                onClick={(e) => scrollToSection(e, '#valores')}
-                className="px-4 py-2 text-sm font-semibold text-gray-700 hover:text-rivamez-navy transition-colors"
-              >
-                Valores
-              </a>
-
-              {/* Nosotros */}
-              <a
-                href="/nosotros"
-                onClick={(e) => scrollToSection(e, '/nosotros')}
-                className={getLinkClasses('/nosotros')}
-              >
-                Nosotros
-              </a>
 
               {/* Blog */}
               <a
@@ -355,46 +421,60 @@ export default function NavbarNew() {
                 {/* Mobile Links */}
                 <nav className="space-y-2">
                   <a
-                    href="/servicios"
-                    onClick={(e) => scrollToSection(e, '/servicios')}
-                    className="block px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg font-semibold transition-colors"
-                  >
-                    Servicios
-                  </a>
-                  <a
-                    href="/proyectos"
-                    onClick={(e) => scrollToSection(e, '/proyectos')}
-                    className="block px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg font-semibold transition-colors"
-                  >
-                    Proyectos
-                  </a>
-                  <a
-                    href="#valores"
-                    onClick={(e) => scrollToSection(e, '#valores')}
-                    className="block px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg font-semibold transition-colors"
-                  >
-                    Valores
-                  </a>
-                  <a
                     href="/nosotros"
                     onClick={(e) => scrollToSection(e, '/nosotros')}
                     className={`block px-4 py-3 rounded-lg font-semibold transition-all ${isActive('/nosotros') ? 'bg-gradient-to-r from-rivamez-navy to-rivamez-cyan text-white shadow-lg' : 'text-gray-700 hover:bg-gray-100'}`}
                   >
-                    Nosotros
+                    🏢 Empresa
+                  </a>
+                  <a
+                    href="/servicios#arquitectura"
+                    onClick={(e) => scrollToSection(e, '/servicios#arquitectura')}
+                    className="block px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg font-semibold transition-colors pl-8 text-sm"
+                  >
+                    → Arquitectura
+                  </a>
+                  <a
+                    href="/servicios#ingenieria"
+                    onClick={(e) => scrollToSection(e, '/servicios#ingenieria')}
+                    className="block px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg font-semibold transition-colors pl-8 text-sm"
+                  >
+                    → Ingeniería
+                  </a>
+                  <a
+                    href="/servicios#construccion"
+                    onClick={(e) => scrollToSection(e, '/servicios#construccion')}
+                    className="block px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg font-semibold transition-colors pl-8 text-sm"
+                  >
+                    → Construcción
+                  </a>
+                  <a
+                    href="/servicios"
+                    onClick={(e) => scrollToSection(e, '/servicios')}
+                    className={`block px-4 py-3 rounded-lg font-semibold transition-all ${isActive('/servicios') ? 'bg-gradient-to-r from-rivamez-navy to-rivamez-cyan text-white shadow-lg' : 'text-gray-700 hover:bg-gray-100'}`}
+                  >
+                    📐 Servicios
+                  </a>
+                  <a
+                    href="/proyectos"
+                    onClick={(e) => scrollToSection(e, '/proyectos')}
+                    className={`block px-4 py-3 rounded-lg font-semibold transition-all ${isActive('/proyectos') ? 'bg-gradient-to-r from-rivamez-navy to-rivamez-cyan text-white shadow-lg' : 'text-gray-700 hover:bg-gray-100'}`}
+                  >
+                    🏆 Proyectos
                   </a>
                   <a
                     href="/blog"
                     onClick={(e) => scrollToSection(e, '/blog')}
                     className={`block px-4 py-3 rounded-lg font-semibold transition-all ${isActive('/blog') ? 'bg-gradient-to-r from-rivamez-navy to-rivamez-cyan text-white shadow-lg' : 'text-gray-700 hover:bg-gray-100'}`}
                   >
-                    Blog
+                    📰 Blog
                   </a>
                   <a
                     href="/contacto"
                     onClick={(e) => scrollToSection(e, '/contacto')}
                     className={`block px-4 py-3 rounded-lg font-semibold transition-all ${isActive('/contacto') ? 'bg-gradient-to-r from-rivamez-navy to-rivamez-cyan text-white shadow-lg' : 'text-gray-700 hover:bg-gray-100'}`}
                   >
-                    Contacto
+                    📞 Contacto
                   </a>
                 </nav>
 

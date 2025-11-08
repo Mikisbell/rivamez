@@ -28,10 +28,17 @@ export default function GlobalSearch() {
   // Mock search data - replace with real search API
   const searchData = [
     { title: 'Inicio', url: '/', category: 'Página' },
-    { title: 'Nosotros', url: '/nosotros', category: 'Página' },
-    { title: 'Servicios', url: '/servicios', category: 'Página' },
-    { title: 'Proyectos', url: '/proyectos', category: 'Página' },
-    { title: 'Blog', url: '/blog', category: 'Página' },
+    { title: 'Empresa', url: '/nosotros', category: 'Compañía' },
+    { title: 'Liderazgo', url: '/nosotros#liderazgo', category: 'Compañía' },
+    { title: 'Valores & Cultura', url: '/nosotros#valores', category: 'Compañía' },
+    { title: 'Certificaciones', url: '/nosotros#certificaciones', category: 'Compañía' },
+    { title: 'Arquitectura', url: '/servicios#arquitectura', category: 'Expertise' },
+    { title: 'Ingeniería', url: '/servicios#ingenieria', category: 'Expertise' },
+    { title: 'Construcción', url: '/servicios#construccion', category: 'Expertise' },
+    { title: 'Servicios Residencial', url: '/servicios#residencial', category: 'Servicios' },
+    { title: 'Servicios Comercial', url: '/servicios#comercial', category: 'Servicios' },
+    { title: 'Proyectos', url: '/proyectos', category: 'Portfolio' },
+    { title: 'Blog & Noticias', url: '/blog', category: 'Contenido' },
     { title: 'Contacto', url: '/contacto', category: 'Página' },
   ];
 
