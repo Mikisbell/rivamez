@@ -96,8 +96,8 @@ export default function Hero() {
       <div className="absolute bottom-0 left-0 w-64 h-64 md:w-96 md:h-96 bg-rivamez-cyan/10 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '10s', animationDelay: '2s' }} />
 
       {/* Content */}
-      <div className="relative flex-1 flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-24 md:pt-28 pb-32 md:pb-40">
-        <div className="max-w-7xl mx-auto">
+      <div className="relative flex-1 flex items-center justify-center section-padding pt-20 md:pt-24 lg:pt-28">
+        <div className="container-responsive">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Left Column - Text Content */}
             <div className="text-center lg:text-left">
@@ -112,7 +112,7 @@ export default function Hero() {
               <div className="w-2 h-2 bg-rivamez-cyan rounded-full animate-pulse" />
               <div className="absolute inset-0 w-2 h-2 bg-rivamez-cyan rounded-full animate-ping opacity-75" />
             </div>
-            <span className="text-white text-xs sm:text-sm font-semibold tracking-wide">Construyendo el futuro de Huancayo desde 2009</span>
+            <span className="text-white text-small font-semibold tracking-wide">Construyendo el futuro de Huancayo desde 2009</span>
             <svg className="w-4 h-4 ml-2 text-white/70 group-hover:text-white group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
@@ -123,7 +123,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white mb-6 leading-tight"
+            className="heading-hero text-white mb-responsive leading-tight"
           >
             <span className="block">Construimos</span>
             <span className="block bg-gradient-to-r from-rivamez-cyan to-rivamez-green bg-clip-text text-transparent">
@@ -136,7 +136,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-200 mb-10 max-w-2xl mx-auto lg:mx-0 font-light leading-relaxed"
+            className="text-body text-gray-200 mb-responsive max-w-2xl mx-auto lg:mx-0 font-light leading-relaxed"
           >
             Desarrollo de proyectos residenciales y comerciales de alta gama en Huancayo, Perú
           </motion.p>
@@ -146,11 +146,11 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-stretch sm:items-center"
+            className="flex flex-col sm:flex-row space-x-responsive justify-center lg:justify-start items-stretch sm:items-center"
           >
             <a
               href="#proyectos"
-              className="w-full sm:w-auto group relative px-8 py-4 bg-white text-rivamez-navy font-semibold rounded-xl hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-cyan-500/50 flex items-center justify-center gap-2 overflow-hidden"
+              className="w-full sm:w-auto group relative btn-primary bg-white text-rivamez-navy rounded-xl hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-cyan-500/50 flex items-center justify-center gap-2 overflow-hidden"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-rivamez-cyan to-rivamez-navy opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <span className="relative z-10 group-hover:text-white transition-colors">Ver Proyectos</span>
@@ -160,7 +160,7 @@ export default function Hero() {
             </a>
             <a
               href="#contacto"
-              className="w-full sm:w-auto group px-8 py-4 bg-transparent border-2 border-white text-white font-semibold rounded-xl hover:bg-white hover:text-rivamez-navy hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-white/30 text-center"
+              className="w-full sm:w-auto group btn-secondary bg-transparent border-2 border-white text-white rounded-xl hover:bg-white hover:text-rivamez-navy hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-white/30 text-center"
             >
               Solicitar Cotización
             </a>
