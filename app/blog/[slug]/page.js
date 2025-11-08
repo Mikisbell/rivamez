@@ -45,16 +45,19 @@ export async function generateStaticParams() {
 // Componentes personalizados para PortableText
 const components = {
   types: {
-    image: ({ value }) => (
-      <div className="my-8 relative w-full h-96">
-        <Image
-          src={urlFor(value).width(1200).height(600).url()}
-          alt={value.alt || 'Imagen del artículo'}
-          fill
-          className="object-cover rounded-2xl"
-        />
-      </div>
-    ),
+    image: ({ value }) => {
+      if (!value?.asset) return null;
+      return (
+        <div className="my-8 relative w-full h-96">
+          <Image
+            src={urlFor(value).width(1200).height(600).url()}
+            alt={value.alt || 'Imagen del artículo'}
+            fill
+            className="object-cover rounded-2xl"
+          />
+        </div>
+      );
+    },
   },
   block: {
     h2: ({ children }) => (
@@ -74,23 +77,27 @@ const components = {
   },
   list: {
     bullet: ({ children }) => (
-      <ul className="list-disc list-inside space-y-2 mb-4 text-gray-700">{children}</ul>
+      <ul className="list-disc list-inside space-y-2 mb-4 ml-6 text-gray-700">{children}</ul>
     ),
     number: ({ children }) => (
-      <ol className="list-decimal list-inside space-y-2 mb-4 text-gray-700">{children}</ol>
+      <ol className="list-decimal list-inside space-y-2 mb-4 ml-6 text-gray-700">{children}</ol>
     ),
   },
   marks: {
-    link: ({ children, value }) => (
-      <a
-        href={value.href}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-rivamez-cyan hover:underline font-semibold"
-      >
-        {children}
-      </a>
-    ),
+    link: ({ children, value }) => {
+      const href = value?.href;
+      if (!href) return <>{children}</>;
+      return (
+        <a
+          href={href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-rivamez-cyan hover:underline font-semibold"
+        >
+          {children}
+        </a>
+      );
+    },
     strong: ({ children }) => <strong className="font-bold text-rivamez-navy">{children}</strong>,
   },
 };
