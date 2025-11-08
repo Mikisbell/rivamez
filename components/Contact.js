@@ -61,44 +61,44 @@ export default function Contact() {
   ];
 
   return (
-    <section id="contacto" className="py-24 px-4 bg-gray-50 relative overflow-hidden">
+    <section id="contacto" className="section-padding bg-gray-50 relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-rivamez-cyan/10 rounded-full blur-3xl" />
         <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-rivamez-navy/10 rounded-full blur-3xl" />
       </div>
 
-      <div className="container mx-auto max-w-7xl relative z-10">
+      <div className="container-responsive relative z-10">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center mb-responsive"
         >
-          <span className="inline-block px-4 py-2 bg-rivamez-cyan/10 text-rivamez-cyan text-sm font-semibold rounded-full mb-4">
+          <span className="inline-block px-4 py-2 bg-rivamez-cyan/10 text-rivamez-cyan text-small font-semibold rounded-full mb-4">
             CONTÁCTANOS
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="heading-xl text-gray-900 mb-responsive">
             Construyamos Algo Juntos
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-body text-gray-600 max-w-3xl mx-auto">
             ¿Tienes un proyecto en mente? Estamos listos para convertir tu visión en realidad.
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-5 gap-12">
+        <div className="grid lg:grid-cols-5 gap-6 md:gap-8 lg:gap-12">
           {/* Contact Info */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="lg:col-span-2 space-y-6"
+            className="lg:col-span-2 space-y-responsive"
           >
             {contactInfo.map((info, index) => (
-              <div key={index} className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+              <div key={index} className="bg-white card-responsive rounded-xl shadow-md hover:shadow-lg transition-shadow">
                 <div className="flex items-start gap-4">
                   <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-rivamez-cyan to-rivamez-navy rounded-lg flex items-center justify-center">
                     <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -106,18 +106,18 @@ export default function Contact() {
                     </svg>
                   </div>
                   <div className="flex-1">
-                    <h3 className="font-semibold text-gray-900 mb-1">{info.title}</h3>
+                    <h3 className="font-semibold heading-sm text-gray-900 mb-1">{info.title}</h3>
                     {info.link ? (
                       <a 
                         href={info.link}
-                        className="text-rivamez-cyan hover:text-rivamez-navy transition-colors text-sm"
+                        className="text-rivamez-cyan hover:text-rivamez-navy transition-colors text-body"
                         target={info.link.startsWith('http') ? '_blank' : undefined}
                         rel={info.link.startsWith('http') ? 'noopener noreferrer' : undefined}
                       >
                         {info.content}
                       </a>
                     ) : (
-                      <p className="text-gray-600 text-sm whitespace-pre-line">{info.content}</p>
+                      <p className="text-gray-600 text-body whitespace-pre-line">{info.content}</p>
                     )}
                   </div>
                 </div>
@@ -131,7 +131,7 @@ export default function Contact() {
                   <svg className="w-12 h-12 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
                   </svg>
-                  <p className="text-sm">Mapa de ubicación</p>
+                  <p className="text-body">Mapa de ubicación</p>
                 </div>
               </div>
             </div>
@@ -145,10 +145,10 @@ export default function Contact() {
             transition={{ duration: 0.8 }}
             className="lg:col-span-3"
           >
-            <form onSubmit={handleSubmit} className="bg-white p-8 rounded-2xl shadow-xl">
+            <form onSubmit={handleSubmit} className="bg-white card-responsive rounded-2xl shadow-xl">
               <div className="grid md:grid-cols-2 gap-6 mb-6">
                 <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">
+                  <label className="block text-body font-semibold text-gray-700 mb-2">
                     Nombre Completo *
                   </label>
                   <input
@@ -162,7 +162,7 @@ export default function Contact() {
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">
+                  <label className="block text-body font-semibold text-gray-700 mb-2">
                     Email *
                   </label>
                   <input
@@ -179,7 +179,7 @@ export default function Contact() {
 
               <div className="grid md:grid-cols-2 gap-6 mb-6">
                 <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">
+                  <label className="block text-body font-semibold text-gray-700 mb-2">
                     Teléfono *
                   </label>
                   <input
@@ -193,7 +193,7 @@ export default function Contact() {
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">
+                  <label className="block text-body font-semibold text-gray-700 mb-2">
                     Servicio de Interés *
                   </label>
                   <select
@@ -230,7 +230,7 @@ export default function Contact() {
               <button
                 type="submit"
                 disabled={status === 'sending'}
-                className="w-full px-8 py-4 bg-gradient-to-r from-rivamez-navy to-rivamez-cyan text-white font-semibold rounded-lg hover:shadow-xl transition-all duration-300 transform hover:scale-[1.02] disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                className="w-full btn-primary bg-gradient-to-r from-rivamez-navy to-rivamez-cyan text-white rounded-lg hover:shadow-xl transition-all duration-300 transform hover:scale-[1.02] disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
               >
                 {status === 'sending' ? (
                   <>
@@ -261,7 +261,7 @@ export default function Contact() {
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="mt-4 p-4 bg-green-50 border border-green-200 rounded-lg text-green-800 text-sm text-center"
+                  className="mt-4 p-4 bg-green-50 border border-green-200 rounded-lg text-green-800 text-body text-center"
                 >
                   Gracias por contactarnos. Te responderemos pronto.
                 </motion.div>
