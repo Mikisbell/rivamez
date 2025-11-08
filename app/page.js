@@ -1,4 +1,5 @@
 import Hero from "@/components/Hero";
+import BuildingHero from "@/components/BuildingHero";
 import Features from "@/components/Features";
 import InteractiveTabs from "@/components/InteractiveTabs";
 import ImpactMetrics from "@/components/ImpactMetrics";
@@ -12,7 +13,11 @@ import ScrollReveal from "@/components/ScrollReveal";
 export default function Home() {
   return (
     <>
-      <Hero />
+      {/* Sección de presentación impresionante con animación de construcción de edificio */}
+      <BuildingHero />
+      
+      {/* Hero original - Puedes comentar/descomentar según prefieras */}
+      {/* <Hero /> */}
       
       <ScrollReveal animation="fadeUp">
         <Features />
