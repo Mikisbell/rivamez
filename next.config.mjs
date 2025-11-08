@@ -9,6 +9,8 @@ const nextConfig = {
         pathname: '/**',
       },
     ],
+    formats: ['image/avif', 'image/webp'],
+    minimumCacheTTL: 60,
   },
   async redirects() {
     return [
@@ -19,5 +21,21 @@ const nextConfig = {
       },
     ];
   },
+  async headers() {
+    return [
+      {
+        source: '/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=60, stale-while-revalidate=120',
+          },
+        ],
+      },
+    ];
+  },
+  reactStrictMode: true,
+  poweredByHeader: false,
+  compress: true,
 };
 export default nextConfig;
