@@ -184,9 +184,11 @@ export default function NavbarNew() {
             ? 'bg-white/95 backdrop-blur-md shadow-lg'
             : 'bg-white shadow-sm'
         }`}
+        onMouseLeave={() => setActiveMenu(null)}
       >
-        <div className="container mx-auto px-6">
-          <div className="flex items-center justify-between h-20">
+        <div className="relative">
+          <div className="container mx-auto px-6">
+            <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <a 
               href="/" 
@@ -312,17 +314,16 @@ export default function NavbarNew() {
           </div>
         </div>
 
-        {/* Mega Menu Dropdown */}
-        <AnimatePresence>
-          {activeMenu && megaMenuData[activeMenu] && (
-            <motion.div
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
-              transition={{ duration: 0.2 }}
-              className="absolute top-full left-0 right-0 bg-white border-t border-gray-200 shadow-2xl"
-              onMouseLeave={() => setActiveMenu(null)}
-            >
+          {/* Mega Menu Dropdown */}
+          <AnimatePresence>
+            {activeMenu && megaMenuData[activeMenu] && (
+              <motion.div
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                transition={{ duration: 0.2 }}
+                className="absolute top-full left-0 right-0 bg-white border-t border-gray-200 shadow-2xl"
+              >
               <div className="container mx-auto px-6 py-8">
                 <div className="grid grid-cols-3 gap-8">
                   {/* Sections */}
@@ -381,6 +382,7 @@ export default function NavbarNew() {
             </motion.div>
           )}
         </AnimatePresence>
+        </div>
       </motion.nav>
 
       {/* Mobile Menu */}
