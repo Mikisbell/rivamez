@@ -137,7 +137,7 @@ export default function Services() {
     <section 
       id="servicios"
       ref={sectionRef} 
-      className="py-20 px-4 bg-gradient-to-br from-rivamez-dark via-gray-900 to-rivamez-navy text-white relative overflow-hidden"
+      className="section-padding bg-gradient-to-br from-rivamez-dark via-gray-900 to-rivamez-navy text-white relative overflow-hidden"
     >
       {/* Circuit Pattern */}
       <div className="absolute inset-0 opacity-10">
@@ -157,26 +157,25 @@ export default function Services() {
       {/* Animated Blobs */}
       <div className="absolute top-20 right-20 w-96 h-96 bg-rivamez-cyan/10 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '7s' }} />
       <div className="absolute bottom-20 left-20 w-96 h-96 bg-rivamez-green/10 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '9s', animationDelay: '1s' }} />
-      <div className="container mx-auto max-w-6xl">
-        <div className="text-center mb-16">
-          <span className="inline-block px-4 py-2 bg-rivamez-cyan/20 text-rivamez-cyan text-sm font-semibold rounded-full mb-4">
+      <div className="container-responsive">
+        <div className="text-center mb-responsive">
+          <span className="inline-block px-4 py-2 bg-rivamez-cyan/20 text-rivamez-cyan text-small font-semibold rounded-full mb-4">
             SERVICIOS PROFESIONALES
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <h2 className="heading-xl mb-responsive">
             Soluciones Integrales de Construcción
           </h2>
-          <p className="text-gray-400 text-xl max-w-3xl mx-auto">
+          <p className="text-gray-400 text-body max-w-3xl mx-auto">
             Con más de 15 años de experiencia, ofrecemos servicios completos desde el diseño conceptual hasta la entrega final del proyecto.
           </p>
         </div>
 
         {/* Grid de Estadísticas/Contadores */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-4 lg:gap-6 xl:gap-8 mt-responsive">
           {stats.map((stat, index) => (
             <div 
               key={stat.id}
-              className="text-center p-6 bg-gray-800 rounded-lg"
-            >
+              className="text-center card-responsive bg-gray-800 rounded-lg">
               <div className="text-5xl font-bold mb-2">
                 <span 
                   ref={(el) => (counterRefs.current[index] = el)}
@@ -186,13 +185,13 @@ export default function Services() {
                 </span>
                 <span className="text-blue-400">{stat.suffix}</span>
               </div>
-              <p className="text-gray-300 text-lg">{stat.label}</p>
+              <p className="text-gray-300 text-body">{stat.label}</p>
             </div>
           ))}
         </div>
 
         {/* Lista de Servicios */}
-        <div className="mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="mt-responsive grid-3-cols">
           {services.map((service) => (
             <div 
               key={service.id} 
@@ -203,13 +202,13 @@ export default function Services() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={service.icon} />
                 </svg>
               </div>
-              <h3 className="text-2xl font-bold mb-3 text-white">{service.title}</h3>
-              <p className="text-gray-400 mb-6 leading-relaxed">
+              <h3 className="heading-md mb-3 text-white">{service.title}</h3>
+              <p className="text-gray-400 text-body mb-responsive leading-relaxed">
                 {service.description}
               </p>
               <ul className="space-y-2">
                 {service.features.map((feature, index) => (
-                  <li key={index} className="flex items-start gap-2 text-sm text-gray-300">
+                  <li key={index} className="flex items-start gap-2 text-small text-gray-300">
                     <svg className="w-5 h-5 text-rivamez-cyan flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
@@ -222,10 +221,10 @@ export default function Services() {
         </div>
 
         {/* CTA Button */}
-        <div className="mt-16 text-center">
+        <div className="mt-responsive text-center">
           <a
             href="#contacto"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-rivamez-cyan to-rivamez-navy text-white font-semibold rounded-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+            className="inline-flex items-center gap-2 btn-primary bg-gradient-to-r from-rivamez-cyan to-rivamez-navy text-white rounded-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
           >
             Solicita una Cotización Gratuita
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

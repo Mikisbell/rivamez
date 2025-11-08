@@ -56,7 +56,7 @@ const features = [
 
 export default function Features() {
   return (
-    <section className="py-20 px-4 bg-gradient-to-b from-white via-gray-50 to-white relative overflow-hidden">
+    <section className="section-padding bg-gradient-to-b from-white via-gray-50 to-white relative overflow-hidden">
       {/* Grid Pattern */}
       <div className="absolute inset-0" style={{
         backgroundImage: `
@@ -71,28 +71,28 @@ export default function Features() {
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-rivamez-navy/10 rounded-full blur-3xl" />
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-rivamez-green/8 rounded-full blur-3xl" />
 
-      <div className="container mx-auto max-w-7xl relative z-10">
+      <div className="container-responsive relative z-10">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center mb-responsive"
         >
-          <span className="inline-block px-4 py-2 bg-rivamez-navy/10 text-rivamez-navy text-sm font-semibold rounded-full mb-4">
+          <span className="inline-block px-4 py-2 bg-rivamez-navy/10 text-rivamez-navy text-small font-semibold rounded-full mb-4">
             ¿POR QUÉ ELEGIRNOS?
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="heading-xl text-gray-900 mb-responsive">
             Compromiso con la Excelencia
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-body text-gray-600 max-w-3xl mx-auto">
             Combinamos experiencia, tecnología y un equipo altamente calificado para entregar proyectos excepcionales.
           </p>
         </motion.div>
 
         {/* Features Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid-3-cols">
           {features.map((feature, index) => (
             <motion.div
               key={feature.id}
@@ -115,16 +115,16 @@ export default function Features() {
                 </div>
 
                 {/* Content */}
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-rivamez-navy transition-colors">
+                <h3 className="heading-md text-gray-900 mb-3 group-hover:text-rivamez-navy transition-colors">
                   {feature.title}
                 </h3>
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-body text-gray-600 leading-relaxed">
                   {feature.description}
                 </p>
 
                 {/* Hover indicator */}
                 <div className="mt-4 flex items-center gap-2 text-rivamez-cyan opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-0 group-hover:translate-x-2">
-                  <span className="text-sm font-semibold">Conoce más</span>
+                  <span className="text-small font-semibold">Conoce más</span>
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
@@ -140,12 +140,12 @@ export default function Features() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-center mt-16"
+          className="text-center mt-responsive"
         >
-          <p className="text-gray-600 mb-6">¿Listo para iniciar tu proyecto con nosotros?</p>
+          <p className="text-body text-gray-600 mb-responsive">¿Listo para iniciar tu proyecto con nosotros?</p>
           <a
             href="#contacto"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-rivamez-navy to-rivamez-cyan text-white font-semibold rounded-xl hover:shadow-2xl hover:shadow-rivamez-cyan/30 hover:scale-105 transition-all duration-300"
+            className="inline-flex items-center gap-2 btn-primary bg-gradient-to-r from-rivamez-navy to-rivamez-cyan text-white rounded-xl hover:shadow-2xl hover:shadow-rivamez-cyan/30 hover:scale-105 transition-all duration-300"
           >
             Solicita una Cotización Gratuita
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
