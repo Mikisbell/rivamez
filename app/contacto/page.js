@@ -3,9 +3,6 @@
 
 import { motion } from 'framer-motion';
 import { useState } from 'react';
-import Navbar from '@/components/NavbarNew';
-import Footer from '@/components/Footer';
-import WhatsAppButton from '@/components/WhatsAppButton';
 
 const contactInfo = [
   {
@@ -95,9 +92,7 @@ export default function ContactoPage() {
   };
 
   return (
-    <>
-      <Navbar />
-      <main className="pt-20">
+    <div className="pt-20">
         {/* Hero Section */}
         <section className="relative py-24 px-4 bg-gradient-to-br from-rivamez-navy via-gray-900 to-rivamez-dark text-white overflow-hidden">
           {/* Background Pattern */}
@@ -428,9 +423,6 @@ export default function ContactoPage() {
             title="Mapa de ubicación RIVAMEZ"
           />
         </section>
-      </main>
-      <Footer />
-      <WhatsAppButton />
-    </>
+    </div>
   );
 }

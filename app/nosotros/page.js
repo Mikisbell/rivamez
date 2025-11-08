@@ -3,9 +3,6 @@
 
 import { motion } from 'framer-motion';
 import { useState } from 'react';
-import Navbar from '@/components/NavbarNew';
-import Footer from '@/components/Footer';
-import WhatsAppButton from '@/components/WhatsAppButton';
 import Team from '@/components/Team';
 import Timeline from '@/components/Timeline';
 import Certifications from '@/components/Certifications';
@@ -91,9 +88,7 @@ export default function NosotrosPage() {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
 
   return (
-    <>
-      <Navbar />
-      <main className="pt-20">
+    <div className="pt-20">
         {/* Cinematic Hero */}
         <section className="relative h-[70vh] md:h-[80vh] flex items-center justify-center overflow-hidden">
           {/* Background Image with Overlay */}
@@ -656,9 +651,6 @@ export default function NosotrosPage() {
             </motion.div>
           </div>
         </section>
-      </main>
-      <Footer />
-      <WhatsAppButton />
       
       {/* Video Modal */}
       <VideoModal 
@@ -666,6 +658,6 @@ export default function NosotrosPage() {
         onClose={() => setIsVideoOpen(false)}
         videoUrl=""
       />
-    </>
+    </div>
   );
 }
