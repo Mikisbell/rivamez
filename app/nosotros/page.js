@@ -6,6 +6,7 @@ import { useState } from 'react';
 import Team from '@/components/Team';
 import Timeline from '@/components/Timeline';
 import Certifications from '@/components/Certifications';
+import Values from '@/components/Values';
 import VideoModal from '@/components/VideoModal';
 
 const leadership = [
@@ -614,10 +615,221 @@ export default function NosotrosPage() {
           </div>
         </section>
 
-        {/* Nuevos Componentes */}
-        <Team />
+        {/* Liderazgo Section */}
+        <section id="liderazgo" className="scroll-mt-20">
+          <Team />
+        </section>
+
+        {/* Historia/Timeline Section */}
         <Timeline />
-        <Certifications />
+
+        {/* Valores & Cultura Section */}
+        <section id="valores" className="scroll-mt-20">
+          <Values />
+        </section>
+
+        {/* Certificaciones Section */}
+        <section id="certificaciones" className="scroll-mt-20">
+          <Certifications />
+        </section>
+
+        {/* Premios y Logros Section */}
+        <section id="premios" className="py-20 px-4 bg-gray-50 scroll-mt-20">
+          <div className="container mx-auto max-w-6xl">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-4xl md:text-5xl font-bold text-rivamez-navy mb-4">
+                Premios y Reconocimientos
+              </h2>
+              <p className="text-xl text-gray-600">
+                Galardones que validan nuestro compromiso con la excelencia
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              {[
+                {
+                  year: '2024',
+                  title: 'Mejor Constructora Regional',
+                  org: 'Cámara de Comercio de Junín',
+                  icon: '🏆'
+                },
+                {
+                  year: '2023',
+                  title: 'Premio a la Innovación',
+                  org: 'Ministerio de Vivienda',
+                  icon: '💡'
+                },
+                {
+                  year: '2023',
+                  title: 'Certificación ISO 9001',
+                  org: 'Bureau Veritas',
+                  icon: '✓'
+                },
+                {
+                  year: '2022',
+                  title: 'Obra del Año',
+                  org: 'Asociación de Constructores',
+                  icon: '🏗️'
+                },
+                {
+                  year: '2021',
+                  title: 'Empresa Socialmente Responsable',
+                  org: 'Perú 2021',
+                  icon: '🌱'
+                },
+                {
+                  year: '2020',
+                  title: 'Excelencia en Gestión',
+                  org: 'CAPECO',
+                  icon: '⭐'
+                }
+              ].map((award, idx) => (
+                <motion.div
+                  key={idx}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: idx * 0.1 }}
+                  className="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all hover:-translate-y-2"
+                >
+                  <div className="text-5xl mb-4">{award.icon}</div>
+                  <div className="text-rivamez-cyan font-bold text-xl mb-2">{award.year}</div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">{award.title}</h3>
+                  <p className="text-gray-600">{award.org}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Logros Destacados Section */}
+        <section id="logros" className="py-20 px-4 scroll-mt-20">
+          <div className="container mx-auto max-w-6xl">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-4xl md:text-5xl font-bold text-rivamez-navy mb-4">
+                Logros Destacados
+              </h2>
+              <p className="text-xl text-gray-600">
+                Hitos que marcan nuestra trayectoria
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 gap-8">
+              {[
+                {
+                  number: '285+',
+                  label: 'Proyectos Completados',
+                  desc: 'En Huancayo y Junín'
+                },
+                {
+                  number: '95%',
+                  label: 'Clientes Satisfechos',
+                  desc: 'Recomendarían nuestros servicios'
+                },
+                {
+                  number: '15+',
+                  label: 'Años de Experiencia',
+                  desc: 'Construyendo confianza'
+                },
+                {
+                  number: '50+',
+                  label: 'Colaboradores',
+                  desc: 'Equipo multidisciplinario'
+                }
+              ].map((stat, idx) => (
+                <motion.div
+                  key={idx}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: idx * 0.1 }}
+                  className="bg-gradient-to-br from-rivamez-navy to-rivamez-cyan p-8 rounded-2xl text-white text-center shadow-2xl"
+                >
+                  <div className="text-5xl md:text-6xl font-bold mb-2">{stat.number}</div>
+                  <h3 className="text-2xl font-bold mb-2">{stat.label}</h3>
+                  <p className="text-gray-200">{stat.desc}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Responsabilidad Social Section */}
+        <section id="rse" className="py-20 px-4 bg-gray-50 scroll-mt-20">
+          <div className="container mx-auto max-w-6xl">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-4xl md:text-5xl font-bold text-rivamez-navy mb-4">
+                Responsabilidad Social
+              </h2>
+              <p className="text-xl text-gray-600">
+                Comprometidos con el desarrollo de nuestra comunidad
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              {[
+                {
+                  icon: '🌱',
+                  title: 'Medio Ambiente',
+                  desc: 'Construcción sostenible y uso de materiales eco-amigables'
+                },
+                {
+                  icon: '👷',
+                  title: 'Desarrollo Local',
+                  desc: 'Capacitación y empleo para la comunidad local'
+                },
+                {
+                  icon: '🏘️',
+                  title: 'Impacto Social',
+                  desc: 'Programas de vivienda accesible y espacios públicos'
+                },
+                {
+                  icon: '📚',
+                  title: 'Educación',
+                  desc: 'Becas y talleres técnicos para jóvenes'
+                },
+                {
+                  icon: '🤝',
+                  title: 'Colaboración',
+                  desc: 'Alianzas con ONGs y gobierno local'
+                },
+                {
+                  icon: '♻️',
+                  title: 'Reciclaje',
+                  desc: 'Gestión responsable de residuos de construcción'
+                }
+              ].map((item, idx) => (
+                <motion.div
+                  key={idx}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: idx * 0.1 }}
+                  className="bg-white p-6 rounded-xl shadow-lg text-center hover:shadow-2xl transition-all"
+                >
+                  <div className="text-5xl mb-4">{item.icon}</div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">{item.title}</h3>
+                  <p className="text-gray-600">{item.desc}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
 
         {/* CTA Section */}
         <section className="py-20 px-4 bg-gradient-to-r from-rivamez-navy to-rivamez-cyan text-white">

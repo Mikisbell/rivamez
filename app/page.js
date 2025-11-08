@@ -1,13 +1,7 @@
 import Hero from "@/components/Hero";
 import Features from "@/components/Features";
 import InteractiveTabs from "@/components/InteractiveTabs";
-import Values from "@/components/Values";
 import ImpactMetrics from "@/components/ImpactMetrics";
-import Certifications from "@/components/Certifications";
-import Team from "@/components/Team";
-import Timeline from "@/components/Timeline";
-import NewsBlog from "@/components/NewsBlog";
-import CoverageMap from "@/components/CoverageMap";
 import About from "@/components/About";
 import Services from "@/components/Services";
 import Projects from "@/components/Projects";
@@ -26,10 +20,6 @@ export default function Home() {
       
       <ScrollReveal animation="scale" delay={0.1}>
         <InteractiveTabs />
-      </ScrollReveal>
-      
-      <ScrollReveal animation="fadeLeft">
-        <Values />
       </ScrollReveal>
       
       <ScrollReveal animation="fadeRight" delay={0.1}>
