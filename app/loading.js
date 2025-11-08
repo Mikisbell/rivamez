@@ -1,4 +1,6 @@
 // app/loading.js - Loading global
+'use client';
+
 export default function RootLoading() {
   return (
     <div className="min-h-screen bg-white pt-20">
