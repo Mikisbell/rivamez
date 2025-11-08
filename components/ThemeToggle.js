@@ -2,9 +2,19 @@
 
 import { useTheme } from './ThemeProvider';
 import { motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
 
 export default function ThemeToggle() {
+  const [mounted, setMounted] = useState(false);
   const { theme, toggleTheme } = useTheme();
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return null;
+  }
 
   return (
     <motion.button
