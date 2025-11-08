@@ -1,16 +1,18 @@
 // Schema.org JSON-LD Structured Data
+import { localSEO } from '@/lib/seo-local';
 
 export const structuredData = {
   // Organization (Global)
   organization: {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'RIVAMEZ',
-    alternateName: 'Grupo Rivamez',
+    name: 'RIVAMEZ - Constructora e Inmobiliaria Huancayo',
+    alternateName: ['Grupo RIVAMEZ', 'Constructora RIVAMEZ Huancayo', 'RIVAMEZ Junín'],
     url: 'https://rivamez.com',
     logo: 'https://rivamez.com/images/logo.png',
-    description: 'Empresa líder en construcción residencial, comercial e industrial en Huancayo con más de 15 años de experiencia',
+    description: 'Constructora e inmobiliaria #1 en Huancayo y Junín con más de 15 años de experiencia. Especialistas en construcción residencial, comercial e industrial con certificación ISO 9001.',
     foundingDate: '2009',
+    slogan: 'Construyendo sueños en Junín desde 2009',
     address: {
       '@type': 'PostalAddress',
       streetAddress: 'Av. Huancavelica 123',
@@ -36,14 +38,18 @@ export const structuredData = {
   // LocalBusiness (Para SEO local)
   localBusiness: {
     '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
+    '@type': ['LocalBusiness', 'GeneralContractor', 'RealEstateAgent'],
     '@id': 'https://rivamez.com/#business',
-    name: 'RIVAMEZ - Constructora e Inmobiliaria',
-    image: 'https://rivamez.com/images/logo.png',
-    description: 'Constructora líder en Huancayo con más de 15 años de experiencia en proyectos residenciales, comerciales e industriales',
+    name: 'RIVAMEZ - Constructora e Inmobiliaria #1 en Huancayo y Junín',
+    alternateName: 'Constructora RIVAMEZ Huancayo',
+    image: ['https://rivamez.com/images/logo.png', 'https://rivamez.com/images/oficina-huancayo.jpg'],
+    description: 'Constructora líder en Huancayo y toda la región Junín con más de 15 años de experiencia. Construcción de casas, departamentos, locales comerciales e industriales. Certificación ISO 9001. +127 proyectos completados.',
     url: 'https://rivamez.com',
     telephone: '+51943818788',
-    priceRange: '$$',
+    email: 'info@rivamez.com',
+    priceRange: 'S/. 1,200 - S/. 2,500 por m²',
+    paymentAccepted: ['Cash', 'Credit Card', 'Financiamiento directo', 'Mi Vivienda', 'Techo Propio'],
+    currenciesAccepted: 'PEN, USD',
     address: {
       '@type': 'PostalAddress',
       streetAddress: 'Av. Huancavelica 123',

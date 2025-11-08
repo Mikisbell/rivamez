@@ -5,6 +5,80 @@
 html, body, #__next { height: 100%; }
 body { margin: 0; }
 
+/* ===================================
+   RESPONSIVE DESIGN - MOBILE FIRST
+   =================================== */
+
+/* Base font size para mobile */
+html {
+  font-size: 14px; /* Mobile base */
+}
+
+/* Tablets */
+@media (min-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+/* Large Desktop */
+@media (min-width: 1440px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+/* Utility classes para responsive spacing */
+@layer utilities {
+  /* Responsive padding */
+  .section-padding {
+    @apply py-12 px-4 sm:py-16 sm:px-6 lg:py-20 lg:px-8;
+  }
+  
+  /* Responsive container */
+  .container-responsive {
+    @apply w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  /* Responsive text sizes */
+  .heading-hero {
+    @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl;
+  }
+  
+  .heading-xl {
+    @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl;
+  }
+  
+  .heading-lg {
+    @apply text-xl sm:text-2xl md:text-3xl lg:text-4xl;
+  }
+  
+  .heading-md {
+    @apply text-lg sm:text-xl md:text-2xl lg:text-3xl;
+  }
+  
+  .text-body {
+    @apply text-sm sm:text-base md:text-lg;
+  }
+  
+  /* Touch-friendly buttons */
+  .btn-touch {
+    @apply min-h-[44px] min-w-[44px] text-sm sm:text-base;
+  }
+  
+  /* Responsive grid */
+  .grid-responsive {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6;
+  }
+}
+
 /* Complex Robot Animation - Multiple movements every 5 seconds */
 @keyframes robotDance {
   0% {
