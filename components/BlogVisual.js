@@ -186,22 +186,23 @@ export default function BlogVisual({ initialPosts = [], initialFeaturedPost = nu
       />
       
       {/* Top Bar - Categorías con gradiente */}
-      <div className="relative border-b-2 border-rivamez-cyan/20 bg-white/95 backdrop-blur-md sticky top-20 z-30 shadow-lg mt-6">
+      <div className="relative border-b-2 border-rivamez-cyan/20 bg-white/95 backdrop-blur-md sticky top-16 md:top-20 z-30 shadow-lg mt-3 md:mt-6">
         <div className="absolute inset-0 bg-gradient-to-r from-rivamez-navy/5 via-rivamez-cyan/5 to-rivamez-navy/5" />
-        <div className="relative max-w-[1400px] mx-auto px-6">
-          <div className="flex items-center gap-3 overflow-x-auto py-5 scrollbar-hide">
+        <div className="relative max-w-[1400px] mx-auto px-3 sm:px-6">
+          <div className="flex items-center gap-2 sm:gap-3 overflow-x-auto py-3 sm:py-4 md:py-5 scrollbar-hide no-scrollbar">
             <motion.button
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => setActiveCategory('all')}
-              className={`px-6 py-3 text-base font-bold whitespace-nowrap transition-all rounded-xl shadow-lg ${
+              className={`px-3 sm:px-4 md:px-6 py-2 sm:py-2.5 md:py-3 text-xs sm:text-sm md:text-base font-bold whitespace-nowrap transition-all rounded-lg md:rounded-xl shadow-md md:shadow-lg ${
                 activeCategory === 'all'
-                  ? 'bg-gradient-to-r from-rivamez-navy to-rivamez-cyan text-white shadow-xl shadow-rivamez-cyan/40'
-                  : 'bg-white text-gray-700 hover:bg-gradient-to-r hover:from-gray-50 hover:to-gray-100 border-2 border-gray-200 hover:shadow-xl'
+                  ? 'bg-gradient-to-r from-rivamez-navy to-rivamez-cyan text-white shadow-lg md:shadow-xl shadow-rivamez-cyan/40'
+                  : 'bg-white text-gray-700 hover:bg-gradient-to-r hover:from-gray-50 hover:to-gray-100 border-2 border-gray-200 hover:shadow-lg md:hover:shadow-xl'
               }`}
             >
-              <span className="text-xl mr-2">📰</span>
-              Todas las noticias
+              <span className="text-base sm:text-lg md:text-xl mr-1 sm:mr-2">📰</span>
+              <span className="hidden sm:inline">Todas las noticias</span>
+              <span className="sm:hidden">Todas</span>
             </motion.button>
             {categories.map((cat) => (
               <motion.button
@@ -209,21 +210,21 @@ export default function BlogVisual({ initialPosts = [], initialFeaturedPost = nu
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => setActiveCategory(cat.slug.current)}
-                className={`px-6 py-3 text-base font-bold whitespace-nowrap transition-all rounded-xl flex items-center gap-2 shadow-lg ${
+                className={`px-3 sm:px-4 md:px-6 py-2 sm:py-2.5 md:py-3 text-xs sm:text-sm md:text-base font-bold whitespace-nowrap transition-all rounded-lg md:rounded-xl flex items-center gap-1 sm:gap-2 shadow-md md:shadow-lg ${
                   activeCategory === cat.slug.current
-                    ? `bg-gradient-to-r ${getCategoryGradient(cat.color)} text-white shadow-xl`
-                    : 'bg-white text-gray-700 hover:bg-gradient-to-r hover:from-gray-50 hover:to-gray-100 border-2 border-gray-200 hover:shadow-xl'
+                    ? `bg-gradient-to-r ${getCategoryGradient(cat.color)} text-white shadow-lg md:shadow-xl`
+                    : 'bg-white text-gray-700 hover:bg-gradient-to-r hover:from-gray-50 hover:to-gray-100 border-2 border-gray-200 hover:shadow-lg md:hover:shadow-xl'
                 }`}
               >
-                <span className="text-xl">{cat.icon}</span>
-                {cat.title}
+                <span className="text-base sm:text-lg md:text-xl">{cat.icon}</span>
+                <span className="hidden sm:inline">{cat.title}</span>
               </motion.button>
             ))}
           </div>
         </div>
       </div>
 
-      <div className="relative max-w-[1400px] mx-auto px-6 py-8">
+      <div className="relative max-w-[1400px] mx-auto px-3 sm:px-6 py-4 sm:py-6 md:py-8">
         {/* Featured Post - Hero grande */}
         {featuredPost && activeCategory === 'all' && (
           <motion.article
@@ -232,26 +233,27 @@ export default function BlogVisual({ initialPosts = [], initialFeaturedPost = nu
             className="mb-12 pb-12 border-b border-gray-200"
           >
             <Link href={`/blog/${featuredPost.slug.current}`}>
-              <div className="grid lg:grid-cols-2 gap-8 group">
+              <div className="grid lg:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
                 {/* Imagen */}
-                <div className="relative h-[400px] lg:h-[500px] overflow-hidden rounded">
+                <motion.div 
+                  whileHover={{ scale: 1.02 }}
+                  className="relative h-[250px] sm:h-[350px] md:h-[450px] lg:h-[550px] overflow-hidden rounded-xl sm:rounded-2xl shadow-lg sm:shadow-2xl">
                   {featuredPost.mainImage ? (
                     <Image
                       src={urlFor(featuredPost.mainImage).width(1000).height(700).url()}
                       alt={featuredPost.title}
                       fill
-                      priority
-                      className="object-cover group-hover:scale-105 transition-transform duration-700"
+                      className="object-cover"
                     />
                   ) : (
                     <div className="w-full h-full bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
                       <span className="text-9xl">🏗️</span>
                     </div>
                   )}
-                </div>
+                </motion.div>
 
                 {/* Contenido */}
-                <div className="flex flex-col justify-center">
+                <div className="flex flex-col justify-center space-y-3 sm:space-y-4 md:space-y-6">
                   {featuredPost.categories?.[0] && (
                     <div className="mb-3">
                       <span className={`inline-block px-3 py-1 text-xs font-bold text-white uppercase tracking-wider rounded ${getCategoryColor(featuredPost.categories[0].color)}`}>
@@ -260,13 +262,23 @@ export default function BlogVisual({ initialPosts = [], initialFeaturedPost = nu
                     </div>
                   )}
                   
-                  <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4 leading-tight group-hover:text-rivamez-cyan transition-colors">
+                  <motion.h1 
+                    initial={{ x: 100, opacity: 0 }}
+                    animate={{ x: 0, opacity: 1 }}
+                    transition={{ delay: 0.3 }}
+                    className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-black text-rivamez-navy mb-2 sm:mb-3 md:mb-4 leading-tight group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-rivamez-navy group-hover:to-rivamez-cyan transition-all duration-500"
+                  > 
                     {featuredPost.title}
-                  </h1>
+                  </motion.h1>
                   
-                  <p className="text-xl text-gray-600 mb-6 leading-relaxed">
+                  <motion.p 
+                    initial={{ x: 100, opacity: 0 }}
+                    animate={{ x: 0, opacity: 1 }}
+                    transition={{ delay: 0.4 }}
+                    className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-700 leading-relaxed font-medium line-clamp-3 sm:line-clamp-none"
+                  >
                     {featuredPost.excerpt}
-                  </p>
+                  </motion.p>
                   
                   <div className="flex items-center gap-4 text-sm text-gray-500">
                     {featuredPost.author && (
@@ -295,7 +307,7 @@ export default function BlogVisual({ initialPosts = [], initialFeaturedPost = nu
         )}
 
         {/* Layout Principal */}
-        <div className="grid lg:grid-cols-12 gap-8">
+        <div className="grid lg:grid-cols-12 gap-6 md:gap-8 lg:gap-10">
           {/* Columna Principal */}
           <div className="lg:col-span-8">
             {/* Top Stories */}
@@ -306,7 +318,7 @@ export default function BlogVisual({ initialPosts = [], initialFeaturedPost = nu
                   Noticias Destacadas
                 </h2>
                 
-                <div className="grid md:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
                   {topPosts.map((post, index) => (
                     <motion.article
                       key={post._id}
@@ -441,7 +453,7 @@ export default function BlogVisual({ initialPosts = [], initialFeaturedPost = nu
 
           {/* Sidebar */}
           <aside className="lg:col-span-4">
-            <div className="sticky top-40 space-y-8">
+            <div className="lg:sticky lg:top-40 space-y-6 md:space-y-8">
               {/* Trending Now */}
               <div className="bg-gray-50 rounded-lg p-6">
                 <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
