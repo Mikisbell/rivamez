@@ -6,8 +6,9 @@ import WhatsAppButton from '@/components/WhatsAppButton';
 import PageTransition from '@/components/PageTransition';
 import ServiceWorkerRegister from '@/components/ServiceWorkerRegister';
 import GlobalSearch from '@/components/GlobalSearch';
-// import { ThemeProvider } from '@/components/ThemeProvider';
-// import ThemeToggle from '@/components/ThemeToggle';
+import ClientOnly from '@/components/ClientOnly';
+import { ThemeProvider } from '@/components/ThemeProvider';
+import ThemeToggle from '@/components/ThemeToggle';
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -48,14 +49,18 @@ export default function RootLayout({ children }) {
       </head>
       <body className={inter.className}>
         <ServiceWorkerRegister />
-        <Navbar />
-        <GlobalSearch />
-        {/* <ThemeToggle /> */}
-        <PageTransition>
-          <main>{children}</main>
-        </PageTransition>
-        <Footer />
-        <WhatsAppButton />
+        <ClientOnly>
+          <ThemeProvider>
+            <Navbar />
+            <GlobalSearch />
+            <ThemeToggle />
+            <PageTransition>
+              <main>{children}</main>
+            </PageTransition>
+            <Footer />
+            <WhatsAppButton />
+          </ThemeProvider>
+        </ClientOnly>
       </body>
     </html>
   );

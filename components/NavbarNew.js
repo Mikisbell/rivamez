@@ -55,7 +55,7 @@ const megaMenuData = {
       }
     ],
     featured: {
-      title: 'Expertise Integral',
+      title: 'Capacidades Integrales',
       image: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=300&q=80',
       desc: 'Soluciones 360° desde el concepto hasta la entrega final',
       cta: 'Ver capacidades',
@@ -224,13 +224,13 @@ export default function NavbarNew() {
                 </button>
               </div>
 
-              {/* Expertise - Mega Menu */}
+              {/* Capacidades - Mega Menu */}
               <div 
                 className="relative"
                 onMouseEnter={() => setActiveMenu('expertise')}
               >
                 <button className="px-4 py-2 text-sm font-semibold text-gray-700 hover:text-rivamez-navy transition-colors flex items-center gap-1">
-                  Expertise
+                  Capacidades
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>

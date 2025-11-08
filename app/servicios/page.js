@@ -122,11 +122,11 @@ export default function ServiciosPage() {
           </div>
         </section>
 
-        {/* EXPERTISE SECTION */}
+        {/* CAPACIDADES SECTION */}
         <section className="py-20 px-4 bg-white">
           <div className="container mx-auto max-w-6xl text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-rivamez-navy mb-4">
-              Nuestro Expertise
+              Nuestras Capacidades
             </h2>
             <p className="text-xl text-gray-600">
               Capacidades multidisciplinarias para soluciones integrales
