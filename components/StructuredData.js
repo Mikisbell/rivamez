@@ -7,8 +7,8 @@ export const structuredData = {
     '@type': 'Organization',
     name: 'RIVAMEZ',
     alternateName: 'Grupo Rivamez',
-    url: 'https://rivamez.vercel.app',
-    logo: 'https://rivamez.vercel.app/images/logo.png',
+    url: 'https://rivamez.com',
+    logo: 'https://rivamez.com/images/logo.png',
     description: 'Empresa líder en construcción residencial, comercial e industrial en Huancayo con más de 15 años de experiencia',
     foundingDate: '2009',
     address: {
@@ -37,11 +37,11 @@ export const structuredData = {
   localBusiness: {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
-    '@id': 'https://rivamez.vercel.app/#business',
+    '@id': 'https://rivamez.com/#business',
     name: 'RIVAMEZ - Constructora e Inmobiliaria',
-    image: 'https://rivamez.vercel.app/images/logo.png',
+    image: 'https://rivamez.com/images/logo.png',
     description: 'Constructora líder en Huancayo con más de 15 años de experiencia en proyectos residenciales, comerciales e industriales',
-    url: 'https://rivamez.vercel.app',
+    url: 'https://rivamez.com',
     telephone: '+51943818788',
     priceRange: '$$',
     address: {
@@ -83,12 +83,12 @@ export const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
     name: 'RIVAMEZ',
-    url: 'https://rivamez.vercel.app',
+    url: 'https://rivamez.com',
     potentialAction: {
       '@type': 'SearchAction',
       target: {
         '@type': 'EntryPoint',
-        urlTemplate: 'https://rivamez.vercel.app/buscar?q={search_term_string}',
+        urlTemplate: 'https://rivamez.com/buscar?q={search_term_string}',
       },
       'query-input': 'required name=search_term_string',
     },
@@ -127,7 +127,7 @@ export const structuredData = {
       '@type': 'ListItem',
       position: index + 1,
       item: {
-        '@id': `https://rivamez.vercel.app${item.url}`,
+        '@id': `https://rivamez.com${item.url}`,
         name: item.name,
       },
     })),
@@ -139,7 +139,7 @@ export const structuredData = {
     '@type': 'Article',
     headline: post.title,
     description: post.excerpt || post.description,
-    image: post.coverImage || 'https://rivamez.vercel.app/images/og-default.jpg',
+    image: post.coverImage || 'https://rivamez.com/images/og-default.jpg',
     datePublished: post.publishedAt,
     dateModified: post.updatedAt || post.publishedAt,
     author: {
@@ -151,7 +151,7 @@ export const structuredData = {
       name: 'RIVAMEZ',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://rivamez.vercel.app/images/logo.png',
+        url: 'https://rivamez.com/images/logo.png',
       },
     },
   }),

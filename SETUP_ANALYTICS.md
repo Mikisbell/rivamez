@@ -68,7 +68,7 @@ NEXT_PUBLIC_GTM_ID=GTM-XXXXXXX  # Pegar tu ID aquí
 ### 3.1 Verificar Propiedad
 
 1. Ve a [Google Search Console](https://search.google.com/search-console)
-2. Agregar propiedad: `https://rivamez.vercel.app`
+2. Agregar propiedad: `https://rivamez.com`
 3. Método de verificación: **Etiqueta HTML**
 4. **Copiar el código de verificación**
 
@@ -83,44 +83,44 @@ verification: {
 
 ### 3.3 Enviar Sitemap
 
-1. URL del sitemap: `https://rivamez.vercel.app/sitemap.xml`
+1. URL del sitemap: `https://rivamez.com/sitemap.xml`
 2. Crear archivo `app/sitemap.js`:
 
 ```javascript
 export default function sitemap() {
   return [
     {
-      url: 'https://rivamez.vercel.app',
+      url: 'https://rivamez.com',
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 1,
     },
     {
-      url: 'https://rivamez.vercel.app/nosotros',
+      url: 'https://rivamez.com/nosotros',
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
-      url: 'https://rivamez.vercel.app/servicios',
+      url: 'https://rivamez.com/servicios',
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.9,
     },
     {
-      url: 'https://rivamez.vercel.app/proyectos',
+      url: 'https://rivamez.com/proyectos',
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.9,
     },
     {
-      url: 'https://rivamez.vercel.app/blog',
+      url: 'https://rivamez.com/blog',
       lastModified: new Date(),
       changeFrequency: 'daily',
       priority: 0.7,
     },
     {
-      url: 'https://rivamez.vercel.app/contacto',
+      url: 'https://rivamez.com/contacto',
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,
@@ -137,7 +137,7 @@ export default function sitemap() {
 
 1. Ve a [Microsoft Clarity](https://clarity.microsoft.com/)
 2. Agregar nuevo proyecto: **RIVAMEZ**
-3. URL: `https://rivamez.vercel.app`
+3. URL: `https://rivamez.com`
 4. **Copiar el código de instalación**
 
 ### 4.2 Agregar a GTM

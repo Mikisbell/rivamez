@@ -27,7 +27,7 @@ const inter = Inter({
 import { generateSEO, robots as seoRobots, viewport as seoViewport } from '@/lib/seo';
 
 export const metadata = {
-  metadataBase: new URL('https://rivamez.vercel.app'),
+  metadataBase: new URL('https://rivamez.com'),
   ...generateSEO.home(),
   icons: {
     icon: '/favicon.ico',
