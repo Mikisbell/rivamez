@@ -6,12 +6,114 @@ import { urlFor } from '@/lib/sanity';
 import Image from 'next/image';
 import Link from 'next/link';
 
+// Datos simulados para demostración
+const MOCK_DATA = {
+  categories: [
+    { _id: 'cat1', title: 'Proyectos', slug: { current: 'proyectos' }, icon: '🏗️', color: 'cyan' },
+    { _id: 'cat2', title: 'Innovación', slug: { current: 'innovacion' }, icon: '💡', color: 'purple' },
+    { _id: 'cat3', title: 'Sostenibilidad', slug: { current: 'sostenibilidad' }, icon: '🌱', color: 'green' },
+    { _id: 'cat4', title: 'Empresa', slug: { current: 'empresa' }, icon: '🏢', color: 'navy' },
+    { _id: 'cat5', title: 'Mercado', slug: { current: 'mercado' }, icon: '📈', color: 'orange' },
+  ],
+  posts: [
+    {
+      _id: '1',
+      title: 'RIVAMEZ inaugura complejo residencial de 150 departamentos con tecnología smart home',
+      excerpt: 'El nuevo proyecto marca un hito en la construcción sostenible en Huancayo con certificación LEED y sistemas de eficiencia energética de última generación.',
+      slug: { current: 'inauguracion-complejo-residencial-smart' },
+      publishedAt: new Date(Date.now() - 2 * 60 * 60 * 1000).toISOString(),
+      readTime: 5,
+      mainImage: null,
+      categories: [{ _id: 'cat1', title: 'Proyectos', slug: { current: 'proyectos' }, color: 'cyan', icon: '🏗️' }],
+      author: { name: 'María González', role: 'Directora de Proyectos', image: null }
+    },
+    {
+      _id: '2',
+      title: 'Nueva tecnología BIM reduce tiempos de construcción en 30%',
+      excerpt: 'Implementación de Building Information Modeling revoluciona la planificación y ejecución de proyectos inmobiliarios.',
+      slug: { current: 'tecnologia-bim-construccion' },
+      publishedAt: new Date(Date.now() - 5 * 60 * 60 * 1000).toISOString(),
+      readTime: 4,
+      mainImage: null,
+      categories: [{ _id: 'cat2', title: 'Innovación', slug: { current: 'innovacion' }, color: 'purple', icon: '💡' }],
+      author: { name: 'Carlos Ramírez', role: 'Jefe de Innovación', image: null }
+    },
+    {
+      _id: '3',
+      title: 'Certificación ISO 14001 refuerza compromiso ambiental de RIVAMEZ',
+      excerpt: 'Nueva certificación internacional posiciona a la empresa como líder en construcción sostenible en el sector.',
+      slug: { current: 'certificacion-iso-14001-ambiental' },
+      publishedAt: new Date(Date.now() - 1 * 24 * 60 * 60 * 1000).toISOString(),
+      readTime: 3,
+      mainImage: null,
+      categories: [{ _id: 'cat3', title: 'Sostenibilidad', slug: { current: 'sostenibilidad' }, color: 'green', icon: '🌱' }],
+      author: { name: 'Ana Torres', role: 'Gerente de Calidad', image: null }
+    },
+    {
+      _id: '4',
+      title: 'Mercado inmobiliario en Huancayo crece 15% en el último trimestre',
+      excerpt: 'Análisis del sector muestra tendencias positivas impulsadas por proyectos de vivienda accesible y mejoras en infraestructura.',
+      slug: { current: 'mercado-inmobiliario-huancayo-crece' },
+      publishedAt: new Date(Date.now() - 2 * 24 * 60 * 60 * 1000).toISOString(),
+      readTime: 6,
+      mainImage: null,
+      categories: [{ _id: 'cat5', title: 'Mercado', slug: { current: 'mercado' }, color: 'orange', icon: '📈' }],
+      author: { name: 'Roberto Silva', role: 'Analista de Mercado', image: null }
+    },
+    {
+      _id: '5',
+      title: 'RIVAMEZ amplía equipo con 50 nuevos profesionales especializados',
+      excerpt: 'Expansión fortalece capacidades en ingeniería civil, arquitectura y gestión de proyectos para afrontar creciente demanda.',
+      slug: { current: 'ampliacion-equipo-profesionales' },
+      publishedAt: new Date(Date.now() - 3 * 24 * 60 * 60 * 1000).toISOString(),
+      readTime: 4,
+      mainImage: null,
+      categories: [{ _id: 'cat4', title: 'Empresa', slug: { current: 'empresa' }, color: 'navy', icon: '🏢' }],
+      author: { name: 'Patricia Mendoza', role: 'Directora de RRHH', image: null }
+    },
+    {
+      _id: '6',
+      title: 'Paneles solares en edificios reducen costos energéticos hasta 40%',
+      excerpt: 'Instalación de sistemas fotovoltaicos en proyectos residenciales genera ahorros significativos para propietarios.',
+      slug: { current: 'paneles-solares-ahorro-energetico' },
+      publishedAt: new Date(Date.now() - 4 * 24 * 60 * 60 * 1000).toISOString(),
+      readTime: 5,
+      mainImage: null,
+      categories: [{ _id: 'cat3', title: 'Sostenibilidad', slug: { current: 'sostenibilidad' }, color: 'green', icon: '🌱' }],
+      author: { name: 'Diego Paredes', role: 'Ingeniero Ambiental', image: null }
+    },
+    {
+      _id: '7',
+      title: 'Alianza estratégica con proveedores internacionales mejora calidad',
+      excerpt: 'Acuerdos con empresas líderes en materiales de construcción garantizan estándares de clase mundial.',
+      slug: { current: 'alianza-proveedores-internacionales' },
+      publishedAt: new Date(Date.now() - 5 * 24 * 60 * 60 * 1000).toISOString(),
+      readTime: 4,
+      mainImage: null,
+      categories: [{ _id: 'cat4', title: 'Empresa', slug: { current: 'empresa' }, color: 'navy', icon: '🏢' }],
+      author: { name: 'Luis Vega', role: 'Director de Compras', image: null }
+    },
+    {
+      _id: '8',
+      title: 'Realidad virtual transforma experiencia de preventa inmobiliaria',
+      excerpt: 'Clientes pueden recorrer virtualmente departamentos antes de la construcción con tecnología VR inmersiva.',
+      slug: { current: 'realidad-virtual-preventa' },
+      publishedAt: new Date(Date.now() - 6 * 24 * 60 * 60 * 1000).toISOString(),
+      readTime: 3,
+      mainImage: null,
+      categories: [{ _id: 'cat2', title: 'Innovación', slug: { current: 'innovacion' }, color: 'purple', icon: '💡' }],
+      author: { name: 'Sandra Flores', role: 'Gerente de Ventas', image: null }
+    },
+  ],
+};
+
 export default function BlogListPro({ initialPosts = [], initialFeaturedPost = null, initialCategories = [] }) {
   const [activeCategory, setActiveCategory] = useState('all');
 
-  const posts = initialPosts.length > 0 ? initialPosts : [];
+  // Usar datos reales o simulados
+  const posts = initialPosts.length > 0 ? initialPosts : MOCK_DATA.posts;
   const featuredPost = initialFeaturedPost || posts[0];
-  const categories = initialCategories.length > 0 ? initialCategories : [];
+  const categories = initialCategories.length > 0 ? initialCategories : MOCK_DATA.categories;
   
   // Top 3 posts para "Top Stories"
   const topPosts = posts.slice(0, 3);
