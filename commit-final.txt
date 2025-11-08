@@ -1,0 +1,46 @@
+fix: ULTRA reduccion minima para tablets - Todo al minimo absoluto
+
+CAMBIOS EXTREMOS TABLETS (768px-1023px):
+
+LOGO:
+- Tablet: h-8 (32px) - MUY PEQUENO
+- Desktop: h-11 (44px)
+- XL: h-14 (56px)
+
+TEXTO GRUPO RIVAMEZ:
+- Tablet: 10px - MINIMO
+- Desktop: 16px (text-base)
+- XL: 20px (text-xl)
+
+TEXTO CONSTRUCTORA:
+- Tablet: 8px - MINUSCULO
+- Desktop: 9px
+- XL: 12px
+
+MENU ITEMS:
+- Tablet: 10px (text-[10px]) - MINIMO
+- Padding: 1.5px (px-1.5) - MINIMO ABSOLUTO
+- Sin espaciado entre items (space-x-0)
+
+TELEFONO:
+- Tablet: OCULTO (hidden lg:flex)
+- Solo visible en desktop y superiores
+- Desktop: 943 818 788
+- XL: +51 943 818 788
+
+BOTON COTIZAR:
+- Tablet: 10px text, 1.5px padding - MINIMO
+- Texto: Cotizar (corto)
+- Desktop: Cotizacion
+- XL: Solicitar Cotizacion
+
+NAVBAR:
+- Tablet: h-14 (56px) - MUY BAJO
+- Desktop: h-16 (64px)
+- XL: h-20 (80px)
+
+PADDING CONTAINER:
+- Tablet: px-4 (16px) - MINIMO
+- Desktop: px-6
+
+TODO reducido al MINIMO ABSOLUTO posible para tablets
