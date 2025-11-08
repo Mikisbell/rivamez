@@ -122,8 +122,265 @@ export default function ServiciosPage() {
           </div>
         </section>
 
-        {/* Services Grid */}
-        <section className="py-20 px-4 bg-gradient-to-b from-gray-50 to-white">
+        {/* EXPERTISE SECTION */}
+        <section className="py-20 px-4 bg-white">
+          <div className="container mx-auto max-w-6xl text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-rivamez-navy mb-4">
+              Nuestro Expertise
+            </h2>
+            <p className="text-xl text-gray-600">
+              Capacidades multidisciplinarias para soluciones integrales
+            </p>
+          </div>
+
+          {/* Arquitectura */}
+          <div id="arquitectura" className="container mx-auto max-w-6xl mb-20 scroll-mt-20">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+              >
+                <div className="text-6xl mb-4">🏛️</div>
+                <h3 className="text-3xl font-bold text-rivamez-navy mb-4">Arquitectura</h3>
+                <p className="text-gray-600 text-lg mb-6">
+                  Diseño arquitectónico innovador que combina funcionalidad, estética y sostenibilidad. Creamos espacios que inspiran y transforman.
+                </p>
+                <ul className="space-y-3">
+                  {['Diseño conceptual y esquemático', 'Modelado 3D y visualización', 'Planos arquitectónicos ejecutivos', 'Diseño bioclimático y sostenible', 'Arquitectura interior'].map((item, i) => (
+                    <li key={i} className="flex items-start gap-3">
+                      <svg className="w-6 h-6 text-rivamez-cyan flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                      </svg>
+                      <span className="text-gray-700">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                className="relative h-96 rounded-2xl overflow-hidden shadow-2xl"
+              >
+                <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800&q=80" alt="Arquitectura" className="w-full h-full object-cover" />
+              </motion.div>
+            </div>
+          </div>
+
+          {/* Ingeniería */}
+          <div id="ingenieria" className="container mx-auto max-w-6xl mb-20 scroll-mt-20 bg-gray-50 -mx-4 px-4 py-12 lg:mx-0 lg:px-12 lg:rounded-3xl">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                className="relative h-96 rounded-2xl overflow-hidden shadow-2xl lg:order-1"
+              >
+                <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&q=80" alt="Ingeniería" className="w-full h-full object-cover" />
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                className="lg:order-2"
+              >
+                <div className="text-6xl mb-4">⚙️</div>
+                <h3 className="text-3xl font-bold text-rivamez-navy mb-4">Ingeniería</h3>
+                <p className="text-gray-600 text-lg mb-6">
+                  Ingeniería estructural y civil de vanguardia. Soluciones técnicas robustas que garantizan seguridad, eficiencia y durabilidad.
+                </p>
+                <ul className="space-y-3">
+                  {['Ingeniería estructural y sísmica', 'Diseño de instalaciones (MEP)', 'Análisis de suelos y cimentaciones', 'Ingeniería de costos', 'Supervisión técnica'].map((item, i) => (
+                    <li key={i} className="flex items-start gap-3">
+                      <svg className="w-6 h-6 text-rivamez-cyan flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                      </svg>
+                      <span className="text-gray-700">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            </div>
+          </div>
+
+          {/* Construcción */}
+          <div id="construccion" className="container mx-auto max-w-6xl mb-20 scroll-mt-20">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+              >
+                <div className="text-6xl mb-4">🏗️</div>
+                <h3 className="text-3xl font-bold text-rivamez-navy mb-4">Construcción</h3>
+                <p className="text-gray-600 text-lg mb-6">
+                  Ejecución de obra con los más altos estándares de calidad y seguridad. Equipos especializados y tecnología de punta para resultados excepcionales.
+                </p>
+                <ul className="space-y-3">
+                  {['Gestión integral de obra', 'Control de calidad ISO 9001', 'Seguridad ocupacional', 'Programación y control (MS Project)', 'Entrega llave en mano'].map((item, i) => (
+                    <li key={i} className="flex items-start gap-3">
+                      <svg className="w-6 h-6 text-rivamez-cyan flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                      </svg>
+                      <span className="text-gray-700">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                className="relative h-96 rounded-2xl overflow-hidden shadow-2xl"
+              >
+                <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&q=80" alt="Construcción" className="w-full h-full object-cover" />
+              </motion.div>
+            </div>
+          </div>
+
+          {/* Gestión de Proyectos */}
+          <div id="gestion" className="container mx-auto max-w-6xl mb-20 scroll-mt-20 bg-gray-50 -mx-4 px-4 py-12 lg:mx-0 lg:px-12 lg:rounded-3xl">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                className="relative h-96 rounded-2xl overflow-hidden shadow-2xl lg:order-1"
+              >
+                <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80" alt="Gestión" className="w-full h-full object-cover" />
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                className="lg:order-2"
+              >
+                <div className="text-6xl mb-4">📊</div>
+                <h3 className="text-3xl font-bold text-rivamez-navy mb-4">Gestión de Proyectos</h3>
+                <p className="text-gray-600 text-lg mb-6">
+                  Metodologías PMI y ágiles para la gestión efectiva de proyectos. Control total desde la planificación hasta el cierre exitoso.
+                </p>
+                <ul className="space-y-3">
+                  {['Project Management PMI', 'Metodologías ágiles (Scrum)', 'Control de presupuestos', 'Gestión de riesgos', 'Coordinación multidisciplinaria'].map((item, i) => (
+                    <li key={i} className="flex items-start gap-3">
+                      <svg className="w-6 h-6 text-rivamez-cyan flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                      </svg>
+                      <span className="text-gray-700">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            </div>
+          </div>
+
+          {/* BIM & Tecnología, Sostenibilidad, Consultoría - Grid compacto */}
+          <div className="container mx-auto max-w-6xl">
+            <div className="grid md:grid-cols-3 gap-8">
+              {/* BIM */}
+              <motion.div
+                id="bim"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all scroll-mt-20"
+              >
+                <div className="text-5xl mb-4">🖥️</div>
+                <h3 className="text-2xl font-bold text-rivamez-navy mb-3">BIM & Tecnología</h3>
+                <p className="text-gray-600 mb-4">
+                  Building Information Modeling para diseño, coordinación y gestión eficiente.
+                </p>
+                <ul className="space-y-2 text-sm text-gray-600">
+                  <li className="flex items-center gap-2">
+                    <span className="text-rivamez-cyan">•</span>
+                    Revit, ArchiCAD, Navisworks
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="text-rivamez-cyan">•</span>
+                    Coordinación 4D/5D
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="text-rivamez-cyan">•</span>
+                    Clash detection
+                  </li>
+                </ul>
+              </motion.div>
+
+              {/* Sostenibilidad */}
+              <motion.div
+                id="sostenibilidad"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.1 }}
+                className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all scroll-mt-20"
+              >
+                <div className="text-5xl mb-4">🌱</div>
+                <h3 className="text-2xl font-bold text-rivamez-navy mb-3">Sostenibilidad</h3>
+                <p className="text-gray-600 mb-4">
+                  Construcción verde certificada LEED con enfoque ambiental.
+                </p>
+                <ul className="space-y-2 text-sm text-gray-600">
+                  <li className="flex items-center gap-2">
+                    <span className="text-rivamez-cyan">•</span>
+                    Certificación LEED
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="text-rivamez-cyan">•</span>
+                    Eficiencia energética
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="text-rivamez-cyan">•</span>
+                    Materiales sostenibles
+                  </li>
+                </ul>
+              </motion.div>
+
+              {/* Consultoría */}
+              <motion.div
+                id="consultoria"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.2 }}
+                className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all scroll-mt-20"
+              >
+                <div className="text-5xl mb-4">💼</div>
+                <h3 className="text-2xl font-bold text-rivamez-navy mb-3">Consultoría</h3>
+                <p className="text-gray-600 mb-4">
+                  Asesoría técnica experta en todas las fases del proyecto.
+                </p>
+                <ul className="space-y-2 text-sm text-gray-600">
+                  <li className="flex items-center gap-2">
+                    <span className="text-rivamez-cyan">•</span>
+                    Estudios de factibilidad
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="text-rivamez-cyan">•</span>
+                    Due diligence técnico
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="text-rivamez-cyan">•</span>
+                    Peritajes
+                  </li>
+                </ul>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* SERVICIOS POR SECTOR */}
+        <section id="residencial" className="py-20 px-4 bg-gradient-to-b from-gray-50 to-white scroll-mt-20">
+          <div className="container mx-auto max-w-6xl text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-rivamez-navy mb-4">
+              Servicios por Sector
+            </h2>
+            <p className="text-xl text-gray-600">
+              Soluciones especializadas para cada tipo de proyecto
+            </p>
+          </div>
+          
           <div className="container mx-auto max-w-7xl">
             <div className="space-y-16">
               {services.map((service, idx) => (
