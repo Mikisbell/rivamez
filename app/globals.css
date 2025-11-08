@@ -105,3 +105,54 @@ body { margin: 0; }
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
+
+/* Dark Mode Styles */
+.dark {
+  color-scheme: dark;
+}
+
+.dark body {
+  background: #0F172A;
+  color: #F1F5F9;
+}
+
+.dark .bg-white {
+  background-color: #1E293B;
+}
+
+.dark .bg-gray-50 {
+  background-color: #0F172A;
+}
+
+.dark .bg-gray-100 {
+  background-color: #1E293B;
+}
+
+.dark .text-gray-900 {
+  color: #F1F5F9;
+}
+
+.dark .text-gray-700 {
+  color: #CBD5E1;
+}
+
+.dark .text-gray-600 {
+  color: #94A3B8;
+}
+
+.dark .border-gray-200 {
+  border-color: #334155;
+}
+
+.dark .border-gray-300 {
+  border-color: #475569;
+}
+
+/* Dark mode hover states */
+.dark .hover\\:bg-gray-100:hover {
+  background-color: #334155;
+}
+
+.dark .hover\\:bg-gray-50:hover {
+  background-color: #1E293B;
+}
