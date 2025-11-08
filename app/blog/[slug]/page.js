@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { PortableText } from '@portabletext/react';
 import { notFound } from 'next/navigation';
+import { generateSEO } from '@/lib/seo';
 
 // Revalidar cada 60 segundos
 export const revalidate = 60;
@@ -18,17 +19,19 @@ export async function generateMetadata({ params }) {
     };
   }
 
-  return {
-    title: `${post.title} - RIVAMEZ Blog`,
+  // Preparar datos del post para SEO
+  const postData = {
+    title: post.title,
+    slug: params.slug,
+    excerpt: post.excerpt || post.title,
     description: post.excerpt || post.title,
-    openGraph: {
-      title: post.title,
-      description: post.excerpt,
-      type: 'article',
-      publishedTime: post.publishedAt,
-      authors: [post.author?.name],
-    },
+    publishedAt: post.publishedAt,
+    coverImage: post.coverImage ? urlFor(post.coverImage).url() : null,
+    author: post.author,
+    keywords: post.keywords || 'construcción, arquitectura, blog rivamez',
   };
+
+  return generateSEO.blogPost(postData);
 }
 
 // Generar rutas estáticas en build time
