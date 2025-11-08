@@ -48,19 +48,19 @@ export default function RootLayout({ children }) {
         <meta name="apple-mobile-web-app-title" content="RIVAMEZ" />
       </head>
       <body className={inter.className}>
-        <ServiceWorkerRegister />
-        <ClientOnly>
-          <ThemeProvider>
-            <Navbar />
-            <GlobalSearch />
+        <ThemeProvider>
+          <ServiceWorkerRegister />
+          <Navbar />
+          <GlobalSearch />
+          <ClientOnly>
             <ThemeToggle />
-            <PageTransition>
-              <main>{children}</main>
-            </PageTransition>
-            <Footer />
-            <WhatsAppButton />
-          </ThemeProvider>
-        </ClientOnly>
+          </ClientOnly>
+          <PageTransition>
+            <main>{children}</main>
+          </PageTransition>
+          <Footer />
+          <WhatsAppButton />
+        </ThemeProvider>
       </body>
     </html>
   );
