@@ -2,12 +2,14 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { useState } from 'react';
 import Navbar from '@/components/NavbarNew';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import Team from '@/components/Team';
 import Timeline from '@/components/Timeline';
 import Certifications from '@/components/Certifications';
+import VideoModal from '@/components/VideoModal';
 
 const leadership = [
   {
@@ -86,56 +88,82 @@ const clients = [
 ];
 
 export default function NosotrosPage() {
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
+
   return (
     <>
       <Navbar />
       <main className="pt-20">
-        {/* Hero Section */}
-        <section className="relative py-24 px-4 bg-gradient-to-br from-rivamez-navy via-gray-900 to-rivamez-dark text-white overflow-hidden">
-          {/* Background Pattern */}
-          <div className="absolute inset-0 opacity-10">
-            <div style={{
+        {/* Cinematic Hero */}
+        <section className="relative h-[70vh] md:h-[80vh] flex items-center justify-center overflow-hidden">
+          {/* Background Image with Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-br from-rivamez-navy/95 via-gray-900/90 to-black/95">
+            <div className="absolute inset-0 opacity-20" style={{
+              backgroundImage: `radial-gradient(circle at 20% 50%, rgba(6, 182, 212, 0.3) 0%, transparent 50%),
+                                radial-gradient(circle at 80% 50%, rgba(16, 185, 129, 0.3) 0%, transparent 50%)`
+            }} />
+            <div className="absolute inset-0 opacity-10" style={{
               backgroundImage: 'radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px)',
-              backgroundSize: '32px 32px'
-            }} className="absolute inset-0" />
+              backgroundSize: '48px 48px'
+            }} />
           </div>
 
-          <div className="container mx-auto max-w-6xl relative z-10">
+          <div className="relative z-10 max-w-6xl mx-auto px-4 text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center"
+              transition={{ duration: 1, ease: "easeOut" }}
             >
-              <span className="inline-block px-5 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-sm font-semibold mb-6">
-                SOBRE NOSOTROS
-              </span>
-              <h1 className="text-5xl md:text-6xl font-bold mb-6">
-                Construyendo el Futuro de Huancayo
+              <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-8 leading-tight">
+                La Gente Detrás de
+                <span className="block bg-gradient-to-r from-rivamez-cyan via-rivamez-green to-white bg-clip-text text-transparent">
+                  los Proyectos
+                </span>
               </h1>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-                Desde 2009, GRUPO RIVAMEZ ha sido líder en el desarrollo de proyectos residenciales, comerciales e institucionales en la región central del Perú, transformando la visión de nuestros clientes en realidad.
+              <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed">
+                Equipos extraordinarios con perspectivas globales, capaces de desempeñarse al más alto nivel 
+                y producir resultados que transforman el mundo.
               </p>
 
-              {/* Stats */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-12">
-                {stats.map((stat, idx) => (
-                  <motion.div
-                    key={idx}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: idx * 0.1 }}
-                    className="text-center"
-                  >
-                    <div className="text-4xl md:text-5xl font-bold text-rivamez-cyan mb-2">
-                      {stat.value}
-                    </div>
-                    <div className="text-sm text-gray-400">{stat.label}</div>
-                  </motion.div>
-                ))}
+              <div className="flex flex-col sm:flex-row gap-6 justify-center">
+                <a
+                  href="#excelencia"
+                  className="px-10 py-5 bg-gradient-to-r from-rivamez-cyan to-rivamez-green text-white font-bold rounded-xl hover:shadow-2xl hover:shadow-rivamez-cyan/50 hover:scale-105 transition-all duration-300"
+                >
+                  Descubre Nuestra Historia
+                </a>
+                <button
+                  onClick={() => setIsVideoOpen(true)}
+                  className="px-10 py-5 bg-white/10 backdrop-blur-sm border-2 border-white text-white font-bold rounded-xl hover:bg-white/20 hover:scale-105 transition-all duration-300 flex items-center justify-center gap-3"
+                >
+                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z" />
+                  </svg>
+                  Ver Video Corporativo
+                </button>
               </div>
             </motion.div>
           </div>
+
+          {/* Scroll Indicator */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.5 }}
+            className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
+          >
+            <div className="flex flex-col items-center gap-2 text-white/60">
+              <span className="text-sm font-semibold">Scroll</span>
+              <motion.div
+                animate={{ y: [0, 10, 0] }}
+                transition={{ repeat: Infinity, duration: 2 }}
+              >
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </motion.div>
+            </div>
+          </motion.div>
         </section>
 
         {/* Mission & Vision */}
@@ -177,6 +205,286 @@ export default function NosotrosPage() {
                 <p className="text-gray-600 leading-relaxed">
                   Ser la constructora líder en la región central del Perú, reconocida por la excelencia en la ejecución de proyectos, innovación tecnológica, compromiso con la sostenibilidad y la satisfacción total de nuestros clientes.
                 </p>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Impulsados por la Excelencia */}
+        <section id="excelencia" className="py-32 px-4 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-96 h-96 bg-rivamez-cyan/5 rounded-full blur-3xl" />
+          <div className="absolute bottom-0 left-0 w-96 h-96 bg-rivamez-green/5 rounded-full blur-3xl" />
+          
+          <div className="container mx-auto max-w-6xl relative z-10">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-rivamez-navy mb-6">
+                Impulsados por la Excelencia
+                <span className="block text-rivamez-cyan mt-2">Definidos por Nuestra Gente</span>
+              </h2>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+              >
+                <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                  Los clientes necesitan equipos con perspectivas integrales — equipos capaces de desempeñarse al más alto nivel,
+                  superando los límites de lo posible y produciendo resultados que transforman el mundo. En RIVAMEZ, 
+                  eso es por lo que nuestra gente es conocida, y es lo que nos distingue.
+                </p>
+                <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                  Con presencia en 7 distritos de Huancayo, tenemos colegas de diferentes orígenes, culturas y especializaciones 
+                  que aportan una combinación única de habilidades altamente especializadas, experiencia y conocimiento incomparable.
+                </p>
+                <p className="text-lg text-gray-700 leading-relaxed">
+                  Investimos en atraer talento de clase mundial y lo fomentamos en el trabajo. A través de nuestra cultura de 
+                  aprendizaje, colaboración y crecimiento, empoderamos a los miembros de nuestro equipo para convertirse en 
+                  los mejores en lo que hacen.
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                className="grid grid-cols-2 gap-6"
+              >
+                {[
+                  { value: "285+", label: "Proyectos Entregados", icon: "🏗️" },
+                  { value: "150+", label: "Profesionales", icon: "👥" },
+                  { value: "15+", label: "Años de Trayectoria", icon: "📅" },
+                  { value: "98%", label: "Satisfacción Cliente", icon: "⭐" }
+                ].map((stat, idx) => (
+                  <motion.div
+                    key={idx}
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: idx * 0.1 }}
+                    className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100 text-center hover:shadow-2xl hover:scale-105 transition-all duration-300"
+                  >
+                    <div className="text-4xl mb-3">{stat.icon}</div>
+                    <div className="text-3xl font-bold text-rivamez-navy mb-2">{stat.value}</div>
+                    <div className="text-sm text-gray-600">{stat.label}</div>
+                  </motion.div>
+                ))}
+              </motion.div>
+            </div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="text-center"
+            >
+              <a
+                href="#valores"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-rivamez-navy text-white font-semibold rounded-xl hover:bg-rivamez-navy/90 hover:scale-105 transition-all duration-300 shadow-lg"
+              >
+                Conoce Nuestros Valores
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </a>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Establecemos el Estándar */}
+        <section className="py-32 px-4 bg-white relative overflow-hidden">
+          <div className="absolute inset-0 opacity-5" style={{
+            backgroundImage: `
+              linear-gradient(rgba(15, 23, 42, 0.5) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(15, 23, 42, 0.5) 1px, transparent 1px)
+            `,
+            backgroundSize: '80px 80px'
+          }} />
+
+          <div className="container mx-auto max-w-7xl relative z-10">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-20"
+            >
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-rivamez-navy mb-6">
+                Establecemos el Estándar
+              </h2>
+              <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+                Nuestros centros de excelencia especializados son centros de experiencia técnica, 
+                impulsados por las mentes más brillantes de la industria.
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+              {[
+                {
+                  title: "Centro BIM de Excelencia",
+                  icon: "💻",
+                  description: "Modelado de Información de Construcción de última generación para entregar proyectos más eficientes, precisos y sin errores.",
+                  color: "from-blue-500 to-cyan-600"
+                },
+                {
+                  title: "Centro de Sostenibilidad",
+                  icon: "🌱",
+                  description: "Soluciones sostenibles que garantizan la eficiencia energética y el respeto al medio ambiente en cada proyecto.",
+                  color: "from-green-500 to-emerald-600"
+                },
+                {
+                  title: "Centro de Seguridad",
+                  icon: "🦺",
+                  description: "Cultura de seguridad rigurosa que protege a nuestros colaboradores y garantiza cero accidentes en obra.",
+                  color: "from-orange-500 to-red-600"
+                },
+                {
+                  title: "Laboratorio de Innovación",
+                  icon: "🔬",
+                  description: "Investigación y desarrollo de nuevas tecnologías y materiales para la construcción del futuro.",
+                  color: "from-purple-500 to-pink-600"
+                },
+                {
+                  title: "Centro de Capacitación",
+                  icon: "🎓",
+                  description: "Programas de formación continua para mantener a nuestro equipo a la vanguardia de la industria.",
+                  color: "from-rivamez-cyan to-blue-700"
+                },
+                {
+                  title: "Control de Calidad",
+                  icon: "✅",
+                  description: "Procesos rigurosos de verificación que garantizan los más altos estándares en cada etapa del proyecto.",
+                  color: "from-rivamez-navy to-gray-800"
+                }
+              ].map((center, idx) => (
+                <motion.div
+                  key={idx}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: idx * 0.1 }}
+                  className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100"
+                >
+                  <div className={`h-2 bg-gradient-to-r ${center.color}`} />
+                  <div className="p-8">
+                    <div className="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">
+                      {center.icon}
+                    </div>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-4">{center.title}</h3>
+                    <p className="text-gray-600 leading-relaxed">{center.description}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="bg-gradient-to-br from-rivamez-navy to-rivamez-cyan rounded-3xl p-12 text-white text-center"
+            >
+              <h3 className="text-3xl md:text-4xl font-bold mb-6">
+                Asociarse con RIVAMEZ significa acceso a una red de especialistas líderes en la industria
+              </h3>
+              <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
+                Cuyo conocimiento e ingenio entregan valor y aseguran el éxito de sus proyectos más complejos.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href="/proyectos"
+                  className="px-8 py-4 bg-white text-rivamez-navy font-bold rounded-xl hover:bg-gray-100 hover:scale-105 transition-all duration-300"
+                >
+                  Ver Proyectos
+                </a>
+                <a
+                  href="/contacto"
+                  className="px-8 py-4 bg-white/10 backdrop-blur-sm border-2 border-white text-white font-bold rounded-xl hover:bg-white/20 hover:scale-105 transition-all duration-300"
+                >
+                  Contactar
+                </a>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Programas de Reconocimiento */}
+        <section className="py-32 px-4 bg-gradient-to-b from-gray-50 to-white">
+          <div className="container mx-auto max-w-7xl">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-20"
+            >
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-rivamez-navy mb-6">
+                Reconocimiento a la Excelencia
+              </h2>
+              <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+                Programas especiales que honran a nuestros profesionales más destacados
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 gap-12">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                className="bg-white rounded-3xl p-10 shadow-xl border-2 border-rivamez-cyan/20"
+              >
+                <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-rivamez-cyan to-rivamez-navy rounded-2xl mb-6">
+                  <svg className="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                </div>
+                <h3 className="text-3xl font-bold text-gray-900 mb-4">Maestros RIVAMEZ</h3>
+                <p className="text-lg text-gray-600 leading-relaxed mb-6">
+                  Programa que reconoce a ingenieros y arquitectos senior que han alcanzado estatura de clase mundial 
+                  en su campo de especialización. Elegidos por sus logros técnicos sustanciales a lo largo de sus carreras.
+                </p>
+                <div className="flex items-center gap-3 text-rivamez-cyan font-semibold">
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <span>12 Maestros Certificados</span>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                className="bg-white rounded-3xl p-10 shadow-xl border-2 border-rivamez-green/20"
+              >
+                <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-rivamez-green to-emerald-700 rounded-2xl mb-6">
+                  <svg className="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" />
+                  </svg>
+                </div>
+                <h3 className="text-3xl font-bold text-gray-900 mb-4">Especialistas Técnicos Distinguidos</h3>
+                <p className="text-lg text-gray-600 leading-relaxed mb-6">
+                  Reconocimiento a empleados que han realizado contribuciones técnicas particularmente significativas 
+                  al éxito de RIVAMEZ. Promueven la excelencia técnica a través de la aplicación de tecnología avanzada.
+                </p>
+                <div className="flex items-center gap-3 text-rivamez-green font-semibold">
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <span>28 Especialistas Activos</span>
+                </div>
               </motion.div>
             </div>
           </div>
@@ -229,7 +537,7 @@ export default function NosotrosPage() {
         </section>
 
         {/* Values */}
-        <section className="py-20 px-4 bg-white relative overflow-hidden">
+        <section id="valores" className="py-20 px-4 bg-white relative overflow-hidden">
           {/* Grid Pattern */}
           <div className="absolute inset-0 opacity-5" style={{
             backgroundImage: `
@@ -351,6 +659,13 @@ export default function NosotrosPage() {
       </main>
       <Footer />
       <WhatsAppButton />
+      
+      {/* Video Modal */}
+      <VideoModal 
+        isOpen={isVideoOpen}
+        onClose={() => setIsVideoOpen(false)}
+        videoUrl=""
+      />
     </>
   );
 }
