@@ -3,6 +3,7 @@
 
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { usePathname } from 'next/navigation';
 
 const megaMenuData = {
   servicios: {
@@ -62,6 +63,7 @@ const megaMenuData = {
 };
 
 export default function NavbarNew() {
+  const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState(null);
@@ -98,6 +100,20 @@ export default function NavbarNew() {
       setMobileMenuOpen(false);
       setActiveMenu(null);
     }
+  };
+
+  // Función para determinar si un link está activo
+  const isActive = (href) => {
+    if (href === '/') return pathname === '/';
+    return pathname.startsWith(href);
+  };
+
+  // Función para obtener las clases del link
+  const getLinkClasses = (href) => {
+    if (isActive(href)) {
+      return "px-4 py-2 text-sm font-bold bg-gradient-to-r from-rivamez-navy to-rivamez-cyan text-white rounded-lg shadow-lg transition-all";
+    }
+    return "px-4 py-2 text-sm font-semibold text-gray-700 hover:text-rivamez-navy hover:bg-gray-50 rounded-lg transition-all";
   };
 
   return (
@@ -174,7 +190,7 @@ export default function NavbarNew() {
               <a
                 href="/nosotros"
                 onClick={(e) => scrollToSection(e, '/nosotros')}
-                className="px-4 py-2 text-sm font-semibold text-gray-700 hover:text-rivamez-navy transition-colors"
+                className={getLinkClasses('/nosotros')}
               >
                 Nosotros
               </a>
@@ -183,7 +199,7 @@ export default function NavbarNew() {
               <a
                 href="/blog"
                 onClick={(e) => scrollToSection(e, '/blog')}
-                className="px-4 py-2 text-sm font-semibold text-gray-700 hover:text-rivamez-navy transition-colors"
+                className={getLinkClasses('/blog')}
               >
                 Blog
               </a>
@@ -192,7 +208,7 @@ export default function NavbarNew() {
               <a
                 href="/contacto"
                 onClick={(e) => scrollToSection(e, '/contacto')}
-                className="px-4 py-2 text-sm font-semibold text-gray-700 hover:text-rivamez-navy transition-colors"
+                className={getLinkClasses('/contacto')}
               >
                 Contacto
               </a>
@@ -362,21 +378,21 @@ export default function NavbarNew() {
                   <a
                     href="/nosotros"
                     onClick={(e) => scrollToSection(e, '/nosotros')}
-                    className="block px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg font-semibold transition-colors"
+                    className={`block px-4 py-3 rounded-lg font-semibold transition-all ${isActive('/nosotros') ? 'bg-gradient-to-r from-rivamez-navy to-rivamez-cyan text-white shadow-lg' : 'text-gray-700 hover:bg-gray-100'}`}
                   >
                     Nosotros
                   </a>
                   <a
                     href="/blog"
                     onClick={(e) => scrollToSection(e, '/blog')}
-                    className="block px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg font-semibold transition-colors"
+                    className={`block px-4 py-3 rounded-lg font-semibold transition-all ${isActive('/blog') ? 'bg-gradient-to-r from-rivamez-navy to-rivamez-cyan text-white shadow-lg' : 'text-gray-700 hover:bg-gray-100'}`}
                   >
                     Blog
                   </a>
                   <a
                     href="/contacto"
                     onClick={(e) => scrollToSection(e, '/contacto')}
-                    className="block px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg font-semibold transition-colors"
+                    className={`block px-4 py-3 rounded-lg font-semibold transition-all ${isActive('/contacto') ? 'bg-gradient-to-r from-rivamez-navy to-rivamez-cyan text-white shadow-lg' : 'text-gray-700 hover:bg-gray-100'}`}
                   >
                     Contacto
                   </a>
