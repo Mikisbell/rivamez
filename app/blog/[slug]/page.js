@@ -36,10 +36,9 @@ export async function generateMetadata({ params }) {
 
 // Generar rutas estáticas en build time
 export async function generateStaticParams() {
-  const posts = await getAllPosts().catch(() => []);
-  return posts.map((post) => ({
-    slug: post.slug.current,
-  }));
+  // Retornar array vacío para generar las páginas bajo demanda
+  // Esto evita errores de build con contenido dinámico
+  return [];
 }
 
 // Componentes personalizados para PortableText
@@ -60,20 +59,26 @@ const components = {
     },
   },
   block: {
-    h2: ({ children }) => (
-      <h2 className="text-3xl font-bold text-rivamez-navy mt-8 mb-4">{children}</h2>
-    ),
-    h3: ({ children }) => (
-      <h3 className="text-2xl font-bold text-rivamez-navy mt-6 mb-3">{children}</h3>
-    ),
-    normal: ({ children }) => (
-      <p className="text-lg text-gray-700 leading-relaxed mb-4">{children}</p>
-    ),
-    blockquote: ({ children }) => (
-      <blockquote className="border-l-4 border-rivamez-cyan pl-6 py-2 my-6 italic text-gray-600">
-        {children}
-      </blockquote>
-    ),
+    h2: ({ children }) => {
+      if (!children) return null;
+      return <h2 className="text-3xl font-bold text-rivamez-navy mt-8 mb-4">{children}</h2>;
+    },
+    h3: ({ children }) => {
+      if (!children) return null;
+      return <h3 className="text-2xl font-bold text-rivamez-navy mt-6 mb-3">{children}</h3>;
+    },
+    normal: ({ children }) => {
+      if (!children) return null;
+      return <p className="text-lg text-gray-700 leading-relaxed mb-4">{children}</p>;
+    },
+    blockquote: ({ children }) => {
+      if (!children) return null;
+      return (
+        <blockquote className="border-l-4 border-rivamez-cyan pl-6 py-2 my-6 italic text-gray-600">
+          {children}
+        </blockquote>
+      );
+    },
   },
   list: {
     bullet: ({ children }) => (
@@ -210,10 +215,18 @@ export default async function PostPage({ params }) {
 
           {/* Contenido del post */}
           <div className="prose prose-lg max-w-none">
-            {post.body ? (
+            {post.excerpt && (
+              <p className="text-xl text-gray-700 leading-relaxed mb-8 font-medium border-l-4 border-rivamez-cyan pl-6">
+                {post.excerpt}
+              </p>
+            )}
+            {post.body && Array.isArray(post.body) ? (
               <PortableText value={post.body} components={components} />
             ) : (
-              <p className="text-gray-600">Este artículo no tiene contenido aún.</p>
+              <div className="text-gray-700 space-y-4">
+                <p>Este artículo está en proceso de redacción.</p>
+                <p>Por favor, vuelve pronto para ver el contenido completo.</p>
+              </div>
             )}
           </div>
 
