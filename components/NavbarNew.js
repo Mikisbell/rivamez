@@ -298,8 +298,9 @@ export default function NavbarNew() {
                 <span className="lg:inline xl:hidden">WhatsApp</span>
               </a>
               <a
-                href="/contacto"
-                onClick={(e) => scrollToSection(e, '/contacto')}
+                href="https://wa.me/51943818788?text=Hola,%20quiero%20solicitar%20una%20cotización%20para%20mi%20proyecto%20de%20construcción"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="px-1.5 md:px-2 lg:px-3 xl:px-6 py-1 md:py-1.5 lg:py-2 xl:py-2.5 bg-gradient-to-r from-rivamez-navy to-rivamez-cyan text-white text-[9px] md:text-[10px] lg:text-xs xl:text-sm font-semibold rounded-md lg:rounded-lg hover:shadow-xl hover:shadow-rivamez-cyan/30 hover:scale-105 transition-all duration-300"
               >
                 <span className="hidden xl:inline">Solicitar Cotización</span>
