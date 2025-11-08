@@ -1,7 +1,4 @@
 // app/blog/page.js
-import Navbar from '@/components/NavbarNew';
-import Footer from '@/components/Footer';
-import WhatsAppButton from '@/components/WhatsAppButton';
 import BlogVisual from '@/components/BlogVisual';
 import { getAllPosts, getFeaturedPost, getAllCategories } from '@/lib/sanity';
 
@@ -22,17 +19,10 @@ export default async function BlogPage() {
   ]);
 
   return (
-    <>
-      <Navbar />
-      <main>
-        <BlogVisual 
-          initialPosts={posts}
-          initialFeaturedPost={featuredPost}
-          initialCategories={categories}
-        />
-      </main>
-      <Footer />
-      <WhatsAppButton />
-    </>
+    <BlogVisual 
+      initialPosts={posts}
+      initialFeaturedPost={featuredPost}
+      initialCategories={categories}
+    />
   );
 }

@@ -1,7 +1,4 @@
 // app/blog/[slug]/page.js
-import Navbar from '@/components/NavbarNew';
-import Footer from '@/components/Footer';
-import WhatsAppButton from '@/components/WhatsAppButton';
 import { getPostBySlug, getAllPosts, urlFor } from '@/lib/sanity';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -115,9 +112,7 @@ export default async function PostPage({ params }) {
   }
 
   return (
-    <>
-      <Navbar />
-      <main className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
         {/* Hero del Post */}
         <article className="max-w-4xl mx-auto px-6 py-16">
           {/* Breadcrumb */}
@@ -286,9 +281,6 @@ export default async function PostPage({ params }) {
             </Link>
           </div>
         </article>
-      </main>
-      <Footer />
-      <WhatsAppButton />
-    </>
+    </div>
   );
 }

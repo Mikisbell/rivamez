@@ -1,5 +1,8 @@
 import "./globals.css";
 import { Inter } from 'next/font/google';
+import Navbar from '@/components/NavbarNew';
+import Footer from '@/components/Footer';
+import WhatsAppButton from '@/components/WhatsAppButton';
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -33,7 +36,12 @@ export default function RootLayout({ children }) {
         <link rel="dns-prefetch" href="https://cdn.sanity.io" />
         <link rel="preconnect" href="https://cdn.sanity.io" crossOrigin="anonymous" />
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <Navbar />
+        <main>{children}</main>
+        <Footer />
+        <WhatsAppButton />
+      </body>
     </html>
   );
 }
