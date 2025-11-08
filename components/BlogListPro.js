@@ -110,8 +110,13 @@ const MOCK_DATA = {
 export default function BlogListPro({ initialPosts = [], initialFeaturedPost = null, initialCategories = [] }) {
   const [activeCategory, setActiveCategory] = useState('all');
 
-  // Usar datos reales o simulados
-  const posts = initialPosts.length > 0 ? initialPosts : MOCK_DATA.posts;
+  // Combinar posts reales con simulados para siempre tener contenido suficiente
+  // Muestra tus posts reales primero, luego completa con simulados hasta tener 8
+  const realPosts = initialPosts.length > 0 ? initialPosts : [];
+  const neededMockPosts = Math.max(8 - realPosts.length, 0);
+  const mockPosts = MOCK_DATA.posts.slice(0, neededMockPosts);
+  
+  const posts = [...realPosts, ...mockPosts];
   const featuredPost = initialFeaturedPost || posts[0];
   const categories = initialCategories.length > 0 ? initialCategories : MOCK_DATA.categories;
   
