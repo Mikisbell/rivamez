@@ -40,16 +40,16 @@ export default function ChatBot() {
       response: '🏗️ En RIVAMEZ ofrecemos:\n\n• Construcción Residencial\n• Proyectos Comerciales\n• Remodelación y Ampliación\n• Diseño Arquitectónico\n• Gestión de Proyectos\n• Construcción Industrial\n\n¿Te interesa algún servicio en específico?'
     },
     
-    // Costos y presupuestos
-    costos: {
-      keywords: ['costo', 'precio', 'cuanto', 'cuánto', 'presupuesto', 'cotizar', 'cotización'],
-      response: '💰 Los costos varían según el proyecto:\n\n• Casa (120m²): Desde S/ 180,000\n• Departamento: Desde S/ 150,000\n• Local comercial: Presupuesto personalizado\n• Remodelación: Desde S/ 50,000\n\n📋 ¿Quieres una cotización detallada?\n\n👉 Escribe "cotización" o contáctanos al +51 943 818 788'
+    // Tiempo de construcción (PRIMERO - más específico)
+    tiempo: {
+      keywords: ['tiempo', 'demora', 'cuanto tarda', 'cuánto tarda', 'duracion', 'duración', 'plazo', 'cuanto demora', 'cuánto demora', 'cuando termina', 'cuándo termina'],
+      response: '⏱️ Plazos aproximados:\n\n• Casa 2 pisos: 8-12 meses\n• Edificio pequeño: 12-18 meses\n• Remodelación: 2-4 meses\n• Local comercial: 6-10 meses\n\n✅ Cumplimos el 98% de entregas a tiempo.\n\n¿Tienes un proyecto en mente?'
     },
 
-    // Tiempo de construcción
-    tiempo: {
-      keywords: ['tiempo', 'demora', 'cuanto tarda', 'cuánto tarda', 'duracion', 'duración', 'plazo'],
-      response: '⏱️ Plazos aproximados:\n\n• Casa 2 pisos: 8-12 meses\n• Edificio pequeño: 12-18 meses\n• Remodelación: 2-4 meses\n• Local comercial: 6-10 meses\n\n✅ Cumplimos el 98% de entregas a tiempo.\n\n¿Tienes un proyecto en mente?'
+    // Costos y presupuestos
+    costos: {
+      keywords: ['costo', 'precio', 'cuanto cuesta', 'cuánto cuesta', 'presupuesto', 'cotizar', 'cotización', 'valor'],
+      response: '💰 Los costos varían según el proyecto:\n\n• Casa (120m²): Desde S/ 180,000\n• Departamento: Desde S/ 150,000\n• Local comercial: Presupuesto personalizado\n• Remodelación: Desde S/ 50,000\n\n📋 ¿Quieres una cotización detallada?\n\n👉 Escribe "cotización" o contáctanos al +51 943 818 788'
     },
 
     // Ubicación
