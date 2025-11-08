@@ -275,64 +275,185 @@ export default function ServiciosPage() {
             </div>
           </div>
 
-          {/* BIM & Tecnología, Sostenibilidad, Consultoría - Grid compacto */}
-          <div className="container mx-auto max-w-6xl">
-            <div className="grid md:grid-cols-3 gap-8">
-              {/* BIM */}
+          {/* TECNOLOGÍAS INNOVADORAS */}
+          <div className="container mx-auto max-w-6xl mb-20">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-rivamez-navy mb-4">
+                Tecnología de Vanguardia
+              </h2>
+              <p className="text-lg text-gray-600">
+                Adoptamos las últimas innovaciones de Estados Unidos y Europa
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8 mb-12">
+              {/* BIM & Gemelos Digitales */}
               <motion.div
                 id="bim"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all scroll-mt-20"
+                className="bg-gradient-to-br from-blue-50 to-cyan-50 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all scroll-mt-20 border border-blue-100"
               >
-                <div className="text-5xl mb-4">🖥️</div>
-                <h3 className="text-2xl font-bold text-rivamez-navy mb-3">BIM & Tecnología</h3>
-                <p className="text-gray-600 mb-4">
-                  Building Information Modeling para diseño, coordinación y gestión eficiente.
+                <div className="text-5xl mb-4">🏗️</div>
+                <h3 className="text-2xl font-bold text-rivamez-navy mb-3">BIM & Gemelos Digitales</h3>
+                <p className="text-gray-700 mb-4 font-medium">
+                  Building Information Modeling + Digital Twins para máxima eficiencia
                 </p>
-                <ul className="space-y-2 text-sm text-gray-600">
-                  <li className="flex items-center gap-2">
-                    <span className="text-rivamez-cyan">•</span>
-                    Revit, ArchiCAD, Navisworks
+                <ul className="space-y-3 text-sm text-gray-600">
+                  <li className="flex items-start gap-2">
+                    <span className="text-rivamez-cyan text-lg">✓</span>
+                    <div><strong>BIM 4D/5D:</strong> Coordinación de tiempo y costos en tiempo real</div>
                   </li>
-                  <li className="flex items-center gap-2">
-                    <span className="text-rivamez-cyan">•</span>
-                    Coordinación 4D/5D
+                  <li className="flex items-start gap-2">
+                    <span className="text-rivamez-cyan text-lg">✓</span>
+                    <div><strong>Digital Twins:</strong> Réplica virtual del edificio con IoT</div>
                   </li>
-                  <li className="flex items-center gap-2">
-                    <span className="text-rivamez-cyan">•</span>
-                    Clash detection
+                  <li className="flex items-start gap-2">
+                    <span className="text-rivamez-cyan text-lg">✓</span>
+                    <div><strong>Clash Detection:</strong> Detección automática de conflictos</div>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-rivamez-cyan text-lg">✓</span>
+                    <div><strong>Software:</strong> Revit, ArchiCAD, Navisworks, Bentley</div>
                   </li>
                 </ul>
               </motion.div>
 
+              {/* IA & Diseño Generativo */}
+              <motion.div
+                id="ia"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.1 }}
+                className="bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all scroll-mt-20 border border-purple-100"
+              >
+                <div className="text-5xl mb-4">🤖</div>
+                <h3 className="text-2xl font-bold text-rivamez-navy mb-3">IA & Diseño Generativo</h3>
+                <p className="text-gray-700 mb-4 font-medium">
+                  Inteligencia Artificial para optimización de diseños estructurales
+                </p>
+                <ul className="space-y-3 text-sm text-gray-600">
+                  <li className="flex items-start gap-2">
+                    <span className="text-rivamez-cyan text-lg">✓</span>
+                    <div><strong>Diseño Generativo:</strong> IA crea múltiples opciones optimizadas</div>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-rivamez-cyan text-lg">✓</span>
+                    <div><strong>Reducción de costos:</strong> Hasta 20% en materiales</div>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-rivamez-cyan text-lg">✓</span>
+                    <div><strong>Machine Learning:</strong> Predicción de riesgos y retrasos</div>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-rivamez-cyan text-lg">✓</span>
+                    <div><strong>Plataformas:</strong> Autodesk Generative Design, Spacemaker</div>
+                  </li>
+                </ul>
+              </motion.div>
+
+              {/* Construcción Modular */}
+              <motion.div
+                id="modular"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.2 }}
+                className="bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all scroll-mt-20 border border-green-100"
+              >
+                <div className="text-5xl mb-4">🏢</div>
+                <h3 className="text-2xl font-bold text-rivamez-navy mb-3">Construcción Modular</h3>
+                <p className="text-gray-700 mb-4 font-medium">
+                  Prefabricación industrializada con metodología DfMA
+                </p>
+                <ul className="space-y-3 text-sm text-gray-600">
+                  <li className="flex items-start gap-2">
+                    <span className="text-rivamez-cyan text-lg">✓</span>
+                    <div><strong>60% más rápido:</strong> Construcción simultánea en planta y sitio</div>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-rivamez-cyan text-lg">✓</span>
+                    <div><strong>90% menos residuos:</strong> Fabricación controlada</div>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-rivamez-cyan text-lg">✓</span>
+                    <div><strong>DfMA:</strong> Design for Manufacturing and Assembly</div>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-rivamez-cyan text-lg">✓</span>
+                    <div><strong>Cross-Laminated Timber:</strong> Madera laminada sostenible</div>
+                  </li>
+                </ul>
+              </motion.div>
+
+              {/* AR/VR & Drones */}
+              <motion.div
+                id="innovacion"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.3 }}
+                className="bg-gradient-to-br from-orange-50 to-amber-50 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all scroll-mt-20 border border-orange-100"
+              >
+                <div className="text-5xl mb-4">🥽</div>
+                <h3 className="text-2xl font-bold text-rivamez-navy mb-3">AR/VR & Drones</h3>
+                <p className="text-gray-700 mb-4 font-medium">
+                  Realidad inmersiva e inspección inteligente con drones
+                </p>
+                <ul className="space-y-3 text-sm text-gray-600">
+                  <li className="flex items-start gap-2">
+                    <span className="text-rivamez-cyan text-lg">✓</span>
+                    <div><strong>VR Walkthroughs:</strong> Recorridos virtuales pre-construcción</div>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-rivamez-cyan text-lg">✓</span>
+                    <div><strong>AR en Obra:</strong> Visualización de planos sobre sitio real</div>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-rivamez-cyan text-lg">✓</span>
+                    <div><strong>Drones & Fotogrametría:</strong> Mapeo 3D y control de avance</div>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-rivamez-cyan text-lg">✓</span>
+                    <div><strong>Training VR:</strong> Capacitación en seguridad inmersiva</div>
+                  </li>
+                </ul>
+              </motion.div>
+            </div>
+
+            {/* Sostenibilidad y Consultoría - Grid 2 columnas */}
+            <div className="grid md:grid-cols-2 gap-8">
               {/* Sostenibilidad */}
               <motion.div
                 id="sostenibilidad"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: 0.1 }}
                 className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all scroll-mt-20"
               >
                 <div className="text-5xl mb-4">🌱</div>
-                <h3 className="text-2xl font-bold text-rivamez-navy mb-3">Sostenibilidad</h3>
+                <h3 className="text-2xl font-bold text-rivamez-navy mb-3">Sostenibilidad LEED</h3>
                 <p className="text-gray-600 mb-4">
-                  Construcción verde certificada LEED con enfoque ambiental.
+                  Construcción verde con estándares internacionales PassivHaus y Net Zero
                 </p>
                 <ul className="space-y-2 text-sm text-gray-600">
                   <li className="flex items-center gap-2">
                     <span className="text-rivamez-cyan">•</span>
-                    Certificación LEED
+                    Certificación LEED Platinum
                   </li>
                   <li className="flex items-center gap-2">
                     <span className="text-rivamez-cyan">•</span>
-                    Eficiencia energética
+                    PassivHaus estándar europeo
                   </li>
                   <li className="flex items-center gap-2">
                     <span className="text-rivamez-cyan">•</span>
-                    Materiales sostenibles
+                    Net Zero Buildings
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="text-rivamez-cyan">•</span>
+                    Materiales sostenibles avanzados
                   </li>
                 </ul>
               </motion.div>
@@ -343,13 +464,13 @@ export default function ServiciosPage() {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: 0.2 }}
+                transition={{ delay: 0.1 }}
                 className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all scroll-mt-20"
               >
                 <div className="text-5xl mb-4">💼</div>
-                <h3 className="text-2xl font-bold text-rivamez-navy mb-3">Consultoría</h3>
+                <h3 className="text-2xl font-bold text-rivamez-navy mb-3">Consultoría Técnica</h3>
                 <p className="text-gray-600 mb-4">
-                  Asesoría técnica experta en todas las fases del proyecto.
+                  Asesoría experta con metodologías Lean Construction e IPD
                 </p>
                 <ul className="space-y-2 text-sm text-gray-600">
                   <li className="flex items-center gap-2">
@@ -358,11 +479,15 @@ export default function ServiciosPage() {
                   </li>
                   <li className="flex items-center gap-2">
                     <span className="text-rivamez-cyan">•</span>
-                    Due diligence técnico
+                    Lean Construction Institute
                   </li>
                   <li className="flex items-center gap-2">
                     <span className="text-rivamez-cyan">•</span>
-                    Peritajes
+                    Integrated Project Delivery (IPD)
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="text-rivamez-cyan">•</span>
+                    Due diligence y peritajes
                   </li>
                 </ul>
               </motion.div>

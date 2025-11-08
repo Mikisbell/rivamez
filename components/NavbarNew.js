@@ -37,7 +37,7 @@ const megaMenuData = {
   expertise: {
     sections: [
       {
-        title: 'Disciplinas',
+        title: 'Disciplinas Core',
         links: [
           { name: 'Arquitectura', href: '/servicios#arquitectura', desc: 'Diseño arquitectónico innovador' },
           { name: 'Ingeniería', href: '/servicios#ingenieria', desc: 'Ingeniería estructural y civil' },
@@ -46,19 +46,20 @@ const megaMenuData = {
         ]
       },
       {
-        title: 'Especialidades',
+        title: 'Tecnología Avanzada',
         links: [
-          { name: 'BIM & Tecnología', href: '/servicios#bim', desc: 'Building Information Modeling' },
-          { name: 'Sostenibilidad', href: '/servicios#sostenibilidad', desc: 'Construcción verde LEED' },
-          { name: 'Consultoría', href: '/servicios#consultoria', desc: 'Asesoría técnica experta' },
+          { name: 'BIM & Gemelos Digitales', href: '/servicios#bim', desc: 'Modelado 4D/5D y Digital Twins' },
+          { name: 'IA & Diseño Generativo', href: '/servicios#ia', desc: 'Inteligencia artificial aplicada' },
+          { name: 'Construcción Modular', href: '/servicios#modular', desc: 'Prefabricación y DfMA' },
+          { name: 'AR/VR & Drones', href: '/servicios#innovacion', desc: 'Realidad inmersiva e inspección' },
         ]
       }
     ],
     featured: {
-      title: 'Capacidades Integrales',
-      image: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=300&q=80',
-      desc: 'Soluciones 360° desde el concepto hasta la entrega final',
-      cta: 'Ver capacidades',
+      title: 'Innovación Tecnológica',
+      image: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=300&q=80',
+      desc: 'Adoptamos las últimas tecnologías de USA y Europa para construcción inteligente',
+      cta: 'Ver tecnologías',
       href: '/servicios'
     }
   },
