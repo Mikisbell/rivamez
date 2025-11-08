@@ -1,17 +1,35 @@
 // app/blog/page.js
-'use client';
-
 import Navbar from '@/components/NavbarNew';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import BlogList from '@/components/BlogList';
+import { getAllPosts, getFeaturedPost, getAllCategories } from '@/lib/sanity';
 
-export default function BlogPage() {
+// Revalidar cada 60 segundos (ISR)
+export const revalidate = 60;
+
+export const metadata = {
+  title: 'Blog - RIVAMEZ',
+  description: 'Noticias, proyectos y consejos de construcción e inmobiliaria',
+};
+
+export default async function BlogPage() {
+  // Fetch data en el servidor (mucho más rápido)
+  const [posts, featuredPost, categories] = await Promise.all([
+    getAllPosts().catch(() => []),
+    getFeaturedPost().catch(() => null),
+    getAllCategories().catch(() => []),
+  ]);
+
   return (
     <>
       <Navbar />
       <main>
-        <BlogList />
+        <BlogList 
+          initialPosts={posts}
+          initialFeaturedPost={featuredPost}
+          initialCategories={categories}
+        />
       </main>
       <Footer />
       <WhatsAppButton />

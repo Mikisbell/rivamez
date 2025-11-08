@@ -2,40 +2,23 @@
 
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
-import { getAllPosts, getFeaturedPost, getAllCategories, urlFor } from '@/lib/sanity';
+import { urlFor } from '@/lib/sanity';
 import Image from 'next/image';
 import Link from 'next/link';
 
-export default function BlogList() {
-  const [posts, setPosts] = useState([]);
-  const [featuredPost, setFeaturedPost] = useState(null);
-  const [categories, setCategories] = useState([]);
+export default function BlogList({ initialPosts = [], initialFeaturedPost = null, initialCategories = [] }) {
+  const [posts, setPosts] = useState(initialPosts);
+  const [featuredPost, setFeaturedPost] = useState(initialFeaturedPost);
+  const [categories, setCategories] = useState(initialCategories);
   const [activeCategory, setActiveCategory] = useState('all');
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
+  // Solo cargar fallback si no hay datos iniciales
   useEffect(() => {
-    async function fetchData() {
-      try {
-        const [allPosts, featured, allCategories] = await Promise.all([
-          getAllPosts(),
-          getFeaturedPost(),
-          getAllCategories()
-        ]);
-        
-        setPosts(allPosts);
-        setFeaturedPost(featured);
-        setCategories(allCategories);
-      } catch (error) {
-        console.error('Error fetching blog data:', error);
-        // Fallback a datos estáticos si Sanity no está configurado
-        loadFallbackData();
-      } finally {
-        setLoading(false);
-      }
+    if (initialPosts.length === 0 && !initialFeaturedPost && initialCategories.length === 0) {
+      loadFallbackData();
     }
-
-    fetchData();
-  }, []);
+  }, [initialPosts, initialFeaturedPost, initialCategories]);
 
   // Datos de fallback si Sanity no está configurado
   function loadFallbackData() {
@@ -263,6 +246,7 @@ export default function BlogList() {
                         src={urlFor(featuredPost.mainImage).width(800).height(600).url()}
                         alt={featuredPost.title}
                         fill
+                        priority
                         className="object-cover rounded-2xl"
                       />
                     ) : (
