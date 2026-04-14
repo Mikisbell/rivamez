@@ -40,7 +40,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section id="inicio" className="relative min-h-screen overflow-hidden">
+    <section id="inicio" className="relative min-h-screen overflow-hidden flex flex-col">
       {/* Animated Gradient Background */}
       <div
         className="absolute inset-0"
@@ -96,7 +96,7 @@ export default function Hero() {
       <div className="absolute bottom-0 left-0 w-64 h-64 md:w-96 md:h-96 bg-rivamez-cyan/10 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '10s', animationDelay: '2s' }} />
 
       {/* Content */}
-      <div className="relative z-10 section-padding pt-24 md:pt-28 lg:pt-32 pb-8 md:pb-12">
+      <div className="relative z-10 flex-1 flex items-center section-padding pt-20 md:pt-24 lg:pt-28 pb-4">
         <div className="container-responsive">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Left Column - Text Content */}
@@ -172,7 +172,7 @@ export default function Hero() {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.8, delay: 0.8 }}
                 onClick={() => setIsVideoOpen(true)}
-                className="group flex items-center gap-3 text-white/90 hover:text-white transition-colors mt-8"
+                className="group flex items-center gap-3 text-white/90 hover:text-white transition-colors mt-8 mb-4"
               >
                 <div className="relative">
                   <div className="w-14 h-14 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center border border-white/20 group-hover:bg-white/20 transition-all duration-300 group-hover:scale-110">
@@ -216,7 +216,7 @@ export default function Hero() {
       </div>
 
       {/* Stats */}
-      <div className="relative z-[5] px-4 pb-20 md:pb-24">
+      <div className="relative z-[5] px-4 pb-16 md:pb-20 shrink-0">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
