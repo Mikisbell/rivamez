@@ -134,9 +134,9 @@ export default function Services() {
   }, []);
 
   return (
-    <section 
+    <section
       id="servicios"
-      ref={sectionRef} 
+      ref={sectionRef}
       className="section-padding bg-gradient-to-br from-rivamez-dark via-gray-900 to-rivamez-navy text-white relative overflow-hidden"
     >
       {/* Circuit Pattern */}
@@ -171,13 +171,13 @@ export default function Services() {
         </div>
 
         {/* Grid de Estadísticas/Contadores */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-4 lg:gap-6 xl:gap-8 mt-responsive">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-6 mt-responsive p-4 sm:p-6 lg:p-8">
           {stats.map((stat, index) => (
-            <div 
+            <div
               key={stat.id}
               className="text-center card-responsive bg-gray-800 rounded-lg">
               <div className="text-5xl font-bold mb-2">
-                <span 
+                <span
                   ref={(el) => (counterRefs.current[index] = el)}
                   className="inline-block"
                 >
@@ -193,9 +193,9 @@ export default function Services() {
         {/* Lista de Servicios */}
         <div className="mt-responsive grid-3-cols">
           {services.map((service) => (
-            <div 
-              key={service.id} 
-              className="bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-2xl hover:shadow-2xl hover:shadow-rivamez-cyan/20 transition-all duration-300 border border-gray-700 hover:border-rivamez-cyan group"
+            <div
+              key={service.id}
+              className="bg-gradient-to-br from-gray-800 to-gray-900 p-4 sm:p-6 lg:p-8 rounded-2xl hover:shadow-2xl hover:shadow-rivamez-cyan/20 transition-all duration-300 border border-gray-700 hover:border-rivamez-cyan group"
             >
               <div className="w-14 h-14 bg-gradient-to-br from-rivamez-cyan to-rivamez-navy rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                 <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">

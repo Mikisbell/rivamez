@@ -95,7 +95,7 @@ export default function Testimonials() {
   }, []);
 
   return (
-    <section id="testimonios" ref={sectionRef} className="py-24 px-4 bg-gradient-to-b from-gray-100 via-white to-gray-50 relative overflow-hidden">
+    <section id="testimonios" ref={sectionRef} className="py-12 md:py-16 lg:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-100 via-white to-gray-50 relative overflow-hidden">
       {/* Line Pattern */}
       <div className="absolute inset-0 opacity-10" style={{
         backgroundImage: `repeating-linear-gradient(
@@ -108,9 +108,9 @@ export default function Testimonials() {
       }} />
 
       {/* Background decoration */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-rivamez-navy/8 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '8s' }} />
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-rivamez-cyan/8 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '10s', animationDelay: '2s' }} />
-      <div className="absolute top-1/2 right-1/4 w-64 h-64 bg-rivamez-green/5 rounded-full blur-3xl" />
+      <div className="absolute top-0 right-0 w-48 sm:w-72 lg:w-96 h-48 sm:h-72 lg:h-96 bg-rivamez-navy/8 rounded-full blur-3xl animate-pulse hidden sm:block" style={{ animationDuration: '8s' }} />
+      <div className="absolute bottom-0 left-0 w-48 sm:w-72 lg:w-96 h-48 sm:h-72 lg:h-96 bg-rivamez-cyan/8 rounded-full blur-3xl animate-pulse hidden sm:block" style={{ animationDuration: '10s', animationDelay: '2s' }} />
+      <div className="absolute top-1/2 right-1/4 w-64 h-64 bg-rivamez-green/5 rounded-full blur-3xl hidden sm:block" />
 
       <div className="container mx-auto max-w-7xl relative z-10">
         {/* Header */}
@@ -133,12 +133,12 @@ export default function Testimonials() {
         </motion.div>
 
         {/* Testimonials Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 mb-12">
           {testimonials.map((testimonial, index) => (
             <div
               key={testimonial.id}
               ref={(el) => (cardsRef.current[index] = el)}
-              className="group bg-white p-8 rounded-2xl border border-gray-200 hover:border-rivamez-cyan hover:shadow-2xl hover:shadow-rivamez-cyan/10 hover:-translate-y-2 transition-all duration-500 opacity-0"
+              className="group bg-white p-4 sm:p-6 lg:p-8 rounded-2xl border border-gray-200 hover:border-rivamez-cyan hover:shadow-2xl hover:shadow-rivamez-cyan/10 hover:-translate-y-2 transition-all duration-500 opacity-0"
             >
               {/* Rating */}
               <div className="flex gap-1 mb-4">
@@ -156,8 +156,8 @@ export default function Testimonials() {
 
               {/* Author */}
               <div className="flex items-center gap-4 pt-4 border-t border-gray-200">
-                <img 
-                  src={testimonial.image} 
+                <img
+                  src={testimonial.image}
                   alt={testimonial.name}
                   className="w-14 h-14 rounded-full object-cover border-2 border-rivamez-cyan"
                 />
@@ -177,7 +177,7 @@ export default function Testimonials() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-8 bg-gradient-to-r from-rivamez-navy to-rivamez-cyan p-8 rounded-2xl"
+          className="grid grid-cols-2 md:grid-cols-4 gap-4 p-4 sm:p-6 lg:p-8 bg-gradient-to-r from-rivamez-navy to-rivamez-cyan rounded-2xl"
         >
           <div className="text-center text-white">
             <div className="text-4xl font-bold mb-2">98%</div>

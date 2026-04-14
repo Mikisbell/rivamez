@@ -52,7 +52,7 @@ export default function VideoModal({ isOpen, onClose, videoUrl, title, duration 
           >
             {/* Header */}
             <div className="relative bg-gradient-to-r from-rivamez-navy to-rivamez-cyan/20 px-6 py-4 border-b border-white/10">
-              <div className="flex items-center justify-between">
+              <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center">
                     <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
@@ -60,7 +60,7 @@ export default function VideoModal({ isOpen, onClose, videoUrl, title, duration 
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-lg font-bold text-white">{title}</h3>
+                    <h3 className="text-sm sm:text-lg font-bold text-white">{title}</h3>
                     {duration && (
                       <p className="text-sm text-gray-300">Duración: {duration}</p>
                     )}
@@ -91,8 +91,8 @@ export default function VideoModal({ isOpen, onClose, videoUrl, title, duration 
               ) : (
                 // Placeholder cuando no hay video - Imagen generada
                 <div className="w-full h-full relative overflow-hidden">
-                  <img 
-                    src="/images/video-placeholder.svg" 
+                  <img
+                    src="/images/video-placeholder.svg"
                     alt="Video Corporativo RIVAMEZ - Próximamente"
                     className="w-full h-full object-cover"
                   />
@@ -113,7 +113,7 @@ export default function VideoModal({ isOpen, onClose, videoUrl, title, duration 
 
             {/* Footer - Quick Actions */}
             <div className="bg-gradient-to-r from-rivamez-navy to-rivamez-cyan/20 px-6 py-4 border-t border-white/10">
-              <div className="flex items-center justify-between">
+              <div className="flex flex-col sm:flex-row items-center justify-between gap-3">
                 <div className="text-sm text-gray-300">
                   ¿Te gustó lo que viste?
                 </div>

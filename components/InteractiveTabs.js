@@ -119,7 +119,7 @@ export default function InteractiveTabs() {
   }, [activeTab]);
 
   return (
-    <section className="py-24 px-4 bg-gradient-to-br from-gray-50 via-white to-gray-50">
+    <section className="py-12 md:py-16 lg:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 via-white to-gray-50">
       <div className="container mx-auto max-w-7xl">
         {/* Header */}
         <motion.div
@@ -143,11 +143,10 @@ export default function InteractiveTabs() {
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
-              className={`px-6 py-3 rounded-lg font-semibold text-sm transition-all duration-300 ${
-                activeTab === tab.id
-                  ? 'bg-rivamez-navy text-white shadow-lg shadow-rivamez-navy/30'
-                  : 'bg-white text-gray-600 hover:bg-gray-100 border border-gray-200'
-              }`}
+              className={`px-3 py-2 md:px-6 md:py-3 rounded-lg font-semibold text-xs md:text-sm whitespace-nowrap transition-all duration-300 ${activeTab === tab.id
+                ? 'bg-rivamez-navy text-white shadow-lg shadow-rivamez-navy/30'
+                : 'bg-white text-gray-600 hover:bg-gray-100 border border-gray-200'
+                }`}
             >
               {tab.label}
             </button>
@@ -228,7 +227,7 @@ export default function InteractiveTabs() {
               </div>
 
               {/* Right Carousel */}
-              <div className="relative h-full min-h-[400px] lg:min-h-[600px] overflow-hidden">
+              <div className="relative h-full min-h-[300px] sm:min-h-[400px] md:min-h-[500px] lg:min-h-[600px] overflow-hidden">
                 <AnimatePresence mode="wait">
                   <motion.div
                     key={currentSlide}
@@ -267,11 +266,10 @@ export default function InteractiveTabs() {
                     <button
                       key={index}
                       onClick={() => setCurrentSlide(index)}
-                      className={`h-2 rounded-full transition-all duration-300 ${
-                        index === currentSlide
-                          ? 'w-8 bg-white'
-                          : 'w-2 bg-white/50 hover:bg-white/75'
-                      }`}
+                      className={`h-2 rounded-full transition-all duration-300 ${index === currentSlide
+                        ? 'w-8 bg-white'
+                        : 'w-2 bg-white/50 hover:bg-white/75'
+                        }`}
                     />
                   ))}
                 </div>

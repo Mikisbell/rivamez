@@ -17,7 +17,7 @@ export default function Contact() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus('sending');
-    
+
     // Simular envío (aquí conectarías con tu backend o servicio de email)
     setTimeout(() => {
       setStatus('success');
@@ -108,7 +108,7 @@ export default function Contact() {
                   <div className="flex-1">
                     <h3 className="font-semibold heading-sm text-gray-900 mb-1">{info.title}</h3>
                     {info.link ? (
-                      <a 
+                      <a
                         href={info.link}
                         className="text-rivamez-cyan hover:text-rivamez-navy transition-colors text-body"
                         target={info.link.startsWith('http') ? '_blank' : undefined}
@@ -125,7 +125,7 @@ export default function Contact() {
             ))}
 
             {/* Map placeholder */}
-            <div className="bg-gray-300 h-64 rounded-xl overflow-hidden shadow-md">
+            <div className="bg-gray-300 h-48 sm:h-56 md:h-64 rounded-xl overflow-hidden shadow-md">
               <div className="w-full h-full flex items-center justify-center text-gray-500">
                 <div className="text-center">
                   <svg className="w-12 h-12 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">

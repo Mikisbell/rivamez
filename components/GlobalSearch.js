@@ -59,7 +59,7 @@ export default function GlobalSearch() {
 
   return (
     <>
-      {/* Search Trigger Button */}
+      {/* Search Trigger Button - Desktop */}
       <button
         onClick={() => setIsOpen(true)}
         className="fixed top-24 right-6 z-40 hidden md:flex items-center gap-2 px-4 py-2 bg-white/90 dark:bg-gray-800/90 backdrop-blur-md border-2 border-gray-200 dark:border-gray-700 rounded-lg hover:border-rivamez-cyan transition-all shadow-lg"
@@ -71,6 +71,17 @@ export default function GlobalSearch() {
         <kbd className="px-2 py-1 text-xs bg-gray-100 dark:bg-gray-700 rounded border border-gray-300 dark:border-gray-600">
           ⌘K
         </kbd>
+      </button>
+
+      {/* Search Trigger Button - Mobile */}
+      <button
+        onClick={() => setIsOpen(true)}
+        className="fixed top-20 right-4 z-40 md:hidden flex items-center justify-center w-10 h-10 bg-white/90 dark:bg-gray-800/90 backdrop-blur-md border-2 border-gray-200 dark:border-gray-700 rounded-full hover:border-rivamez-cyan transition-all shadow-lg"
+        aria-label="Buscar"
+      >
+        <svg className="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+        </svg>
       </button>
 
       {/* Search Modal */}
@@ -92,7 +103,7 @@ export default function GlobalSearch() {
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: -20 }}
               transition={{ type: 'spring', duration: 0.5 }}
-              className="fixed top-20 left-1/2 -translate-x-1/2 w-full max-w-2xl z-50 px-4"
+              className="fixed top-16 sm:top-20 left-1/2 -translate-x-1/2 w-full max-w-2xl z-50 px-4"
             >
               <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl border-2 border-gray-200 dark:border-gray-700 overflow-hidden">
                 {/* Search Input */}
@@ -119,7 +130,7 @@ export default function GlobalSearch() {
                 </div>
 
                 {/* Results */}
-                <div className="max-h-96 overflow-y-auto">
+                <div className="max-h-[50vh] sm:max-h-96 overflow-y-auto">
                   {results.length > 0 ? (
                     <div className="p-2">
                       {results.map((result, index) => (

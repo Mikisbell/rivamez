@@ -10,7 +10,7 @@ export default function ChatBot() {
   const [inputText, setInputText] = useState('');
   const [isTyping, setIsTyping] = useState(false);
   const messagesEndRef = useRef(null);
-  
+
   // Inicializar mensaje de bienvenida solo en el cliente
   useEffect(() => {
     if (messages.length === 0) {
@@ -39,7 +39,7 @@ export default function ChatBot() {
       keywords: ['servicio', 'servicios', 'ofrecen', 'hacen', 'que hacen', 'especialidad'],
       response: '🏗️ En RIVAMEZ ofrecemos:\n\n• Construcción Residencial\n• Proyectos Comerciales\n• Remodelación y Ampliación\n• Diseño Arquitectónico\n• Gestión de Proyectos\n• Construcción Industrial\n\n¿Te interesa algún servicio en específico?'
     },
-    
+
     // Tiempo de construcción (PRIMERO - más específico)
     tiempo: {
       keywords: ['tiempo', 'demora', 'cuanto tarda', 'cuánto tarda', 'duracion', 'duración', 'plazo', 'cuanto demora', 'cuánto demora', 'cuando termina', 'cuándo termina'],
@@ -133,7 +133,7 @@ export default function ChatBot() {
     // Buscar en la base de conocimiento
     for (const [key, data] of Object.entries(knowledgeBase)) {
       if (key === 'default') continue;
-      
+
       const matched = data.keywords.some(keyword => input.includes(keyword));
       if (matched) {
         return data.response;
@@ -166,7 +166,7 @@ export default function ChatBot() {
         text: botResponse,
         time: new Date().toLocaleTimeString('es-PE', { hour: '2-digit', minute: '2-digit' })
       };
-      
+
       setMessages(prev => [...prev, botMessage]);
       setIsTyping(false);
     }, 800);
@@ -189,7 +189,7 @@ export default function ChatBot() {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             onClick={() => setIsOpen(true)}
-            className="fixed bottom-6 right-6 z-50 w-14 h-14 md:w-16 md:h-16 bg-gradient-to-br from-rivamez-cyan to-rivamez-navy rounded-full shadow-2xl flex items-center justify-center text-white hover:shadow-rivamez-cyan/50 transition-all duration-300"
+            className="fixed bottom-20 sm:bottom-24 right-3 sm:right-6 z-50 w-14 h-14 md:w-16 md:h-16 bg-gradient-to-br from-rivamez-cyan to-rivamez-navy rounded-full shadow-2xl flex items-center justify-center text-white hover:shadow-rivamez-cyan/50 transition-all duration-300"
             aria-label="Abrir chat"
           >
             <svg className="w-7 h-7 md:w-8 md:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -208,7 +208,7 @@ export default function ChatBot() {
             initial={{ opacity: 0, y: 20, scale: 0.9 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.9 }}
-            className="fixed bottom-6 right-6 z-50 w-[calc(100vw-2rem)] max-w-[380px] h-[600px] max-h-[calc(100vh-5rem)] bg-white rounded-2xl shadow-2xl flex flex-col overflow-hidden"
+            className="fixed bottom-20 sm:bottom-24 right-3 sm:right-6 z-50 w-[calc(100vw-1.5rem)] sm:w-[calc(100vw-2rem)] max-w-[380px] h-[500px] sm:h-[600px] max-h-[calc(100vh-5rem)] bg-white rounded-2xl shadow-2xl flex flex-col overflow-hidden"
           >
             {/* Header */}
             <div className="bg-gradient-to-r from-rivamez-navy to-rivamez-cyan text-white p-4 flex items-center justify-between">
@@ -244,13 +244,12 @@ export default function ChatBot() {
                   className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}
                 >
                   <div
-                    className={`max-w-[85%] rounded-2xl px-4 py-2 ${
-                      message.type === 'user'
-                        ? 'bg-gradient-to-r from-rivamez-cyan to-rivamez-navy text-white rounded-br-sm'
-                        : 'bg-white text-gray-800 shadow-md rounded-bl-sm'
-                    }`}
+                    className={`max-w-[85%] rounded-2xl px-4 py-2 ${message.type === 'user'
+                      ? 'bg-gradient-to-r from-rivamez-cyan to-rivamez-navy text-white rounded-br-sm'
+                      : 'bg-white text-gray-800 shadow-md rounded-bl-sm'
+                      }`}
                   >
-                    <p className="text-sm whitespace-pre-line">{message.text}</p>
+                    <p className="text-sm sm:text-base whitespace-pre-line">{message.text}</p>
                     <p className={`text-xs mt-1 ${message.type === 'user' ? 'text-white/70' : 'text-gray-500'}`}>
                       {message.time}
                     </p>
@@ -287,7 +286,7 @@ export default function ChatBot() {
                     <button
                       key={index}
                       onClick={() => handleQuickReply(reply.query)}
-                      className="text-xs px-3 py-1.5 bg-gray-100 hover:bg-rivamez-cyan/10 text-gray-700 rounded-full transition-colors border border-gray-200 hover:border-rivamez-cyan"
+                      className="text-sm px-3 py-2 bg-gray-100 hover:bg-rivamez-cyan/10 text-gray-700 rounded-full transition-colors border border-gray-200 hover:border-rivamez-cyan"
                     >
                       {reply.text}
                     </button>

@@ -6,10 +6,16 @@ import { useEffect, useRef, useState } from 'react';
 export default function BuildingHero() {
   const containerRef = useRef(null);
   const [isComplete, setIsComplete] = useState(false);
+  const [windowSize, setWindowSize] = useState({ width: 1920, height: 1080 });
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start start", "end start"]
   });
+
+  // Track window size for SSR safety
+  useEffect(() => {
+    setWindowSize({ width: window.innerWidth, height: window.innerHeight });
+  }, []);
 
   // Smooth spring animation
   const smoothProgress = useSpring(scrollYProgress, {
@@ -31,7 +37,7 @@ export default function BuildingHero() {
     const timer1 = setTimeout(() => setPhase(1), 1000);
     const timer2 = setTimeout(() => setPhase(2), 2500);
     const timer3 = setTimeout(() => setIsComplete(true), 4000);
-    
+
     return () => {
       clearTimeout(timer1);
       clearTimeout(timer2);
@@ -73,13 +79,13 @@ export default function BuildingHero() {
   ];
 
   return (
-    <section 
+    <section
       ref={containerRef}
       className="relative min-h-screen bg-gradient-to-b from-gray-900 via-rivamez-dark to-black overflow-hidden"
     >
       {/* Animated Grid Background */}
       <div className="absolute inset-0 opacity-20">
-        <div 
+        <div
           className="absolute inset-0"
           style={{
             backgroundImage: `
@@ -99,8 +105,8 @@ export default function BuildingHero() {
             key={i}
             className="absolute w-1 h-1 bg-rivamez-cyan rounded-full"
             initial={{
-              x: Math.random() * window.innerWidth,
-              y: Math.random() * window.innerHeight,
+              x: Math.random() * windowSize.width,
+              y: Math.random() * windowSize.height,
               opacity: Math.random() * 0.5 + 0.3
             }}
             animate={{
@@ -117,7 +123,7 @@ export default function BuildingHero() {
       </div>
 
       {/* Hero Content */}
-      <motion.div 
+      <motion.div
         className="relative z-10 container-responsive py-20 md:py-32"
         style={{ opacity }}
       >
@@ -163,7 +169,7 @@ export default function BuildingHero() {
         {/* Building Visualization */}
         <div className="relative max-w-7xl mx-auto perspective-1000">
           {/* Construction Timeline */}
-          <motion.div 
+          <motion.div
             className="flex justify-center mb-12"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -173,15 +179,13 @@ export default function BuildingHero() {
               {['Cimientos', 'Estructura', 'Acabados'].map((label, idx) => (
                 <div key={label} className="flex items-center gap-2">
                   <motion.div
-                    className={`w-3 h-3 rounded-full ${
-                      phase >= idx ? 'bg-rivamez-cyan' : 'bg-gray-600'
-                    }`}
+                    className={`w-3 h-3 rounded-full ${phase >= idx ? 'bg-rivamez-cyan' : 'bg-gray-600'
+                      }`}
                     animate={phase >= idx ? { scale: [1, 1.3, 1] } : {}}
                     transition={{ duration: 0.5 }}
                   />
-                  <span className={`text-sm font-medium ${
-                    phase >= idx ? 'text-white' : 'text-gray-500'
-                  }`}>
+                  <span className={`text-sm font-medium ${phase >= idx ? 'text-white' : 'text-gray-500'
+                    }`}>
                     {label}
                   </span>
                   {idx < 2 && <div className="w-8 h-0.5 bg-gray-700" />}
@@ -206,17 +210,17 @@ export default function BuildingHero() {
           <motion.div
             className="absolute -top-20 right-0 md:right-20"
             initial={{ y: -100, opacity: 0 }}
-            animate={{ 
+            animate={{
               y: phase === 2 ? -50 : 0,
               opacity: phase < 2 ? 1 : 0,
               x: [0, -10, 0]
             }}
-            transition={{ 
+            transition={{
               y: { duration: 1, delay: 0.5 },
               x: { duration: 2, repeat: Infinity, ease: "easeInOut" }
             }}
           >
-            <div className="text-6xl md:text-8xl">🏗️</div>
+            <div className="text-4xl md:text-6xl lg:text-8xl">🏗️</div>
           </motion.div>
 
           {/* Completion Celebration */}
@@ -236,7 +240,7 @@ export default function BuildingHero() {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 2 }}
-          className="grid md:grid-cols-3 gap-6 mt-20"
+          className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mt-10 md:mt-16 lg:mt-20"
         >
           {buildingLayers.reverse().map((layer, idx) => (
             <motion.div
@@ -245,7 +249,7 @@ export default function BuildingHero() {
               className="relative group"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-rivamez-cyan/20 to-rivamez-navy/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all" />
-              <div className="relative bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-8 hover:border-rivamez-cyan/50 transition-all">
+              <div className="relative bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-4 sm:p-6 lg:p-8 hover:border-rivamez-cyan/50 transition-all">
                 <div className="text-5xl mb-4">{layer.icon}</div>
                 <div className="text-xs font-bold text-rivamez-cyan mb-2 tracking-wider">
                   {layer.subtitle}
@@ -256,7 +260,7 @@ export default function BuildingHero() {
                 <p className="text-gray-400 leading-relaxed">
                   {layer.description}
                 </p>
-                
+
                 {/* Hover indicator */}
                 <motion.div
                   className="absolute bottom-4 right-4 w-8 h-8 border-2 border-rivamez-cyan rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
@@ -276,26 +280,26 @@ export default function BuildingHero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 2.5 }}
-          className="text-center mt-16"
+          className="text-center mt-8 md:mt-12 lg:mt-16"
         >
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <motion.a
               href="#proyectos"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="group px-8 py-4 bg-gradient-to-r from-rivamez-cyan to-rivamez-green text-white rounded-xl font-semibold text-lg shadow-2xl hover:shadow-cyan-500/50 transition-all flex items-center gap-2"
+              className="group px-4 sm:px-6 md:px-8 py-3 sm:py-4 bg-gradient-to-r from-rivamez-cyan to-rivamez-green text-white rounded-xl font-semibold text-lg shadow-2xl hover:shadow-cyan-500/50 transition-all flex items-center gap-2"
             >
               <span>Explora Nuestros Proyectos</span>
               <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
             </motion.a>
-            
+
             <motion.a
               href="#contacto"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-8 py-4 bg-white/10 backdrop-blur-md border-2 border-white/20 text-white rounded-xl font-semibold text-lg hover:bg-white/20 transition-all"
+              className="px-4 sm:px-6 md:px-8 py-3 sm:py-4 bg-white/10 backdrop-blur-md border-2 border-white/20 text-white rounded-xl font-semibold text-lg hover:bg-white/20 transition-all"
             >
               Solicitar Cotización
             </motion.a>
@@ -307,7 +311,7 @@ export default function BuildingHero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 3 }}
-          className="flex justify-center mt-16"
+          className="flex justify-center mt-8 md:mt-12"
         >
           <motion.div
             animate={{ y: [0, 10, 0] }}
@@ -323,7 +327,7 @@ export default function BuildingHero() {
       </motion.div>
 
       {/* Bottom Gradient Fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black to-transparent pointer-events-none z-0" />
     </section>
   );
 }
@@ -337,13 +341,13 @@ function BuildingLayer({ layer, index, isVisible }) {
     <motion.div
       ref={ref}
       initial={{ y: 100, opacity: 0, scaleY: 0 }}
-      animate={isVisible ? { 
-        y: 0, 
-        opacity: 1, 
-        scaleY: 1 
+      animate={isVisible ? {
+        y: 0,
+        opacity: 1,
+        scaleY: 1
       } : {}}
-      transition={{ 
-        duration: 0.8, 
+      transition={{
+        duration: 0.8,
         delay: layer.delay,
         type: "spring",
         stiffness: 100
@@ -365,9 +369,9 @@ function BuildingLayer({ layer, index, isVisible }) {
       >
         {/* Glass effect overlay */}
         <div className="absolute inset-0 bg-white/5 backdrop-blur-sm" />
-        
+
         {/* Grid pattern */}
-        <div 
+        <div
           className="absolute inset-0 opacity-20"
           style={{
             backgroundImage: `
@@ -392,7 +396,7 @@ function BuildingLayer({ layer, index, isVisible }) {
               <div className="text-xs font-bold text-white/60 mb-1 tracking-wider">
                 {layer.subtitle}
               </div>
-              <h3 className="text-2xl md:text-3xl font-bold text-white mb-1">
+              <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-white mb-1">
                 {layer.title}
               </h3>
               <p className="text-sm text-white/80 max-w-md hidden md:block">

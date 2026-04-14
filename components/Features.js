@@ -102,7 +102,7 @@ export default function Features() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="group relative"
             >
-              <div className="h-full p-8 rounded-2xl border border-gray-200 hover:border-rivamez-cyan hover:shadow-xl hover:shadow-rivamez-cyan/10 hover:-translate-y-2 transition-all duration-500 bg-white">
+              <div className="h-full p-4 sm:p-6 lg:p-8 rounded-2xl border border-gray-200 hover:border-rivamez-cyan hover:shadow-xl hover:shadow-rivamez-cyan/10 hover:-translate-y-2 transition-all duration-500 bg-white">
                 {/* Icon */}
                 <div className="relative mb-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-rivamez-cyan via-rivamez-navy to-rivamez-green rounded-full flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg">

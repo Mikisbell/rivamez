@@ -14,10 +14,10 @@ export default function Home() {
   return (
     <>
       {/* Sección de presentación impresionante con animación de construcción de edificio */}
-      <BuildingHero />
+      {/* <BuildingHero /> */}
       
-      {/* Hero original - Puedes comentar/descomentar según prefieras */}
-      {/* <Hero /> */}
+      {/* Hero original */}
+      <Hero />
       
       <ScrollReveal animation="fadeUp">
         <Features />

@@ -36,14 +36,14 @@ export default function ExitIntentModal() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
     // Track conversion
     trackEvent.exitIntentConverted();
     trackEvent.formSubmit('Exit Intent Lead Magnet');
 
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 1000));
-    
+
     setSubmitted(true);
 
     // Auto download lead magnet PDF
@@ -74,7 +74,7 @@ export default function ExitIntentModal() {
             transition={{ type: 'spring', duration: 0.5 }}
             className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-lg z-50 px-4"
           >
-            <div className="bg-white rounded-2xl shadow-2xl overflow-hidden">
+            <div className="relative bg-white rounded-2xl shadow-2xl overflow-hidden">
               {!submitted ? (
                 <>
                   {/* Close Button */}
@@ -88,9 +88,9 @@ export default function ExitIntentModal() {
                   </button>
 
                   {/* Header */}
-                  <div className="bg-gradient-to-br from-rivamez-navy to-rivamez-cyan p-8 text-white text-center">
-                    <div className="text-5xl mb-4">🎁</div>
-                    <h2 className="text-3xl font-bold mb-2">
+                  <div className="bg-gradient-to-br from-rivamez-navy to-rivamez-cyan p-6 sm:p-8 text-white text-center">
+                    <div className="text-4xl sm:text-5xl mb-3 sm:mb-4">🎁</div>
+                    <h2 className="text-2xl sm:text-3xl font-bold mb-2">
                       ¡Espera! Regalo Especial
                     </h2>
                     <p className="text-cyan-100">
@@ -99,7 +99,7 @@ export default function ExitIntentModal() {
                   </div>
 
                   {/* Content */}
-                  <div className="p-8">
+                  <div className="p-6 sm:p-8">
                     <div className="bg-gradient-to-br from-yellow-50 to-orange-50 border-2 border-yellow-200 rounded-xl p-6 mb-6">
                       <h3 className="text-xl font-bold text-gray-900 mb-2">
                         📘 "10 Errores que Encarecen tu Proyecto de Construcción"

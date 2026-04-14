@@ -18,7 +18,7 @@ export default function BlogListNew({ initialPosts = [], initialFeaturedPost = n
 
   // Filtrar posts por categoría y búsqueda
   const filteredPosts = posts.filter(post => {
-    const matchesCategory = activeCategory === 'all' || 
+    const matchesCategory = activeCategory === 'all' ||
       post.categories?.some(cat => cat.slug.current === activeCategory);
     const matchesSearch = searchQuery === '' ||
       post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -32,7 +32,7 @@ export default function BlogListNew({ initialPosts = [], initialFeaturedPost = n
     const now = new Date();
     const diff = now - date;
     const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-    
+
     if (days === 0) return 'Hoy';
     if (days === 1) return 'Ayer';
     if (days < 7) return `Hace ${days} días`;
@@ -117,7 +117,7 @@ export default function BlogListNew({ initialPosts = [], initialFeaturedPost = n
                 <Link href={`/blog/${featuredPost.slug.current}`}>
                   <div className="group relative bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500">
                     {/* Imagen */}
-                    <div className="relative h-96 overflow-hidden">
+                    <div className="relative h-56 sm:h-72 md:h-96 overflow-hidden">
                       {featuredPost.mainImage ? (
                         <Image
                           src={urlFor(featuredPost.mainImage).width(1200).height(600).url()}
@@ -132,7 +132,7 @@ export default function BlogListNew({ initialPosts = [], initialFeaturedPost = n
                         </div>
                       )}
                       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-                      
+
                       {/* Badge Featured */}
                       <div className="absolute top-6 left-6">
                         <span className="px-4 py-2 bg-gradient-to-r from-yellow-400 to-amber-600 text-white text-sm font-bold rounded-full shadow-lg flex items-center gap-2">
@@ -203,7 +203,7 @@ export default function BlogListNew({ initialPosts = [], initialFeaturedPost = n
                     <Link href={`/blog/${post.slug.current}`}>
                       <div className="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 flex flex-col sm:flex-row">
                         {/* Imagen */}
-                        <div className="relative sm:w-64 h-48 sm:h-auto flex-shrink-0 overflow-hidden">
+                        <div className="relative w-full sm:w-64 h-48 sm:h-auto flex-shrink-0 overflow-hidden">
                           {post.mainImage ? (
                             <Image
                               src={urlFor(post.mainImage).width(400).height(300).url()}
@@ -290,18 +290,17 @@ export default function BlogListNew({ initialPosts = [], initialFeaturedPost = n
                   <button
                     key={cat._id}
                     onClick={() => setActiveCategory(cat.slug.current)}
-                    className={`w-full text-left px-4 py-3 rounded-xl transition-all ${
-                      activeCategory === cat.slug.current
-                        ? 'bg-gradient-to-r from-rivamez-navy to-rivamez-cyan text-white shadow-lg scale-105'
-                        : 'bg-gray-50 text-gray-700 hover:bg-gray-100'
-                    }`}
+                    className={`w-full text-left px-4 py-3 rounded-xl transition-all ${activeCategory === cat.slug.current
+                      ? 'bg-gradient-to-r from-rivamez-navy to-rivamez-cyan text-white shadow-lg scale-105'
+                      : 'bg-gray-50 text-gray-700 hover:bg-gray-100'
+                      }`}
                   >
                     <span className="flex items-center gap-2">
                       <span className="text-xl">{cat.icon}</span>
                       <span className="font-semibold">{cat.title}</span>
                       <span className="ml-auto text-sm opacity-75">
-                        {cat.slug.current === 'all' 
-                          ? posts.length 
+                        {cat.slug.current === 'all'
+                          ? posts.length
                           : posts.filter(p => p.categories?.some(c => c.slug.current === cat.slug.current)).length}
                       </span>
                     </span>

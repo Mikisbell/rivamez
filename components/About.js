@@ -65,7 +65,7 @@ export default function About() {
   }, []);
 
   return (
-    <section id="nosotros" ref={sectionRef} className="py-24 px-4 bg-gradient-to-b from-white via-gray-50 to-white relative overflow-hidden">
+    <section id="nosotros" ref={sectionRef} className="py-12 md:py-16 lg:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white via-gray-50 to-white relative overflow-hidden">
       {/* Geometric Pattern */}
       <div className="absolute inset-0 opacity-5" style={{
         backgroundImage: `
@@ -76,9 +76,9 @@ export default function About() {
       }} />
 
       {/* Decorative elements */}
-      <div className="absolute top-0 left-0 w-96 h-96 bg-rivamez-cyan/10 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '10s' }} />
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-rivamez-navy/10 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '12s', animationDelay: '2s' }} />
-      <div className="absolute top-1/2 left-1/4 w-64 h-64 bg-rivamez-green/8 rounded-full blur-3xl" />
+      <div className="absolute top-0 left-0 w-48 sm:w-72 lg:w-96 h-48 sm:h-72 lg:h-96 bg-rivamez-cyan/10 rounded-full blur-3xl animate-pulse hidden sm:block" style={{ animationDuration: '10s' }} />
+      <div className="absolute bottom-0 right-0 w-48 sm:w-72 lg:w-96 h-48 sm:h-72 lg:h-96 bg-rivamez-navy/10 rounded-full blur-3xl animate-pulse hidden sm:block" style={{ animationDuration: '12s', animationDelay: '2s' }} />
+      <div className="absolute top-1/2 left-1/4 w-64 h-64 bg-rivamez-green/8 rounded-full blur-3xl hidden sm:block" />
 
       <div className="container mx-auto max-w-7xl relative z-10">
         {/* Header */}
@@ -101,13 +101,13 @@ export default function About() {
         </motion.div>
 
         {/* Mission & Vision Grid */}
-        <div className="grid md:grid-cols-2 gap-8 mb-20">
+        <div className="grid md:grid-cols-2 gap-4 sm:gap-6 mb-12 md:mb-20 p-4 sm:p-6 lg:p-8">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="bg-white p-8 rounded-2xl shadow-xl border border-gray-100 hover:shadow-2xl transition-shadow duration-300"
+            className="bg-white p-4 sm:p-6 lg:p-8 rounded-2xl shadow-xl border border-gray-100 hover:shadow-2xl transition-shadow duration-300"
           >
             <div className="w-16 h-16 bg-gradient-to-br from-rivamez-cyan to-rivamez-navy rounded-xl flex items-center justify-center mb-6">
               <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -125,7 +125,7 @@ export default function About() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="bg-white p-8 rounded-2xl shadow-xl border border-gray-100 hover:shadow-2xl transition-shadow duration-300"
+            className="bg-white p-4 sm:p-6 lg:p-8 rounded-2xl shadow-xl border border-gray-100 hover:shadow-2xl transition-shadow duration-300"
           >
             <div className="w-16 h-16 bg-gradient-to-br from-rivamez-green to-rivamez-cyan rounded-xl flex items-center justify-center mb-6">
               <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -148,7 +148,7 @@ export default function About() {
               <div
                 key={value.id}
                 ref={(el) => (cardsRef.current[index] = el)}
-                className="group bg-white p-8 rounded-2xl border border-gray-200 hover:border-rivamez-cyan hover:shadow-xl hover:shadow-rivamez-cyan/10 hover:-translate-y-1 transition-all duration-300 opacity-0"
+                className="group bg-white p-4 sm:p-6 lg:p-8 rounded-2xl border border-gray-200 hover:border-rivamez-cyan hover:shadow-xl hover:shadow-rivamez-cyan/10 hover:-translate-y-1 transition-all duration-300 opacity-0"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-rivamez-cyan via-rivamez-navy to-rivamez-green rounded-full flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg">
                   <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">

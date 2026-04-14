@@ -85,10 +85,10 @@ export default function BlogList({ initialPosts = [], initialFeaturedPost = null
 
   const filteredPosts = activeCategory === 'all'
     ? posts.filter(p => !p.featured)
-    : posts.filter(p => 
-        !p.featured && 
-        p.categories?.some(cat => cat.slug?.current === activeCategory)
-      );
+    : posts.filter(p =>
+      !p.featured &&
+      p.categories?.some(cat => cat.slug?.current === activeCategory)
+    );
 
   const getColorClasses = (color) => {
     const colors = {
@@ -117,8 +117,8 @@ export default function BlogList({ initialPosts = [], initialFeaturedPost = null
   return (
     <section id="blog" className="relative py-20 md:py-32 overflow-hidden bg-gradient-to-b from-gray-50 to-white">
       {/* Background */}
-      <div className="absolute top-0 left-0 w-96 h-96 bg-rivamez-cyan/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-rivamez-green/10 rounded-full blur-3xl" />
+      <div className="absolute top-0 left-0 w-48 sm:w-72 lg:w-96 h-48 sm:h-72 lg:h-96 bg-rivamez-cyan/10 rounded-full blur-3xl hidden sm:block" />
+      <div className="absolute bottom-0 right-0 w-48 sm:w-72 lg:w-96 h-48 sm:h-72 lg:h-96 bg-rivamez-green/10 rounded-full blur-3xl hidden sm:block" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
@@ -154,11 +154,10 @@ export default function BlogList({ initialPosts = [], initialFeaturedPost = null
         >
           <button
             onClick={() => setActiveCategory('all')}
-            className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
-              activeCategory === 'all'
-                ? 'bg-gradient-to-r from-rivamez-cyan to-rivamez-navy text-white shadow-lg scale-105'
-                : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'
-            }`}
+            className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${activeCategory === 'all'
+              ? 'bg-gradient-to-r from-rivamez-cyan to-rivamez-navy text-white shadow-lg scale-105'
+              : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'
+              }`}
           >
             <span className="mr-2">📰</span>
             Todas
@@ -168,11 +167,10 @@ export default function BlogList({ initialPosts = [], initialFeaturedPost = null
               <button
                 key={category._id}
                 onClick={() => setActiveCategory(category.slug.current)}
-                className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
-                  activeCategory === category.slug.current
-                    ? 'bg-gradient-to-r from-rivamez-cyan to-rivamez-navy text-white shadow-lg scale-105'
-                    : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'
-                }`}
+                className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${activeCategory === category.slug.current
+                  ? 'bg-gradient-to-r from-rivamez-cyan to-rivamez-navy text-white shadow-lg scale-105'
+                  : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'
+                  }`}
               >
                 <span className="mr-2">{category.icon}</span>
                 {category.title}
@@ -192,7 +190,7 @@ export default function BlogList({ initialPosts = [], initialFeaturedPost = null
           >
             <Link href={`/blog/${featuredPost.slug.current}`}>
               <div className="relative bg-white rounded-3xl overflow-hidden shadow-2xl hover:shadow-3xl transition-shadow duration-300 cursor-pointer group">
-                <div className="grid md:grid-cols-2 gap-8 p-8 md:p-12">
+                <div className="grid md:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 p-4 sm:p-6 md:p-8 lg:p-10">
                   {/* Content */}
                   <div className="flex flex-col justify-center">
                     <div className="flex items-center gap-3 mb-4">
@@ -200,10 +198,10 @@ export default function BlogList({ initialPosts = [], initialFeaturedPost = null
                         ⭐ DESTACADO
                       </span>
                       <span className="text-sm text-gray-500">
-                        {new Date(featuredPost.publishedAt).toLocaleDateString('es-PE', { 
-                          year: 'numeric', 
-                          month: 'long', 
-                          day: 'numeric' 
+                        {new Date(featuredPost.publishedAt).toLocaleDateString('es-PE', {
+                          year: 'numeric',
+                          month: 'long',
+                          day: 'numeric'
                         })}
                       </span>
                     </div>
@@ -261,7 +259,7 @@ export default function BlogList({ initialPosts = [], initialFeaturedPost = null
         )}
 
         {/* Posts Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
           {filteredPosts.map((post, index) => (
             <motion.article
               key={post._id}
@@ -339,7 +337,7 @@ export default function BlogList({ initialPosts = [], initialFeaturedPost = null
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="mt-16 bg-gradient-to-br from-rivamez-navy to-rivamez-cyan rounded-3xl p-8 md:p-12 text-center"
+          className="mt-16 bg-gradient-to-br from-rivamez-navy to-rivamez-cyan rounded-3xl p-4 sm:p-6 lg:p-8 md:p-12 text-center"
         >
           <div className="max-w-2xl mx-auto">
             <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">

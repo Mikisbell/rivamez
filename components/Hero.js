@@ -40,16 +40,16 @@ export default function Hero() {
   }, []);
 
   return (
-    <section id="inicio" className="relative min-h-screen overflow-hidden flex flex-col">
+    <section id="inicio" className="relative min-h-screen overflow-hidden">
       {/* Animated Gradient Background */}
-      <div 
+      <div
         className="absolute inset-0"
         style={{
           background: 'linear-gradient(135deg, #0F172A 0%, #1E3A8A 50%, #06B6D4 100%)',
           transform: `translateY(${scrollY * 0.5}px)`
         }}
       />
-      
+
       {/* Mesh Gradient Overlay */}
       <div className="absolute inset-0" style={{
         background: `
@@ -65,7 +65,7 @@ export default function Hero() {
         backgroundImage: 'radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px)',
         backgroundSize: '32px 32px'
       }} />
-      
+
       {/* Geometric Pattern Overlay */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 opacity-5" style={{
@@ -81,7 +81,7 @@ export default function Hero() {
       </div>
 
       {/* Hospital Blueprint Background - Hidden on mobile */}
-      <div 
+      <div
         className="absolute inset-0 opacity-0 md:opacity-5"
         style={{
           backgroundImage: 'url(/images/hospital-blueprint.svg)',
@@ -96,97 +96,97 @@ export default function Hero() {
       <div className="absolute bottom-0 left-0 w-64 h-64 md:w-96 md:h-96 bg-rivamez-cyan/10 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '10s', animationDelay: '2s' }} />
 
       {/* Content */}
-      <div className="relative flex-1 flex items-center justify-center section-padding pt-20 md:pt-24 lg:pt-28">
+      <div className="relative z-10 section-padding pt-24 md:pt-28 lg:pt-32 pb-8 md:pb-12">
         <div className="container-responsive">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Left Column - Text Content */}
             <div className="text-center lg:text-left">
-          {/* Badge - Dataiku Style */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="inline-flex items-center px-5 py-2.5 bg-white/10 backdrop-blur-md border border-white/30 rounded-full mb-8 shadow-lg hover:bg-white/15 transition-all duration-300 group"
-          >
-            <div className="relative mr-3">
-              <div className="w-2 h-2 bg-rivamez-cyan rounded-full animate-pulse" />
-              <div className="absolute inset-0 w-2 h-2 bg-rivamez-cyan rounded-full animate-ping opacity-75" />
-            </div>
-            <span className="text-white text-small font-semibold tracking-wide">Construyendo el futuro de Huancayo desde 2009</span>
-            <svg className="w-4 h-4 ml-2 text-white/70 group-hover:text-white group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </motion.div>
-
-          {/* Main Title */}
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="heading-hero text-white mb-responsive leading-tight"
-          >
-            <span className="block">Construimos</span>
-            <span className="block bg-gradient-to-r from-rivamez-cyan to-rivamez-green bg-clip-text text-transparent">
-              Sueños Sólidos
-            </span>
-          </motion.h1>
-
-          {/* Subtitle */}
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-body text-gray-200 mb-responsive max-w-2xl mx-auto lg:mx-0 font-light leading-relaxed"
-          >
-            Desarrollo de proyectos residenciales y comerciales de alta gama en Huancayo, Perú
-          </motion.p>
-
-          {/* CTA Buttons */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="flex flex-col sm:flex-row space-x-responsive justify-center lg:justify-start items-stretch sm:items-center"
-          >
-            <a
-              href="#proyectos"
-              className="w-full sm:w-auto group relative btn-primary bg-white text-rivamez-navy rounded-xl hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-cyan-500/50 flex items-center justify-center gap-2 overflow-hidden"
-            >
-              <div className="absolute inset-0 bg-gradient-to-r from-rivamez-cyan to-rivamez-navy opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              <span className="relative z-10 group-hover:text-white transition-colors">Ver Proyectos</span>
-              <svg className="relative z-10 w-5 h-5 group-hover:translate-x-1 transition-transform group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </a>
-            <a
-              href="#contacto"
-              className="w-full sm:w-auto group btn-secondary bg-transparent border-2 border-white text-white rounded-xl hover:bg-white hover:text-rivamez-navy hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-white/30 text-center"
-            >
-              Solicitar Cotización
-            </a>
-          </motion.div>
-
-          {/* Video CTA */}
-          <motion.button
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
-            onClick={() => setIsVideoOpen(true)}
-            className="group flex items-center gap-3 text-white/90 hover:text-white transition-colors mt-8"
-          >
-            <div className="relative">
-              <div className="w-14 h-14 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center border border-white/20 group-hover:bg-white/20 transition-all duration-300 group-hover:scale-110">
-                <svg className="w-6 h-6 ml-0.5" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M8 5v14l11-7z" />
+              {/* Badge - Dataiku Style */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="inline-flex items-center px-5 py-2.5 bg-white/10 backdrop-blur-md border border-white/30 rounded-full mb-8 shadow-lg hover:bg-white/15 transition-all duration-300 group"
+              >
+                <div className="relative mr-3">
+                  <div className="w-2 h-2 bg-rivamez-cyan rounded-full animate-pulse" />
+                  <div className="absolute inset-0 w-2 h-2 bg-rivamez-cyan rounded-full animate-ping opacity-75" />
+                </div>
+                <span className="text-white text-small font-semibold tracking-wide">Construyendo el futuro de Huancayo desde 2009</span>
+                <svg className="w-4 h-4 ml-2 text-white/70 group-hover:text-white group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
-              </div>
-              <div className="absolute inset-0 bg-white/20 rounded-full animate-ping" />
-            </div>
-            <div className="text-left">
-              <div className="text-sm font-semibold">Ver Video Corporativo</div>
-              <div className="text-xs text-white/70">Descubre quiénes somos</div>
-            </div>
-          </motion.button>
+              </motion.div>
+
+              {/* Main Title */}
+              <motion.h1
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                className="heading-hero text-white mb-responsive leading-tight"
+              >
+                <span className="block">Construimos</span>
+                <span className="block bg-gradient-to-r from-rivamez-cyan to-rivamez-green bg-clip-text text-transparent">
+                  Sueños Sólidos
+                </span>
+              </motion.h1>
+
+              {/* Subtitle */}
+              <motion.p
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+                className="text-body text-gray-200 mb-responsive max-w-2xl mx-auto lg:mx-0 font-light leading-relaxed"
+              >
+                Desarrollo de proyectos residenciales y comerciales de alta gama en Huancayo, Perú
+              </motion.p>
+
+              {/* CTA Buttons */}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.6 }}
+                className="flex flex-col sm:flex-row space-x-responsive justify-center lg:justify-start items-stretch sm:items-center"
+              >
+                <a
+                  href="#proyectos"
+                  className="w-full sm:w-auto group relative btn-primary bg-white text-rivamez-navy rounded-xl hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-cyan-500/50 flex items-center justify-center gap-2 overflow-hidden"
+                >
+                  <div className="absolute inset-0 bg-gradient-to-r from-rivamez-cyan to-rivamez-navy opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <span className="relative z-10 group-hover:text-white transition-colors">Ver Proyectos</span>
+                  <svg className="relative z-10 w-5 h-5 group-hover:translate-x-1 transition-transform group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </a>
+                <a
+                  href="#contacto"
+                  className="w-full sm:w-auto group btn-secondary bg-transparent border-2 border-white text-white rounded-xl hover:bg-white hover:text-rivamez-navy hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-white/30 text-center"
+                >
+                  Solicitar Cotización
+                </a>
+              </motion.div>
+
+              {/* Video CTA */}
+              <motion.button
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.8, delay: 0.8 }}
+                onClick={() => setIsVideoOpen(true)}
+                className="group flex items-center gap-3 text-white/90 hover:text-white transition-colors mt-8"
+              >
+                <div className="relative">
+                  <div className="w-14 h-14 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center border border-white/20 group-hover:bg-white/20 transition-all duration-300 group-hover:scale-110">
+                    <svg className="w-6 h-6 ml-0.5" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M8 5v14l11-7z" />
+                    </svg>
+                  </div>
+                  <div className="absolute inset-0 bg-white/20 rounded-full animate-ping" />
+                </div>
+                <div className="text-left">
+                  <div className="text-sm font-semibold">Ver Video Corporativo</div>
+                  <div className="text-xs text-white/70">Descubre quiénes somos</div>
+                </div>
+              </motion.button>
             </div>
 
             {/* Right Column - Robot Ingeniero */}
@@ -198,14 +198,14 @@ export default function Hero() {
             >
               {/* Glow effect behind robot - con animación pulsante */}
               <div className="absolute inset-0 bg-gradient-to-r from-rivamez-cyan/20 to-rivamez-green/20 rounded-full animate-glow-pulse" />
-              
+
               {/* Robot Image - con animación compleja */}
-              <img 
-                src="/images/robot-ingeniero.svg" 
-                alt="Robot Ingeniero RIVAMEZ - Tecnología en Construcción" 
+              <img
+                src="/images/robot-ingeniero.svg"
+                alt="Robot Ingeniero RIVAMEZ - Tecnología en Construcción"
                 className="relative w-full max-w-lg h-auto drop-shadow-2xl animate-robot-dance"
               />
-              
+
               {/* Partículas decorativas animadas - Hidden on mobile */}
               <div className="hidden lg:block absolute top-10 left-10 w-3 h-3 bg-rivamez-cyan rounded-full animate-ping" />
               <div className="hidden lg:block absolute bottom-20 right-10 w-2 h-2 bg-rivamez-green rounded-full animate-pulse" style={{ animationDelay: '1s' }} />
@@ -215,8 +215,8 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Stats - Moved below */}
-      <div className="absolute bottom-8 sm:bottom-12 md:bottom-16 left-0 right-0 z-10">
+      {/* Stats */}
+      <div className="relative z-[5] px-4 pb-20 md:pb-24">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -225,19 +225,19 @@ export default function Hero() {
         >
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 bg-white/10 backdrop-blur-md rounded-2xl p-6 md:p-8 border border-white/20">
             <div className="text-center">
-              <div className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-white to-rivamez-cyan bg-clip-text text-transparent mb-2">15+</div>
+              <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-white to-rivamez-cyan bg-clip-text text-transparent mb-2">15+</div>
               <div className="text-gray-200 text-xs sm:text-sm font-medium">Años de Experiencia</div>
             </div>
             <div className="text-center md:border-x border-white/20">
-              <div className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-white to-rivamez-cyan bg-clip-text text-transparent mb-2">285+</div>
+              <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-white to-rivamez-cyan bg-clip-text text-transparent mb-2">285+</div>
               <div className="text-gray-200 text-xs sm:text-sm font-medium">Proyectos Completados</div>
             </div>
             <div className="text-center md:border-r border-white/20">
-              <div className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-white to-rivamez-green bg-clip-text text-transparent mb-2">250+</div>
+              <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-white to-rivamez-green bg-clip-text text-transparent mb-2">250+</div>
               <div className="text-gray-200 text-xs sm:text-sm font-medium">Clientes Satisfechos</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-white to-rivamez-cyan bg-clip-text text-transparent mb-2">62+</div>
+              <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-white to-rivamez-cyan bg-clip-text text-transparent mb-2">62+</div>
               <div className="text-gray-200 text-xs sm:text-sm font-medium">Profesionales</div>
             </div>
           </div>
@@ -249,10 +249,11 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5, duration: 1 }}
-        className="absolute bottom-4 left-1/2 transform -translate-x-1/2 hidden md:flex"
+        className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex"
       >
         <div className="flex flex-col items-center gap-2">
-          <span className="text-white/60 text-sm">Scroll para explorar</span>
+          <span className="text-white/60 text-sm hidden md:block">Scroll para explorar</span>
+          <span className="text-white/60 text-xs md:hidden">Desliza</span>
           <motion.div
             animate={{ y: [0, 10, 0] }}
             transition={{ repeat: Infinity, duration: 1.5 }}

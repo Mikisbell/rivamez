@@ -83,7 +83,7 @@ export default function Projects() {
 
   useLayoutEffect(() => {
     const cards = cardsRef.current;
-    
+
     // Animate title
     gsap.fromTo(
       titleRef.current,
@@ -126,10 +126,10 @@ export default function Projects() {
   }, []);
 
   return (
-    <section 
+    <section
       id="proyectos"
-      ref={sectionRef} 
-      className="py-24 px-4 bg-gradient-to-b from-white via-gray-50 to-gray-100 relative overflow-hidden"
+      ref={sectionRef}
+      className="py-12 md:py-16 lg:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white via-gray-50 to-gray-100 relative overflow-hidden"
     >
       {/* Dot Pattern */}
       <div className="absolute inset-0" style={{
@@ -159,7 +159,7 @@ export default function Projects() {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {projects.map((project, index) => (
             <div
               key={project.id}
@@ -167,7 +167,7 @@ export default function Projects() {
               className="group relative bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl hover:shadow-rivamez-cyan/20 hover:-translate-y-2 transition-all duration-500 opacity-0 border border-gray-100 hover:border-rivamez-cyan/30"
             >
               {/* Image Placeholder */}
-              <div className="relative h-72 bg-gradient-to-br from-gray-300 via-gray-200 to-gray-100 overflow-hidden">
+              <div className="relative h-48 sm:h-56 md:h-64 lg:h-72 bg-gradient-to-br from-gray-300 via-gray-200 to-gray-100 overflow-hidden">
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="text-center">
                     <svg className="w-16 h-16 mx-auto text-gray-400 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -176,10 +176,10 @@ export default function Projects() {
                     <span className="text-gray-500 text-sm font-medium">Imagen del Proyecto</span>
                   </div>
                 </div>
-                
+
                 {/* Overlay on hover */}
-                <div className="absolute inset-0 bg-rivamez-navy/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <button className="px-6 py-3 bg-white text-rivamez-navy rounded-lg font-semibold transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                <div className="absolute inset-0 bg-rivamez-navy/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center md:group-hover:opacity-100">
+                  <button className="px-6 py-3 bg-white text-rivamez-navy rounded-lg font-semibold transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 md:translate-y-4">
                     Ver Detalles
                   </button>
                 </div>
@@ -191,11 +191,11 @@ export default function Projects() {
               </div>
 
               {/* Content */}
-              <div className="p-6">
+              <div className="p-4 sm:p-6">
                 <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-rivamez-cyan transition-colors">
                   {project.title}
                 </h3>
-                
+
                 <div className="space-y-2 text-sm text-gray-600">
                   <div className="flex items-center">
                     <svg className="w-4 h-4 mr-2 text-rivamez-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -227,7 +227,7 @@ export default function Projects() {
 
         {/* CTA */}
         <div className="text-center mt-16">
-          <a 
+          <a
             href="#contacto"
             className="inline-flex items-center gap-2 px-8 py-4 bg-rivamez-navy text-white font-semibold rounded-lg hover:bg-rivamez-cyan transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
           >

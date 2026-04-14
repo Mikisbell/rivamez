@@ -117,7 +117,7 @@ export default function ImpactMetrics() {
   ];
 
   return (
-    <section id="impacto" className="relative py-20 md:py-32 overflow-hidden bg-gradient-to-b from-white to-gray-50">
+    <section id="impacto" className="relative py-12 md:py-20 lg:py-32 overflow-hidden bg-gradient-to-b from-white to-gray-50">
       {/* Decorative Background */}
       <div className="absolute inset-0 opacity-50">
         <div className="absolute top-1/4 left-0 w-72 h-72 bg-rivamez-cyan/20 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '8s' }} />
@@ -143,7 +143,7 @@ export default function ImpactMetrics() {
             </span>
           </h2>
           <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-            Más de 15 años transformando Huancayo con proyectos que generan valor real 
+            Más de 15 años transformando Huancayo con proyectos que generan valor real
             para nuestros clientes y la comunidad.
           </p>
         </motion.div>
@@ -157,11 +157,11 @@ export default function ImpactMetrics() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 overflow-hidden"
+              className="group relative bg-white rounded-2xl p-4 sm:p-6 lg:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 overflow-hidden"
             >
               {/* Background Gradient on Hover */}
               <div className={`absolute inset-0 bg-gradient-to-br ${metric.color} opacity-0 group-hover:opacity-5 transition-opacity duration-300`} />
-              
+
               <div className="relative">
                 {/* Icon */}
                 <div className={`w-16 h-16 bg-gradient-to-br ${metric.color} rounded-xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform duration-300`}>
@@ -210,7 +210,7 @@ export default function ImpactMetrics() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="bg-gradient-to-br from-rivamez-navy to-rivamez-navy/90 rounded-3xl p-8 md:p-12 mb-12"
+          className="bg-gradient-to-br from-rivamez-navy to-rivamez-navy/90 rounded-3xl p-4 sm:p-6 lg:p-8 xl:p-12 mb-12"
         >
           <h3 className="text-2xl md:text-3xl font-bold text-white text-center mb-8">
             Más Números que Nos Definen
@@ -254,7 +254,7 @@ export default function ImpactMetrics() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className={`${achievement.color} rounded-2xl p-8 text-white relative overflow-hidden group hover:scale-105 transition-transform duration-300`}
+                className={`${achievement.color} rounded-2xl p-4 sm:p-6 lg:p-8 text-white relative overflow-hidden group hover:scale-105 transition-transform duration-300`}
               >
                 {/* Decorative Pattern */}
                 <div className="absolute inset-0 opacity-10">
@@ -268,7 +268,7 @@ export default function ImpactMetrics() {
                   <div className="text-6xl font-bold mb-2 opacity-20">{achievement.year}</div>
                   <h4 className="text-2xl font-bold mb-1">{achievement.title}</h4>
                   <p className="text-lg opacity-90">{achievement.subtitle}</p>
-                  
+
                   {/* Trophy Icon */}
                   <div className="absolute top-0 right-0 opacity-20 group-hover:opacity-40 transition-opacity">
                     <svg className="w-20 h-20" fill="currentColor" viewBox="0 0 24 24">
@@ -287,13 +287,13 @@ export default function ImpactMetrics() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-20"
+          className="mt-12 sm:mt-16 lg:mt-20"
         >
           <h3 className="text-3xl md:text-4xl font-bold text-rivamez-navy text-center mb-12">
             Comparación con la Industria
           </h3>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 p-4 sm:p-6 lg:p-8">
             {[
               { metric: "Entrega Puntual", rivamez: 98, industria: 75, unit: "%" },
               { metric: "Satisfacción Cliente", rivamez: 96, industria: 82, unit: "%" },
@@ -309,7 +309,7 @@ export default function ImpactMetrics() {
                 className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100"
               >
                 <h4 className="text-lg font-bold text-gray-900 mb-4">{item.metric}</h4>
-                
+
                 {/* RIVAMEZ Bar */}
                 <div className="mb-4">
                   <div className="flex items-center justify-between mb-2">
@@ -364,7 +364,7 @@ export default function ImpactMetrics() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.5 }}
-          className="mt-20"
+          className="mt-12 sm:mt-16 lg:mt-20"
         >
           <h3 className="text-3xl md:text-4xl font-bold text-rivamez-navy text-center mb-12">
             Hitos de Crecimiento
@@ -372,7 +372,7 @@ export default function ImpactMetrics() {
 
           <div className="relative">
             {/* Timeline Line */}
-            <div className="absolute top-8 left-0 right-0 h-1 bg-gradient-to-r from-rivamez-cyan via-rivamez-green to-rivamez-navy hidden md:block" />
+            <div className="absolute top-4 sm:top-6 lg:top-8 left-0 right-0 h-1 bg-gradient-to-r from-rivamez-cyan via-rivamez-green to-rivamez-navy hidden md:block" />
 
             {/* Milestones */}
             <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
@@ -392,7 +392,7 @@ export default function ImpactMetrics() {
                   className="relative bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 text-center group cursor-pointer border-2 border-transparent hover:border-rivamez-cyan"
                 >
                   {/* Dot on timeline */}
-                  <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-rivamez-navy rounded-full border-4 border-white shadow-lg hidden md:block group-hover:scale-150 transition-transform" />
+                  <div className="absolute -top-4 sm:-top-6 lg:-top-8 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-rivamez-navy rounded-full border-4 border-white shadow-lg hidden md:block group-hover:scale-150 transition-transform" />
 
                   <div className="text-4xl mb-3 group-hover:scale-110 transition-transform">{milestone.icon}</div>
                   <div className="text-3xl font-bold text-rivamez-navy mb-1">{milestone.value}</div>
@@ -410,14 +410,14 @@ export default function ImpactMetrics() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.6 }}
-          className="mt-20"
+          className="mt-12 sm:mt-16 lg:mt-20"
         >
           <h3 className="text-3xl md:text-4xl font-bold text-rivamez-navy text-center mb-12">
             Densidad de Proyectos en Huancayo
           </h3>
 
-          <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100">
-            <div className="grid md:grid-cols-2 gap-8 items-center">
+          <div className="bg-white rounded-3xl p-4 sm:p-6 lg:p-8 shadow-xl border border-gray-100">
+            <div className="grid md:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 p-4 sm:p-6 lg:p-8 items-center">
               {/* Heatmap Grid */}
               <div className="space-y-3">
                 {[
@@ -447,13 +447,12 @@ export default function ImpactMetrics() {
                         whileInView={{ width: `${zona.density}%` }}
                         viewport={{ once: true }}
                         transition={{ duration: 1, delay: index * 0.05 + 0.3 }}
-                        className={`h-full rounded-lg transition-all duration-300 ${
-                          zona.density > 80 ? 'bg-gradient-to-r from-red-500 to-orange-500' :
+                        className={`h-full rounded-lg transition-all duration-300 ${zona.density > 80 ? 'bg-gradient-to-r from-red-500 to-orange-500' :
                           zona.density > 50 ? 'bg-gradient-to-r from-orange-400 to-yellow-500' :
-                          zona.density > 20 ? 'bg-gradient-to-r from-yellow-400 to-green-500' :
-                          'bg-gradient-to-r from-green-400 to-blue-500'
-                        }`}
-                        style={{ 
+                            zona.density > 20 ? 'bg-gradient-to-r from-yellow-400 to-green-500' :
+                              'bg-gradient-to-r from-green-400 to-blue-500'
+                          }`}
+                        style={{
                           boxShadow: zona.density > 80 ? '0 0 20px rgba(239, 68, 68, 0.4)' : 'none'
                         }}
                       />

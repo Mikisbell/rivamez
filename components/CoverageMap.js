@@ -103,7 +103,7 @@ export default function CoverageMap() {
             </span>
           </h2>
           <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-            Con presencia en 7 distritos de Huancayo y más de {totalProjects} proyectos completados, 
+            Con presencia en 7 distritos de Huancayo y más de {totalProjects} proyectos completados,
             somos la constructora con mayor cobertura en la región.
           </p>
         </motion.div>
@@ -122,11 +122,11 @@ export default function CoverageMap() {
             </h3>
 
             {/* Simplified Map */}
-            <div className="relative aspect-square max-w-lg mx-auto">
+            <div className="relative aspect-[4/3] md:aspect-square max-w-lg mx-auto">
               <svg viewBox="0 0 100 100" className="w-full h-full">
                 {/* Background */}
-                <rect width="100" height="100" fill="#F3F4F6" rx="8"/>
-                
+                <rect width="100" height="100" fill="#F3F4F6" rx="8" />
+
                 {/* Districts as circles */}
                 {districts.map((district, index) => (
                   <g key={district.id}>
@@ -145,7 +145,7 @@ export default function CoverageMap() {
                       onMouseEnter={() => setSelectedDistrict(district.id)}
                       onMouseLeave={() => setSelectedDistrict(null)}
                     />
-                    
+
                     {/* Project count */}
                     <text
                       x={district.position.x}
@@ -173,7 +173,7 @@ export default function CoverageMap() {
                 <motion.div
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  className="absolute top-0 right-0 bg-white rounded-xl p-4 shadow-2xl border-2 border-rivamez-cyan max-w-xs"
+                  className="absolute top-0 right-0 bg-white rounded-xl p-3 sm:p-4 shadow-2xl border-2 border-rivamez-cyan max-w-[calc(100vw-2rem)] sm:max-w-xs"
                 >
                   {(() => {
                     const district = districts.find(d => d.id === selectedDistrict);
@@ -229,9 +229,8 @@ export default function CoverageMap() {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   onMouseEnter={() => setSelectedDistrict(district.id)}
                   onMouseLeave={() => setSelectedDistrict(null)}
-                  className={`relative bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border-2 ${
-                    selectedDistrict === district.id ? 'border-rivamez-cyan scale-105' : 'border-gray-100'
-                  } cursor-pointer`}
+                  className={`relative bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border-2 ${selectedDistrict === district.id ? 'border-rivamez-cyan scale-105' : 'border-gray-100'
+                    } cursor-pointer`}
                 >
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-4">
@@ -315,7 +314,7 @@ export default function CoverageMap() {
             ¿Buscas construir en Huancayo?
           </h3>
           <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
-            Con presencia en toda la región y experiencia en todo tipo de proyectos, 
+            Con presencia en toda la región y experiencia en todo tipo de proyectos,
             somos tu mejor opción para construir en cualquier distrito de Huancayo.
           </p>
           <a

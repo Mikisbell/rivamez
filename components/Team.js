@@ -100,7 +100,7 @@ export default function Team() {
             </span>
           </h2>
           <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-            Un equipo de profesionales altamente calificados con décadas de experiencia combinada, 
+            Un equipo de profesionales altamente calificados con décadas de experiencia combinada,
             dedicados a hacer realidad tus proyectos con excelencia y compromiso.
           </p>
         </motion.div>
@@ -140,7 +140,7 @@ export default function Team() {
                   <p className="text-sm text-gray-600 mb-3">
                     {member.specialty}
                   </p>
-                  
+
                   {/* Experience Badge */}
                   <div className="inline-flex items-center gap-2 px-4 py-2 bg-gray-100 rounded-full mb-4">
                     <svg className="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -223,7 +223,7 @@ export default function Team() {
 
       {/* Simple Modal (cuando se clickea un miembro) */}
       {selectedMember && (
-        <div 
+        <div
           className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm"
           onClick={() => setSelectedMember(null)}
         >
@@ -232,7 +232,7 @@ export default function Team() {
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.9 }}
             onClick={(e) => e.stopPropagation()}
-            className="relative bg-white rounded-2xl p-8 max-w-2xl w-full shadow-2xl"
+            className="relative bg-white rounded-2xl p-4 sm:p-6 md:p-8 max-w-2xl w-full shadow-2xl"
           >
             <button
               onClick={() => setSelectedMember(null)}
@@ -243,9 +243,9 @@ export default function Team() {
               </svg>
             </button>
 
-            <div className="flex flex-col md:flex-row gap-8">
+            <div className="flex flex-col md:flex-row gap-4 sm:gap-6 md:gap-8">
               <div className="flex-shrink-0">
-                <div className={`w-32 h-32 bg-gradient-to-br ${selectedMember.color} rounded-full flex items-center justify-center text-6xl`}>
+                <div className={`w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 bg-gradient-to-br ${selectedMember.color} rounded-full flex items-center justify-center text-6xl`}>
                   {selectedMember.avatar}
                 </div>
               </div>

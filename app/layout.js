@@ -12,13 +12,9 @@ import ThemeToggle from '@/components/ThemeToggle';
 import GoogleAnalytics from '@/components/GoogleAnalytics';
 import GoogleTagManager, { GoogleTagManagerNoScript } from '@/components/GoogleTagManager';
 import StructuredData from '@/components/StructuredData';
-import dynamic from 'next/dynamic';
+import ExitIntentModal from '@/components/ExitIntentModal';
 
-const ExitIntentModal = dynamic(() => import('@/components/ExitIntentModal'), {
-  ssr: false,
-});
-
-const inter = Inter({ 
+const inter = Inter({
   subsets: ['latin'],
   display: 'swap',
   preload: true,
@@ -58,22 +54,22 @@ export default function RootLayout({ children }) {
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <meta name="apple-mobile-web-app-title" content="RIVAMEZ" />
-        
+
         {/* Google Tag Manager */}
         {GTM_ID && <GoogleTagManager GTM_ID={GTM_ID} />}
       </head>
       <body className={inter.className}>
         {/* GTM NoScript fallback */}
         {GTM_ID && <GoogleTagManagerNoScript GTM_ID={GTM_ID} />}
-        
+
         {/* Google Analytics 4 */}
         {GA_MEASUREMENT_ID && <GoogleAnalytics GA_MEASUREMENT_ID={GA_MEASUREMENT_ID} />}
-        
+
         {/* Schema.org Structured Data */}
         <StructuredData type="organization" />
         <StructuredData type="localBusiness" />
         <StructuredData type="website" />
-        
+
         <ThemeProvider>
           <ServiceWorkerRegister />
           <Navbar />

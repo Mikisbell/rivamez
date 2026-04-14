@@ -115,11 +115,11 @@ export default function BlogListPro({ initialPosts = [], initialFeaturedPost = n
   const realPosts = initialPosts.length > 0 ? initialPosts : [];
   const neededMockPosts = Math.max(8 - realPosts.length, 0);
   const mockPosts = MOCK_DATA.posts.slice(0, neededMockPosts);
-  
+
   const posts = [...realPosts, ...mockPosts];
   const featuredPost = initialFeaturedPost || posts[0];
   const categories = initialCategories.length > 0 ? initialCategories : MOCK_DATA.categories;
-  
+
   // Top 3 posts para "Top Stories"
   const topPosts = posts.slice(0, 3);
   // Trending posts (últimos 5)
@@ -129,7 +129,7 @@ export default function BlogListPro({ initialPosts = [], initialFeaturedPost = n
 
   // Filtrar posts
   const filteredPosts = regularPosts.filter(post => {
-    return activeCategory === 'all' || 
+    return activeCategory === 'all' ||
       post.categories?.some(cat => cat.slug.current === activeCategory);
   });
 
@@ -139,7 +139,7 @@ export default function BlogListPro({ initialPosts = [], initialFeaturedPost = n
     const diff = now - date;
     const hours = Math.floor(diff / (1000 * 60 * 60));
     const days = Math.floor(hours / 24);
-    
+
     if (hours < 1) return 'Hace unos minutos';
     if (hours < 24) return `Hace ${hours}h`;
     if (days === 1) return 'Ayer';
@@ -166,11 +166,10 @@ export default function BlogListPro({ initialPosts = [], initialFeaturedPost = n
           <div className="flex items-center gap-2 overflow-x-auto py-4 scrollbar-hide">
             <button
               onClick={() => setActiveCategory('all')}
-              className={`px-4 py-2 text-sm font-semibold whitespace-nowrap transition-colors rounded ${
-                activeCategory === 'all'
-                  ? 'bg-rivamez-navy text-white'
-                  : 'text-gray-700 hover:bg-gray-100'
-              }`}
+              className={`px-4 py-2 text-sm font-semibold whitespace-nowrap transition-colors rounded ${activeCategory === 'all'
+                ? 'bg-rivamez-navy text-white'
+                : 'text-gray-700 hover:bg-gray-100'
+                }`}
             >
               Todas las noticias
             </button>
@@ -178,11 +177,10 @@ export default function BlogListPro({ initialPosts = [], initialFeaturedPost = n
               <button
                 key={cat._id}
                 onClick={() => setActiveCategory(cat.slug.current)}
-                className={`px-4 py-2 text-sm font-semibold whitespace-nowrap transition-colors rounded flex items-center gap-1 ${
-                  activeCategory === cat.slug.current
-                    ? 'bg-rivamez-navy text-white'
-                    : 'text-gray-700 hover:bg-gray-100'
-                }`}
+                className={`px-4 py-2 text-sm font-semibold whitespace-nowrap transition-colors rounded flex items-center gap-1 ${activeCategory === cat.slug.current
+                  ? 'bg-rivamez-navy text-white'
+                  : 'text-gray-700 hover:bg-gray-100'
+                  }`}
               >
                 <span>{cat.icon}</span>
                 {cat.title}
@@ -203,7 +201,7 @@ export default function BlogListPro({ initialPosts = [], initialFeaturedPost = n
             <Link href={`/blog/${featuredPost.slug.current}`}>
               <div className="grid lg:grid-cols-2 gap-8 group">
                 {/* Imagen */}
-                <div className="relative h-[400px] lg:h-[500px] overflow-hidden rounded">
+                <div className="relative h-56 sm:h-72 md:h-80 lg:h-96 xl:h-[500px] overflow-hidden rounded">
                   {featuredPost.mainImage ? (
                     <Image
                       src={urlFor(featuredPost.mainImage).width(1000).height(700).url()}
@@ -228,15 +226,15 @@ export default function BlogListPro({ initialPosts = [], initialFeaturedPost = n
                       </span>
                     </div>
                   )}
-                  
+
                   <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4 leading-tight group-hover:text-rivamez-cyan transition-colors">
                     {featuredPost.title}
                   </h1>
-                  
+
                   <p className="text-xl text-gray-600 mb-6 leading-relaxed">
                     {featuredPost.excerpt}
                   </p>
-                  
+
                   <div className="flex items-center gap-4 text-sm text-gray-500">
                     {featuredPost.author && (
                       <>
@@ -274,7 +272,7 @@ export default function BlogListPro({ initialPosts = [], initialFeaturedPost = n
                   <div className="w-1 h-7 bg-rivamez-cyan rounded-full"></div>
                   Noticias Destacadas
                 </h2>
-                
+
                 <div className="grid md:grid-cols-3 gap-6">
                   {topPosts.map((post, index) => (
                     <motion.article
@@ -299,17 +297,17 @@ export default function BlogListPro({ initialPosts = [], initialFeaturedPost = n
                               </div>
                             )}
                           </div>
-                          
+
                           {post.categories?.[0] && (
                             <span className={`inline-block px-2 py-1 text-xs font-bold text-white uppercase tracking-wide mb-2 rounded ${getCategoryColor(post.categories[0].color)}`}>
                               {post.categories[0].title}
                             </span>
                           )}
-                          
+
                           <h3 className="text-lg font-bold text-gray-900 mb-2 line-clamp-2 group-hover:text-rivamez-cyan transition-colors">
                             {post.title}
                           </h3>
-                          
+
                           <p className="text-sm text-gray-500">
                             {getRelativeTime(post.publishedAt)} · {post.readTime || 3} min de lectura
                           </p>
@@ -327,7 +325,7 @@ export default function BlogListPro({ initialPosts = [], initialFeaturedPost = n
                 <div className="w-1 h-7 bg-rivamez-cyan rounded-full"></div>
                 Últimas Noticias
               </h2>
-              
+
               <div className="space-y-8">
                 <AnimatePresence mode="wait">
                   {filteredPosts.map((post, index) => (
@@ -340,9 +338,9 @@ export default function BlogListPro({ initialPosts = [], initialFeaturedPost = n
                       className="pb-8 border-b border-gray-200 last:border-0"
                     >
                       <Link href={`/blog/${post.slug.current}`}>
-                        <div className="group flex gap-6">
+                        <div className="group flex flex-col sm:flex-row gap-4 sm:gap-6">
                           {/* Imagen */}
-                          <div className="relative w-72 h-48 flex-shrink-0 overflow-hidden rounded">
+                          <div className="relative w-full sm:w-64 md:w-72 h-48 flex-shrink-0 overflow-hidden rounded">
                             {post.mainImage ? (
                               <Image
                                 src={urlFor(post.mainImage).width(400).height(300).url()}
@@ -364,15 +362,15 @@ export default function BlogListPro({ initialPosts = [], initialFeaturedPost = n
                                 {post.categories[0].title}
                               </span>
                             )}
-                            
+
                             <h3 className="text-2xl font-bold text-gray-900 mb-2 line-clamp-2 group-hover:text-rivamez-cyan transition-colors">
                               {post.title}
                             </h3>
-                            
+
                             <p className="text-gray-600 mb-4 line-clamp-2 flex-1">
                               {post.excerpt}
                             </p>
-                            
+
                             <div className="flex items-center gap-3 text-sm text-gray-500">
                               {post.author?.image && (
                                 <div className="relative w-8 h-8 rounded-full overflow-hidden">
@@ -419,7 +417,7 @@ export default function BlogListPro({ initialPosts = [], initialFeaturedPost = n
                   </svg>
                   Tendencias
                 </h3>
-                
+
                 <div className="space-y-4">
                   {trendingPosts.map((post, index) => (
                     <Link key={post._id} href={`/blog/${post.slug.current}`}>
