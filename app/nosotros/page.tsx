@@ -4,11 +4,11 @@
 
 import { motion } from 'framer-motion';
 import { useState } from 'react';
-import Team from '@/components/Team';
-import Timeline from '@/components/Timeline';
-import Certifications from '@/components/Certifications';
-import Values from '@/components/Values';
-import VideoModal from '@/components/VideoModal';
+import Team from '@/components/sections/Team';
+import Timeline from '@/components/sections/Timeline';
+import Certifications from '@/components/sections/Certifications';
+import Values from '@/components/sections/Values';
+import VideoModal from '@/components/ui/VideoModal';
 
 const leadership = [
   {
@@ -18,22 +18,28 @@ const leadership = [
     bio: 'Ingeniero Civil con más de 20 años de experiencia en proyectos de gran envergadura.'
   },
   {
-    name: 'María Elena Rojas',
-    role: 'Directora de Proyectos',
-    image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80',
-    bio: 'Arquitecta especializada en desarrollo comercial y residencial de alto nivel.'
+    name: 'Miguel Rivera',
+    role: 'Co-Fundador & Director de Estrategia',
+    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80',
+    bio: 'Estratega de negocios especializado en el sector inmobiliario y desarrollo corporativo.'
   },
   {
-    name: 'Jorge Mendoza',
+    name: 'Edwin Enriquez',
+    role: 'Director de Proyectos',
+    image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80',
+    bio: 'Arquitecto especializado en desarrollo comercial y residencial de alto nivel.'
+  },
+  {
+    name: 'Marso Amez',
     role: 'Director de Operaciones',
     image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&q=80',
     bio: 'MBA con experiencia en gestión de equipos de construcción y optimización de procesos.'
   },
   {
-    name: 'Ana Gutiérrez',
-    role: 'Directora Financiera',
+    name: 'Jesus Canez',
+    role: 'Director Financiero',
     image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=80',
-    bio: 'Contadora Pública especializada en finanzas corporativas y análisis de inversiones.'
+    bio: 'Contador Público especializado en finanzas corporativas y análisis de inversiones.'
   }
 ];
 

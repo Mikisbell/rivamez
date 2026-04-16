@@ -1,5 +1,5 @@
 // app/blog/page.js
-import BlogVisual from '@/components/BlogVisual';
+import BlogVisual from '@/components/blog/BlogVisual';
 import { getAllPosts, getFeaturedPost, getAllCategories } from '@/lib/sanity';
 
 // Revalidar cada 60 segundos (ISR)

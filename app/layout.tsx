@@ -1,18 +1,18 @@
 import "./globals.css";
 import { Inter } from 'next/font/google';
-import Navbar from '@/components/NavbarNew';
-import Footer from '@/components/Footer';
-import WhatsAppButton from '@/components/WhatsAppButton';
-import PageTransition from '@/components/PageTransition';
-import ServiceWorkerRegister from '@/components/ServiceWorkerRegister';
-import GlobalSearch from '@/components/GlobalSearch';
-import ClientOnly from '@/components/ClientOnly';
-import { ThemeProvider } from '@/components/ThemeProvider';
-import ThemeToggle from '@/components/ThemeToggle';
-import GoogleAnalytics from '@/components/GoogleAnalytics';
-import GoogleTagManager, { GoogleTagManagerNoScript } from '@/components/GoogleTagManager';
-import StructuredData from '@/components/StructuredData';
-import ExitIntentModal from '@/components/ExitIntentModal';
+import Navbar from '@/components/layout/Navbar';
+import Footer from '@/components/layout/Footer';
+import WhatsAppButton from '@/components/ui/WhatsAppButton';
+import PageTransition from '@/components/layout/PageTransition';
+import ServiceWorkerRegister from '@/components/utils/ServiceWorkerRegister';
+import GlobalSearch from '@/components/ui/GlobalSearch';
+import ClientOnly from '@/components/utils/ClientOnly';
+import { ThemeProvider } from '@/components/layout/ThemeProvider';
+import ThemeToggle from '@/components/layout/ThemeToggle';
+import GoogleAnalytics from '@/components/utils/GoogleAnalytics';
+import GoogleTagManager, { GoogleTagManagerNoScript } from '@/components/utils/GoogleTagManager';
+import StructuredData from '@/components/utils/StructuredData';
+import ExitIntentModal from '@/components/ui/ExitIntentModal';
 
 const inter = Inter({
   subsets: ['latin'],

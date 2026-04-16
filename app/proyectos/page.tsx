@@ -3,7 +3,7 @@
 
 import { motion } from 'framer-motion';
 import { useState } from 'react';
-import CoverageMap from '@/components/CoverageMap';
+import CoverageMap from '@/components/sections/CoverageMap';
 
 const categories = ['Todos', 'Residencial', 'Comercial', 'Institucional', 'Remodelación'];
 

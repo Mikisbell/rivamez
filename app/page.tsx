@@ -1,14 +1,14 @@
-import Hero from "@/components/Hero";
-import BuildingHero from "@/components/BuildingHero";
-import Features from "@/components/Features";
-import InteractiveTabs from "@/components/InteractiveTabs";
-import ImpactMetrics from "@/components/ImpactMetrics";
-import About from "@/components/About";
-import Services from "@/components/Services";
-import Projects from "@/components/Projects";
-import Testimonials from "@/components/Testimonials";
-import Contact from "@/components/Contact";
-import ScrollReveal from "@/components/ScrollReveal";
+import Hero from '@/components/sections/Hero';
+import BuildingHero from '@/components/sections/BuildingHero';
+import Features from '@/components/sections/Features';
+import InteractiveTabs from '@/components/ui/InteractiveTabs';
+import ImpactMetrics from '@/components/sections/ImpactMetrics';
+import About from '@/components/sections/About';
+import Services from '@/components/sections/Services';
+import Projects from '@/components/sections/Projects';
+import Testimonials from '@/components/sections/Testimonials';
+import Contact from '@/components/sections/Contact';
+import ScrollReveal from '@/components/ui/ScrollReveal';
 
 export default function Home() {
   return (

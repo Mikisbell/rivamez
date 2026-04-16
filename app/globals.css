@@ -2,6 +2,45 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ===================================
+   SEMANTIC DESIGN TOKENS
+   Format: R G B (sin coma, para soportar /<alpha-value>)
+   =================================== */
+:root {
+  /* Light mode (default) */
+  --background: 255 255 255;            /* white */
+  --foreground: 15 23 42;               /* slate-900 */
+  --muted: 248 250 252;                 /* slate-50 — fondos alternativos */
+  --muted-foreground: 100 116 139;      /* slate-500 — texto secundario */
+  --surface: 255 255 255;               /* white — cards */
+  --surface-foreground: 15 23 42;       /* slate-900 */
+  --border: 226 232 240;                /* slate-200 */
+  --input: 255 255 255;                 /* white */
+  --primary: 30 58 138;                 /* rivamez-navy */
+  --primary-foreground: 255 255 255;
+  --accent: 6 182 212;                  /* rivamez-cyan */
+  --accent-foreground: 255 255 255;
+  --success: 5 150 105;                 /* rivamez-green */
+  --ring: 6 182 212;                    /* cyan focus ring */
+}
+
+.dark {
+  --background: 15 23 42;               /* slate-900 */
+  --foreground: 241 245 249;            /* slate-100 */
+  --muted: 30 41 59;                    /* slate-800 */
+  --muted-foreground: 148 163 184;      /* slate-400 */
+  --surface: 30 41 59;                  /* slate-800 — cards en dark */
+  --surface-foreground: 241 245 249;
+  --border: 51 65 85;                   /* slate-700 */
+  --input: 30 41 59;                    /* slate-800 */
+  --primary: 59 130 246;                /* blue-500 — más brillante en dark */
+  --primary-foreground: 255 255 255;
+  --accent: 34 211 238;                 /* cyan-400 — un toque más vivo */
+  --accent-foreground: 15 23 42;
+  --success: 16 185 129;                /* emerald-500 */
+  --ring: 34 211 238;
+}
+
 *,
 *::before,
 *::after {
@@ -18,6 +57,9 @@ body {
   overflow-x: hidden;
   max-width: 100vw;
   position: relative;
+  background-color: rgb(var(--background));
+  color: rgb(var(--foreground));
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 #__next {
@@ -289,55 +331,14 @@ html {
   display: none;
 }
 
-/* Dark Mode Styles */
+/* Dark Mode — color-scheme indica al navegador (scrollbars, form controls) que use UI oscura.
+   Los colores de los componentes ahora vienen de los semantic tokens (--background, --surface, etc.) */
 .dark {
   color-scheme: dark;
 }
 
-.dark body {
-  background: #0F172A;
-  color: #F1F5F9;
-}
-
-.dark .bg-white {
-  background-color: #1E293B;
-}
-
-.dark .bg-gray-50 {
-  background-color: #0F172A;
-}
-
-.dark .bg-gray-100 {
-  background-color: #1E293B;
-}
-
-.dark .text-gray-900 {
-  color: #F1F5F9;
-}
-
-.dark .text-gray-700 {
-  color: #CBD5E1;
-}
-
-.dark .text-gray-600 {
-  color: #94A3B8;
-}
-
-.dark .border-gray-200 {
-  border-color: #334155;
-}
-
-.dark .border-gray-300 {
-  border-color: #475569;
-}
-
-/* Dark mode hover states - using attribute selectors for Tailwind escaped classes */
-.dark [class*="hover:bg-gray-100"]:hover {
-  background-color: #334155;
-}
-
-.dark [class*="hover:bg-gray-50"]:hover {
-  background-color: #1E293B;
+:root {
+  color-scheme: light;
 }
 
 /* ===================================

@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
-import VideoModal from './VideoModal';
+import VideoModal from '@/components/ui/VideoModal';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -40,7 +40,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section id="inicio" className="relative min-h-screen overflow-hidden flex flex-col">
+    <section id="inicio" className="relative min-h-[100dvh] overflow-hidden flex flex-col">
       {/* Animated Gradient Background */}
       <div
         className="absolute inset-0"
@@ -96,9 +96,9 @@ export default function Hero() {
       <div className="absolute bottom-0 left-0 w-64 h-64 md:w-96 md:h-96 bg-rivamez-cyan/10 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '10s', animationDelay: '2s' }} />
 
       {/* Content */}
-      <div className="relative z-10 flex-1 flex items-center section-padding pt-20 md:pt-24 lg:pt-28 pb-4">
-        <div className="container-responsive">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <div className="relative z-10 flex-1 flex items-center section-padding pt-20 md:pt-24 lg:pt-28 pb-6">
+        <div className="container-responsive w-full">
+          <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-8 lg:gap-12 items-center">
             {/* Left Column - Text Content */}
             <div className="text-center lg:text-left">
               {/* Badge - Dataiku Style */}
@@ -146,7 +146,7 @@ export default function Hero() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
-                className="flex flex-col sm:flex-row space-x-responsive justify-center lg:justify-start items-stretch sm:items-center"
+                className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center lg:justify-start items-stretch sm:items-center w-full"
               >
                 <a
                   href="#proyectos"
@@ -166,27 +166,6 @@ export default function Hero() {
                 </a>
               </motion.div>
 
-              {/* Video CTA */}
-              <motion.button
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.8, delay: 0.8 }}
-                onClick={() => setIsVideoOpen(true)}
-                className="group flex items-center gap-3 text-white/90 hover:text-white transition-colors mt-8 mb-4"
-              >
-                <div className="relative">
-                  <div className="w-14 h-14 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center border border-white/20 group-hover:bg-white/20 transition-all duration-300 group-hover:scale-110">
-                    <svg className="w-6 h-6 ml-0.5" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M8 5v14l11-7z" />
-                    </svg>
-                  </div>
-                  <div className="absolute inset-0 bg-white/20 rounded-full animate-ping" />
-                </div>
-                <div className="text-left">
-                  <div className="text-sm font-semibold">Ver Video Corporativo</div>
-                  <div className="text-xs text-white/70">Descubre quiénes somos</div>
-                </div>
-              </motion.button>
             </div>
 
             {/* Right Column - Robot Ingeniero */}
@@ -196,34 +175,36 @@ export default function Hero() {
               transition={{ duration: 1, delay: 0.5 }}
               className="relative hidden lg:flex justify-center items-center"
             >
-              {/* Glow effect behind robot - con animación pulsante */}
-              <div className="absolute inset-0 bg-gradient-to-r from-rivamez-cyan/20 to-rivamez-green/20 rounded-full animate-glow-pulse" />
+              <div className="relative w-full max-w-[260px] xl:max-w-[320px] aspect-square">
+                {/* Glow effect behind robot */}
+                <div className="absolute inset-0 bg-gradient-to-r from-rivamez-cyan/20 to-rivamez-green/20 rounded-full animate-glow-pulse" />
 
-              {/* Robot Image - con animación compleja */}
-              <img
-                src="/images/robot-ingeniero.svg"
-                alt="Robot Ingeniero RIVAMEZ - Tecnología en Construcción"
-                className="relative w-full max-w-lg h-auto drop-shadow-2xl animate-robot-dance"
-              />
+                {/* Robot Image */}
+                <img
+                  src="/images/robot-ingeniero.svg"
+                  alt="Robot Ingeniero RIVAMEZ - Tecnología en Construcción"
+                  className="relative w-full h-full object-contain drop-shadow-2xl animate-robot-dance"
+                />
 
-              {/* Partículas decorativas animadas - Hidden on mobile */}
-              <div className="hidden lg:block absolute top-10 left-10 w-3 h-3 bg-rivamez-cyan rounded-full animate-ping" />
-              <div className="hidden lg:block absolute bottom-20 right-10 w-2 h-2 bg-rivamez-green rounded-full animate-pulse" style={{ animationDelay: '1s' }} />
-              <div className="hidden lg:block absolute top-1/2 left-5 w-2 h-2 bg-yellow-400 rounded-full animate-bounce" style={{ animationDelay: '2s' }} />
+                {/* Partículas decorativas */}
+                <div className="absolute top-6 left-6 w-3 h-3 bg-rivamez-cyan rounded-full animate-ping" />
+                <div className="absolute bottom-10 right-6 w-2 h-2 bg-rivamez-green rounded-full animate-pulse" style={{ animationDelay: '1s' }} />
+                <div className="absolute top-1/2 left-2 w-2 h-2 bg-yellow-400 rounded-full animate-bounce" style={{ animationDelay: '2s' }} />
+              </div>
             </motion.div>
           </div>
         </div>
       </div>
 
       {/* Stats */}
-      <div className="relative z-[5] px-4 pb-16 md:pb-20 shrink-0">
+      <div className="relative z-10 px-4 pb-10 md:pb-12 shrink-0">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1 }}
           className="max-w-6xl mx-auto px-4"
         >
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 bg-white/10 backdrop-blur-md rounded-2xl p-6 md:p-8 border border-white/20">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 bg-white/10 backdrop-blur-md rounded-2xl p-4 md:p-8 border border-white/20">
             <div className="text-center">
               <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-white to-rivamez-cyan bg-clip-text text-transparent mb-2">15+</div>
               <div className="text-gray-200 text-xs sm:text-sm font-medium">Años de Experiencia</div>
