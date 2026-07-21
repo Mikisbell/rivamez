@@ -189,19 +189,19 @@ export default function Timeline() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="text-5xl md:text-6xl font-bold text-white mb-2">15</div>
-              <div className="text-white/80">Años de Experiencia del Equipo</div>
+              <div className="text-white">Años de Experiencia del Equipo</div>
             </div>
             <div className="text-center">
               <div className="text-5xl md:text-6xl font-bold text-white mb-2">285+</div>
-              <div className="text-white/80">Proyectos Completados</div>
+              <div className="text-white">Proyectos Completados</div>
             </div>
             <div className="text-center">
               <div className="text-5xl md:text-6xl font-bold text-white mb-2">10</div>
-              <div className="text-white/80">Hitos Importantes</div>
+              <div className="text-white">Hitos Importantes</div>
             </div>
             <div className="text-center">
               <div className="text-5xl md:text-6xl font-bold text-white mb-2">5K+</div>
-              <div className="text-white/80">Familias Beneficiadas</div>
+              <div className="text-white">Familias Beneficiadas</div>
             </div>
           </div>
         </motion.div>

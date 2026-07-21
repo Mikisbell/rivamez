@@ -45,7 +45,7 @@ export default function Hero() {
       <div
         className="absolute inset-0"
         style={{
-          background: 'linear-gradient(135deg, #0F172A 0%, #1E3A8A 50%, #06B6D4 100%)',
+          background: 'linear-gradient(135deg, #0F172A 0%, #113572 50%, #1385BB 100%)',
           transform: `translateY(${scrollY * 0.5}px)`
         }}
       />
@@ -53,9 +53,9 @@ export default function Hero() {
       {/* Mesh Gradient Overlay */}
       <div className="absolute inset-0" style={{
         background: `
-          radial-gradient(at 20% 30%, rgba(6, 182, 212, 0.3) 0px, transparent 50%),
-          radial-gradient(at 80% 0%, rgba(30, 58, 138, 0.3) 0px, transparent 50%),
-          radial-gradient(at 80% 80%, rgba(6, 182, 212, 0.2) 0px, transparent 50%),
+          radial-gradient(at 20% 30%, rgba(19, 133, 187, 0.3) 0px, transparent 50%),
+          radial-gradient(at 80% 0%, rgba(17, 53, 114, 0.3) 0px, transparent 50%),
+          radial-gradient(at 80% 80%, rgba(19, 133, 187, 0.2) 0px, transparent 50%),
           radial-gradient(at 0% 80%, rgba(15, 23, 42, 0.3) 0px, transparent 50%)
         `
       }} />
@@ -70,10 +70,10 @@ export default function Hero() {
       <div className="absolute inset-0">
         <div className="absolute inset-0 opacity-5" style={{
           backgroundImage: `
-            linear-gradient(30deg, #06B6D4 12%, transparent 12.5%, transparent 87%, #06B6D4 87.5%, #06B6D4),
-            linear-gradient(150deg, #06B6D4 12%, transparent 12.5%, transparent 87%, #06B6D4 87.5%, #06B6D4),
-            linear-gradient(30deg, #06B6D4 12%, transparent 12.5%, transparent 87%, #06B6D4 87.5%, #06B6D4),
-            linear-gradient(150deg, #06B6D4 12%, transparent 12.5%, transparent 87%, #06B6D4 87.5%, #06B6D4)
+            linear-gradient(30deg, #1385BB 12%, transparent 12.5%, transparent 87%, #1385BB 87.5%, #1385BB),
+            linear-gradient(150deg, #1385BB 12%, transparent 12.5%, transparent 87%, #1385BB 87.5%, #1385BB),
+            linear-gradient(30deg, #1385BB 12%, transparent 12.5%, transparent 87%, #1385BB 87.5%, #1385BB),
+            linear-gradient(150deg, #1385BB 12%, transparent 12.5%, transparent 87%, #1385BB 87.5%, #1385BB)
           `,
           backgroundSize: '80px 140px',
           backgroundPosition: '0 0, 0 0, 40px 70px, 40px 70px'
@@ -126,7 +126,9 @@ export default function Hero() {
                 className="heading-hero text-white mb-responsive leading-tight"
               >
                 <span className="block">Construimos</span>
-                <span className="block bg-gradient-to-r from-rivamez-cyan to-rivamez-green bg-clip-text text-transparent">
+                {/* Sobre el azul del hero van las variantes CLARAS de la marca:
+                    celeste #5BBCE4 (5.5:1 sobre navy) y verde lima #8FCB5E (6.1:1). */}
+                <span className="block bg-gradient-to-r from-rivamez-cyan-lighter to-rivamez-lime-light bg-clip-text text-transparent">
                   Sueños Sólidos
                 </span>
               </motion.h1>
@@ -177,7 +179,7 @@ export default function Hero() {
             >
               <div className="relative w-full max-w-[260px] xl:max-w-[320px] aspect-square">
                 {/* Glow effect behind robot */}
-                <div className="absolute inset-0 bg-gradient-to-r from-rivamez-cyan/20 to-rivamez-green/20 rounded-full animate-glow-pulse" />
+                <div className="absolute inset-0 bg-gradient-to-r from-rivamez-cyan/20 to-rivamez-lime/20 rounded-full animate-glow-pulse" />
 
                 {/* Robot Image */}
                 <img
@@ -188,7 +190,7 @@ export default function Hero() {
 
                 {/* Partículas decorativas */}
                 <div className="absolute top-6 left-6 w-3 h-3 bg-rivamez-cyan rounded-full animate-ping" />
-                <div className="absolute bottom-10 right-6 w-2 h-2 bg-rivamez-green rounded-full animate-pulse" style={{ animationDelay: '1s' }} />
+                <div className="absolute bottom-10 right-6 w-2 h-2 bg-rivamez-lime rounded-full animate-pulse" style={{ animationDelay: '1s' }} />
                 <div className="absolute top-1/2 left-2 w-2 h-2 bg-yellow-400 rounded-full animate-bounce" style={{ animationDelay: '2s' }} />
               </div>
             </motion.div>
@@ -204,21 +206,23 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 1 }}
           className="max-w-6xl mx-auto px-4"
         >
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 bg-white/10 backdrop-blur-md rounded-2xl p-4 md:p-8 border border-white/20">
+          {/* Vidrio OSCURO: el degradado del hero termina en celeste de marca y un vidrio
+              blanco aclaraba la zona hasta hacer ilegibles cifras y etiquetas. */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 bg-rivamez-dark/45 backdrop-blur-md rounded-2xl p-4 md:p-8 border border-white/20">
             <div className="text-center">
-              <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-white to-rivamez-cyan bg-clip-text text-transparent mb-2">15+</div>
+              <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-white to-rivamez-cyan-lighter bg-clip-text text-transparent mb-2">15+</div>
               <div className="text-gray-200 text-xs sm:text-sm font-medium">Años de Experiencia del Equipo</div>
             </div>
             <div className="text-center md:border-x border-white/20">
-              <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-white to-rivamez-cyan bg-clip-text text-transparent mb-2">285+</div>
+              <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-white to-rivamez-cyan-lighter bg-clip-text text-transparent mb-2">285+</div>
               <div className="text-gray-200 text-xs sm:text-sm font-medium">Proyectos Completados</div>
             </div>
             <div className="text-center md:border-r border-white/20">
-              <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-white to-rivamez-green bg-clip-text text-transparent mb-2">250+</div>
+              <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-white to-rivamez-lime-light bg-clip-text text-transparent mb-2">250+</div>
               <div className="text-gray-200 text-xs sm:text-sm font-medium">Clientes Satisfechos</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-white to-rivamez-cyan bg-clip-text text-transparent mb-2">62+</div>
+              <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-white to-rivamez-cyan-lighter bg-clip-text text-transparent mb-2">62+</div>
               <div className="text-gray-200 text-xs sm:text-sm font-medium">Profesionales</div>
             </div>
           </div>
@@ -233,8 +237,8 @@ export default function Hero() {
         className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex"
       >
         <div className="flex flex-col items-center gap-2">
-          <span className="text-white/60 text-sm hidden md:block">Scroll para explorar</span>
-          <span className="text-white/60 text-xs md:hidden">Desliza</span>
+          <span className="text-white/90 text-sm hidden md:block">Scroll para explorar</span>
+          <span className="text-white/90 text-xs md:hidden">Desliza</span>
           <motion.div
             animate={{ y: [0, 10, 0] }}
             transition={{ repeat: Infinity, duration: 1.5 }}

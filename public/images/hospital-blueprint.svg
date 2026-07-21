@@ -5,13 +5,13 @@
   <defs>
     <!-- Grid pattern -->
     <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse">
-      <path d="M 50 0 L 0 0 0 50" fill="none" stroke="#06B6D4" stroke-width="0.5" opacity="0.3"/>
+      <path d="M 50 0 L 0 0 0 50" fill="none" stroke="#1385BB" stroke-width="0.5" opacity="0.3"/>
     </pattern>
     
     <!-- Grid mayor -->
     <pattern id="gridMajor" width="200" height="200" patternUnits="userSpaceOnUse">
       <rect width="200" height="200" fill="url(#grid)"/>
-      <path d="M 200 0 L 0 0 0 200" fill="none" stroke="#06B6D4" stroke-width="1" opacity="0.5"/>
+      <path d="M 200 0 L 0 0 0 200" fill="none" stroke="#1385BB" stroke-width="1" opacity="0.5"/>
     </pattern>
   </defs>
   
@@ -26,7 +26,7 @@
     
     <!-- Área de Emergencias (izquierda) -->
     <rect x="200" y="150" width="200" height="200"/>
-    <text x="300" y="240" font-family="monospace" font-size="14" fill="#06B6D4" text-anchor="middle" opacity="0.8">EMERGENCIAS</text>
+    <text x="300" y="240" font-family="monospace" font-size="14" fill="#1385BB" text-anchor="middle" opacity="0.8">EMERGENCIAS</text>
     <!-- Símbolo cruz -->
     <line x1="280" y1="200" x2="320" y2="200" stroke="#EF4444" stroke-width="3"/>
     <line x1="300" y1="180" x2="300" y2="220" stroke="#EF4444" stroke-width="3"/>
@@ -80,8 +80,8 @@
     <text x="945" y="605" font-family="monospace" font-size="10" fill="#EC4899" text-anchor="middle">TAC</text>
     
     <!-- Pasillos principales -->
-    <line x1="400" y1="300" x2="800" y2="300" stroke="#06B6D4" stroke-width="3" stroke-dasharray="10,5"/>
-    <line x1="800" y1="150" x2="800" y2="650" stroke="#06B6D4" stroke-width="3" stroke-dasharray="10,5"/>
+    <line x1="400" y1="300" x2="800" y2="300" stroke="#1385BB" stroke-width="3" stroke-dasharray="10,5"/>
+    <line x1="800" y1="150" x2="800" y2="650" stroke="#1385BB" stroke-width="3" stroke-dasharray="10,5"/>
     
     <!-- Puertas -->
     <line x1="280" y1="150" x2="320" y2="150" stroke="#FFFFFF" stroke-width="4"/>
@@ -90,11 +90,11 @@
     
     <!-- Escaleras -->
     <g transform="translate(420, 320)">
-      <rect width="60" height="60" stroke="#06B6D4" stroke-width="2"/>
-      <line x1="10" y1="10" x2="50" y2="50" stroke="#06B6D4"/>
-      <line x1="20" y1="10" x2="60" y2="50" stroke="#06B6D4"/>
-      <line x1="10" y1="20" x2="50" y2="60" stroke="#06B6D4"/>
-      <text x="30" y="35" font-family="monospace" font-size="10" fill="#06B6D4" text-anchor="middle">ESC</text>
+      <rect width="60" height="60" stroke="#1385BB" stroke-width="2"/>
+      <line x1="10" y1="10" x2="50" y2="50" stroke="#1385BB"/>
+      <line x1="20" y1="10" x2="60" y2="50" stroke="#1385BB"/>
+      <line x1="10" y1="20" x2="50" y2="60" stroke="#1385BB"/>
+      <text x="30" y="35" font-family="monospace" font-size="10" fill="#1385BB" text-anchor="middle">ESC</text>
     </g>
     
     <!-- Ascensores -->
@@ -106,7 +106,7 @@
   </g>
   
   <!-- Anotaciones técnicas -->
-  <g font-family="monospace" font-size="12" fill="#06B6D4" opacity="0.5">
+  <g font-family="monospace" font-size="12" fill="#1385BB" opacity="0.5">
     <text x="50" y="100">PLANTA: PRIMER PISO</text>
     <text x="50" y="120">ESCALA: 1:200</text>
     <text x="50" y="140">ÁREA TOTAL: 400m²</text>
@@ -137,13 +137,13 @@
   
   <!-- Sello profesional -->
   <g transform="translate(1000, 650)">
-    <circle cx="50" cy="50" r="45" stroke="#06B6D4" stroke-width="2" fill="none" opacity="0.6"/>
+    <circle cx="50" cy="50" r="45" stroke="#1385BB" stroke-width="2" fill="none" opacity="0.6"/>
     <text x="50" y="45" font-family="Arial" font-size="12" fill="#FFFFFF" text-anchor="middle" opacity="0.7">GRUPO</text>
-    <text x="50" y="60" font-family="Arial" font-size="16" fill="#06B6D4" text-anchor="middle" font-weight="bold">RIVAMEZ</text>
+    <text x="50" y="60" font-family="Arial" font-size="16" fill="#1385BB" text-anchor="middle" font-weight="bold">RIVAMEZ</text>
     <text x="50" y="72" font-family="Arial" font-size="8" fill="#FFFFFF" text-anchor="middle" opacity="0.6">CONSTRUCTORA</text>
   </g>
   
   <!-- Líneas de medida decorativas -->
-  <line x1="200" y1="680" x2="1000" y2="680" stroke="#06B6D4" stroke-width="1" opacity="0.3" stroke-dasharray="5,5"/>
-  <line x1="170" y1="150" x2="170" y2="650" stroke="#06B6D4" stroke-width="1" opacity="0.3" stroke-dasharray="5,5"/>
+  <line x1="200" y1="680" x2="1000" y2="680" stroke="#1385BB" stroke-width="1" opacity="0.3" stroke-dasharray="5,5"/>
+  <line x1="170" y1="150" x2="170" y2="650" stroke="#1385BB" stroke-width="1" opacity="0.3" stroke-dasharray="5,5"/>
 </svg>

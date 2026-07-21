@@ -69,8 +69,8 @@ export default function About() {
       {/* Geometric Pattern */}
       <div className="absolute inset-0 opacity-5" style={{
         backgroundImage: `
-          linear-gradient(30deg, #06B6D4 12%, transparent 12.5%, transparent 87%, #06B6D4 87.5%, #06B6D4),
-          linear-gradient(150deg, #06B6D4 12%, transparent 12.5%, transparent 87%, #06B6D4 87.5%, #06B6D4)
+          linear-gradient(30deg, #1385BB 12%, transparent 12.5%, transparent 87%, #1385BB 87.5%, #1385BB),
+          linear-gradient(150deg, #1385BB 12%, transparent 12.5%, transparent 87%, #1385BB 87.5%, #1385BB)
         `,
         backgroundSize: '80px 140px'
       }} />

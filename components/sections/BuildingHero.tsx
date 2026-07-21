@@ -251,7 +251,7 @@ export default function BuildingHero() {
               <div className="absolute inset-0 bg-gradient-to-r from-rivamez-cyan/20 to-rivamez-navy/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all" />
               <div className="relative bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-4 sm:p-6 lg:p-8 hover:border-rivamez-cyan/50 transition-all">
                 <div className="text-5xl mb-4">{layer.icon}</div>
-                <div className="text-xs font-bold text-rivamez-cyan mb-2 tracking-wider">
+                <div className="text-xs font-bold text-rivamez-cyan-lighter mb-2 tracking-wider">
                   {layer.subtitle}
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-3">

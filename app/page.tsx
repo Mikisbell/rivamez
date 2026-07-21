@@ -4,6 +4,7 @@ import Features from '@/components/sections/Features';
 import InteractiveTabs from '@/components/ui/InteractiveTabs';
 import ImpactMetrics from '@/components/sections/ImpactMetrics';
 import About from '@/components/sections/About';
+import Respaldo from '@/components/sections/Respaldo';
 import Services from '@/components/sections/Services';
 import Projects from '@/components/sections/Projects';
 import Testimonials from '@/components/sections/Testimonials';
@@ -34,7 +35,11 @@ export default function Home() {
       <ScrollReveal animation="fadeUp">
         <About />
       </ScrollReveal>
-      
+
+      <ScrollReveal animation="fadeUp" delay={0.1}>
+        <Respaldo />
+      </ScrollReveal>
+
       <ScrollReveal animation="blur" delay={0.2}>
         <Services />
       </ScrollReveal>

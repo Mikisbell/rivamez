@@ -26,9 +26,14 @@ export const metadata = {
   metadataBase: new URL('https://rivamez.com'),
   ...generateSEO.home(),
   icons: {
-    icon: '/favicon.ico',
-    shortcut: '/favicon.ico',
-    apple: '/favicon.ico',
+    icon: [
+      { url: '/images/favicon.ico', sizes: 'any' },
+      { url: '/images/icon-512.png', type: 'image/png', sizes: '512x512' },
+    ],
+    shortcut: '/images/favicon.ico',
+    apple: [
+      { url: '/images/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
   },
   robots: seoRobots,
   verification: {
@@ -50,7 +55,7 @@ export default function RootLayout({ children }) {
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
         <link rel="preconnect" href="https://cdn.sanity.io" crossOrigin="anonymous" />
         <link rel="manifest" href="/manifest.json" />
-        <meta name="theme-color" content="#06B6D4" />
+        <meta name="theme-color" content="#113572" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <meta name="apple-mobile-web-app-title" content="RIVAMEZ" />

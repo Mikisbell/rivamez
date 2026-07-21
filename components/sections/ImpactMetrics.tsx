@@ -189,7 +189,7 @@ export default function ImpactMetrics() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="bg-gradient-to-br from-rivamez-navy to-rivamez-navy/90 rounded-3xl p-4 sm:p-6 lg:p-8 xl:p-12 mb-12"
+          className="bg-gradient-to-br from-rivamez-navy to-rivamez-dark rounded-3xl p-4 sm:p-6 lg:p-8 xl:p-12 mb-12"
         >
           <h3 className="text-2xl md:text-3xl font-bold text-white text-center mb-8">
             Más Números que Nos Definen
@@ -207,7 +207,7 @@ export default function ImpactMetrics() {
               >
                 <div className="text-4xl mb-3">{metric.icon}</div>
                 <div className="text-3xl font-bold text-white mb-2">{metric.value}</div>
-                <div className="text-sm font-semibold text-rivamez-cyan mb-1">{metric.label}</div>
+                <div className="text-sm font-semibold text-rivamez-cyan-lighter mb-1">{metric.label}</div>
                 <div className="text-xs text-gray-300">{metric.description}</div>
               </motion.div>
             ))}

@@ -18,15 +18,16 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Logo y Slogan */}
           <div className="md:col-span-1">
-            <div className="flex items-center space-x-3 mb-4">
-              <img
-                src="/images/logo.png"
-                alt="GRUPO RIVAMEZ Logo"
-                className="h-10 w-auto"
-              />
-              <div className="flex flex-col">
-                <span className="font-bold heading-sm leading-tight">GRUPO RIVAMEZ</span>
-                <span className="text-small text-gray-400 leading-tight">Constructora & Inmobiliaria</span>
+            {/* El logo ya contiene el nombre y el tagline, por eso no se repiten en texto.
+                Va sobre un panel blanco: sus tintas (navy, verde bosque, gris) son oscuras
+                y sobre el fondo del footer quedarian ilegibles. */}
+            <div className="mb-4">
+              <div className="inline-flex bg-white rounded-lg px-4 py-3">
+                <img
+                  src="/images/logo.png"
+                  alt="GRUPO RIVAMEZ, Ingeniería & Arquitectura"
+                  className="h-12 w-auto"
+                />
               </div>
             </div>
             <p className="text-gray-400 text-body leading-relaxed">
@@ -39,27 +40,27 @@ export default function Footer() {
             <h3 className="font-semibold heading-sm mb-4">Navegación</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#inicio" onClick={(e) => scrollToSection(e, '#inicio')} className="text-gray-400 hover:text-rivamez-cyan transition-colors">
+                <a href="#inicio" onClick={(e) => scrollToSection(e, '#inicio')} className="text-gray-400 hover:text-rivamez-cyan-light transition-colors">
                   Inicio
                 </a>
               </li>
               <li>
-                <a href="#proyectos" onClick={(e) => scrollToSection(e, '#proyectos')} className="text-gray-400 hover:text-rivamez-cyan transition-colors">
+                <a href="#proyectos" onClick={(e) => scrollToSection(e, '#proyectos')} className="text-gray-400 hover:text-rivamez-cyan-light transition-colors">
                   Proyectos
                 </a>
               </li>
               <li>
-                <a href="#servicios" onClick={(e) => scrollToSection(e, '#servicios')} className="text-gray-400 hover:text-rivamez-cyan transition-colors">
+                <a href="#servicios" onClick={(e) => scrollToSection(e, '#servicios')} className="text-gray-400 hover:text-rivamez-cyan-light transition-colors">
                   Servicios
                 </a>
               </li>
               <li>
-                <a href="#nosotros" onClick={(e) => scrollToSection(e, '#nosotros')} className="text-gray-400 hover:text-rivamez-cyan transition-colors">
+                <a href="#nosotros" onClick={(e) => scrollToSection(e, '#nosotros')} className="text-gray-400 hover:text-rivamez-cyan-light transition-colors">
                   Nosotros
                 </a>
               </li>
               <li>
-                <a href="#contacto" onClick={(e) => scrollToSection(e, '#contacto')} className="text-gray-400 hover:text-rivamez-cyan transition-colors">
+                <a href="#contacto" onClick={(e) => scrollToSection(e, '#contacto')} className="text-gray-400 hover:text-rivamez-cyan-light transition-colors">
                   Contacto
                 </a>
               </li>
@@ -71,25 +72,25 @@ export default function Footer() {
             <h3 className="font-semibold heading-sm mb-4">Contacto</h3>
             <ul className="space-y-3 text-gray-400 text-body">
               <li className="flex items-start">
-                <svg className="w-5 h-5 mr-2 mt-0.5 text-rivamez-cyan flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5 mr-2 mt-0.5 text-rivamez-cyan-light flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
                 <span>Av. Cahuide 298<br />Huancayo, Perú</span>
               </li>
               <li className="flex items-center">
-                <svg className="w-5 h-5 mr-2 text-rivamez-cyan flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5 mr-2 text-rivamez-cyan-light flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
-                <a href="tel:+51943818788" className="hover:text-rivamez-cyan transition-colors">
+                <a href="tel:+51943818788" className="hover:text-rivamez-cyan-light transition-colors">
                   +51 943 818 788
                 </a>
               </li>
               <li className="flex items-center">
-                <svg className="w-5 h-5 mr-2 text-rivamez-cyan flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5 mr-2 text-rivamez-cyan-light flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
-                <a href="mailto:info@rivamez.com" className="hover:text-rivamez-cyan transition-colors">
+                <a href="mailto:info@rivamez.com" className="hover:text-rivamez-cyan-light transition-colors">
                   info@rivamez.com
                 </a>
               </li>
@@ -137,7 +138,7 @@ export default function Footer() {
         {/* Copyright */}
         <div className="border-t border-gray-800 mt-responsive pt-responsive text-center text-gray-400 text-body">
           <p>&copy; {currentYear} GRUPO RIVAMEZ. Todos los derechos reservados.</p>
-          <p className="mt-2 text-small text-gray-500">
+          <p className="mt-2 text-small text-gray-400">
             Grupo Rivamez es nombre comercial de FreeCloud S.A.C. | RUC 20600345665
           </p>
         </div>

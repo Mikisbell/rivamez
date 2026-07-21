@@ -20,7 +20,7 @@ export default function CoverageMap() {
       name: 'El Tambo',
       projects: 92,
       type: 'Residencial Premium',
-      color: '#06B6D4',
+      color: '#1385BB',
       position: { x: 65, y: 35 }
     },
     {

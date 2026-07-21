@@ -16,12 +16,12 @@
   --surface-foreground: 15 23 42;       /* slate-900 */
   --border: 226 232 240;                /* slate-200 */
   --input: 255 255 255;                 /* white */
-  --primary: 30 58 138;                 /* rivamez-navy */
+  --primary: 17 53 114;                 /* rivamez-navy #113572, ~11:1 sobre blanco */
   --primary-foreground: 255 255 255;
-  --accent: 6 182 212;                  /* rivamez-cyan */
+  --accent: 19 133 187;                 /* rivamez-cyan #1385BB, ~4.1:1, solo texto grande */
   --accent-foreground: 255 255 255;
-  --success: 5 150 105;                 /* rivamez-green */
-  --ring: 6 182 212;                    /* cyan focus ring */
+  --success: 3 106 49;                  /* rivamez-green #036A31, ~6.5:1, verde accesible */
+  --ring: 19 133 187;                   /* celeste de marca para el focus ring */
 }
 
 .dark {
@@ -33,12 +33,14 @@
   --surface-foreground: 241 245 249;
   --border: 51 65 85;                   /* slate-700 */
   --input: 30 41 59;                    /* slate-800 */
-  --primary: 59 130 246;                /* blue-500 — más brillante en dark */
+  /* En dark los tonos de marca se aclaran: el navy y el verde bosque no contrastan
+     contra un fondo slate-900. Se usan las variantes claras de la misma familia. */
+  --primary: 19 133 187;                /* rivamez-cyan #1385BB, ~4.1:1 sobre slate-900 */
   --primary-foreground: 255 255 255;
-  --accent: 34 211 238;                 /* cyan-400 — un toque más vivo */
+  --accent: 63 168 216;                 /* celeste aclarado, ~6.3:1 sobre slate-900 */
   --accent-foreground: 15 23 42;
-  --success: 16 185 129;                /* emerald-500 */
-  --ring: 34 211 238;
+  --success: 114 178 68;                /* rivamez-lime #72B244, ~6.6:1 sobre slate-900 */
+  --ring: 63 168 216;
 }
 
 *,

@@ -10,7 +10,7 @@
   
   <!-- Curva Cyan (centro) -->
   <path d="M 35 8 Q 42 2 48 8 Q 55 25 52 50 Q 50 75 45 90 Q 42 98 37 93 Q 33 87 35 78 Q 38 58 40 38 Q 41 18 35 8 Z" 
-        fill="#06B6D4"/>
+        fill="#1385BB"/>
   
   <!-- Espacio blanco central (separación) -->
   <path d="M 42 30 Q 44 32 46 30 Q 48 40 47 60 Q 46 72 44 75 Q 42 73 43 60 Q 44 45 42 30 Z" 
@@ -18,7 +18,7 @@
   
   <!-- Curva Verde (derecha, adelante) -->
   <path d="M 52 25 Q 58 18 64 25 Q 70 45 68 68 Q 66 85 60 95 Q 56 100 52 94 Q 48 86 50 75 Q 53 60 55 45 Q 56 32 52 25 Z" 
-        fill="#059669"/>
+        fill="#036A31"/>
   
   <!-- Espacio blanco en curva verde -->
   <path d="M 58 50 Q 60 52 62 50 Q 63 60 62 75 Q 61 82 59 85 Q 57 83 58 75 Q 59 65 58 50 Z" 

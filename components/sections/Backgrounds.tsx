@@ -1,7 +1,7 @@
 // components/Backgrounds.js
 // Fondos decorativos estilo Dataiku
 
-export const MeshGradient = ({ colors = ['#0F172A', '#1E3A8A', '#06B6D4'], className = '' }) => (
+export const MeshGradient = ({ colors = ['#0F172A', '#113572', '#1385BB'], className = '' }) => (
   <div className={`absolute inset-0 overflow-hidden ${className}`}>
     <div className="absolute inset-0 opacity-30"
       style={{
@@ -16,7 +16,7 @@ export const MeshGradient = ({ colors = ['#0F172A', '#1E3A8A', '#06B6D4'], class
   </div>
 );
 
-export const DotPattern = ({ color = 'rgba(6, 182, 212, 0.15)', className = '' }) => (
+export const DotPattern = ({ color = 'rgba(19, 133, 187, 0.15)', className = '' }) => (
   <div className={`absolute inset-0 ${className}`}>
     <div 
       className="absolute inset-0"
@@ -28,7 +28,7 @@ export const DotPattern = ({ color = 'rgba(6, 182, 212, 0.15)', className = '' }
   </div>
 );
 
-export const GridPattern = ({ color = 'rgba(6, 182, 212, 0.08)', className = '' }) => (
+export const GridPattern = ({ color = 'rgba(19, 133, 187, 0.08)', className = '' }) => (
   <div className={`absolute inset-0 ${className}`}>
     <div 
       className="absolute inset-0"
@@ -53,7 +53,7 @@ export const WaveBackground = ({ className = '' }) => (
       />
       <defs>
         <linearGradient id="wave-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" stopColor="#06B6D4" />
+          <stop offset="0%" stopColor="#1385BB" />
           <stop offset="100%" stopColor="#0F172A" />
         </linearGradient>
       </defs>
@@ -78,8 +78,8 @@ export const LinePattern = ({ className = '' }) => (
           45deg,
           transparent,
           transparent 10px,
-          rgba(6, 182, 212, 0.3) 10px,
-          rgba(6, 182, 212, 0.3) 11px
+          rgba(19, 133, 187, 0.3) 10px,
+          rgba(19, 133, 187, 0.3) 11px
         )`
       }}
     />
@@ -112,10 +112,10 @@ export const CircuitPattern = ({ className = '' }) => (
     <svg className="absolute inset-0 w-full h-full" xmlns="http://www.w3.org/2000/svg">
       <defs>
         <pattern id="circuit" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
-          <circle cx="25" cy="25" r="2" fill="rgba(6, 182, 212, 0.2)" />
-          <circle cx="75" cy="75" r="2" fill="rgba(6, 182, 212, 0.2)" />
-          <line x1="25" y1="25" x2="75" y2="25" stroke="rgba(6, 182, 212, 0.15)" strokeWidth="0.5" />
-          <line x1="75" y1="25" x2="75" y2="75" stroke="rgba(6, 182, 212, 0.15)" strokeWidth="0.5" />
+          <circle cx="25" cy="25" r="2" fill="rgba(19, 133, 187, 0.2)" />
+          <circle cx="75" cy="75" r="2" fill="rgba(19, 133, 187, 0.2)" />
+          <line x1="25" y1="25" x2="75" y2="25" stroke="rgba(19, 133, 187, 0.15)" strokeWidth="0.5" />
+          <line x1="75" y1="25" x2="75" y2="75" stroke="rgba(19, 133, 187, 0.15)" strokeWidth="0.5" />
         </pattern>
       </defs>
       <rect width="100%" height="100%" fill="url(#circuit)" />
@@ -129,10 +129,10 @@ export const GeometricPattern = ({ className = '' }) => (
       className="absolute inset-0 opacity-5"
       style={{
         backgroundImage: `
-          linear-gradient(30deg, #06B6D4 12%, transparent 12.5%, transparent 87%, #06B6D4 87.5%, #06B6D4),
-          linear-gradient(150deg, #06B6D4 12%, transparent 12.5%, transparent 87%, #06B6D4 87.5%, #06B6D4),
-          linear-gradient(30deg, #06B6D4 12%, transparent 12.5%, transparent 87%, #06B6D4 87.5%, #06B6D4),
-          linear-gradient(150deg, #06B6D4 12%, transparent 12.5%, transparent 87%, #06B6D4 87.5%, #06B6D4)
+          linear-gradient(30deg, #1385BB 12%, transparent 12.5%, transparent 87%, #1385BB 87.5%, #1385BB),
+          linear-gradient(150deg, #1385BB 12%, transparent 12.5%, transparent 87%, #1385BB 87.5%, #1385BB),
+          linear-gradient(30deg, #1385BB 12%, transparent 12.5%, transparent 87%, #1385BB 87.5%, #1385BB),
+          linear-gradient(150deg, #1385BB 12%, transparent 12.5%, transparent 87%, #1385BB 87.5%, #1385BB)
         `,
         backgroundSize: '80px 140px',
         backgroundPosition: '0 0, 0 0, 40px 70px, 40px 70px'
@@ -146,7 +146,7 @@ export const AnimatedGradient = ({ className = '' }) => (
     <div 
       className="absolute inset-0"
       style={{
-        background: 'linear-gradient(45deg, #06B6D4, #0F172A, #1E3A8A, #06B6D4)',
+        background: 'linear-gradient(45deg, #1385BB, #0F172A, #113572, #1385BB)',
         backgroundSize: '400% 400%',
         animation: 'gradient 15s ease infinite',
         opacity: 0.1

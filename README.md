@@ -341,7 +341,7 @@ chore: Mantenimiento
 
 ## 📞 Contacto
 
-**RIVAMEZ - Constructora & Inmobiliaria**
+**RIVAMEZ - Ingeniería & Arquitectura**
 - 📧 Email: info@rivamez.com
 - 📱 WhatsApp: +51 943 818 788
 - 🌐 Web: [rivamez.vercel.app](https://rivamez.vercel.app)

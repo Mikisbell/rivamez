@@ -175,10 +175,10 @@ export default function BlogVisual({ initialPosts = [], initialFeaturedPost = nu
       <div className="fixed inset-0 z-0 opacity-[0.03] pointer-events-none"
         style={{
           backgroundImage: `
-            linear-gradient(90deg, #1e3a8a 1px, transparent 1px),
-            linear-gradient(0deg, #1e3a8a 1px, transparent 1px),
-            linear-gradient(45deg, transparent 48%, #06b6d4 48%, #06b6d4 52%, transparent 52%),
-            linear-gradient(-45deg, transparent 48%, #06b6d4 48%, #06b6d4 52%, transparent 52%)
+            linear-gradient(90deg, #113572 1px, transparent 1px),
+            linear-gradient(0deg, #113572 1px, transparent 1px),
+            linear-gradient(45deg, transparent 48%, #1385BB 48%, #1385BB 52%, transparent 52%),
+            linear-gradient(-45deg, transparent 48%, #1385BB 48%, #1385BB 52%, transparent 52%)
           `,
           backgroundSize: '80px 80px, 80px 80px, 40px 40px, 40px 40px',
           backgroundPosition: '0 0, 0 0, 0 0, 20px 20px'

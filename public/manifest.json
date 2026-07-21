@@ -1,24 +1,24 @@
 {
-  "name": "RIVAMEZ - Constructora e Inmobiliaria",
+  "name": "RIVAMEZ - Ingeniería & Arquitectura",
   "short_name": "RIVAMEZ",
   "description": "Empresa líder en construcción residencial, comercial y remodelación en Huancayo",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#0F172A",
-  "theme_color": "#06B6D4",
+  "theme_color": "#113572",
   "orientation": "portrait-primary",
   "icons": [
     {
-      "src": "/icon-192x192.png",
-      "sizes": "192x192",
+      "src": "/images/apple-touch-icon.png",
+      "sizes": "180x180",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
     },
     {
-      "src": "/icon-512x512.png",
+      "src": "/images/icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
     }
   ],
   "screenshots": [

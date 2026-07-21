@@ -84,12 +84,12 @@ const stats = [
 ];
 
 const clients = [
-  'https://via.placeholder.com/150x60/06B6D4/FFFFFF?text=Cliente+1',
+  'https://via.placeholder.com/150x60/1385BB/FFFFFF?text=Cliente+1',
   'https://via.placeholder.com/150x60/0F172A/FFFFFF?text=Cliente+2',
-  'https://via.placeholder.com/150x60/059669/FFFFFF?text=Cliente+3',
-  'https://via.placeholder.com/150x60/06B6D4/FFFFFF?text=Cliente+4',
+  'https://via.placeholder.com/150x60/036A31/FFFFFF?text=Cliente+3',
+  'https://via.placeholder.com/150x60/1385BB/FFFFFF?text=Cliente+4',
   'https://via.placeholder.com/150x60/0F172A/FFFFFF?text=Cliente+5',
-  'https://via.placeholder.com/150x60/059669/FFFFFF?text=Cliente+6',
+  'https://via.placeholder.com/150x60/036A31/FFFFFF?text=Cliente+6',
 ];
 
 export default function NosotrosPage() {
@@ -102,8 +102,8 @@ export default function NosotrosPage() {
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 bg-gradient-to-br from-rivamez-navy/95 via-gray-900/90 to-black/95">
           <div className="absolute inset-0 opacity-20" style={{
-            backgroundImage: `radial-gradient(circle at 20% 50%, rgba(6, 182, 212, 0.3) 0%, transparent 50%),
-                                radial-gradient(circle at 80% 50%, rgba(16, 185, 129, 0.3) 0%, transparent 50%)`
+            backgroundImage: `radial-gradient(circle at 20% 50%, rgba(19, 133, 187, 0.3) 0%, transparent 50%),
+                                radial-gradient(circle at 80% 50%, rgba(114, 178, 68, 0.3) 0%, transparent 50%)`
           }} />
           <div className="absolute inset-0 opacity-10" style={{
             backgroundImage: 'radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px)',
@@ -119,7 +119,7 @@ export default function NosotrosPage() {
           >
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-8 leading-tight">
               La Gente Detrás de
-              <span className="block bg-gradient-to-r from-rivamez-cyan via-rivamez-green to-white bg-clip-text text-transparent">
+              <span className="block bg-gradient-to-r from-rivamez-cyan-lighter via-rivamez-lime-light to-white bg-clip-text text-transparent">
                 los Proyectos
               </span>
             </h1>
@@ -412,7 +412,7 @@ export default function NosotrosPage() {
               </a>
               <a
                 href="/contacto"
-                className="px-8 py-4 bg-white/10 backdrop-blur-sm border-2 border-white text-white font-bold rounded-xl hover:bg-white/20 hover:scale-105 transition-all duration-300"
+                className="px-8 py-4 bg-rivamez-dark/30 backdrop-blur-sm border-2 border-white text-white font-bold rounded-xl hover:bg-rivamez-dark/50 hover:scale-105 transition-all duration-300"
               >
                 Contactar
               </a>
@@ -788,7 +788,7 @@ export default function NosotrosPage() {
               </a>
               <a
                 href="tel:+51943818788"
-                className="px-8 py-4 bg-white/10 backdrop-blur-sm border-2 border-white text-white font-semibold rounded-lg hover:bg-white/20 hover:scale-105 transition-all duration-300"
+                className="px-8 py-4 bg-rivamez-dark/30 backdrop-blur-sm border-2 border-white text-white font-semibold rounded-lg hover:bg-rivamez-dark/50 hover:scale-105 transition-all duration-300"
               >
                 Llamar Ahora
               </a>

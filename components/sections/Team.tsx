@@ -180,19 +180,19 @@ export default function Team() {
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-rivamez-cyan mb-2">62+</div>
+              <div className="text-4xl md:text-5xl font-bold text-rivamez-cyan-light mb-2">62+</div>
               <div className="text-white/80 text-sm">Profesionales</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-rivamez-green mb-2">130+</div>
+              <div className="text-4xl md:text-5xl font-bold text-rivamez-lime mb-2">130+</div>
               <div className="text-white/80 text-sm">Años de Experiencia</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-rivamez-cyan mb-2">15+</div>
+              <div className="text-4xl md:text-5xl font-bold text-rivamez-cyan-light mb-2">15+</div>
               <div className="text-white/80 text-sm">Especialidades</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-rivamez-green mb-2">100%</div>
+              <div className="text-4xl md:text-5xl font-bold text-rivamez-lime mb-2">100%</div>
               <div className="text-white/80 text-sm">Comprometidos</div>
             </div>
           </div>

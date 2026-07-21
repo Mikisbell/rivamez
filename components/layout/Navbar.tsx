@@ -192,21 +192,20 @@ export default function NavbarNew() {
               {/* Logo */}
               <a
                 href="/"
-                className="flex items-center space-x-2 md:space-x-2 lg:space-x-3 group z-10"
+                className="flex items-center shrink-0 group z-10"
               >
+                {/* Movil: isotipo. El logo horizontal (4.19:1) a 28 px deja el tagline ilegible */}
+                <img
+                  src="/images/isotipo.png"
+                  alt="GRUPO RIVAMEZ"
+                  className="block md:hidden h-9 sm:h-10 w-auto transition-transform group-hover:scale-105"
+                />
+                {/* Desde md: logo completo. Ya trae el nombre y el tagline, no se repite en texto */}
                 <img
                   src="/images/logo.png"
-                  alt="GRUPO RIVAMEZ"
-                  className="h-7 sm:h-8 md:h-8 lg:h-11 xl:h-14 w-auto transition-transform group-hover:scale-105"
+                  alt="GRUPO RIVAMEZ, Ingeniería & Arquitectura"
+                  className="hidden md:block h-9 lg:h-12 xl:h-14 w-auto transition-transform group-hover:scale-105"
                 />
-                <div className="flex flex-col">
-                  <span className="font-bold text-xs sm:text-sm md:text-sm lg:text-base xl:text-lg leading-tight text-rivamez-navy">
-                    GRUPO RIVAMEZ
-                  </span>
-                  <span className="text-xs sm:text-sm md:text-sm lg:text-base xl:text-sm leading-tight text-gray-600">
-                    Constructora & Inmobiliaria
-                  </span>
-                </div>
               </a>
 
               {/* Desktop Menu + CTA juntos */}

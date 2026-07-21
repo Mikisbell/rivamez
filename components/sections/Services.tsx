@@ -159,7 +159,7 @@ export default function Services() {
       <div className="absolute bottom-20 left-20 w-96 h-96 bg-rivamez-green/10 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '9s', animationDelay: '1s' }} />
       <div className="container-responsive">
         <div className="text-center mb-responsive">
-          <span className="inline-block px-4 py-2 bg-rivamez-cyan/20 text-rivamez-cyan text-small font-semibold rounded-full mb-4">
+          <span className="inline-block px-4 py-2 bg-rivamez-cyan/20 text-rivamez-cyan-lighter text-small font-semibold rounded-full mb-4">
             SERVICIOS PROFESIONALES
           </span>
           <h2 className="heading-xl mb-responsive">
@@ -209,7 +209,7 @@ export default function Services() {
               <ul className="space-y-2">
                 {service.features.map((feature, index) => (
                   <li key={index} className="flex items-start gap-2 text-small text-gray-300">
-                    <svg className="w-5 h-5 text-rivamez-cyan flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 text-rivamez-cyan-light flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                     <span>{feature}</span>
