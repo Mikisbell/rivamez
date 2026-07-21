@@ -178,7 +178,7 @@ export default function NosotrosPage() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="bg-gradient-to-br from-rivamez-cyan/10 to-white p-10 rounded-2xl border border-rivamez-cyan/20"
+              className="bg-gradient-to-br from-rivamez-cyan/10 to-white p-6 md:p-10 rounded-2xl border border-rivamez-cyan/20"
             >
               <div className="w-16 h-16 bg-gradient-to-br from-rivamez-cyan to-rivamez-navy rounded-xl flex items-center justify-center mb-6">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -196,7 +196,7 @@ export default function NosotrosPage() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="bg-gradient-to-br from-rivamez-navy/10 to-white p-10 rounded-2xl border border-rivamez-navy/20"
+              className="bg-gradient-to-br from-rivamez-navy/10 to-white p-6 md:p-10 rounded-2xl border border-rivamez-navy/20"
             >
               <div className="w-16 h-16 bg-gradient-to-br from-rivamez-green to-rivamez-cyan rounded-xl flex items-center justify-center mb-6">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -395,7 +395,7 @@ export default function NosotrosPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="bg-gradient-to-br from-rivamez-navy to-rivamez-cyan rounded-3xl p-12 text-white text-center"
+            className="bg-gradient-to-br from-rivamez-navy to-rivamez-cyan rounded-3xl p-8 md:p-12 text-white text-center"
           >
             <h3 className="text-3xl md:text-4xl font-bold mb-6">
               Asociarse con RIVAMEZ significa acceso a una red de especialistas líderes en la industria
@@ -445,7 +445,7 @@ export default function NosotrosPage() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="bg-white rounded-3xl p-10 shadow-xl border-2 border-rivamez-cyan/20"
+              className="bg-white rounded-3xl p-6 md:p-10 shadow-xl border-2 border-rivamez-cyan/20"
             >
               <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-rivamez-cyan to-rivamez-navy rounded-2xl mb-6">
                 <svg className="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 20 20">
@@ -470,7 +470,7 @@ export default function NosotrosPage() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="bg-white rounded-3xl p-10 shadow-xl border-2 border-rivamez-green/20"
+              className="bg-white rounded-3xl p-6 md:p-10 shadow-xl border-2 border-rivamez-green/20"
             >
               <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-rivamez-green to-emerald-700 rounded-2xl mb-6">
                 <svg className="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 20 20">

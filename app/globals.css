@@ -69,6 +69,17 @@ body {
   overflow-x: hidden;
 }
 
+/* Contenedor raiz del contenido: recorta el desborde horizontal que producen
+   las animaciones de entrada (transformaciones en X que quedan aplicadas
+   mientras la seccion no entra en viewport) y los blobs decorativos.
+   Se usa `clip` en vez de `hidden` porque NO crea un contenedor de scroll:
+   asi no se rompe `position: sticky` (filtros de /proyectos y del blog)
+   ni se altera el scroll vertical de la pagina. */
+main {
+  overflow-x: clip;
+  overflow-y: visible;
+}
+
 /* Prevent all containers from overflowing */
 section,
 footer,

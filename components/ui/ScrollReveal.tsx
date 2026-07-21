@@ -53,6 +53,11 @@ export default function ScrollReveal({
   return (
     <motion.div
       ref={ref}
+      // Las variantes fadeLeft/fadeRight desplazan el bloque 75px en X mientras
+      // la seccion no entra en viewport. Sin recorte, ese desplazamiento genera
+      // scroll lateral en toda la pagina. `overflow-x-clip` lo contiene sin
+      // crear un contenedor de scroll (no rompe sticky ni el scroll vertical).
+      className="overflow-x-clip"
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
       variants={selectedAnimation}
