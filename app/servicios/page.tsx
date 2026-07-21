@@ -20,7 +20,7 @@ const services = [
     ),
     title: 'Proyectos Comerciales',
     description: 'Centros comerciales, oficinas clase AAA y espacios comerciales que impulsan tu negocio.',
-    features: ['Centros comerciales', 'Edificios de oficinas AAA', 'Locales comerciales', 'Certificación LEED'],
+    features: ['Centros comerciales', 'Edificios de oficinas AAA', 'Locales comerciales', 'Gestión ambiental ISO 14001'],
     process: ['Estudio de factibilidad', 'Diseño funcional', 'Construcción eficiente', 'Smart building'],
     image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&q=80'
   },
@@ -69,7 +69,7 @@ const services = [
 const benefits = [
   {
     title: 'Experiencia Comprobada',
-    description: 'Más de 15 años y 285+ proyectos completados exitosamente',
+    description: 'Equipo con más de 15 años de experiencia profesional y 285+ proyectos completados exitosamente',
     icon: '🏆'
   },
   {
@@ -434,22 +434,23 @@ export default function ServiciosPage() {
               className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all scroll-mt-20"
             >
               <div className="text-5xl mb-4">🌱</div>
-              <h3 className="text-2xl font-bold text-rivamez-navy mb-3">Sostenibilidad LEED</h3>
+              <h3 className="text-2xl font-bold text-rivamez-navy mb-3">Sostenibilidad ISO 14001</h3>
               <p className="text-gray-600 mb-4">
-                Construcción verde con estándares internacionales PassivHaus y Net Zero
+                Construcción con criterios ambientales respaldados por nuestro sistema de gestión certificado
               </p>
               <ul className="space-y-2 text-sm text-gray-600">
                 <li className="flex items-center gap-2">
                   <span className="text-rivamez-cyan">•</span>
-                  Certificación LEED Platinum
+                  Sistema de gestión ambiental ISO 14001 vigente
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="text-rivamez-cyan">•</span>
-                  PassivHaus estándar europeo
+                  Manejo y segregación de residuos de obra
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="text-rivamez-cyan">•</span>
-                  Net Zero Buildings
+                  Diseño con enfoque Net Zero: criterios de eficiencia energética aplicados al
+                  proyecto, sin certificación de terceros
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="text-rivamez-cyan">•</span>
@@ -479,7 +480,7 @@ export default function ServiciosPage() {
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="text-rivamez-cyan">•</span>
-                  Lean Construction Institute
+                  Metodología Lean Construction
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="text-rivamez-cyan">•</span>

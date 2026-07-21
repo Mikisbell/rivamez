@@ -166,7 +166,7 @@ export default function Services() {
             Soluciones Integrales de Construcción
           </h2>
           <p className="text-gray-400 text-body max-w-3xl mx-auto">
-            Con más de 15 años de experiencia, ofrecemos servicios completos desde el diseño conceptual hasta la entrega final del proyecto.
+            Con un equipo de más de 15 años de experiencia profesional, ofrecemos servicios completos desde el diseño conceptual hasta la entrega final del proyecto.
           </p>
         </div>
 

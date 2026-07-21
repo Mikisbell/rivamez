@@ -235,7 +235,7 @@
 4. "Mejores Zonas para Construir en Junín: Análisis de Precios"
 5. "Casas Modernas en Huancayo: 50+ Ideas con Precios Reales"
 6. "Financiamiento de Construcción en Perú: Mi Vivienda vs Bancos"
-7. "Construcción Sostenible en Junín: LEED y PassivHaus"
+7. "Construcción Sostenible en Junín: eficiencia energética y gestión ambiental ISO 14001"
 8. "Remodelación de Casas en Huancayo: Antes y Después [Galería]"
 9. "Cuánto Demora Construir una Casa en Huancayo [Timeline Real]"
 10. "Errores Comunes al Contratar una Constructora en Junín"

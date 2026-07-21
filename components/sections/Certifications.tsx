@@ -3,101 +3,54 @@
 import { motion } from 'framer-motion';
 
 export default function Certifications() {
+  // Organismo certificador de los cuatro sistemas de gestión.
+  const CERTIFIER = "CCL (Consultanst & Constructors Louis's)";
+  const VERIFICATION_URL = "https://www.cclouiss.com/verificacion-certificacion/";
+
   const certifications = [
     {
       name: "ISO 9001:2015",
       category: "Sistema de Gestión de Calidad",
-      year: "2018",
-      issuer: "Bureau Veritas",
-      description: "Certificación internacional que garantiza estándares de calidad en todos nuestros procesos constructivos.",
+      year: "2026",
+      issuer: CERTIFIER,
+      certNumber: "IEC/QM-CCL-PERJ1-MAY070526-J1-01 Rev. 0",
+      description: "Gestión de calidad certificada en nuestros procesos de diseño, ingeniería y ejecución de obra.",
       icon: "🎯",
       color: "from-blue-500 to-blue-700",
       verified: true
     },
     {
       name: "ISO 14001",
-      category: "Gestión Ambiental",
-      year: "2019",
-      issuer: "SGS",
-      description: "Compromiso con la sostenibilidad y el cuidado del medio ambiente en cada proyecto.",
+      category: "Sistema de Gestión Ambiental",
+      year: "2026",
+      issuer: CERTIFIER,
+      certNumber: "IEC/EM-CCL-PERJ2-MAY070526-J2-02 Rev. 0",
+      description: "Gestión ambiental aplicada al manejo de residuos, uso de recursos y control de impactos en obra.",
       icon: "🌱",
       color: "from-green-500 to-emerald-700",
       verified: true
     },
     {
-      name: "OHSAS 18001",
-      category: "Seguridad y Salud Ocupacional",
-      year: "2020",
-      issuer: "Intertek",
-      description: "Máximos estándares de seguridad para proteger a nuestro equipo y colaboradores.",
+      name: "ISO 45001:2018",
+      category: "Seguridad y Salud en el Trabajo",
+      year: "2026",
+      issuer: CERTIFIER,
+      certNumber: "IEC/OS-CCL-PERJ3-MAY070526-J3-03 Rev. 0",
+      description: "Gestión de seguridad y salud ocupacional para proteger al personal en obra y en oficina.",
       icon: "🛡️",
       color: "from-orange-500 to-red-600",
       verified: true
     },
     {
-      name: "Registro CAPECO",
-      category: "Cámara Peruana de la Construcción",
-      year: "2009",
-      issuer: "CAPECO",
-      description: "Miembro activo del gremio constructor más importante del Perú.",
-      icon: "🏗️",
+      name: "ISO 37001:2025",
+      category: "Sistema de Gestión Antisoborno",
+      year: "2026",
+      issuer: CERTIFIER,
+      certNumber: "IEC/AB-CCL-PERJ4-MAY070526-J4-04 Rev. 0",
+      description: "Gestión antisoborno aplicada a contrataciones, licitaciones y relación con proveedores.",
+      icon: "⚖️",
       color: "from-rivamez-navy to-blue-900",
       verified: true
-    },
-    {
-      name: "CIP Hábil",
-      category: "Colegio de Ingenieros del Perú",
-      year: "2009",
-      issuer: "CIP - CD Junín",
-      description: "Todos nuestros ingenieros están habilitados y colegiados en el CIP.",
-      icon: "👨‍💼",
-      color: "from-purple-500 to-purple-700",
-      verified: true
-    },
-    {
-      name: "BIM Certified",
-      category: "Building Information Modeling",
-      year: "2021",
-      issuer: "Autodesk",
-      description: "Certificación en metodología BIM para proyectos de alta complejidad.",
-      icon: "💻",
-      color: "from-rivamez-cyan to-blue-600",
-      verified: true
-    }
-  ];
-
-  const awards = [
-    {
-      title: "Mejor Constructora de Junín",
-      year: "2023",
-      issuer: "Cámara de Comercio de Huancayo",
-      description: "Reconocimiento por excelencia en construcción y contribución al desarrollo regional.",
-      icon: "🏆",
-      color: "from-yellow-400 to-amber-600"
-    },
-    {
-      title: "Premio Excelencia en Construcción",
-      year: "2022",
-      issuer: "CAPECO Nacional",
-      description: "Por innovación, calidad y cumplimiento en proyectos residenciales.",
-      icon: "⭐",
-      color: "from-rivamez-cyan to-blue-600"
-    },
-    {
-      title: "Reconocimiento Municipalidad de Huancayo",
-      year: "2021",
-      issuer: "Municipalidad Provincial de Huancayo",
-      description: "Por aporte al desarrollo urbano sostenible de la ciudad.",
-      icon: "🎖️",
-      color: "from-rivamez-green to-green-700"
-    },
-    {
-      title: "Mejor Proyecto Residencial",
-      year: "2020",
-      issuer: "Feria Inmobiliaria del Centro",
-      description: "Torres del Sol - Proyecto destacado por diseño, calidad y entrega puntual.",
-      icon: "🏅",
-      color: "from-rivamez-navy to-blue-900"
     }
   ];
 
@@ -124,12 +77,13 @@ export default function Certifications() {
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-rivamez-navy mb-6">
             Certificaciones
             <span className="block bg-gradient-to-r from-rivamez-cyan to-rivamez-green bg-clip-text text-transparent">
-              y Reconocimientos
+              vigentes y verificables
             </span>
           </h2>
           <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-            Nuestro compromiso con la excelencia está respaldado por certificaciones internacionales 
-            y el reconocimiento de la industria de la construcción.
+            Contamos con cuatro sistemas de gestión certificados bajo normas ISO, vigentes y
+            verificables en línea. Los certificados están emitidos a nombre de FreeCloud S.A.C.,
+            razón social de la que Grupo Rivamez es nombre comercial.
           </p>
         </motion.div>
 
@@ -144,7 +98,7 @@ export default function Certifications() {
             Certificaciones Internacionales
           </motion.h3>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 gap-6">
             {certifications.map((cert, index) => (
               <motion.div
                 key={index}
@@ -187,8 +141,18 @@ export default function Certifications() {
                     {cert.description}
                   </p>
 
+                  {/* Número de certificado */}
+                  <div className="mb-4 rounded-lg bg-gray-50 px-3 py-2">
+                    <p className="text-[11px] uppercase tracking-wide text-gray-400 font-semibold">
+                      N.° de certificado
+                    </p>
+                    <p className="text-xs text-gray-700 font-mono break-all">
+                      {cert.certNumber}
+                    </p>
+                  </div>
+
                   {/* Footer */}
-                  <div className="pt-4 border-t border-gray-100 flex items-center justify-between text-sm">
+                  <div className="pt-4 border-t border-gray-100 flex flex-wrap items-center justify-between gap-2 text-sm">
                     <span className="text-gray-500">
                       Emitido por <span className="font-semibold text-gray-700">{cert.issuer}</span>
                     </span>
@@ -196,65 +160,55 @@ export default function Certifications() {
                       {cert.year}
                     </span>
                   </div>
+
+                  {/* Verificación en línea */}
+                  <a
+                    href={VERIFICATION_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-rivamez-cyan hover:underline"
+                  >
+                    Verificar certificado
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                  </a>
                 </div>
               </motion.div>
             ))}
           </div>
-        </div>
 
-        {/* Awards Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          <h3 className="text-3xl md:text-4xl font-bold text-rivamez-navy text-center mb-12">
-            Premios y Reconocimientos
-          </h3>
-
-          <div className="grid md:grid-cols-2 gap-6">
-            {awards.map((award, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className={`group relative bg-gradient-to-br ${award.color} rounded-2xl p-8 text-white overflow-hidden hover:scale-105 transition-transform duration-300`}
+          {/* Nota del organismo certificador */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="mt-8 rounded-2xl border border-gray-100 bg-gray-50 p-6 text-sm text-gray-600 leading-relaxed"
+          >
+            <p className="mb-2">
+              <span className="font-semibold text-rivamez-navy">Organismo certificador:</span>{' '}
+              {CERTIFIER}, Management System Certification Body N.° MSCB-1550, acreditado por IAS y
+              miembro del IAF.
+            </p>
+            <p className="mb-2">
+              <span className="font-semibold text-rivamez-navy">Titular:</span> FreeCloud S.A.C.
+              (nombre comercial: Grupo Rivamez). Certificación inicial: 04/05/2026. Fecha de emisión:
+              07/05/2026. Auditoría de vigilancia: 07/05/2027. Recertificación: 04/05/2028.
+            </p>
+            <p>
+              Puedes comprobar la vigencia de cada certificado en{' '}
+              <a
+                href={VERIFICATION_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-rivamez-cyan hover:underline break-all"
               >
-                {/* Decorative Pattern */}
-                <div className="absolute inset-0 opacity-10">
-                  <div className="absolute inset-0" style={{
-                    backgroundImage: `radial-gradient(circle, white 1px, transparent 1px)`,
-                    backgroundSize: '20px 20px'
-                  }} />
-                </div>
-
-                <div className="relative">
-                  <div className="flex items-start justify-between mb-4">
-                    <div className="text-6xl">{award.icon}</div>
-                    <div className="text-5xl font-bold opacity-20">{award.year}</div>
-                  </div>
-
-                  <h4 className="text-2xl md:text-3xl font-bold mb-2">
-                    {award.title}
-                  </h4>
-
-                  <p className="text-white/90 mb-4 text-lg">
-                    {award.description}
-                  </p>
-
-                  <div className="pt-4 border-t border-white/20">
-                    <p className="text-sm text-white/80">
-                      Otorgado por <span className="font-semibold text-white">{award.issuer}</span>
-                    </p>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
+                {VERIFICATION_URL}
+              </a>
+            </p>
+          </motion.div>
+        </div>
 
         {/* Trust Badge */}
         <motion.div

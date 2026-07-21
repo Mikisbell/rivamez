@@ -96,7 +96,7 @@ export default function About() {
             Construyendo el Futuro de Huancayo
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Con más de 15 años de experiencia, somos líderes en el desarrollo de proyectos residenciales y comerciales en la región central del Perú.
+            Con un equipo de más de 15 años de experiencia profesional, desarrollamos proyectos residenciales y comerciales en la región central del Perú.
           </p>
         </motion.div>
 

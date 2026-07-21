@@ -112,7 +112,7 @@ export default function Hero() {
                   <div className="w-2 h-2 bg-rivamez-cyan rounded-full animate-pulse" />
                   <div className="absolute inset-0 w-2 h-2 bg-rivamez-cyan rounded-full animate-ping opacity-75" />
                 </div>
-                <span className="text-white text-small font-semibold tracking-wide">Construyendo el futuro de Huancayo desde 2009</span>
+                <span className="text-white text-small font-semibold tracking-wide">Más de 15 años de experiencia profesional construyendo Huancayo</span>
                 <svg className="w-4 h-4 ml-2 text-white/70 group-hover:text-white group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
@@ -207,7 +207,7 @@ export default function Hero() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 bg-white/10 backdrop-blur-md rounded-2xl p-4 md:p-8 border border-white/20">
             <div className="text-center">
               <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-white to-rivamez-cyan bg-clip-text text-transparent mb-2">15+</div>
-              <div className="text-gray-200 text-xs sm:text-sm font-medium">Años de Experiencia</div>
+              <div className="text-gray-200 text-xs sm:text-sm font-medium">Años de Experiencia del Equipo</div>
             </div>
             <div className="text-center md:border-x border-white/20">
               <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-white to-rivamez-cyan bg-clip-text text-transparent mb-2">285+</div>

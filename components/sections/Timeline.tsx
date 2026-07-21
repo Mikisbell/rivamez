@@ -6,11 +6,11 @@ export default function Timeline() {
   const milestones = [
     {
       year: "2009",
-      title: "Fundación de RIVAMEZ",
-      description: "Inicio de operaciones en Huancayo con una visión clara: transformar la industria de la construcción en la región central del Perú.",
+      title: "Inicio de la trayectoria profesional",
+      description: "Nuestro equipo fundador empieza a ejercer en Huancayo con una visión clara: transformar la industria de la construcción en la región central del Perú.",
       icon: "🏁",
       color: "from-rivamez-navy to-blue-900",
-      achievements: ["3 proyectos iniciales", "10 colaboradores", "Registro en CAPECO"]
+      achievements: ["3 proyectos iniciales", "10 colaboradores"]
     },
     {
       year: "2012",
@@ -18,7 +18,7 @@ export default function Timeline() {
       description: "Inauguración de 'Residencial Los Andes', nuestro primer proyecto de gran envergadura con 24 departamentos.",
       icon: "🏢",
       color: "from-blue-500 to-blue-700",
-      achievements: ["24 departamentos entregados", "100% ocupación", "Premio diseño arquitectónico"]
+      achievements: ["24 departamentos entregados", "100% ocupación"]
     },
     {
       year: "2015",
@@ -30,11 +30,11 @@ export default function Timeline() {
     },
     {
       year: "2018",
-      title: "Certificación ISO 9001",
-      description: "Obtención de la certificación ISO 9001:2015, validando nuestros estándares internacionales de calidad.",
-      icon: "🎯",
+      title: "Constitución de FreeCloud S.A.C.",
+      description: "La operación se formaliza como FreeCloud S.A.C., empresa que opera bajo el nombre comercial Grupo Rivamez, con actividad de arquitectura, ingeniería y consultoría técnica.",
+      icon: "🏛️",
       color: "from-green-500 to-emerald-700",
-      achievements: ["ISO 9001:2015", "Procesos estandarizados", "Auditorías exitosas"]
+      achievements: ["RUC 20600345665", "Actividad 7110: arquitectura e ingeniería", "Sede en El Tambo, Huancayo"]
     },
     {
       year: "2020",
@@ -53,28 +53,20 @@ export default function Timeline() {
       achievements: ["100% proyectos BIM", "Equipo certificado", "Tecnología de punta"]
     },
     {
-      year: "2022",
-      title: "Premio Nacional CAPECO",
-      description: "Reconocimiento como mejor constructora en innovación y calidad por la Cámara Peruana de la Construcción.",
-      icon: "⭐",
-      color: "from-yellow-400 to-amber-600",
-      achievements: ["Premio CAPECO Nacional", "Finalista 3 categorías", "Reconocimiento industria"]
-    },
-    {
-      year: "2023",
-      title: "Mayor Constructora de Junín",
-      description: "Distinción otorgada por la Cámara de Comercio de Huancayo como la constructora líder de la región.",
-      icon: "🏆",
-      color: "from-rivamez-green to-green-700",
-      achievements: ["#1 en Junín", "S/.150M+ en proyectos", "285+ proyectos totales"]
-    },
-    {
       year: "2025",
       title: "15 Años Construyendo Futuro",
-      description: "Celebramos tres lustros de excelencia, innovación y compromiso con Huancayo y sus familias.",
+      description: "Celebramos tres lustros de trayectoria profesional, innovación y compromiso con Huancayo y sus familias.",
       icon: "🎉",
       color: "from-rivamez-navy to-rivamez-cyan",
       achievements: ["15 años de trayectoria", "62+ profesionales", "Proyectos en 8 distritos"]
+    },
+    {
+      year: "2026",
+      title: "Cuatro sistemas de gestión certificados",
+      description: "Obtención de las certificaciones ISO 9001, ISO 14001, ISO 45001 e ISO 37001, emitidas por CCL y verificables en línea.",
+      icon: "🎯",
+      color: "from-green-500 to-emerald-700",
+      achievements: ["ISO 9001:2015 y ISO 14001", "ISO 45001:2018 e ISO 37001:2025", "Vigentes hasta la recertificación de 2028"]
     }
   ];
 
@@ -103,12 +95,13 @@ export default function Timeline() {
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-rivamez-navy mb-6">
             Construyendo Historia
             <span className="block bg-gradient-to-r from-rivamez-cyan to-rivamez-green bg-clip-text text-transparent">
-              Desde 2009
+              Más de 15 Años
             </span>
           </h2>
           <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-            Un viaje de 15 años transformando Huancayo, superando desafíos y creando 
-            legados que perdurarán por generaciones.
+            Un recorrido de más de 15 años de experiencia profesional del equipo transformando
+            Huancayo, superando desafíos y creando legados que perdurarán por generaciones. La
+            empresa, FreeCloud S.A.C., se constituyó en 2018.
           </p>
         </motion.div>
 
@@ -191,19 +184,19 @@ export default function Timeline() {
           className="mt-20 bg-gradient-to-br from-rivamez-navy to-rivamez-cyan rounded-3xl p-8 md:p-12"
         >
           <h3 className="text-3xl md:text-4xl font-bold text-white text-center mb-8">
-            15 Años en Números
+            Nuestra Trayectoria en Números
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="text-5xl md:text-6xl font-bold text-white mb-2">15</div>
-              <div className="text-white/80">Años de Historia</div>
+              <div className="text-white/80">Años de Experiencia del Equipo</div>
             </div>
             <div className="text-center">
               <div className="text-5xl md:text-6xl font-bold text-white mb-2">285+</div>
               <div className="text-white/80">Proyectos Completados</div>
             </div>
             <div className="text-center">
-              <div className="text-5xl md:text-6xl font-bold text-white mb-2">9</div>
+              <div className="text-5xl md:text-6xl font-bold text-white mb-2">10</div>
               <div className="text-white/80">Hitos Importantes</div>
             </div>
             <div className="text-center">

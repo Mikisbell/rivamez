@@ -28,7 +28,6 @@
    ├─ Liderazgo (Equipo directivo)
    ├─ Valores & Cultura
    ├─ Certificaciones (ISO)
-   ├─ Premios y Reconocimientos
    ├─ Logros Destacados
    └─ Responsabilidad Social
 
@@ -84,14 +83,13 @@
 - Drones para mapeo 3D y fotogrametría
 - **Beneficio:** Inspecciones 10x más rápidas
 
-#### 5. **Sostenibilidad LEED** 🌱
-- Certificación LEED Platinum
-- PassivHaus (estándar europeo)
-- Net Zero Buildings
-- **Beneficio:** 90% menos consumo energético
+#### 5. **Sostenibilidad ISO 14001** 🌱
+- Sistema de gestión ambiental ISO 14001 vigente
+- Manejo y segregación de residuos de obra
+- Diseño con enfoque Net Zero: criterios de eficiencia energética, sin certificación de terceros
 
 #### 6. **Lean Construction & IPD** 💼
-- Metodología Lean Construction Institute
+- Metodología Lean Construction
 - Integrated Project Delivery
 - **Beneficio:** 25% reducción en desperdicios
 

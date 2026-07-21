@@ -31,11 +31,11 @@ const tabsData = [
     id: 'comercial',
     label: 'PROYECTOS COMERCIALES',
     title: 'Centros Comerciales y Oficinas AAA',
-    description: 'Desarrollamos espacios comerciales modernos y funcionales que impulsan tu negocio. Desde plazas comerciales con múltiples locales hasta edificios de oficinas con certificación LEED, cada proyecto está diseñado para maximizar el retorno de inversión.',
+    description: 'Desarrollamos espacios comerciales modernos y funcionales que impulsan tu negocio. Desde plazas comerciales con múltiples locales hasta edificios de oficinas clase AAA, cada proyecto está diseñado para maximizar el retorno de inversión.',
     features: [
       'Centros comerciales de hasta 95 locales',
       'Edificios de oficinas clase AAA',
-      'Diseño sostenible certificado LEED',
+      'Diseño sostenible bajo gestión ambiental ISO 14001',
       'Tecnología de automatización integrada'
     ],
     slides: [

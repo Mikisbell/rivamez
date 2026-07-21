@@ -11,7 +11,7 @@ export default function ImpactMetrics() {
       value: "150M+",
       label: "En Inversión Ejecutada",
       prefix: "S/.",
-      description: "Soles en proyectos completados desde 2009",
+      description: "Soles en proyectos completados",
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -95,27 +95,6 @@ export default function ImpactMetrics() {
     }
   ];
 
-  const achievements = [
-    {
-      title: "Mayor Constructora",
-      subtitle: "de Junín",
-      year: "2023",
-      color: "bg-gradient-to-br from-rivamez-navy to-blue-900"
-    },
-    {
-      title: "Premio Excelencia",
-      subtitle: "en Construcción",
-      year: "2022",
-      color: "bg-gradient-to-br from-rivamez-cyan to-blue-600"
-    },
-    {
-      title: "Reconocimiento",
-      subtitle: "Municipalidad",
-      year: "2021",
-      color: "bg-gradient-to-br from-rivamez-green to-emerald-600"
-    }
-  ];
-
   return (
     <section id="impacto" className="relative py-12 md:py-20 lg:py-32 overflow-hidden bg-gradient-to-b from-white to-gray-50">
       {/* Decorative Background */}
@@ -143,8 +122,8 @@ export default function ImpactMetrics() {
             </span>
           </h2>
           <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-            Más de 15 años transformando Huancayo con proyectos que generan valor real
-            para nuestros clientes y la comunidad.
+            Más de 15 años de experiencia profesional de nuestro equipo transformando Huancayo
+            con proyectos que generan valor real para nuestros clientes y la comunidad.
           </p>
         </motion.div>
 
@@ -235,52 +214,6 @@ export default function ImpactMetrics() {
           </div>
         </motion.div>
 
-        {/* Achievements / Awards */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-        >
-          <h3 className="text-2xl md:text-3xl font-bold text-rivamez-navy text-center mb-8">
-            Reconocimientos Recientes
-          </h3>
-
-          <div className="grid md:grid-cols-3 gap-6">
-            {achievements.map((achievement, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className={`${achievement.color} rounded-2xl p-4 sm:p-6 lg:p-8 text-white relative overflow-hidden group hover:scale-105 transition-transform duration-300`}
-              >
-                {/* Decorative Pattern */}
-                <div className="absolute inset-0 opacity-10">
-                  <div className="absolute inset-0" style={{
-                    backgroundImage: `radial-gradient(circle, white 1px, transparent 1px)`,
-                    backgroundSize: '20px 20px'
-                  }} />
-                </div>
-
-                <div className="relative">
-                  <div className="text-6xl font-bold mb-2 opacity-20">{achievement.year}</div>
-                  <h4 className="text-2xl font-bold mb-1">{achievement.title}</h4>
-                  <p className="text-lg opacity-90">{achievement.subtitle}</p>
-
-                  {/* Trophy Icon */}
-                  <div className="absolute top-0 right-0 opacity-20 group-hover:opacity-40 transition-opacity">
-                    <svg className="w-20 h-20" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
-                    </svg>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
-
         {/* 1. Comparación con Industria */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -366,9 +299,14 @@ export default function ImpactMetrics() {
           transition={{ duration: 0.6, delay: 0.5 }}
           className="mt-12 sm:mt-16 lg:mt-20"
         >
-          <h3 className="text-3xl md:text-4xl font-bold text-rivamez-navy text-center mb-12">
-            Hitos de Crecimiento
+          <h3 className="text-3xl md:text-4xl font-bold text-rivamez-navy text-center mb-4">
+            Hitos de Trayectoria
           </h3>
+          <p className="text-center text-gray-600 max-w-3xl mx-auto mb-12">
+            Los hitos anteriores a 2018 corresponden a la trayectoria profesional del equipo
+            fundador. FreeCloud S.A.C., que opera bajo el nombre comercial Grupo Rivamez, se
+            constituyó en 2018.
+          </p>
 
           <div className="relative">
             {/* Timeline Line */}

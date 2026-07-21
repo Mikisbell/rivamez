@@ -14,20 +14,20 @@ const megaMenuData = {
           { name: 'Nosotros', href: '/nosotros', desc: 'Historia y visión de RIVAMEZ' },
           { name: 'Liderazgo', href: '/nosotros#liderazgo', desc: 'Nuestro equipo directivo' },
           { name: 'Valores & Cultura', href: '/nosotros#valores', desc: 'Lo que nos define' },
-          { name: 'Certificaciones', href: '/nosotros#certificaciones', desc: 'ISO y reconocimientos' },
+          { name: 'Certificaciones', href: '/nosotros#certificaciones', desc: 'Sistemas de gestión ISO vigentes' },
         ]
       },
       {
-        title: 'Reconocimientos',
+        title: 'Trayectoria',
         links: [
-          { name: 'Premios', href: '/nosotros#premios', desc: 'Galardones nacionales' },
+          { name: 'Historia', href: '/nosotros#historia', desc: 'Línea de tiempo de la empresa' },
           { name: 'Logros', href: '/nosotros#logros', desc: 'Hitos importantes' },
           { name: 'Responsabilidad Social', href: '/nosotros#rse', desc: 'Impacto comunitario' },
         ]
       }
     ],
     featured: {
-      title: 'Más de 15 años',
+      title: 'Equipo con más de 15 años',
       image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=300&q=80',
       desc: 'Liderando la construcción sostenible en Perú con excelencia e innovación',
       cta: 'Conocer más',

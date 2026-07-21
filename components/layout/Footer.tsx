@@ -30,7 +30,7 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-gray-400 text-body leading-relaxed">
-              Transformando espacios, construyendo futuro. Más de 15 años de experiencia y excelencia en Huancayo.
+              Transformando espacios, construyendo futuro. Más de 15 años de experiencia profesional de nuestro equipo en Huancayo.
             </p>
           </div>
 
@@ -137,6 +137,9 @@ export default function Footer() {
         {/* Copyright */}
         <div className="border-t border-gray-800 mt-responsive pt-responsive text-center text-gray-400 text-body">
           <p>&copy; {currentYear} GRUPO RIVAMEZ. Todos los derechos reservados.</p>
+          <p className="mt-2 text-small text-gray-500">
+            Grupo Rivamez es nombre comercial de FreeCloud S.A.C. | RUC 20600345665
+          </p>
         </div>
       </div>
     </footer>

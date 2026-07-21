@@ -19,7 +19,7 @@ const MOCK_DATA = {
     {
       _id: '1',
       title: 'RIVAMEZ inaugura complejo residencial de 150 departamentos con tecnología smart home',
-      excerpt: 'El nuevo proyecto marca un hito en la construcción sostenible en Huancayo con certificación LEED y sistemas de eficiencia energética de última generación.',
+      excerpt: 'El nuevo proyecto marca un hito en la construcción sostenible en Huancayo con criterios de gestión ambiental ISO 14001 y sistemas de eficiencia energética de última generación.',
       slug: { current: 'inauguracion-complejo-residencial-smart' },
       publishedAt: new Date(Date.now() - 2 * 60 * 60 * 1000).toISOString(),
       readTime: 5,

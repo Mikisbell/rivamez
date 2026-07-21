@@ -73,7 +73,7 @@ export default function ChatBot() {
     // Experiencia
     experiencia: {
       keywords: ['experiencia', 'años', 'trayectoria', 'antigüedad'],
-      response: '⭐ RIVAMEZ cuenta con:\n\n• **15+ años** de experiencia\n• **285+ proyectos** completados\n• **98%** de satisfacción del cliente\n• **62+ profesionales** en nuestro equipo\n\n🏅 Certificaciones ISO y reconocimientos nacionales.'
+      response: '⭐ RIVAMEZ cuenta con:\n\n• **15+ años** de experiencia profesional del equipo\n• **285+ proyectos** completados\n• **98%** de satisfacción del cliente\n• **62+ profesionales** en nuestro equipo\n\n🏅 Certificaciones ISO 9001, ISO 14001, ISO 45001 e ISO 37001 vigentes.'
     },
 
     // Garantía
@@ -103,7 +103,7 @@ export default function ChatBot() {
     // Saludo
     saludo: {
       keywords: ['hola', 'buenos días', 'buenas tardes', 'buenas noches', 'hey', 'que tal'],
-      response: '👋 ¡Hola! Bienvenido a RIVAMEZ.\n\nSomos expertos en construcción con 15+ años de experiencia.\n\n¿En qué puedo ayudarte hoy?\n\n💡 Puedes preguntarme sobre:\n• Servicios\n• Precios\n• Tiempos\n• Proyectos\n• Contacto'
+      response: '👋 ¡Hola! Bienvenido a RIVAMEZ.\n\nSomos expertos en construcción, con un equipo de 15+ años de experiencia profesional.\n\n¿En qué puedo ayudarte hoy?\n\n💡 Puedes preguntarme sobre:\n• Servicios\n• Precios\n• Tiempos\n• Proyectos\n• Contacto'
     },
 
     // Agradecimiento

@@ -189,7 +189,7 @@ export default function Testimonials() {
           </div>
           <div className="text-center text-white">
             <div className="text-4xl font-bold mb-2">15+</div>
-            <div className="text-sm opacity-90">Años Experiencia</div>
+            <div className="text-sm opacity-90">Años de Experiencia del Equipo</div>
           </div>
           <div className="text-center text-white">
             <div className="text-4xl font-bold mb-2">5.0</div>

@@ -65,8 +65,8 @@ const projects = [
     units: '120 oficinas',
     status: 'Completado',
     year: '2022',
-    description: 'Edificio inteligente clase AAA con certificación LEED, tecnología de automatización y eficiencia energética.',
-    features: ['8 Pisos', '120 Oficinas', 'LEED', 'Domótica', 'Helipuerto', 'Smart AC']
+    description: 'Edificio inteligente clase AAA con tecnología de automatización y eficiencia energética.',
+    features: ['8 Pisos', '120 Oficinas', 'Eficiencia energética', 'Domótica', 'Helipuerto', 'Smart AC']
   },
   {
     title: 'Colegio Innova',

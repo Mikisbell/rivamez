@@ -78,7 +78,7 @@ const values = [
 
 const stats = [
   { value: '285+', label: 'Proyectos Completados' },
-  { value: '15+', label: 'Años de Experiencia' },
+  { value: '15+', label: 'Años de Experiencia del Equipo' },
   { value: '150+', label: 'Profesionales' },
   { value: '98%', label: 'Satisfacción' }
 ];
@@ -265,7 +265,7 @@ export default function NosotrosPage() {
               {[
                 { value: "285+", label: "Proyectos Entregados", icon: "🏗️" },
                 { value: "150+", label: "Profesionales", icon: "👥" },
-                { value: "15+", label: "Años de Trayectoria", icon: "📅" },
+                { value: "15+", label: "Años de Trayectoria del Equipo", icon: "📅" },
                 { value: "98%", label: "Satisfacción Cliente", icon: "⭐" }
               ].map((stat, idx) => (
                 <motion.div
@@ -640,80 +640,6 @@ export default function NosotrosPage() {
         <Certifications />
       </section>
 
-      {/* Premios y Logros Section */}
-      <section id="premios" className="py-20 px-4 bg-gray-50 scroll-mt-20">
-        <div className="container mx-auto max-w-6xl">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-rivamez-navy mb-4">
-              Premios y Reconocimientos
-            </h2>
-            <p className="text-xl text-gray-600">
-              Galardones que validan nuestro compromiso con la excelencia
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                year: '2024',
-                title: 'Mejor Constructora Regional',
-                org: 'Cámara de Comercio de Junín',
-                icon: '🏆'
-              },
-              {
-                year: '2023',
-                title: 'Premio a la Innovación',
-                org: 'Ministerio de Vivienda',
-                icon: '💡'
-              },
-              {
-                year: '2023',
-                title: 'Certificación ISO 9001',
-                org: 'Bureau Veritas',
-                icon: '✓'
-              },
-              {
-                year: '2022',
-                title: 'Obra del Año',
-                org: 'Asociación de Constructores',
-                icon: '🏗️'
-              },
-              {
-                year: '2021',
-                title: 'Empresa Socialmente Responsable',
-                org: 'Perú 2021',
-                icon: '🌱'
-              },
-              {
-                year: '2020',
-                title: 'Excelencia en Gestión',
-                org: 'CAPECO',
-                icon: '⭐'
-              }
-            ].map((award, idx) => (
-              <motion.div
-                key={idx}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: idx * 0.1 }}
-                className="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all hover:-translate-y-2"
-              >
-                <div className="text-5xl mb-4">{award.icon}</div>
-                <div className="text-rivamez-cyan font-bold text-xl mb-2">{award.year}</div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">{award.title}</h3>
-                <p className="text-gray-600">{award.org}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Logros Destacados Section */}
       <section id="logros" className="py-20 px-4 scroll-mt-20">
         <div className="container mx-auto max-w-6xl">
@@ -745,7 +671,7 @@ export default function NosotrosPage() {
               },
               {
                 number: '15+',
-                label: 'Años de Experiencia',
+                label: 'Años de Experiencia del Equipo',
                 desc: 'Construyendo confianza'
               },
               {

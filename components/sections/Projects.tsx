@@ -59,9 +59,9 @@ const projects = [
     area: '3,200 m²',
     year: '2024',
     category: 'Comercial',
-    description: 'Edificio de oficinas AAA con 8 pisos, 64 oficinas ejecutivas, salas de reuniones, auditorio para 120 personas, terraza lounge y estacionamiento exclusivo. Certificación LEED.',
+    description: 'Edificio de oficinas AAA con 8 pisos, 64 oficinas ejecutivas, salas de reuniones, auditorio para 120 personas, terraza lounge y estacionamiento exclusivo. Diseño de eficiencia energética.',
     image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80',
-    features: ['Certificación LEED', 'Auditorio 120 personas', 'Terraza lounge', '64 oficinas']
+    features: ['Eficiencia energética', 'Auditorio 120 personas', 'Terraza lounge', '64 oficinas']
   },
   {
     id: 6,
