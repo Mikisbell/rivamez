@@ -96,9 +96,13 @@ export default function Hero() {
       <div className="absolute bottom-0 left-0 w-64 h-64 md:w-96 md:h-96 bg-rivamez-cyan/10 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '10s', animationDelay: '2s' }} />
 
       {/* Content */}
-      <div className="relative z-10 flex-1 flex items-center section-padding pt-20 md:pt-24 lg:pt-28 pb-6">
+      {/* pt-40 en tablet: el buscador flotante (fixed, top-24) cae justo sobre la fila
+          del badge cuando el texto ocupa todo el ancho. */}
+      <div className="relative z-10 flex-1 flex items-center section-padding pt-20 md:pt-40 lg:pt-28 pb-6">
         <div className="container-responsive w-full">
-          <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-8 lg:gap-12 items-center">
+          {/* En tablet (md-lg) el grid sigue siendo de una columna: la ilustracion baja
+              como segunda fila y rellena el aire muerto que dejaba el centrado vertical. */}
+          <div className="grid gap-6 md:gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:gap-12 items-center">
             {/* Left Column - Text Content */}
             <div className="text-center lg:text-left">
               {/* Badge - Dataiku Style */}
@@ -175,9 +179,11 @@ export default function Hero() {
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1, delay: 0.5 }}
-              className="relative hidden lg:flex justify-center items-center"
+              className="relative hidden md:flex lg:flex justify-center items-center max-lg:[@media(max-height:820px)]:hidden"
             >
-              <div className="relative w-full max-w-[260px] xl:max-w-[320px] aspect-square">
+              {/* max-h en tablet: en pantallas bajas (landscape) la ilustracion se encoge
+                  sola y evita que el contenido del hero se desborde hacia arriba. */}
+              <div className="relative w-full max-w-[260px] max-h-[32dvh] lg:max-w-[260px] lg:max-h-none xl:max-w-[320px] aspect-square">
                 {/* Glow effect behind robot */}
                 <div className="absolute inset-0 bg-gradient-to-r from-rivamez-cyan/20 to-rivamez-lime/20 rounded-full animate-glow-pulse" />
 
