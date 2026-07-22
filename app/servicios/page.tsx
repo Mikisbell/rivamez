@@ -68,24 +68,24 @@ const services = [
 
 const benefits = [
   {
-    title: 'Experiencia Comprobada',
-    description: 'Equipo con más de 15 años de experiencia profesional y 285+ proyectos completados exitosamente',
-    icon: '🏆'
+    title: 'Empresa Formal desde 2015',
+    description: 'Más de diez años inscritos en Registros Públicos, con RUC activo y habido ante SUNAT',
+    icon: '📅'
   },
   {
-    title: 'Equipo Profesional',
-    description: '150+ profesionales especializados y certificados',
-    icon: '👥'
+    title: 'Más de 50 Proyectos',
+    description: 'Proyectos desarrollados en Huancayo y Junín, cada uno con contrato y expediente técnico',
+    icon: '🏗️'
   },
   {
-    title: 'Tecnología Avanzada',
-    description: 'BIM, drones, IoT y software de última generación',
-    icon: '💻'
+    title: 'Cuatro ISO Vigentes',
+    description: 'ISO 9001, 14001, 45001 y 37001 emitidas por un organismo acreditado ante IAS y miembro del IAF',
+    icon: '🏅'
   },
   {
-    title: 'Garantía de Calidad',
-    description: 'Certificaciones ISO y control de calidad total',
-    icon: '✓'
+    title: '100% Verificable en Línea',
+    description: 'Cada certificado tiene número propio y se comprueba en el portal del certificador',
+    icon: '🔎'
   }
 ];
 
@@ -116,7 +116,8 @@ export default function ServiciosPage() {
               Soluciones Integrales de Construcción
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Desde el diseño hasta la entrega, ofrecemos servicios completos para hacer realidad tu proyecto de construcción
+              Ingeniería, arquitectura y gestión de proyectos: desde el diseño y la licencia
+              municipal hasta la entrega de la obra y su inscripción en Registros Públicos
             </p>
           </motion.div>
         </div>
@@ -129,7 +130,7 @@ export default function ServiciosPage() {
             Nuestras Capacidades
           </h2>
           <p className="text-xl text-gray-600">
-            Capacidades multidisciplinarias para soluciones integrales
+            Arquitectura, ingeniería, construcción, gestión de proyectos y formalización
           </p>
         </div>
 
@@ -273,6 +274,82 @@ export default function ServiciosPage() {
               </ul>
             </motion.div>
           </div>
+        </div>
+
+        {/* Formalización ante la Municipalidad */}
+        <div id="formalizacion" className="container mx-auto max-w-6xl mb-20 scroll-mt-20">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="rounded-3xl border border-rivamez-cyan/30 bg-gradient-to-br from-rivamez-navy to-rivamez-dark p-6 sm:p-8 lg:p-12 text-white"
+          >
+            <div className="max-w-3xl">
+              <span className="inline-block px-4 py-2 bg-white/10 border border-white/20 rounded-full text-xs font-semibold tracking-wide mb-5">
+                GESTIÓN DE PROYECTOS Y TRÁMITES
+              </span>
+              <div className="text-6xl mb-4">📑</div>
+              <h3 className="text-3xl md:text-4xl font-bold mb-4">
+                Formalización ante la Municipalidad
+              </h3>
+              <p className="text-gray-200 text-lg leading-relaxed mb-4">
+                Una vivienda sin papeles en regla no se puede vender, no sirve como garantía para
+                un crédito hipotecario y complica la herencia entre los hijos. Nosotros nos
+                encargamos del trámite completo para que tu propiedad quede reconocida por la
+                municipalidad e inscrita en Registros Públicos.
+              </p>
+              <p className="text-gray-300 mb-8">
+                Lo hacemos con el mismo equipo que diseña y construye: el expediente técnico que
+                exige la municipalidad lo firma un profesional colegiado y habilitado.
+              </p>
+            </div>
+
+            <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
+              {[
+                {
+                  icon: '🏗️',
+                  title: 'Licencia de edificación',
+                  desc: 'Gestionamos el permiso municipal para construir y armamos el expediente técnico que la municipalidad exige. Construir sin licencia expone la obra a multas y a la paralización.'
+                },
+                {
+                  icon: '✅',
+                  title: 'Conformidad de obra y declaratoria de fábrica',
+                  desc: 'Regularizamos lo ya construido para que quede reconocido e inscrito en Registros Públicos. Sin este paso, la casa existe en la realidad pero no en el título.'
+                },
+                {
+                  icon: '📐',
+                  title: 'Saneamiento físico legal del lote',
+                  desc: 'Titulación, inscripción del terreno y corrección de áreas y linderos. Es lo que permite vender, hipotecar o heredar sin discusiones con vecinos o herederos.'
+                },
+                {
+                  icon: '🔑',
+                  title: 'Subdivisión e independización',
+                  desc: 'Dividimos lotes e independizamos departamentos y unidades inmobiliarias, para que cada uno tenga su propia partida y pueda venderse o financiarse por separado.'
+                }
+              ].map((item, i) => (
+                <div
+                  key={i}
+                  className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-colors duration-300"
+                >
+                  <div className="text-3xl mb-3">{item.icon}</div>
+                  <h4 className="text-lg font-bold mb-2 text-rivamez-cyan-lighter">{item.title}</h4>
+                  <p className="text-sm text-gray-200 leading-relaxed">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-8">
+              <a
+                href="/contacto"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-white text-rivamez-navy font-semibold rounded-lg hover:bg-rivamez-cyan hover:text-white transition-all duration-300 shadow-lg"
+              >
+                Consultar por mi trámite
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </a>
+            </div>
+          </motion.div>
         </div>
 
         {/* TECNOLOGÍAS INNOVADORAS */}
@@ -604,7 +681,7 @@ export default function ServiciosPage() {
               ¿Por Qué Elegir RIVAMEZ?
             </h2>
             <p className="text-xl text-gray-600">
-              Ventajas que nos hacen únicos en el mercado
+              Razones que puedes comprobar por tu cuenta, no promesas
             </p>
           </motion.div>
 

@@ -31,7 +31,8 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-gray-400 text-body leading-relaxed">
-              Transformando espacios, construyendo futuro. Más de 15 años de experiencia profesional de nuestro equipo en Huancayo.
+              Ingeniería, arquitectura y gestión de proyectos en Huancayo. FreeCloud S.A.C., empresa
+              formal desde 2015, certificada en cuatro normas ISO.
             </p>
           </div>
 

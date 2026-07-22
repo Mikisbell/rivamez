@@ -151,7 +151,7 @@ export default function ProyectosPage() {
                 Nuestros Proyectos
               </h1>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                285+ proyectos completados con éxito en Huancayo y la región Junín, construyendo el futuro de la infraestructura peruana
+                Más de 50 proyectos desarrollados en Huancayo y la región Junín, cada uno con contrato y expediente técnico
               </p>
             </motion.div>
           </div>

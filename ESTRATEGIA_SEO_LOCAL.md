@@ -14,7 +14,7 @@
 - [x] Coordenadas GPS de Huancayo
 - [x] Horarios de atención
 - [x] Áreas de servicio (Huancayo, El Tambo, Chilca, etc.)
-- [x] Rating 4.8/5 con 127 reviews
+- [ ] Rating y resenas: NO declarar hasta tener perfil publico real (se retiro aggregateRating del schema)
 - [x] Sitemap dinámico con páginas locales
 - [x] robots.txt optimizado
 
@@ -76,7 +76,8 @@
    Construcción de casas, departamentos y locales comerciales. 
    
    ✅ Certificación ISO 9001
-   ✅ +127 proyectos completados
+   ✅ Empresa formal desde 2015 (partida registral 11209511)
+   ✅ +50 proyectos desarrollados
    ✅ Garantía 5 años
    ✅ Financiamiento directo
    ✅ Cotización gratis en 24h
@@ -147,8 +148,8 @@
 
 1. **`/cobertura/huancayo`:**
    ```
-   Title: Constructora en Huancayo | +127 Casas Construidas | RIVAMEZ
-   H1: Constructora Líder en Huancayo
+   Title: Constructora Formal y Certificada en Huancayo | RIVAMEZ
+   H1: Constructora Formal y Certificada en Huancayo
    
    Contenido:
    - Historia de RIVAMEZ en Huancayo
@@ -198,7 +199,7 @@
 
 1. **Correo Huancayo**
    - Enviar nota de prensa sobre proyecto destacado
-   - "RIVAMEZ completa 127 proyectos en Junín"
+   - "FreeCloud S.A.C. (Grupo Rivamez) obtiene cuatro certificaciones ISO verificables"
 
 2. **Radio local**
    - Entrevista en radio popular de Huancayo

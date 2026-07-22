@@ -24,7 +24,7 @@ const tabsData = [
     stats: [
       { value: '72', label: 'Departamentos' },
       { value: '15', label: 'Pisos máximo' },
-      { value: '98%', label: 'Satisfacción' }
+      { value: 'ISO', label: 'Calidad certificada' }
     ]
   },
   {

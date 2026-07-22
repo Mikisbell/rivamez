@@ -62,7 +62,7 @@ export default function NewsBlog() {
     {
       id: 5,
       title: "Alianza estratégica con proveedores internacionales de materiales",
-      excerpt: "Acuerdos con líderes mundiales en materiales de construcción garantizan calidad superior y mejores precios para nuestros clientes.",
+      excerpt: "Acuerdos con proveedores de materiales certificados que permiten mejores condiciones para nuestros clientes.",
       category: "empresa",
       date: "2025-01-03",
       readTime: "3 min",

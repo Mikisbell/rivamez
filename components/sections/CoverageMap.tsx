@@ -6,27 +6,29 @@ import { useState } from 'react';
 export default function CoverageMap() {
   const [selectedDistrict, setSelectedDistrict] = useState(null);
 
+  // Mapa de ZONAS atendidas, no de cifras: los conteos por distrito que publicaba esta
+  // seccion (85, 92, 48...) sumaban los 285 proyectos que nunca tuvieron respaldo.
   const districts = [
     {
       id: 'huancayo',
       name: 'Huancayo Centro',
-      projects: 85,
-      type: 'Residencial y Comercial',
+      short: 'Huancayo',
+      type: 'Residencial y comercial',
       color: '#0F172A',
       position: { x: 50, y: 45 }
     },
     {
       id: 'eltambo',
       name: 'El Tambo',
-      projects: 92,
-      type: 'Residencial Premium',
+      short: 'El Tambo',
+      type: 'Residencial',
       color: '#1385BB',
       position: { x: 65, y: 35 }
     },
     {
       id: 'chilca',
       name: 'Chilca',
-      projects: 48,
+      short: 'Chilca',
       type: 'Residencial',
       color: '#10B981',
       position: { x: 35, y: 55 }
@@ -34,15 +36,15 @@ export default function CoverageMap() {
     {
       id: 'pilcomayo',
       name: 'Pilcomayo',
-      projects: 22,
-      type: 'Industrial y Comercial',
+      short: 'Pilcomayo',
+      type: 'Industrial y comercial',
       color: '#8B5CF6',
       position: { x: 70, y: 60 }
     },
     {
       id: 'huancan',
       name: 'Huancán',
-      projects: 18,
+      short: 'Huancán',
       type: 'Residencial',
       color: '#F59E0B',
       position: { x: 45, y: 65 }
@@ -50,7 +52,7 @@ export default function CoverageMap() {
     {
       id: 'sancajas',
       name: 'San Agustín de Cajas',
-      projects: 12,
+      short: 'San Agustín',
       type: 'Residencial',
       color: '#EC4899',
       position: { x: 30, y: 40 }
@@ -58,7 +60,7 @@ export default function CoverageMap() {
     {
       id: 'concepcion',
       name: 'Concepción',
-      projects: 8,
+      short: 'Concepción',
       type: 'Comercial',
       color: '#6366F1',
       position: { x: 80, y: 50 }
@@ -66,13 +68,11 @@ export default function CoverageMap() {
   ];
 
   const projectTypes = [
-    { type: 'Residencial', count: 185, icon: '🏘️', color: 'from-blue-500 to-blue-700' },
-    { type: 'Comercial', count: 48, icon: '🏪', color: 'from-purple-500 to-purple-700' },
-    { type: 'Industrial', count: 22, icon: '🏭', color: 'from-orange-500 to-red-600' },
-    { type: 'Mixto', count: 30, icon: '🏢', color: 'from-green-500 to-emerald-700' }
+    { type: 'Residencial', desc: 'Viviendas, multifamiliares y condominios', icon: '🏘️', color: 'from-blue-500 to-blue-700' },
+    { type: 'Comercial', desc: 'Locales, oficinas y espacios de venta', icon: '🏪', color: 'from-purple-500 to-purple-700' },
+    { type: 'Industrial', desc: 'Naves, almacenes y plantas', icon: '🏭', color: 'from-orange-500 to-red-600' },
+    { type: 'Institucional', desc: 'Salud, educación y edificios públicos', icon: '🏢', color: 'from-green-500 to-emerald-700' }
   ];
-
-  const totalProjects = districts.reduce((sum, d) => sum + d.projects, 0);
 
   return (
     <section id="cobertura" className="relative py-20 md:py-32 overflow-hidden bg-white">
@@ -103,8 +103,8 @@ export default function CoverageMap() {
             </span>
           </h2>
           <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-            Con presencia en 7 distritos de Huancayo y más de {totalProjects} proyectos completados,
-            somos la constructora con mayor cobertura en la región.
+            Atendemos proyectos en siete distritos de Huancayo y el valle del Mantaro, con obra,
+            supervisión y gestión de trámites municipales en cada zona.
           </p>
         </motion.div>
 
@@ -138,7 +138,7 @@ export default function CoverageMap() {
                       transition={{ duration: 0.5, delay: index * 0.1 }}
                       cx={district.position.x}
                       cy={district.position.y}
-                      r={Math.sqrt(district.projects) * 0.8}
+                      r={4.5}
                       fill={district.color}
                       opacity={selectedDistrict === district.id ? 1 : 0.7}
                       className="cursor-pointer transition-all hover:opacity-100"
@@ -146,18 +146,18 @@ export default function CoverageMap() {
                       onMouseLeave={() => setSelectedDistrict(null)}
                     />
 
-                    {/* Project count */}
+                    {/* Nombre del distrito (antes iba el conteo inventado de proyectos) */}
                     <text
                       x={district.position.x}
-                      y={district.position.y}
+                      y={district.position.y + 8}
                       textAnchor="middle"
                       dominantBaseline="middle"
-                      fill="white"
-                      fontSize="6"
+                      fill="#334155"
+                      fontSize="2.6"
                       fontWeight="bold"
                       className="pointer-events-none"
                     >
-                      {district.projects}
+                      {district.short}
                     </text>
                   </g>
                 ))}
@@ -184,13 +184,7 @@ export default function CoverageMap() {
                         </h4>
                         <div className="space-y-2 text-sm">
                           <div className="flex items-center gap-2">
-                            <span className="font-semibold text-rivamez-cyan">
-                              {district.projects}
-                            </span>
-                            <span className="text-gray-600">proyectos</span>
-                          </div>
-                          <div className="flex items-center gap-2">
-                            <span className="text-gray-600">Tipo:</span>
+                            <span className="text-gray-600">Trabajo típico:</span>
                             <span className="font-semibold text-gray-800">
                               {district.type}
                             </span>
@@ -204,7 +198,7 @@ export default function CoverageMap() {
             </div>
 
             <p className="text-sm text-gray-500 text-center mt-4">
-              * Tamaño de círculo representa cantidad de proyectos
+              * Esquema referencial de las zonas atendidas, no un mapa a escala
             </p>
           </motion.div>
 
@@ -216,11 +210,11 @@ export default function CoverageMap() {
             transition={{ duration: 0.6 }}
           >
             <h3 className="text-2xl font-bold text-rivamez-navy mb-6">
-              Proyectos por Distrito
+              Distritos donde trabajamos
             </h3>
 
             <div className="space-y-4">
-              {districts.sort((a, b) => b.projects - a.projects).map((district, index) => (
+              {districts.map((district, index) => (
                 <motion.div
                   key={district.id}
                   initial={{ opacity: 0, x: 30 }}
@@ -232,39 +226,18 @@ export default function CoverageMap() {
                   className={`relative bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border-2 ${selectedDistrict === district.id ? 'border-rivamez-cyan scale-105' : 'border-gray-100'
                     } cursor-pointer`}
                 >
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-4">
-                      <div
-                        className="w-12 h-12 rounded-full flex items-center justify-center text-white font-bold text-lg"
-                        style={{ backgroundColor: district.color }}
-                      >
-                        {index + 1}
-                      </div>
-                      <div>
-                        <h4 className="text-lg font-bold text-rivamez-navy">
-                          {district.name}
-                        </h4>
-                        <p className="text-sm text-gray-600">{district.type}</p>
-                      </div>
-                    </div>
-                    <div className="text-right">
-                      <div className="text-3xl font-bold text-rivamez-cyan">
-                        {district.projects}
-                      </div>
-                      <div className="text-xs text-gray-500">proyectos</div>
-                    </div>
-                  </div>
-
-                  {/* Progress Bar */}
-                  <div className="mt-4 bg-gray-100 rounded-full h-2 overflow-hidden">
-                    <motion.div
-                      initial={{ width: 0 }}
-                      whileInView={{ width: `${(district.projects / totalProjects) * 100}%` }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 1, delay: index * 0.1 }}
-                      className="h-full rounded-full"
+                  <div className="flex items-center gap-4">
+                    <div
+                      className="w-3 h-12 rounded-full flex-shrink-0"
                       style={{ backgroundColor: district.color }}
+                      aria-hidden="true"
                     />
+                    <div>
+                      <h4 className="text-lg font-bold text-rivamez-navy">
+                        {district.name}
+                      </h4>
+                      <p className="text-sm text-gray-600">{district.type}</p>
+                    </div>
                   </div>
                 </motion.div>
               ))}
@@ -281,7 +254,7 @@ export default function CoverageMap() {
           className="mb-16"
         >
           <h3 className="text-2xl font-bold text-rivamez-navy text-center mb-8">
-            Proyectos por Tipo
+            Tipos de Proyecto que Ejecutamos
           </h3>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -295,8 +268,8 @@ export default function CoverageMap() {
                 className={`bg-gradient-to-br ${type.color} rounded-2xl p-6 text-white text-center hover:scale-105 transition-transform duration-300`}
               >
                 <div className="text-5xl mb-3">{type.icon}</div>
-                <div className="text-4xl font-bold mb-2">{type.count}</div>
-                <div className="text-sm opacity-90">{type.type}</div>
+                <div className="text-xl font-bold mb-2">{type.type}</div>
+                <div className="text-sm opacity-90">{type.desc}</div>
               </motion.div>
             ))}
           </div>
@@ -314,8 +287,8 @@ export default function CoverageMap() {
             ¿Buscas construir en Huancayo?
           </h3>
           <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
-            Con presencia en toda la región y experiencia en todo tipo de proyectos,
-            somos tu mejor opción para construir en cualquier distrito de Huancayo.
+            Trabajamos en toda la provincia, con contrato, expediente técnico y gestión de los
+            trámites municipales que tu obra necesita.
           </p>
           <a
             href="#contacto"

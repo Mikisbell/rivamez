@@ -2,7 +2,6 @@ import Hero from '@/components/sections/Hero';
 import BuildingHero from '@/components/sections/BuildingHero';
 import Features from '@/components/sections/Features';
 import InteractiveTabs from '@/components/ui/InteractiveTabs';
-import ImpactMetrics from '@/components/sections/ImpactMetrics';
 import About from '@/components/sections/About';
 import Respaldo from '@/components/sections/Respaldo';
 import Services from '@/components/sections/Services';
@@ -28,10 +27,11 @@ export default function Home() {
         <InteractiveTabs />
       </ScrollReveal>
       
-      <ScrollReveal animation="fadeRight" delay={0.1}>
-        <ImpactMetrics />
-      </ScrollReveal>
-      
+      {/* ImpactMetrics retirada: toda la seccion (inversion ejecutada, m2/ano, 98% de
+          entregas, 4.8/5, empleos, comparacion con la industria, serie historica de
+          proyectos y mapa de calor por distrito) eran cifras sin respaldo. La credibilidad
+          real vive en <Respaldo />: RUC, partida registral y certificados ISO verificables. */}
+
       <ScrollReveal animation="fadeUp">
         <About />
       </ScrollReveal>

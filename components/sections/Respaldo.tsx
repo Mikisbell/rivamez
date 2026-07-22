@@ -66,8 +66,9 @@ export default function Respaldo() {
           </h2>
           <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Grupo Rivamez es el nombre comercial de FreeCloud S.A.C., empresa constructora formal de
-            Huancayo, activa y habida ante SUNAT desde 2018. Su sistema de gestión está certificado
-            por un organismo acreditado internacionalmente en cuatro normas ISO.
+            Huancayo, constituida en 2015 e inscrita en Registros Públicos, activa y habida ante
+            SUNAT. Su sistema de gestión está certificado por un organismo acreditado
+            internacionalmente en cuatro normas ISO.
           </p>
         </motion.div>
 
@@ -77,7 +78,7 @@ export default function Respaldo() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="grid sm:grid-cols-3 gap-4 mb-10 md:mb-14"
+          className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-10 md:mb-14"
         >
           <div className="rounded-xl border border-gray-200 bg-white p-5 text-center shadow-sm">
             <p className="text-[11px] uppercase tracking-wide text-gray-500 font-semibold mb-1">
@@ -91,11 +92,20 @@ export default function Respaldo() {
             </p>
             <p className="text-base font-bold text-rivamez-navy font-mono">20600345665</p>
           </div>
+          {/* Fecha real de constitucion: la ficha RUC muestra la inscripcion en Registros
+              Publicos el 23/04/2015 (partida 11209511). El RUC se inscribio despues. */}
+          <div className="rounded-xl border border-gray-200 bg-white p-5 text-center shadow-sm">
+            <p className="text-[11px] uppercase tracking-wide text-gray-500 font-semibold mb-1">
+              Constituida
+            </p>
+            <p className="text-base font-bold text-rivamez-navy">23/04/2015</p>
+            <p className="text-[11px] text-gray-500 font-mono mt-1">Partida 11209511</p>
+          </div>
           <div className="rounded-xl border border-gray-200 bg-white p-5 text-center shadow-sm">
             <p className="text-[11px] uppercase tracking-wide text-gray-500 font-semibold mb-1">
               Estado ante SUNAT
             </p>
-            <p className="text-base font-bold text-rivamez-green">Activa y habida desde 2018</p>
+            <p className="text-base font-bold text-rivamez-green">Activa y habida</p>
           </div>
         </motion.div>
 
@@ -212,8 +222,8 @@ export default function Respaldo() {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="mt-8 text-center text-base sm:text-lg text-gray-600"
         >
-          Detrás hay más de 15 años de experiencia profesional del equipo en ejecución, consultoría y
-          supervisión de obras.{' '}
+          Detrás hay más de diez años de empresa formal en ingeniería, arquitectura y gestión de
+          proyectos, con ejecución, consultoría y supervisión de obras.{' '}
           <span className="font-semibold text-rivamez-navy">
             Ingeniería que se comprueba, respaldo que se verifica.
           </span>

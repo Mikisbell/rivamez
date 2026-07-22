@@ -116,7 +116,7 @@ export default function Hero() {
                   <div className="w-2 h-2 bg-rivamez-cyan rounded-full animate-pulse" />
                   <div className="absolute inset-0 w-2 h-2 bg-rivamez-cyan rounded-full animate-ping opacity-75" />
                 </div>
-                <span className="text-white text-small font-semibold tracking-wide">Más de 15 años de experiencia profesional construyendo Huancayo</span>
+                <span className="text-white text-small font-semibold tracking-wide">Ingeniería, arquitectura y gestión de proyectos en Huancayo desde 2015</span>
                 <svg className="w-4 h-4 ml-2 text-white/70 group-hover:text-white group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
@@ -214,22 +214,26 @@ export default function Hero() {
         >
           {/* Vidrio OSCURO: el degradado del hero termina en celeste de marca y un vidrio
               blanco aclaraba la zona hasta hacer ilegibles cifras y etiquetas. */}
+          {/* Solo metricas verificables: antiguedad registral, proyectos respaldados por
+              contratos, certificados ISO con numero propio y verificacion publica en linea. */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 bg-rivamez-dark/45 backdrop-blur-md rounded-2xl p-4 md:p-8 border border-white/20">
             <div className="text-center">
-              <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-white to-rivamez-cyan-lighter bg-clip-text text-transparent mb-2">15+</div>
-              <div className="text-gray-200 text-xs sm:text-sm font-medium">Años de Experiencia del Equipo</div>
+              <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-white to-rivamez-cyan-lighter bg-clip-text text-transparent mb-2">
+                +10 <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl">años</span>
+              </div>
+              <div className="text-gray-200 text-xs sm:text-sm font-medium">De empresa formal desde 2015</div>
             </div>
             <div className="text-center md:border-x border-white/20">
-              <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-white to-rivamez-cyan-lighter bg-clip-text text-transparent mb-2">285+</div>
-              <div className="text-gray-200 text-xs sm:text-sm font-medium">Proyectos Completados</div>
+              <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-white to-rivamez-cyan-lighter bg-clip-text text-transparent mb-2">+50</div>
+              <div className="text-gray-200 text-xs sm:text-sm font-medium">Proyectos desarrollados</div>
             </div>
             <div className="text-center md:border-r border-white/20">
-              <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-white to-rivamez-lime-light bg-clip-text text-transparent mb-2">250+</div>
-              <div className="text-gray-200 text-xs sm:text-sm font-medium">Clientes Satisfechos</div>
+              <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-white to-rivamez-lime-light bg-clip-text text-transparent mb-2">4</div>
+              <div className="text-gray-200 text-xs sm:text-sm font-medium">Certificaciones ISO vigentes</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-white to-rivamez-cyan-lighter bg-clip-text text-transparent mb-2">62+</div>
-              <div className="text-gray-200 text-xs sm:text-sm font-medium">Profesionales</div>
+              <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-white to-rivamez-cyan-lighter bg-clip-text text-transparent mb-2">100%</div>
+              <div className="text-gray-200 text-xs sm:text-sm font-medium">Verificable en línea</div>
             </div>
           </div>
         </motion.div>

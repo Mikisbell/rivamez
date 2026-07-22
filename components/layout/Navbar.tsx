@@ -27,9 +27,9 @@ const megaMenuData = {
       }
     ],
     featured: {
-      title: 'Equipo con más de 15 años',
+      title: 'Empresa formal desde 2015',
       image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=300&q=80',
-      desc: 'Liderando la construcción sostenible en Perú con excelencia e innovación',
+      desc: 'FreeCloud S.A.C., certificada en cuatro normas ISO verificables en línea',
       cta: 'Conocer más',
       href: '/nosotros'
     }
@@ -77,6 +77,7 @@ const megaMenuData = {
       {
         title: 'Servicios Adicionales',
         links: [
+          { name: 'Formalización', href: '/servicios#formalizacion', desc: 'Licencias, conformidad de obra y saneamiento' },
           { name: 'Remodelación', href: '/servicios#remodelacion', desc: 'Renovación integral' },
           { name: 'Mantenimiento', href: '/servicios#mantenimiento', desc: 'Post-construcción' },
           { name: 'Valuaciones', href: '/servicios#valuaciones', desc: 'Tasación técnica' },
@@ -99,7 +100,7 @@ const megaMenuData = {
           { name: 'Proyectos Destacados', href: '/proyectos#destacados', desc: 'Nuestros mejores trabajos' },
           { name: 'En Construcción', href: '/proyectos#en-construccion', desc: 'Obras actuales' },
           { name: 'Completados', href: '/proyectos#completados', desc: 'Proyectos finalizados' },
-          { name: 'Portfolio Completo', href: '/proyectos', desc: '285+ proyectos exitosos' },
+          { name: 'Portfolio Completo', href: '/proyectos', desc: 'Más de 50 proyectos desarrollados' },
         ]
       },
       {
@@ -112,9 +113,9 @@ const megaMenuData = {
       }
     ],
     featured: {
-      title: '285+ Proyectos',
+      title: 'Más de 50 Proyectos',
       image: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=300&q=80',
-      desc: 'Transformando Huancayo y Junín con construcciones de clase mundial',
+      desc: 'Obras en Huancayo y Junín con contrato y expediente técnico',
       cta: 'Ver portfolio',
       href: '/proyectos'
     }

@@ -171,30 +171,23 @@ export default function Testimonials() {
           ))}
         </div>
 
-        {/* Stats */}
+        {/* Cierre: la barra de cifras de satisfaccion se retiro (98%, 250+ clientes, 5.0)
+            porque no habia respaldo. El bloque de metricas verificables ya vive en el hero
+            y en la seccion de servicios, y no tiene sentido triplicarlo en la home. */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-4 p-4 sm:p-6 lg:p-8 bg-gradient-to-r from-rivamez-navy to-rivamez-cyan rounded-2xl"
+          className="p-6 sm:p-8 bg-gradient-to-r from-rivamez-navy to-rivamez-cyan rounded-2xl text-center text-white"
         >
-          <div className="text-center text-white">
-            <div className="text-4xl font-bold mb-2">98%</div>
-            <div className="text-sm opacity-90">Satisfacción</div>
-          </div>
-          <div className="text-center text-white">
-            <div className="text-4xl font-bold mb-2">250+</div>
-            <div className="text-sm opacity-90">Clientes Felices</div>
-          </div>
-          <div className="text-center text-white">
-            <div className="text-4xl font-bold mb-2">15+</div>
-            <div className="text-sm opacity-90">Años de Experiencia del Equipo</div>
-          </div>
-          <div className="text-center text-white">
-            <div className="text-4xl font-bold mb-2">5.0</div>
-            <div className="text-sm opacity-90">Calificación</div>
-          </div>
+          <p className="text-lg sm:text-xl font-semibold mb-2">
+            La confianza se comprueba, no se declara
+          </p>
+          <p className="text-sm sm:text-base opacity-90 max-w-2xl mx-auto">
+            Cada proyecto se entrega con contrato, expediente técnico y respaldo de una empresa
+            formal desde 2015, con cuatro certificaciones ISO verificables en línea.
+          </p>
         </motion.div>
       </div>
     </section>

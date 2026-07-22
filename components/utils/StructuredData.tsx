@@ -12,8 +12,10 @@ export const structuredData = {
     alternateName: ['Grupo RIVAMEZ', 'Constructora RIVAMEZ Huancayo', 'RIVAMEZ Junín'],
     url: 'https://rivamez.com',
     logo: 'https://rivamez.com/images/logo.png',
-    description: 'Constructora e inmobiliaria en Huancayo y Junín, con un equipo de más de 15 años de experiencia profesional. Especialistas en construcción residencial, comercial e industrial, con certificaciones ISO 9001, ISO 14001, ISO 45001 e ISO 37001.',
-    foundingDate: '2018',
+    description: 'Constructora e inmobiliaria en Huancayo y Junín, constituida en 2015. Ingeniería, arquitectura y gestión de proyectos: construcción residencial, comercial e industrial y formalización ante la municipalidad, con certificaciones ISO 9001, ISO 14001, ISO 45001 e ISO 37001.',
+    // Fecha real de constitucion segun la ficha RUC: inscripcion en Registros Publicos
+    // el 23/04/2015 (partida 11209511). 2018 era la inscripcion del RUC, no la fundacion.
+    foundingDate: '2015-04-23',
     slogan: 'Construyendo sueños en Junín',
     address: {
       '@type': 'PostalAddress',
@@ -47,7 +49,8 @@ export const structuredData = {
     taxID: '20600345665',
     alternateName: 'Constructora RIVAMEZ Huancayo',
     image: ['https://rivamez.com/images/logo.png', 'https://rivamez.com/images/oficina-huancayo.jpg'],
-    description: 'Constructora en Huancayo y toda la región Junín, con un equipo de más de 15 años de experiencia profesional. Construcción de casas, departamentos, locales comerciales e industriales. Certificaciones ISO 9001, ISO 14001, ISO 45001 e ISO 37001.',
+    description: 'Constructora en Huancayo y toda la región Junín, empresa formal constituida en 2015. Construcción de casas, departamentos, locales comerciales e industriales, y formalización ante la municipalidad. Certificaciones ISO 9001, ISO 14001, ISO 45001 e ISO 37001.',
+    foundingDate: '2015-04-23',
     url: 'https://rivamez.com',
     telephone: '+51943818788',
     email: 'info@rivamez.com',
@@ -81,11 +84,8 @@ export const structuredData = {
         closes: '13:00',
       },
     ],
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.8',
-      reviewCount: '127',
-    },
+    // Sin aggregateRating: declarar calificaciones sin un perfil publico de resenas que las
+    // respalde es publicidad enganosa y Google lo penaliza como rich snippet invalido.
   },
 
   // Website (Sitelinks Search Box)

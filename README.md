@@ -51,7 +51,7 @@
 🏆 PROYECTOS
    ├─ Destacados
    ├─ En Construcción
-   └─ Completados (285+)
+   └─ Completados (+50)
 
 📰 BLOG & 📞 CONTACTO
 ```

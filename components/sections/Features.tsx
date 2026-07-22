@@ -17,8 +17,8 @@ const features = [
     icon: (
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
     ),
-    title: 'Entrega a Tiempo',
-    description: 'Cumplimiento del 98% de plazos de entrega gracias a nuestra gestión eficiente de proyectos.'
+    title: 'Plazos por Contrato',
+    description: 'El cronograma de obra queda escrito en el contrato y se controla con hitos verificables en cada valorización.'
   },
   {
     id: 3,
@@ -41,8 +41,8 @@ const features = [
     icon: (
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
     ),
-    title: 'Equipo Especializado',
-    description: '62+ profesionales certificados con experiencia en proyectos de gran envergadura.'
+    title: 'Equipo Colegiado',
+    description: 'Cada proyecto lo firma un ingeniero o arquitecto colegiado y habilitado, con número de colegiatura verificable.'
   },
   {
     id: 6,

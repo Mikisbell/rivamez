@@ -37,13 +37,19 @@ export default function ChatBot() {
     // Servicios
     servicios: {
       keywords: ['servicio', 'servicios', 'ofrecen', 'hacen', 'que hacen', 'especialidad'],
-      response: '🏗️ En RIVAMEZ ofrecemos:\n\n• Construcción Residencial\n• Proyectos Comerciales\n• Remodelación y Ampliación\n• Diseño Arquitectónico\n• Gestión de Proyectos\n• Construcción Industrial\n\n¿Te interesa algún servicio en específico?'
+      response: '🏗️ En RIVAMEZ ofrecemos:\n\n• Construcción Residencial\n• Proyectos Comerciales\n• Remodelación y Ampliación\n• Diseño Arquitectónico\n• Gestión de Proyectos\n• Construcción Industrial\n• Formalización ante la Municipalidad\n\n¿Te interesa algún servicio en específico?'
+    },
+
+    // Formalizacion y tramites (licencia, conformidad de obra, saneamiento, independizacion)
+    formalizacion: {
+      keywords: ['licencia', 'formalizar', 'formalización', 'formalizacion', 'trámite', 'tramite', 'conformidad de obra', 'declaratoria', 'saneamiento', 'independización', 'independizacion', 'subdivisión', 'subdivision', 'registros públicos', 'registros publicos', 'título', 'titulo', 'partida'],
+      response: '📑 Gestionamos la formalización de tu propiedad:\n\n• **Licencia de edificación** con el expediente técnico que exige la municipalidad\n• **Conformidad de obra y declaratoria de fábrica** para inscribir lo ya construido\n• **Saneamiento físico legal** del lote: titulación, áreas y linderos\n• **Subdivisión e independización** de lotes y departamentos\n\n⚠️ Sin estos papeles la vivienda no se puede vender, hipotecar ni heredar sin problemas.\n\n¿Cuál es tu caso?'
     },
 
     // Tiempo de construcción (PRIMERO - más específico)
     tiempo: {
       keywords: ['tiempo', 'demora', 'cuanto tarda', 'cuánto tarda', 'duracion', 'duración', 'plazo', 'cuanto demora', 'cuánto demora', 'cuando termina', 'cuándo termina'],
-      response: '⏱️ Plazos aproximados:\n\n• Casa 2 pisos: 8-12 meses\n• Edificio pequeño: 12-18 meses\n• Remodelación: 2-4 meses\n• Local comercial: 6-10 meses\n\n✅ Cumplimos el 98% de entregas a tiempo.\n\n¿Tienes un proyecto en mente?'
+      response: '⏱️ Plazos aproximados:\n\n• Casa 2 pisos: 8-12 meses\n• Edificio pequeño: 12-18 meses\n• Remodelación: 2-4 meses\n• Local comercial: 6-10 meses\n\n✅ El cronograma queda escrito en el contrato, con hitos verificables en cada valorización.\n\n¿Tienes un proyecto en mente?'
     },
 
     // Costos y presupuestos
@@ -67,13 +73,13 @@ export default function ChatBot() {
     // Proyectos anteriores
     proyectos: {
       keywords: ['proyecto', 'proyectos', 'obra', 'obras', 'portafolio', 'trabajos', 'realizados'],
-      response: '🏆 Hemos completado 285+ proyectos:\n\n• Torres del Valle (72 deptos)\n• Plaza San Carlos\n• Condominio Los Portales\n• Clínica Santa María\n• Y muchos más...\n\n📸 Ve nuestro portafolio completo en la sección "Proyectos" de la web.'
+      response: '🏆 Hemos desarrollado más de 50 proyectos, cada uno con contrato y expediente técnico:\n\n• Vivienda unifamiliar y multifamiliar\n• Locales comerciales\n• Remodelación y ampliación\n• Obras institucionales\n\n📸 Ve nuestro portafolio en la sección "Proyectos" de la web.'
     },
 
     // Experiencia
     experiencia: {
       keywords: ['experiencia', 'años', 'trayectoria', 'antigüedad'],
-      response: '⭐ RIVAMEZ cuenta con:\n\n• **15+ años** de experiencia profesional del equipo\n• **285+ proyectos** completados\n• **98%** de satisfacción del cliente\n• **62+ profesionales** en nuestro equipo\n\n🏅 Certificaciones ISO 9001, ISO 14001, ISO 45001 e ISO 37001 vigentes.'
+      response: '⭐ RIVAMEZ cuenta con:\n\n• **+10 años** de empresa formal (constituida en 2015)\n• **+50 proyectos** desarrollados\n• **4 certificaciones ISO** vigentes\n• **100% verificable** en línea, con número de certificado\n\n🏅 ISO 9001, ISO 14001, ISO 45001 e ISO 37001, emitidas por un organismo acreditado.'
     },
 
     // Garantía
@@ -123,6 +129,7 @@ export default function ChatBot() {
     { text: '💰 Precios', query: 'cuanto cuesta' },
     { text: '🏗️ Servicios', query: 'que servicios ofrecen' },
     { text: '⏱️ Tiempos', query: 'cuanto demora' },
+    { text: '📑 Formalización', query: 'formalizar mi propiedad' },
     { text: '📞 Contacto', query: 'contacto' },
   ];
 

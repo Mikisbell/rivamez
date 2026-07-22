@@ -76,11 +76,13 @@ const values = [
   }
 ];
 
+// Solo metricas verificables: partida registral, contratos, certificados ISO y su
+// comprobacion publica en linea.
 const stats = [
-  { value: '285+', label: 'Proyectos Completados' },
-  { value: '15+', label: 'Años de Experiencia del Equipo' },
-  { value: '150+', label: 'Profesionales' },
-  { value: '98%', label: 'Satisfacción' }
+  { value: '+10 años', label: 'De empresa formal desde 2015' },
+  { value: '+50', label: 'Proyectos desarrollados' },
+  { value: '4', label: 'Certificaciones ISO vigentes' },
+  { value: '100%', label: 'Verificable en línea' }
 ];
 
 const clients = [
@@ -240,16 +242,16 @@ export default function NosotrosPage() {
               transition={{ duration: 0.8 }}
             >
               <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                Los clientes necesitan equipos con perspectivas integrales — equipos capaces de desempeñarse al más alto nivel,
+                Los clientes necesitan equipos con perspectivas integrales, capaces de desempeñarse al más alto nivel,
                 superando los límites de lo posible y produciendo resultados que transforman el mundo. En RIVAMEZ,
                 eso es por lo que nuestra gente es conocida, y es lo que nos distingue.
               </p>
               <p className="text-lg text-gray-700 leading-relaxed mb-6">
                 Con presencia en 7 distritos de Huancayo, tenemos colegas de diferentes orígenes, culturas y especializaciones
-                que aportan una combinación única de habilidades altamente especializadas, experiencia y conocimiento incomparable.
+                que aportan habilidades especializadas y experiencia de obra en la región.
               </p>
               <p className="text-lg text-gray-700 leading-relaxed">
-                Investimos en atraer talento de clase mundial y lo fomentamos en el trabajo. A través de nuestra cultura de
+                Invertimos en atraer buenos profesionales y en formarlos en el trabajo. A través de nuestra cultura de
                 aprendizaje, colaboración y crecimiento, empoderamos a los miembros de nuestro equipo para convertirse en
                 los mejores en lo que hacen.
               </p>
@@ -263,10 +265,10 @@ export default function NosotrosPage() {
               className="grid grid-cols-2 gap-6"
             >
               {[
-                { value: "285+", label: "Proyectos Entregados", icon: "🏗️" },
-                { value: "150+", label: "Profesionales", icon: "👥" },
-                { value: "15+", label: "Años de Trayectoria del Equipo", icon: "📅" },
-                { value: "98%", label: "Satisfacción Cliente", icon: "⭐" }
+                { value: "+10 años", label: "De empresa formal desde 2015", icon: "📅" },
+                { value: "+50", label: "Proyectos desarrollados", icon: "🏗️" },
+                { value: "4", label: "Certificaciones ISO vigentes", icon: "🏅" },
+                { value: "100%", label: "Verificable en línea", icon: "🔎" }
               ].map((stat, idx) => (
                 <motion.div
                   key={idx}
@@ -398,7 +400,7 @@ export default function NosotrosPage() {
             className="bg-gradient-to-br from-rivamez-navy to-rivamez-cyan rounded-3xl p-8 md:p-12 text-white text-center"
           >
             <h3 className="text-3xl md:text-4xl font-bold mb-6">
-              Asociarse con RIVAMEZ significa acceso a una red de especialistas líderes en la industria
+              Asociarse con RIVAMEZ significa acceso a una red de especialistas colegiados y habilitados
             </h3>
             <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
               Cuyo conocimiento e ingenio entregan valor y aseguran el éxito de sus proyectos más complejos.
@@ -454,7 +456,7 @@ export default function NosotrosPage() {
               </div>
               <h3 className="text-3xl font-bold text-gray-900 mb-4">Maestros RIVAMEZ</h3>
               <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                Programa que reconoce a ingenieros y arquitectos senior que han alcanzado estatura de clase mundial
+                Programa que reconoce a ingenieros y arquitectos senior con trayectoria acreditada
                 en su campo de especialización. Elegidos por sus logros técnicos sustanciales a lo largo de sus carreras.
               </p>
               <div className="flex items-center gap-3 text-rivamez-cyan font-semibold">
@@ -601,7 +603,7 @@ export default function NosotrosPage() {
               Clientes que Confían en Nosotros
             </h2>
             <p className="text-xl text-gray-600">
-              Empresas líderes eligen RIVAMEZ para sus proyectos
+              Empresas que confían en RIVAMEZ para sus proyectos
             </p>
           </motion.div>
 
@@ -660,24 +662,24 @@ export default function NosotrosPage() {
           <div className="grid md:grid-cols-2 gap-8">
             {[
               {
-                number: '285+',
-                label: 'Proyectos Completados',
-                desc: 'En Huancayo y Junín'
+                number: '+10 años',
+                label: 'De empresa formal desde 2015',
+                desc: 'Inscrita en Registros Públicos, partida 11209511'
               },
               {
-                number: '95%',
-                label: 'Clientes Satisfechos',
-                desc: 'Recomendarían nuestros servicios'
+                number: '+50',
+                label: 'Proyectos desarrollados',
+                desc: 'Cada uno con contrato y expediente técnico'
               },
               {
-                number: '15+',
-                label: 'Años de Experiencia del Equipo',
-                desc: 'Construyendo confianza'
+                number: '4',
+                label: 'Certificaciones ISO vigentes',
+                desc: 'ISO 9001, 14001, 45001 y 37001'
               },
               {
-                number: '50+',
-                label: 'Colaboradores',
-                desc: 'Equipo multidisciplinario'
+                number: '100%',
+                label: 'Verificable en línea',
+                desc: 'Cada certificado tiene número propio y se comprueba'
               }
             ].map((stat, idx) => (
               <motion.div

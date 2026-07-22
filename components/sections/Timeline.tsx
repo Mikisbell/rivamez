@@ -22,27 +22,38 @@ export default function Timeline() {
     },
     {
       year: "2015",
-      title: "Expansión a El Tambo",
-      description: "Apertura de operaciones en El Tambo, marcando el inicio de nuestra expansión regional.",
-      icon: "📍",
-      color: "from-rivamez-cyan to-blue-600",
-      achievements: ["Nueva oficina El Tambo", "50+ colaboradores", "12 proyectos simultáneos"]
-    },
-    {
-      year: "2018",
       title: "Constitución de FreeCloud S.A.C.",
       description: "La operación se formaliza como FreeCloud S.A.C., empresa que opera bajo el nombre comercial Grupo Rivamez, con actividad de arquitectura, ingeniería y consultoría técnica.",
       icon: "🏛️",
       color: "from-green-500 to-emerald-700",
-      achievements: ["RUC 20600345665", "Actividad 7110: arquitectura e ingeniería", "Sede en El Tambo, Huancayo"]
+      achievements: [
+        "Inscrita en Registros Públicos el 23/04/2015",
+        "Partida registral 11209511",
+        "Sede en El Tambo, Huancayo"
+      ]
+    },
+    {
+      year: "2018",
+      title: "Inscripción del RUC ante SUNAT",
+      description: "La empresa queda inscrita en el Registro Único de Contribuyentes y opera desde entonces con estado activo y condición de habida.",
+      icon: "🧾",
+      color: "from-blue-500 to-blue-700",
+      achievements: [
+        "RUC 20600345665",
+        "Actividad 7110: arquitectura e ingeniería",
+        "Estado activo y habido ante SUNAT"
+      ]
     },
     {
       year: "2020",
-      title: "Hito: 100 Proyectos Completados",
-      description: "Celebración de nuestro proyecto número 100, un momento histórico que demuestra nuestro compromiso continuo.",
-      icon: "💯",
+      title: "Consolidación de la cartera de obra",
+      description: "La empresa consolida su cartera de proyectos residenciales y comerciales en Huancayo, cada uno respaldado por contrato y expediente técnico.",
+      icon: "🏗️",
       color: "from-purple-500 to-purple-700",
-      achievements: ["100 proyectos entregados", "5,000+ familias", "98% satisfacción"]
+      achievements: [
+        "Proyectos con contrato y expediente técnico",
+        "Cobertura en Huancayo, El Tambo y Chilca"
+      ]
     },
     {
       year: "2021",
@@ -54,11 +65,14 @@ export default function Timeline() {
     },
     {
       year: "2025",
-      title: "15 Años Construyendo Futuro",
-      description: "Celebramos tres lustros de trayectoria profesional, innovación y compromiso con Huancayo y sus familias.",
+      title: "Una Década de Empresa Formal",
+      description: "La empresa cumple diez años desde su constitución, sosteniendo la operación con formalidad tributaria y registral continua.",
       icon: "🎉",
       color: "from-rivamez-navy to-rivamez-cyan",
-      achievements: ["15 años de trayectoria", "62+ profesionales", "Proyectos en 8 distritos"]
+      achievements: [
+        "10 años desde la constitución en 2015",
+        "Registro vigente en Registros Públicos y SUNAT"
+      ]
     },
     {
       year: "2026",
@@ -95,13 +109,13 @@ export default function Timeline() {
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-rivamez-navy mb-6">
             Construyendo Historia
             <span className="block bg-gradient-to-r from-rivamez-cyan to-rivamez-green bg-clip-text text-transparent">
-              Más de 15 Años
+              Más de 10 Años
             </span>
           </h2>
           <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-            Un recorrido de más de 15 años de experiencia profesional del equipo transformando
-            Huancayo, superando desafíos y creando legados que perdurarán por generaciones. La
-            empresa, FreeCloud S.A.C., se constituyó en 2018.
+            FreeCloud S.A.C., que opera bajo el nombre comercial Grupo Rivamez, se constituyó el 23
+            de abril de 2015 según su partida registral. Los hitos anteriores corresponden a la
+            trayectoria profesional del equipo fundador.
           </p>
         </motion.div>
 
@@ -188,20 +202,22 @@ export default function Timeline() {
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="text-5xl md:text-6xl font-bold text-white mb-2">15</div>
-              <div className="text-white">Años de Experiencia del Equipo</div>
+              <div className="text-4xl md:text-6xl font-bold text-white mb-2">
+                +10 <span className="text-2xl md:text-4xl">años</span>
+              </div>
+              <div className="text-white">De empresa formal desde 2015</div>
             </div>
             <div className="text-center">
-              <div className="text-5xl md:text-6xl font-bold text-white mb-2">285+</div>
-              <div className="text-white">Proyectos Completados</div>
+              <div className="text-4xl md:text-6xl font-bold text-white mb-2">+50</div>
+              <div className="text-white">Proyectos desarrollados</div>
             </div>
             <div className="text-center">
-              <div className="text-5xl md:text-6xl font-bold text-white mb-2">10</div>
-              <div className="text-white">Hitos Importantes</div>
+              <div className="text-4xl md:text-6xl font-bold text-white mb-2">4</div>
+              <div className="text-white">Certificaciones ISO vigentes</div>
             </div>
             <div className="text-center">
-              <div className="text-5xl md:text-6xl font-bold text-white mb-2">5K+</div>
-              <div className="text-white">Familias Beneficiadas</div>
+              <div className="text-4xl md:text-6xl font-bold text-white mb-2">100%</div>
+              <div className="text-white">Verificable en línea</div>
             </div>
           </div>
         </motion.div>

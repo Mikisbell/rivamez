@@ -7,12 +7,12 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
-// Datos de los contadores (estadísticas)
+// Contadores: solo metricas verificables (partida registral, contratos, certificados ISO).
 const stats = [
-  { id: 1, value: 15, suffix: '+', label: 'Años de Experiencia' },
-  { id: 2, value: 285, suffix: '+', label: 'Proyectos Completados' },
-  { id: 3, value: 98, suffix: '%', label: 'Satisfacción del Cliente' },
-  { id: 4, value: 62, suffix: '+', label: 'Profesionales Certificados' },
+  { id: 1, prefix: '+', value: 10, suffix: ' años', label: 'De empresa formal desde 2015' },
+  { id: 2, prefix: '+', value: 50, suffix: '', label: 'Proyectos desarrollados' },
+  { id: 3, prefix: '', value: 4, suffix: '', label: 'Certificaciones ISO vigentes' },
+  { id: 4, prefix: '', value: 100, suffix: '%', label: 'Verificable en línea' },
 ];
 
 const services = [
@@ -87,6 +87,21 @@ const services = [
       'Renders y visualización 3D',
       'Planos y especificaciones técnicas'
     ]
+  },
+  {
+    id: 7,
+    icon: 'M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z',
+    title: 'Formalización ante la Municipalidad',
+    description: 'Una casa sin papeles no se puede vender, hipotecar ni dejar en herencia sin problemas. Nos encargamos del trámite completo para que tu propiedad quede reconocida e inscrita.',
+    features: [
+      'Licencia de edificación con expediente técnico',
+      'Conformidad de obra y declaratoria de fábrica',
+      'Saneamiento físico legal del lote',
+      'Subdivisión e independización de unidades'
+    ],
+    // Ocupa la fila completa: con 7 tarjetas la ultima quedaria huerfana en la grilla
+    // de 2 y 3 columnas, y ademas conviene destacar el servicio nuevo.
+    featured: true
   },
 ];
 
@@ -166,7 +181,8 @@ export default function Services() {
             Soluciones Integrales de Construcción
           </h2>
           <p className="text-gray-400 text-body max-w-3xl mx-auto">
-            Con un equipo de más de 15 años de experiencia profesional, ofrecemos servicios completos desde el diseño conceptual hasta la entrega final del proyecto.
+            Ingeniería, arquitectura y gestión de proyectos: cubrimos desde el diseño conceptual y la
+            licencia municipal hasta la entrega de la obra y su inscripción en Registros Públicos.
           </p>
         </div>
 
@@ -176,14 +192,15 @@ export default function Services() {
             <div
               key={stat.id}
               className="text-center card-responsive bg-gray-800 rounded-lg">
-              <div className="text-5xl font-bold mb-2">
+              <div className="text-4xl sm:text-5xl font-bold mb-2">
+                <span className="text-blue-400">{stat.prefix}</span>
                 <span
                   ref={(el) => (counterRefs.current[index] = el)}
                   className="inline-block"
                 >
                   0
                 </span>
-                <span className="text-blue-400">{stat.suffix}</span>
+                <span className="text-blue-400 text-2xl sm:text-3xl">{stat.suffix}</span>
               </div>
               <p className="text-gray-300 text-body">{stat.label}</p>
             </div>
@@ -195,7 +212,11 @@ export default function Services() {
           {services.map((service) => (
             <div
               key={service.id}
-              className="bg-gradient-to-br from-gray-800 to-gray-900 p-4 sm:p-6 lg:p-8 rounded-2xl hover:shadow-2xl hover:shadow-rivamez-cyan/20 transition-all duration-300 border border-gray-700 hover:border-rivamez-cyan group"
+              className={`bg-gradient-to-br from-gray-800 to-gray-900 p-4 sm:p-6 lg:p-8 rounded-2xl hover:shadow-2xl hover:shadow-rivamez-cyan/20 transition-all duration-300 border group ${
+                service.featured
+                  ? 'sm:col-span-2 lg:col-span-3 border-rivamez-cyan/50'
+                  : 'border-gray-700 hover:border-rivamez-cyan'
+              }`}
             >
               <div className="w-14 h-14 bg-gradient-to-br from-rivamez-cyan to-rivamez-navy rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                 <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -206,7 +227,7 @@ export default function Services() {
               <p className="text-gray-400 text-body mb-responsive leading-relaxed">
                 {service.description}
               </p>
-              <ul className="space-y-2">
+              <ul className={service.featured ? 'grid sm:grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-4' : 'space-y-2'}>
                 {service.features.map((feature, index) => (
                   <li key={index} className="flex items-start gap-2 text-small text-gray-300">
                     <svg className="w-5 h-5 text-rivamez-cyan-light flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

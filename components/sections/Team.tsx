@@ -176,24 +176,26 @@ export default function Team() {
           className="bg-gradient-to-br from-rivamez-navy to-rivamez-navy/90 rounded-2xl p-8 md:p-12"
         >
           <h3 className="text-2xl md:text-3xl font-bold text-white text-center mb-8">
-            Nuestro Equipo en Números
+            El Respaldo de la Empresa en Números
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-rivamez-cyan-light mb-2">62+</div>
-              <div className="text-white/80 text-sm">Profesionales</div>
+              <div className="text-3xl md:text-5xl font-bold text-rivamez-cyan-light mb-2">
+                +10 <span className="text-xl md:text-3xl">años</span>
+              </div>
+              <div className="text-white/80 text-sm">De empresa formal desde 2015</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-rivamez-lime mb-2">130+</div>
-              <div className="text-white/80 text-sm">Años de Experiencia</div>
+              <div className="text-3xl md:text-5xl font-bold text-rivamez-lime mb-2">+50</div>
+              <div className="text-white/80 text-sm">Proyectos desarrollados</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-rivamez-cyan-light mb-2">15+</div>
-              <div className="text-white/80 text-sm">Especialidades</div>
+              <div className="text-3xl md:text-5xl font-bold text-rivamez-cyan-light mb-2">4</div>
+              <div className="text-white/80 text-sm">Certificaciones ISO vigentes</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-rivamez-lime mb-2">100%</div>
-              <div className="text-white/80 text-sm">Comprometidos</div>
+              <div className="text-3xl md:text-5xl font-bold text-rivamez-lime mb-2">100%</div>
+              <div className="text-white/80 text-sm">Verificable en línea</div>
             </div>
           </div>
         </motion.div>

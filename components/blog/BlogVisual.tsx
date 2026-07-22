@@ -41,7 +41,7 @@ const MOCK_DATA = {
     {
       _id: '3',
       title: 'Certificación ISO 14001 refuerza compromiso ambiental de RIVAMEZ',
-      excerpt: 'Nueva certificación internacional posiciona a la empresa como líder en construcción sostenible en el sector.',
+      excerpt: 'Nueva certificación internacional que acredita el sistema de gestión ambiental de la empresa.',
       slug: { current: 'certificacion-iso-14001-ambiental' },
       publishedAt: new Date(Date.now() - 1 * 24 * 60 * 60 * 1000).toISOString(),
       readTime: 3,
@@ -85,7 +85,7 @@ const MOCK_DATA = {
     {
       _id: '7',
       title: 'Alianza estratégica con proveedores internacionales mejora calidad',
-      excerpt: 'Acuerdos con empresas líderes en materiales de construcción garantizan estándares de clase mundial.',
+      excerpt: 'Acuerdos con proveedores de materiales de construcción con certificación de calidad vigente.',
       slug: { current: 'alianza-proveedores-internacionales' },
       publishedAt: new Date(Date.now() - 5 * 24 * 60 * 60 * 1000).toISOString(),
       readTime: 4,
