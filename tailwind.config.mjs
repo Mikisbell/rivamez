@@ -65,6 +65,23 @@ export default {
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
       },
+      // Escala tipografica fluida (Fase 1): mapea a las CSS vars clamp() de
+      // globals.css. Se usan como clases normales: text-fluid-h1, text-fluid-body, etc.
+      fontSize: {
+        'fluid-hero':  'var(--text-fluid-hero)',
+        'fluid-h1':    'var(--text-fluid-h1)',
+        'fluid-h2':    'var(--text-fluid-h2)',
+        'fluid-h3':    'var(--text-fluid-h3)',
+        'fluid-lg':    'var(--text-fluid-lg)',
+        'fluid-body':  'var(--text-fluid-body)',
+        'fluid-small': 'var(--text-fluid-small)',
+      },
+      // Espaciado fluido: se usa como py-fluid-section, gap-fluid-gap, mb-fluid-block, etc.
+      spacing: {
+        'fluid-section': 'var(--space-section)',
+        'fluid-block':   'var(--space-block)',
+        'fluid-gap':     'var(--space-gap)',
+      },
     },
   },
   plugins: [],

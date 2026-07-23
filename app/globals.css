@@ -43,6 +43,33 @@
   --ring: 63 168 216;
 }
 
+/* ===================================
+   FLUID DESIGN TOKENS (Fase 1 — fundaciones de diseno fluido)
+   Escalas continuas con clamp(): el tamano se adapta al viewport SIN saltos de
+   breakpoint. Formula: clamp(min, base + factor*vw, max), min ~ movil 360px,
+   max ~ 1440px.
+   ACCESIBILIDAD: NO se aplica clamp() al font-size del html/:root (romperia el
+   zoom del navegador). El root queda en 16px fijo; estas escalas se consumen
+   por token/clase, nunca en el root global.
+   Son tokens de TAMANO/ESPACIADO: no tocan el color ni el dark mode, viven en
+   su propia seccion para no interferir con el bloque de color de arriba.
+   =================================== */
+:root {
+  /* Escala tipografica fluida */
+  --text-fluid-hero:  clamp(2.5rem, 1.5rem + 5vw, 5rem);
+  --text-fluid-h1:    clamp(2rem, 1.4rem + 3vw, 3.5rem);
+  --text-fluid-h2:    clamp(1.5rem, 1.1rem + 2vw, 2.5rem);
+  --text-fluid-h3:    clamp(1.25rem, 1rem + 1.2vw, 1.75rem);
+  --text-fluid-lg:    clamp(1.125rem, 1rem + 0.5vw, 1.375rem);
+  --text-fluid-body:  clamp(1rem, 0.95rem + 0.3vw, 1.125rem);
+  --text-fluid-small: clamp(0.875rem, 0.83rem + 0.2vw, 1rem);
+
+  /* Escala de espaciado fluida */
+  --space-section: clamp(3rem, 2rem + 5vw, 8rem);     /* padding vertical de secciones */
+  --space-block:   clamp(1.5rem, 1rem + 2vw, 3rem);   /* separacion entre bloques */
+  --space-gap:     clamp(1rem, 0.5rem + 1.5vw, 2rem); /* gap de grillas y flex */
+}
+
 *,
 *::before,
 *::after {
@@ -120,43 +147,72 @@ html {
 /* Utility classes para responsive spacing */
 @layer utilities {
 
-  /* Responsive padding - Ajustado para tablets */
+  /* Padding de seccion - FLUIDO (Fase 1): el eje vertical escala con
+     --space-section y el lateral con un clamp propio. Reemplaza los escalones
+     py-8 sm:py-10 ... xl:py-20 por una escala continua. */
   .section-padding {
-    @apply py-8 px-3 sm:py-10 sm:px-4 md:py-12 md:px-4 lg:py-16 lg:px-6 xl:py-20 xl:px-8;
+    padding-block: var(--space-section);
+    padding-inline: clamp(0.75rem, 3vw, 2rem);
   }
 
-  /* Responsive container - Compacto en tablets */
+  /* Contenedor central - FLUIDO: conserva el max-width (max-w-7xl = 80rem) y el
+     centrado; solo el padding lateral pasa a fluido clamp(1rem, 5vw, 4rem). */
   .container-responsive {
-    @apply w-full max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-6 xl:px-8;
+    width: 100%;
+    max-width: 80rem;
+    margin-inline: auto;
+    padding-inline: clamp(1rem, 5vw, 4rem);
   }
 
-  /* Responsive text sizes - Optimizado para todos los dispositivos */
+  /* Escala tipografica fluida: cada utilidad cuelga de un token clamp().
+     Se conservan los nombres de clase para no romper los archivos que las usan. */
   .heading-hero {
-    @apply text-2xl sm:text-3xl md:text-3xl lg:text-5xl xl:text-6xl font-bold leading-tight;
+    font-size: var(--text-fluid-hero);
+    font-weight: 700;
+    line-height: 1.1;
   }
 
   .heading-xl {
-    @apply text-xl sm:text-2xl md:text-2xl lg:text-4xl xl:text-5xl font-bold leading-tight;
+    font-size: var(--text-fluid-h1);
+    font-weight: 700;
+    line-height: 1.15;
   }
 
   .heading-lg {
-    @apply text-lg sm:text-xl md:text-xl lg:text-3xl xl:text-4xl font-bold leading-tight;
+    font-size: var(--text-fluid-h2);
+    font-weight: 700;
+    line-height: 1.2;
   }
 
   .heading-md {
-    @apply text-base sm:text-lg md:text-lg lg:text-2xl xl:text-3xl font-semibold leading-tight;
+    font-size: var(--text-fluid-h3);
+    font-weight: 600;
+    line-height: 1.25;
   }
 
   .heading-sm {
-    @apply text-sm sm:text-base md:text-base lg:text-xl xl:text-2xl font-semibold;
+    font-size: var(--text-fluid-lg);
+    font-weight: 600;
+    line-height: 1.3;
   }
 
   .text-body {
-    @apply text-xs sm:text-sm md:text-sm lg:text-base xl:text-lg leading-relaxed;
+    font-size: var(--text-fluid-body);
+    line-height: 1.65;
   }
 
   .text-small {
-    @apply text-xs sm:text-sm md:text-sm lg:text-base xl:text-lg;
+    font-size: var(--text-fluid-small);
+  }
+
+  /* Grilla intrinseca: se reacomoda sola sin depender de breakpoints.
+     El min del minmax (18rem = ancho minimo de columna) se AJUSTA POR SECCION:
+     subilo para tarjetas anchas, bajalo para items chicos. El min(100%, 18rem)
+     evita desborde horizontal cuando el contenedor es mas angosto que 18rem. */
+  .grid-auto {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+    gap: var(--space-gap);
   }
 
   /* Touch-friendly buttons - Responsive */

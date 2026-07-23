@@ -40,7 +40,12 @@ export default function Hero() {
   }, []);
 
   return (
-    <section id="inicio" className="relative min-h-[100dvh] overflow-hidden flex flex-col">
+    <section id="inicio" className="relative min-h-[100dvh] flex flex-col">
+      {/* Capa decorativa aislada: el overflow-hidden vive SOLO aca, envolviendo los
+          adornos absolutos, para que recorten sin reintroducir scroll horizontal y
+          SIN recortar el contenido real del hero (ese overflow en la raiz era el
+          defecto de altura que cortaba la tarjeta de metricas). */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
       {/* Animated Gradient Background */}
       <div
         className="absolute inset-0"
@@ -94,15 +99,18 @@ export default function Hero() {
       {/* Blurred Circles */}
       <div className="absolute top-0 right-0 w-64 h-64 md:w-96 md:h-96 bg-white/5 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '8s' }} />
       <div className="absolute bottom-0 left-0 w-64 h-64 md:w-96 md:h-96 bg-rivamez-cyan/10 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '10s', animationDelay: '2s' }} />
+      </div>
 
       {/* Content */}
-      {/* pt-40 en tablet: el buscador flotante (fixed, top-24) cae justo sobre la fila
-          del badge cuando el texto ocupa todo el ancho. */}
-      <div className="relative z-10 flex-1 flex items-center section-padding pt-20 md:pt-40 lg:pt-28 pb-6">
-        <div className="container-responsive w-full">
+      {/* Altura intrinseca: el contenido va en flujo normal con padding vertical FLUIDO
+          (clamp), sin section-padding que inflaba el alto. En pantalla alta el hero se ve
+          amplio; en pantalla baja CRECE y el usuario hace un scroll corto natural, sin
+          recortar nada. pt-40 en tablet libra el buscador flotante (fixed, top-24). */}
+      <div className="relative z-10 flex-1 flex items-center w-full container-responsive pt-24 md:pt-40 lg:pt-28 pb-[clamp(1rem,3vh,2rem)]">
+        <div className="w-full">
           {/* En tablet (md-lg) el grid sigue siendo de una columna: la ilustracion baja
               como segunda fila y rellena el aire muerto que dejaba el centrado vertical. */}
-          <div className="grid gap-6 md:gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:gap-12 items-center">
+          <div className="grid gap-fluid-gap lg:grid-cols-[1.1fr_0.9fr] lg:gap-12 items-center">
             {/* Left Column - Text Content */}
             <div className="text-center lg:text-left">
               {/* Badge - Dataiku Style */}
@@ -127,7 +135,7 @@ export default function Hero() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className="heading-hero text-white mb-responsive leading-tight"
+                className="heading-hero text-white mb-fluid-block leading-tight"
               >
                 <span className="block">Construimos</span>
                 {/* Sobre el azul del hero van las variantes CLARAS de la marca:
@@ -142,7 +150,7 @@ export default function Hero() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
-                className="text-body text-gray-200 mb-responsive max-w-2xl mx-auto lg:mx-0 font-light leading-relaxed"
+                className="text-fluid-lg text-gray-200 mb-fluid-block max-w-2xl mx-auto lg:mx-0 font-light leading-relaxed"
               >
                 Desarrollo de proyectos residenciales y comerciales de alta gama en Huancayo, Perú
               </motion.p>
@@ -179,11 +187,12 @@ export default function Hero() {
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1, delay: 0.5 }}
-              className="relative hidden md:flex lg:flex justify-center items-center max-lg:[@media(max-height:820px)]:hidden"
+              className="relative hidden md:flex justify-center items-center"
             >
-              {/* max-h en tablet: en pantallas bajas (landscape) la ilustracion se encoge
-                  sola y evita que el contenido del hero se desborde hacia arriba. */}
-              <div className="relative w-full max-w-[260px] max-h-[32dvh] lg:max-w-[260px] lg:max-h-none xl:max-w-[320px] aspect-square">
+              {/* Robot con tamano INTRINSECO: ancho fluido con clamp() (nunca empuja las
+                  metricas fuera de vista) y un tope de alto por vh que lo encoge en
+                  pantallas de poca altura, en vez de ocultarlo por umbral de px. */}
+              <div className="relative aspect-square w-[clamp(180px,22vw,320px)] max-h-[42vh] lg:max-h-none">
                 {/* Glow effect behind robot */}
                 <div className="absolute inset-0 bg-gradient-to-r from-rivamez-cyan/20 to-rivamez-lime/20 rounded-full animate-glow-pulse" />
 
@@ -205,7 +214,7 @@ export default function Hero() {
       </div>
 
       {/* Stats */}
-      <div className="relative z-10 px-4 pb-10 md:pb-12 shrink-0">
+      <div className="relative z-10 shrink-0 px-4 pb-[clamp(1.5rem,4vh,3rem)]">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -216,24 +225,24 @@ export default function Hero() {
               blanco aclaraba la zona hasta hacer ilegibles cifras y etiquetas. */}
           {/* Solo metricas verificables: antiguedad registral, proyectos respaldados por
               contratos, certificados ISO con numero propio y verificacion publica en linea. */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 bg-rivamez-dark/45 backdrop-blur-md rounded-2xl p-4 md:p-8 border border-white/20">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-fluid-gap bg-rivamez-dark/45 backdrop-blur-md rounded-2xl p-fluid-block border border-white/20">
             <div className="text-center">
-              <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-white to-rivamez-cyan-lighter bg-clip-text text-transparent mb-2">
-                +10 <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl">años</span>
+              <div className="text-fluid-h1 font-bold bg-gradient-to-r from-white to-rivamez-cyan-lighter bg-clip-text text-transparent mb-2">
+                +10 <span className="text-fluid-lg">años</span>
               </div>
-              <div className="text-gray-200 text-xs sm:text-sm font-medium">De empresa formal desde 2015</div>
+              <div className="text-gray-200 text-fluid-small font-medium">De empresa formal desde 2015</div>
             </div>
             <div className="text-center md:border-x border-white/20">
-              <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-white to-rivamez-cyan-lighter bg-clip-text text-transparent mb-2">+50</div>
-              <div className="text-gray-200 text-xs sm:text-sm font-medium">Proyectos desarrollados</div>
+              <div className="text-fluid-h1 font-bold bg-gradient-to-r from-white to-rivamez-cyan-lighter bg-clip-text text-transparent mb-2">+50</div>
+              <div className="text-gray-200 text-fluid-small font-medium">Proyectos desarrollados</div>
             </div>
             <div className="text-center md:border-r border-white/20">
-              <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-white to-rivamez-lime-light bg-clip-text text-transparent mb-2">4</div>
-              <div className="text-gray-200 text-xs sm:text-sm font-medium">Certificaciones ISO vigentes</div>
+              <div className="text-fluid-h1 font-bold bg-gradient-to-r from-white to-rivamez-lime-light bg-clip-text text-transparent mb-2">4</div>
+              <div className="text-gray-200 text-fluid-small font-medium">Certificaciones ISO vigentes</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-white to-rivamez-cyan-lighter bg-clip-text text-transparent mb-2">100%</div>
-              <div className="text-gray-200 text-xs sm:text-sm font-medium">Verificable en línea</div>
+              <div className="text-fluid-h1 font-bold bg-gradient-to-r from-white to-rivamez-cyan-lighter bg-clip-text text-transparent mb-2">100%</div>
+              <div className="text-gray-200 text-fluid-small font-medium">Verificable en línea</div>
             </div>
           </div>
         </motion.div>
