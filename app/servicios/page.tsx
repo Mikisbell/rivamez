@@ -93,7 +93,7 @@ export default function ServiciosPage() {
   return (
     <div className="pt-20">
       {/* Hero Section */}
-      <section className="relative py-24 px-4 bg-gradient-to-br from-rivamez-navy via-gray-900 to-rivamez-dark text-white overflow-hidden">
+      <section className="relative section-padding bg-gradient-to-br from-rivamez-navy via-gray-900 to-rivamez-dark text-white overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-10">
           <div style={{
@@ -112,10 +112,10 @@ export default function ServiciosPage() {
             <span className="inline-block px-5 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-sm font-semibold mb-6">
               SERVICIOS
             </span>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+            <h1 className="text-fluid-h1 font-bold mb-6">
               Soluciones Integrales de Construcción
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-fluid-lg text-gray-300 max-w-3xl mx-auto">
               Ingeniería, arquitectura y gestión de proyectos: desde el diseño y la licencia
               municipal hasta la entrega de la obra y su inscripción en Registros Públicos
             </p>
@@ -124,27 +124,27 @@ export default function ServiciosPage() {
       </section>
 
       {/* CAPACIDADES SECTION */}
-      <section className="py-12 sm:py-16 md:py-20 px-4 bg-white overflow-hidden">
+      <section className="section-padding bg-white overflow-hidden">
         <div className="container mx-auto max-w-6xl text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-rivamez-navy mb-4">
+          <h2 className="text-fluid-h2 font-bold text-rivamez-navy mb-4">
             Nuestras Capacidades
           </h2>
-          <p className="text-xl text-gray-600">
+          <p className="text-fluid-lg text-gray-600">
             Arquitectura, ingeniería, construcción, gestión de proyectos y formalización
           </p>
         </div>
 
         {/* Arquitectura */}
         <div id="arquitectura" className="container mx-auto max-w-6xl mb-20 scroll-mt-20">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-fluid-gap items-center">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
               <div className="text-6xl mb-4">🏛️</div>
-              <h3 className="text-3xl font-bold text-rivamez-navy mb-4">Arquitectura</h3>
-              <p className="text-gray-600 text-lg mb-6">
+              <h3 className="text-fluid-h3 font-bold text-rivamez-navy mb-4">Arquitectura</h3>
+              <p className="text-gray-600 text-fluid-body mb-6">
                 Diseño arquitectónico innovador que combina funcionalidad, estética y sostenibilidad. Creamos espacios que inspiran y transforman.
               </p>
               <ul className="space-y-3">
@@ -171,7 +171,7 @@ export default function ServiciosPage() {
 
         {/* Ingeniería */}
         <div id="ingenieria" className="container mx-auto max-w-6xl mb-20 scroll-mt-20 bg-gray-50 -mx-4 px-4 py-12 lg:mx-0 lg:px-12 lg:rounded-3xl">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-fluid-gap items-center">
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -187,8 +187,8 @@ export default function ServiciosPage() {
               className="lg:order-2"
             >
               <div className="text-6xl mb-4">⚙️</div>
-              <h3 className="text-3xl font-bold text-rivamez-navy mb-4">Ingeniería</h3>
-              <p className="text-gray-600 text-lg mb-6">
+              <h3 className="text-fluid-h3 font-bold text-rivamez-navy mb-4">Ingeniería</h3>
+              <p className="text-gray-600 text-fluid-body mb-6">
                 Ingeniería estructural y civil de vanguardia. Soluciones técnicas robustas que garantizan seguridad, eficiencia y durabilidad.
               </p>
               <ul className="space-y-3">
@@ -207,15 +207,15 @@ export default function ServiciosPage() {
 
         {/* Construcción */}
         <div id="construccion" className="container mx-auto max-w-6xl mb-20 scroll-mt-20">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-fluid-gap items-center">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
               <div className="text-6xl mb-4">🏗️</div>
-              <h3 className="text-3xl font-bold text-rivamez-navy mb-4">Construcción</h3>
-              <p className="text-gray-600 text-lg mb-6">
+              <h3 className="text-fluid-h3 font-bold text-rivamez-navy mb-4">Construcción</h3>
+              <p className="text-gray-600 text-fluid-body mb-6">
                 Ejecución de obra con los más altos estándares de calidad y seguridad. Equipos especializados y tecnología de punta para resultados excepcionales.
               </p>
               <ul className="space-y-3">
@@ -242,7 +242,7 @@ export default function ServiciosPage() {
 
         {/* Gestión de Proyectos */}
         <div id="gestion" className="container mx-auto max-w-6xl mb-20 scroll-mt-20 bg-gray-50 -mx-4 px-4 py-12 lg:mx-0 lg:px-12 lg:rounded-3xl">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-fluid-gap items-center">
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -258,8 +258,8 @@ export default function ServiciosPage() {
               className="lg:order-2"
             >
               <div className="text-6xl mb-4">📊</div>
-              <h3 className="text-3xl font-bold text-rivamez-navy mb-4">Gestión de Proyectos</h3>
-              <p className="text-gray-600 text-lg mb-6">
+              <h3 className="text-fluid-h3 font-bold text-rivamez-navy mb-4">Gestión de Proyectos</h3>
+              <p className="text-gray-600 text-fluid-body mb-6">
                 Metodologías PMI y ágiles para la gestión efectiva de proyectos. Control total desde la planificación hasta el cierre exitoso.
               </p>
               <ul className="space-y-3">
@@ -289,10 +289,10 @@ export default function ServiciosPage() {
                 GESTIÓN DE PROYECTOS Y TRÁMITES
               </span>
               <div className="text-6xl mb-4">📑</div>
-              <h3 className="text-3xl md:text-4xl font-bold mb-4">
+              <h3 className="text-fluid-h3 font-bold mb-4">
                 Formalización ante la Municipalidad
               </h3>
-              <p className="text-gray-200 text-lg leading-relaxed mb-4">
+              <p className="text-gray-200 text-fluid-body leading-relaxed mb-4">
                 Una vivienda sin papeles en regla no se puede vender, no sirve como garantía para
                 un crédito hipotecario y complica la herencia entre los hijos. Nosotros nos
                 encargamos del trámite completo para que tu propiedad quede reconocida por la
@@ -304,7 +304,7 @@ export default function ServiciosPage() {
               </p>
             </div>
 
-            <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
+            <div className="grid sm:grid-cols-2 gap-fluid-gap">
               {[
                 {
                   icon: '🏗️',
@@ -355,15 +355,15 @@ export default function ServiciosPage() {
         {/* TECNOLOGÍAS INNOVADORAS */}
         <div className="container mx-auto max-w-6xl mb-20">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-rivamez-navy mb-4">
+            <h2 className="text-fluid-h3 font-bold text-rivamez-navy mb-4">
               Tecnología de Vanguardia
             </h2>
-            <p className="text-lg text-gray-600">
+            <p className="text-fluid-body text-gray-600">
               Adoptamos las últimas innovaciones de Estados Unidos y Europa
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 mb-12">
+          <div className="grid md:grid-cols-2 gap-fluid-gap mb-12">
             {/* BIM & Gemelos Digitales */}
             <motion.div
               id="bim"
@@ -373,7 +373,7 @@ export default function ServiciosPage() {
               className="bg-gradient-to-br from-blue-50 to-cyan-50 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all scroll-mt-20 border border-blue-100"
             >
               <div className="text-5xl mb-4">🏗️</div>
-              <h3 className="text-2xl font-bold text-rivamez-navy mb-3">BIM & Gemelos Digitales</h3>
+              <h3 className="text-fluid-h3 font-bold text-rivamez-navy mb-3">BIM & Gemelos Digitales</h3>
               <p className="text-gray-700 mb-4 font-medium">
                 Building Information Modeling + Digital Twins para máxima eficiencia
               </p>
@@ -407,7 +407,7 @@ export default function ServiciosPage() {
               className="bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all scroll-mt-20 border border-purple-100"
             >
               <div className="text-5xl mb-4">🤖</div>
-              <h3 className="text-2xl font-bold text-rivamez-navy mb-3">IA & Diseño Generativo</h3>
+              <h3 className="text-fluid-h3 font-bold text-rivamez-navy mb-3">IA & Diseño Generativo</h3>
               <p className="text-gray-700 mb-4 font-medium">
                 Inteligencia Artificial para optimización de diseños estructurales
               </p>
@@ -441,7 +441,7 @@ export default function ServiciosPage() {
               className="bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all scroll-mt-20 border border-green-100"
             >
               <div className="text-5xl mb-4">🏢</div>
-              <h3 className="text-2xl font-bold text-rivamez-navy mb-3">Construcción Modular</h3>
+              <h3 className="text-fluid-h3 font-bold text-rivamez-navy mb-3">Construcción Modular</h3>
               <p className="text-gray-700 mb-4 font-medium">
                 Prefabricación industrializada con metodología DfMA
               </p>
@@ -475,7 +475,7 @@ export default function ServiciosPage() {
               className="bg-gradient-to-br from-orange-50 to-amber-50 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all scroll-mt-20 border border-orange-100"
             >
               <div className="text-5xl mb-4">🥽</div>
-              <h3 className="text-2xl font-bold text-rivamez-navy mb-3">AR/VR & Drones</h3>
+              <h3 className="text-fluid-h3 font-bold text-rivamez-navy mb-3">AR/VR & Drones</h3>
               <p className="text-gray-700 mb-4 font-medium">
                 Realidad inmersiva e inspección inteligente con drones
               </p>
@@ -501,7 +501,7 @@ export default function ServiciosPage() {
           </div>
 
           {/* Sostenibilidad y Consultoría - Grid 2 columnas */}
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-fluid-gap">
             {/* Sostenibilidad */}
             <motion.div
               id="sostenibilidad"
@@ -511,7 +511,7 @@ export default function ServiciosPage() {
               className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all scroll-mt-20"
             >
               <div className="text-5xl mb-4">🌱</div>
-              <h3 className="text-2xl font-bold text-rivamez-navy mb-3">Sostenibilidad ISO 14001</h3>
+              <h3 className="text-fluid-h3 font-bold text-rivamez-navy mb-3">Sostenibilidad ISO 14001</h3>
               <p className="text-gray-600 mb-4">
                 Construcción con criterios ambientales respaldados por nuestro sistema de gestión certificado
               </p>
@@ -546,7 +546,7 @@ export default function ServiciosPage() {
               className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all scroll-mt-20"
             >
               <div className="text-5xl mb-4">💼</div>
-              <h3 className="text-2xl font-bold text-rivamez-navy mb-3">Consultoría Técnica</h3>
+              <h3 className="text-fluid-h3 font-bold text-rivamez-navy mb-3">Consultoría Técnica</h3>
               <p className="text-gray-600 mb-4">
                 Asesoría experta con metodologías Lean Construction e IPD
               </p>
@@ -574,12 +574,12 @@ export default function ServiciosPage() {
       </section>
 
       {/* SERVICIOS POR SECTOR */}
-      <section id="residencial" className="py-12 sm:py-16 md:py-20 px-4 bg-gradient-to-b from-gray-50 to-white scroll-mt-20">
+      <section id="residencial" className="section-padding bg-gradient-to-b from-gray-50 to-white scroll-mt-20">
         <div className="container mx-auto max-w-6xl text-center mb-8 sm:mb-12 md:mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-rivamez-navy mb-4">
+          <h2 className="text-fluid-h2 font-bold text-rivamez-navy mb-4">
             Servicios por Sector
           </h2>
-          <p className="text-xl text-gray-600">
+          <p className="text-fluid-lg text-gray-600">
             Soluciones especializadas para cada tipo de proyecto
           </p>
         </div>
@@ -593,7 +593,7 @@ export default function ServiciosPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
-                className={`grid lg:grid-cols-2 gap-8 items-center ${idx % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}
+                className={`grid lg:grid-cols-2 gap-fluid-gap items-center ${idx % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}
               >
                 {/* Image */}
                 <div className={`${idx % 2 === 1 ? 'lg:order-2' : ''}`}>
@@ -615,11 +615,11 @@ export default function ServiciosPage() {
                     </svg>
                   </div>
 
-                  <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                  <h2 className="text-fluid-h3 font-bold text-gray-900 mb-4">
                     {service.title}
                   </h2>
 
-                  <p className="text-lg text-gray-600 mb-6">
+                  <p className="text-fluid-body text-gray-600 mb-6">
                     {service.description}
                   </p>
 
@@ -668,7 +668,7 @@ export default function ServiciosPage() {
       </section>
 
       {/* Benefits */}
-      <section className="py-12 sm:py-16 md:py-20 px-4 bg-white overflow-hidden">
+      <section className="section-padding bg-white overflow-hidden">
         <div className="container mx-auto max-w-6xl">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -677,15 +677,15 @@ export default function ServiciosPage() {
             transition={{ duration: 0.8 }}
             className="text-center mb-8 sm:mb-12 md:mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            <h2 className="text-fluid-h2 font-bold text-gray-900 mb-4">
               ¿Por Qué Elegir RIVAMEZ?
             </h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-fluid-lg text-gray-600">
               Razones que puedes comprobar por tu cuenta, no promesas
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-fluid-gap">
             {benefits.map((benefit, idx) => (
               <motion.div
                 key={idx}
@@ -705,7 +705,7 @@ export default function ServiciosPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 sm:py-20 md:py-24 lg:py-32 px-4 bg-gradient-to-r from-rivamez-navy to-rivamez-cyan text-white overflow-hidden">
+      <section className="section-padding bg-gradient-to-r from-rivamez-navy to-rivamez-cyan text-white overflow-hidden">
         <div className="container mx-auto max-w-4xl text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -713,10 +713,10 @@ export default function ServiciosPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <h2 className="text-fluid-h2 font-bold mb-6">
               ¿Listo para Empezar?
             </h2>
-            <p className="text-xl mb-8 text-gray-200">
+            <p className="text-fluid-lg mb-8 text-gray-200">
               Contáctanos hoy y descubre cómo podemos ayudarte con tu proyecto
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

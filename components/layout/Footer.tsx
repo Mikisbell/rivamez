@@ -15,7 +15,7 @@ export default function Footer() {
   return (
     <footer className="bg-rivamez-dark text-white overflow-hidden">
       <div className="container-responsive section-padding">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-fluid-gap">
           {/* Logo y Slogan */}
           <div className="md:col-span-1">
             {/* El logo ya contiene el nombre y el tagline, por eso no se repiten en texto.
@@ -137,7 +137,7 @@ export default function Footer() {
         </div>
 
         {/* Copyright */}
-        <div className="border-t border-gray-800 mt-responsive pt-responsive text-center text-gray-400 text-body">
+        <div className="border-t border-gray-800 mt-fluid-block pt-fluid-block text-center text-gray-400 text-body">
           <p>&copy; {currentYear} GRUPO RIVAMEZ. Todos los derechos reservados.</p>
           <p className="mt-2 text-small text-gray-400">
             Grupo Rivamez es nombre comercial de FreeCloud S.A.C. | RUC 20600345665

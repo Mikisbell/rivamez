@@ -119,18 +119,18 @@ export default function NosotrosPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut" }}
           >
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-8 leading-tight">
+            <h1 className="text-fluid-hero font-bold text-white mb-8 leading-tight">
               La Gente Detrás de
               <span className="block bg-gradient-to-r from-rivamez-cyan-lighter via-rivamez-lime-light to-white bg-clip-text text-transparent">
                 los Proyectos
               </span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed">
+            <p className="text-fluid-lg text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed">
               Equipos extraordinarios con perspectivas globales, capaces de desempeñarse al más alto nivel
               y producir resultados que transforman el mundo.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+            <div className="flex flex-col sm:flex-row gap-fluid-gap justify-center">
               <a
                 href="#excelencia"
                 className="px-10 py-5 bg-gradient-to-r from-rivamez-cyan to-rivamez-green text-white font-bold rounded-xl hover:shadow-2xl hover:shadow-rivamez-cyan/50 hover:scale-105 transition-all duration-300"
@@ -172,9 +172,9 @@ export default function NosotrosPage() {
       </section>
 
       {/* Mission & Vision */}
-      <section className="py-16 sm:py-20 md:py-24 lg:py-32 px-4 bg-white overflow-hidden">
+      <section className="section-padding bg-white overflow-hidden">
         <div className="container mx-auto max-w-6xl">
-          <div className="grid md:grid-cols-2 gap-12">
+          <div className="grid md:grid-cols-2 gap-fluid-gap">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -187,7 +187,7 @@ export default function NosotrosPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Nuestra Misión</h2>
+              <h2 className="text-fluid-h3 font-bold text-gray-900 mb-4">Nuestra Misión</h2>
               <p className="text-gray-600 leading-relaxed">
                 Transformar la visión de nuestros clientes en realidad, entregando proyectos de construcción de la más alta calidad que superen expectativas y generen valor a largo plazo para la comunidad de Huancayo y la región central del Perú.
               </p>
@@ -206,7 +206,7 @@ export default function NosotrosPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                 </svg>
               </div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Nuestra Visión</h2>
+              <h2 className="text-fluid-h3 font-bold text-gray-900 mb-4">Nuestra Visión</h2>
               <p className="text-gray-600 leading-relaxed">
                 Ser la constructora líder en la región central del Perú, reconocida por la excelencia en la ejecución de proyectos, innovación tecnológica, compromiso con la sostenibilidad y la satisfacción total de nuestros clientes.
               </p>
@@ -216,7 +216,7 @@ export default function NosotrosPage() {
       </section>
 
       {/* Impulsados por la Excelencia */}
-      <section id="excelencia" className="py-16 sm:py-20 md:py-24 lg:py-32 px-4 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
+      <section id="excelencia" className="section-padding bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-rivamez-cyan/5 rounded-full blur-3xl" />
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-rivamez-green/5 rounded-full blur-3xl" />
 
@@ -228,29 +228,29 @@ export default function NosotrosPage() {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-rivamez-navy mb-6">
+            <h2 className="text-fluid-h2 font-bold text-rivamez-navy mb-6">
               Impulsados por la Excelencia
               <span className="block text-rivamez-cyan mt-2">Definidos por Nuestra Gente</span>
             </h2>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center mb-12 sm:mb-16 md:mb-20">
+          <div className="grid md:grid-cols-2 gap-fluid-gap items-center mb-fluid-block">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              <p className="text-fluid-body text-gray-700 leading-relaxed mb-6">
                 Los clientes necesitan equipos con perspectivas integrales, capaces de desempeñarse al más alto nivel,
                 superando los límites de lo posible y produciendo resultados que transforman el mundo. En RIVAMEZ,
                 eso es por lo que nuestra gente es conocida, y es lo que nos distingue.
               </p>
-              <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              <p className="text-fluid-body text-gray-700 leading-relaxed mb-6">
                 Con presencia en 7 distritos de Huancayo, tenemos colegas de diferentes orígenes, culturas y especializaciones
                 que aportan habilidades especializadas y experiencia de obra en la región.
               </p>
-              <p className="text-lg text-gray-700 leading-relaxed">
+              <p className="text-fluid-body text-gray-700 leading-relaxed">
                 Invertimos en atraer buenos profesionales y en formarlos en el trabajo. A través de nuestra cultura de
                 aprendizaje, colaboración y crecimiento, empoderamos a los miembros de nuestro equipo para convertirse en
                 los mejores en lo que hacen.
@@ -262,7 +262,7 @@ export default function NosotrosPage() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="grid grid-cols-2 gap-6"
+              className="grid grid-cols-2 gap-fluid-gap"
             >
               {[
                 { value: "+10 años", label: "De empresa formal desde 2015", icon: "📅" },
@@ -279,7 +279,7 @@ export default function NosotrosPage() {
                   className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100 text-center hover:shadow-2xl hover:scale-105 transition-all duration-300"
                 >
                   <div className="text-4xl mb-3">{stat.icon}</div>
-                  <div className="text-3xl font-bold text-rivamez-navy mb-2">{stat.value}</div>
+                  <div className="text-fluid-h3 font-bold text-rivamez-navy mb-2">{stat.value}</div>
                   <div className="text-sm text-gray-600">{stat.label}</div>
                 </motion.div>
               ))}
@@ -307,7 +307,7 @@ export default function NosotrosPage() {
       </section>
 
       {/* Establecemos el Estándar */}
-      <section className="py-16 sm:py-20 md:py-24 lg:py-32 px-4 bg-white relative overflow-hidden">
+      <section className="section-padding bg-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-5" style={{
           backgroundImage: `
               linear-gradient(rgba(15, 23, 42, 0.5) 1px, transparent 1px),
@@ -324,16 +324,16 @@ export default function NosotrosPage() {
             transition={{ duration: 0.8 }}
             className="text-center mb-20"
           >
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-rivamez-navy mb-6">
+            <h2 className="text-fluid-h2 font-bold text-rivamez-navy mb-6">
               Establecemos el Estándar
             </h2>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+            <p className="text-fluid-lg text-gray-600 max-w-4xl mx-auto">
               Nuestros centros de excelencia especializados son centros de experiencia técnica,
               impulsados por las mentes más brillantes de la industria.
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-fluid-gap mb-16">
             {[
               {
                 title: "Centro BIM de Excelencia",
@@ -385,7 +385,7 @@ export default function NosotrosPage() {
                   <div className="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">
                     {center.icon}
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">{center.title}</h3>
+                  <h3 className="text-fluid-h3 font-bold text-gray-900 mb-4">{center.title}</h3>
                   <p className="text-gray-600 leading-relaxed">{center.description}</p>
                 </div>
               </motion.div>
@@ -399,10 +399,10 @@ export default function NosotrosPage() {
             transition={{ duration: 0.8 }}
             className="bg-gradient-to-br from-rivamez-navy to-rivamez-cyan rounded-3xl p-8 md:p-12 text-white text-center"
           >
-            <h3 className="text-3xl md:text-4xl font-bold mb-6">
+            <h3 className="text-fluid-h3 font-bold mb-6">
               Asociarse con RIVAMEZ significa acceso a una red de especialistas colegiados y habilitados
             </h3>
-            <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
+            <p className="text-fluid-lg text-white/90 mb-8 max-w-3xl mx-auto">
               Cuyo conocimiento e ingenio entregan valor y aseguran el éxito de sus proyectos más complejos.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -424,7 +424,7 @@ export default function NosotrosPage() {
       </section>
 
       {/* Programas de Reconocimiento */}
-      <section className="py-16 sm:py-20 md:py-24 lg:py-32 px-4 bg-gradient-to-b from-gray-50 to-white">
+      <section className="section-padding bg-gradient-to-b from-gray-50 to-white">
         <div className="container mx-auto max-w-7xl">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -433,15 +433,15 @@ export default function NosotrosPage() {
             transition={{ duration: 0.8 }}
             className="text-center mb-20"
           >
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-rivamez-navy mb-6">
+            <h2 className="text-fluid-h2 font-bold text-rivamez-navy mb-6">
               Reconocimiento a la Excelencia
             </h2>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+            <p className="text-fluid-lg text-gray-600 max-w-4xl mx-auto">
               Programas especiales que honran a nuestros profesionales más destacados
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-12">
+          <div className="grid md:grid-cols-2 gap-fluid-gap">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -454,8 +454,8 @@ export default function NosotrosPage() {
                   <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                 </svg>
               </div>
-              <h3 className="text-3xl font-bold text-gray-900 mb-4">Maestros RIVAMEZ</h3>
-              <p className="text-lg text-gray-600 leading-relaxed mb-6">
+              <h3 className="text-fluid-h3 font-bold text-gray-900 mb-4">Maestros RIVAMEZ</h3>
+              <p className="text-fluid-body text-gray-600 leading-relaxed mb-6">
                 Programa que reconoce a ingenieros y arquitectos senior con trayectoria acreditada
                 en su campo de especialización. Elegidos por sus logros técnicos sustanciales a lo largo de sus carreras.
               </p>
@@ -479,8 +479,8 @@ export default function NosotrosPage() {
                   <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" />
                 </svg>
               </div>
-              <h3 className="text-3xl font-bold text-gray-900 mb-4">Especialistas Técnicos Distinguidos</h3>
-              <p className="text-lg text-gray-600 leading-relaxed mb-6">
+              <h3 className="text-fluid-h3 font-bold text-gray-900 mb-4">Especialistas Técnicos Distinguidos</h3>
+              <p className="text-fluid-body text-gray-600 leading-relaxed mb-6">
                 Reconocimiento a empleados que han realizado contribuciones técnicas particularmente significativas
                 al éxito de RIVAMEZ. Promueven la excelencia técnica a través de la aplicación de tecnología avanzada.
               </p>
@@ -496,7 +496,7 @@ export default function NosotrosPage() {
       </section>
 
       {/* Leadership Team */}
-      <section className="py-16 sm:py-20 md:py-24 lg:py-32 px-4 bg-gradient-to-b from-gray-50 to-white overflow-hidden">
+      <section className="section-padding bg-gradient-to-b from-gray-50 to-white overflow-hidden">
         <div className="container mx-auto max-w-7xl">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -505,15 +505,15 @@ export default function NosotrosPage() {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            <h2 className="text-fluid-h2 font-bold text-gray-900 mb-4">
               Nuestro Equipo Directivo
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-fluid-lg text-gray-600 max-w-3xl mx-auto">
               Líderes con décadas de experiencia comprometidos con la excelencia
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid-auto">
             {leadership.map((member, idx) => (
               <motion.div
                 key={idx}
@@ -542,7 +542,7 @@ export default function NosotrosPage() {
       </section>
 
       {/* Values */}
-      <section id="valores" className="py-20 px-4 bg-white relative overflow-hidden">
+      <section id="valores" className="section-padding bg-white relative overflow-hidden">
         {/* Grid Pattern */}
         <div className="absolute inset-0 opacity-5" style={{
           backgroundImage: `
@@ -560,15 +560,15 @@ export default function NosotrosPage() {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            <h2 className="text-fluid-h2 font-bold text-gray-900 mb-4">
               Nuestros Valores
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-fluid-lg text-gray-600 max-w-3xl mx-auto">
               Los principios que guían cada uno de nuestros proyectos
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-fluid-gap">
             {values.map((value, idx) => (
               <motion.div
                 key={idx}
@@ -590,7 +590,7 @@ export default function NosotrosPage() {
       </section>
 
       {/* Clients */}
-      <section className="py-16 sm:py-20 md:py-24 lg:py-32 px-4 bg-gradient-to-b from-gray-50 to-white overflow-hidden">
+      <section className="section-padding bg-gradient-to-b from-gray-50 to-white overflow-hidden">
         <div className="container mx-auto max-w-7xl">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -599,15 +599,15 @@ export default function NosotrosPage() {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            <h2 className="text-fluid-h2 font-bold text-gray-900 mb-4">
               Clientes que Confían en Nosotros
             </h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-fluid-lg text-gray-600">
               Empresas que confían en RIVAMEZ para sus proyectos
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-fluid-gap items-center">
             {clients.map((client, idx) => (
               <motion.div
                 key={idx}
@@ -643,7 +643,7 @@ export default function NosotrosPage() {
       </section>
 
       {/* Logros Destacados Section */}
-      <section id="logros" className="py-20 px-4 scroll-mt-20">
+      <section id="logros" className="section-padding scroll-mt-20">
         <div className="container mx-auto max-w-6xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -651,15 +651,15 @@ export default function NosotrosPage() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-rivamez-navy mb-4">
+            <h2 className="text-fluid-h2 font-bold text-rivamez-navy mb-4">
               Logros Destacados
             </h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-fluid-lg text-gray-600">
               Hitos que marcan nuestra trayectoria
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-fluid-gap">
             {[
               {
                 number: '+10 años',
@@ -690,8 +690,8 @@ export default function NosotrosPage() {
                 transition={{ delay: idx * 0.1 }}
                 className="bg-gradient-to-br from-rivamez-navy to-rivamez-cyan p-8 rounded-2xl text-white text-center shadow-2xl"
               >
-                <div className="text-5xl md:text-6xl font-bold mb-2">{stat.number}</div>
-                <h3 className="text-2xl font-bold mb-2">{stat.label}</h3>
+                <div className="text-fluid-h1 font-bold mb-2">{stat.number}</div>
+                <h3 className="text-fluid-h3 font-bold mb-2">{stat.label}</h3>
                 <p className="text-gray-200">{stat.desc}</p>
               </motion.div>
             ))}
@@ -700,7 +700,7 @@ export default function NosotrosPage() {
       </section>
 
       {/* Responsabilidad Social Section */}
-      <section id="rse" className="py-20 px-4 bg-gray-50 scroll-mt-20">
+      <section id="rse" className="section-padding bg-gray-50 scroll-mt-20">
         <div className="container mx-auto max-w-6xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -708,15 +708,15 @@ export default function NosotrosPage() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-rivamez-navy mb-4">
+            <h2 className="text-fluid-h2 font-bold text-rivamez-navy mb-4">
               Responsabilidad Social
             </h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-fluid-lg text-gray-600">
               Comprometidos con el desarrollo de nuestra comunidad
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid-auto">
             {[
               {
                 icon: '🌱',
@@ -767,7 +767,7 @@ export default function NosotrosPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 sm:py-20 md:py-24 lg:py-32 px-4 bg-gradient-to-r from-rivamez-navy to-rivamez-cyan text-white overflow-hidden">
+      <section className="section-padding bg-gradient-to-r from-rivamez-navy to-rivamez-cyan text-white overflow-hidden">
         <div className="container mx-auto max-w-4xl text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -775,10 +775,10 @@ export default function NosotrosPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <h2 className="text-fluid-h2 font-bold mb-6">
               ¿Listo para Empezar tu Proyecto?
             </h2>
-            <p className="text-xl mb-8 text-gray-200">
+            <p className="text-fluid-lg mb-8 text-gray-200">
               Contáctanos hoy y descubre cómo podemos hacer realidad tu visión
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

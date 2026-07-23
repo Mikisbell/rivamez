@@ -42,29 +42,29 @@ export default function Respaldo() {
   return (
     <section
       id="respaldo"
-      className="py-12 md:py-16 lg:py-24 px-4 sm:px-6 lg:px-8 bg-white relative overflow-hidden"
+      className="py-fluid-section bg-white relative overflow-hidden"
     >
       {/* Elementos decorativos */}
       <div className="absolute top-0 right-0 w-48 sm:w-72 lg:w-96 h-48 sm:h-72 lg:h-96 bg-rivamez-cyan/10 rounded-full blur-3xl hidden sm:block" />
       <div className="absolute bottom-0 left-0 w-48 sm:w-72 lg:w-96 h-48 sm:h-72 lg:h-96 bg-rivamez-navy/10 rounded-full blur-3xl hidden sm:block" />
 
-      <div className="container mx-auto max-w-7xl relative z-10">
+      <div className="container-responsive relative z-10">
         {/* Encabezado */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-12 md:mb-16"
+          className="text-center mb-fluid-block"
         >
           <span className="inline-block px-4 py-2 bg-rivamez-navy/10 text-rivamez-navy text-sm font-semibold rounded-full mb-4">
             RESPALDO Y CERTIFICACIONES
           </span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-rivamez-navy mb-6">
+          <h2 className="text-fluid-h2 font-bold text-rivamez-navy mb-6">
             La credibilidad no se declara,
             <span className="block text-rivamez-cyan">se verifica</span>
           </h2>
-          <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-fluid-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Grupo Rivamez es el nombre comercial de FreeCloud S.A.C., empresa constructora formal de
             Huancayo, constituida en 2015 e inscrita en Registros Públicos, activa y habida ante
             SUNAT. Su sistema de gestión está certificado por un organismo acreditado
@@ -78,7 +78,7 @@ export default function Respaldo() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-10 md:mb-14"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-fluid-gap mb-fluid-block"
         >
           <div className="rounded-xl border border-gray-200 bg-white p-5 text-center shadow-sm">
             <p className="text-[11px] uppercase tracking-wide text-gray-500 font-semibold mb-1">
@@ -110,7 +110,7 @@ export default function Respaldo() {
         </motion.div>
 
         {/* Las cuatro normas certificadas */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-fluid-gap">
           {normas.map((norma, index) => (
             <motion.div
               key={norma.id}
@@ -158,14 +158,14 @@ export default function Respaldo() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="mt-8 md:mt-10 rounded-2xl border border-gray-200 bg-gray-50 p-6 sm:p-8"
+          className="mt-fluid-block rounded-2xl border border-gray-200 bg-gray-50 p-fluid-block"
         >
-          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
+          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-fluid-gap">
             <div className="max-w-2xl">
-              <h3 className="text-xl sm:text-2xl font-bold text-rivamez-navy mb-3">
+              <h3 className="text-fluid-h3 font-bold text-rivamez-navy mb-3">
                 Organismo certificador
               </h3>
-              <p className="text-sm sm:text-base text-gray-600 leading-relaxed mb-4">
+              <p className="text-body text-gray-600 leading-relaxed mb-4">
                 {CERTIFIER}, Management System Certification Body N.° MSCB-1550, acreditado por IAS y
                 miembro del IAF. Certificación inicial: 04/05/2026; auditoría de vigilancia:
                 07/05/2027; recertificación: 04/05/2028.
@@ -220,7 +220,7 @@ export default function Respaldo() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="mt-8 text-center text-base sm:text-lg text-gray-600"
+          className="mt-fluid-block text-center text-body text-gray-600"
         >
           Detrás hay más de diez años de empresa formal en ingeniería, arquitectura y gestión de
           proyectos, con ejecución, consultoría y supervisión de obras.{' '}

@@ -85,7 +85,7 @@ export default function Timeline() {
   ];
 
   return (
-    <section id="historia" className="relative py-20 md:py-32 overflow-hidden bg-gradient-to-b from-white to-gray-50">
+    <section id="historia" className="relative py-fluid-section overflow-hidden bg-gradient-to-b from-white to-gray-50">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-30">
         <div className="absolute inset-0" style={{
@@ -94,25 +94,25 @@ export default function Timeline() {
         }} />
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative container-responsive">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-20"
+          className="text-center mb-fluid-block"
         >
           <span className="inline-block px-4 py-2 bg-rivamez-cyan/10 text-rivamez-cyan rounded-full text-sm font-semibold mb-4">
             NUESTRA HISTORIA
           </span>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-rivamez-navy mb-6">
+          <h2 className="text-fluid-h1 font-bold text-rivamez-navy mb-6">
             Construyendo Historia
             <span className="block bg-gradient-to-r from-rivamez-cyan to-rivamez-green bg-clip-text text-transparent">
               Más de 10 Años
             </span>
           </h2>
-          <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-fluid-lg text-gray-600 max-w-3xl mx-auto">
             FreeCloud S.A.C., que opera bajo el nombre comercial Grupo Rivamez, se constituyó el 23
             de abril de 2015 según su partida registral. Los hitos anteriores corresponden a la
             trayectoria profesional del equipo fundador.
@@ -139,7 +139,7 @@ export default function Timeline() {
               >
                 {/* Content */}
                 <div className={`flex-1 ${index % 2 === 0 ? 'md:text-right' : 'md:text-left'}`}>
-                  <div className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-shadow duration-300 border border-gray-100">
+                  <div className="bg-white rounded-2xl p-fluid-block shadow-xl hover:shadow-2xl transition-shadow duration-300 border border-gray-100">
                     {/* Year Badge */}
                     <div className={`inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r ${milestone.color} text-white rounded-full font-bold mb-4`}>
                       <span className="text-2xl">{milestone.icon}</span>
@@ -147,7 +147,7 @@ export default function Timeline() {
                     </div>
 
                     {/* Title */}
-                    <h3 className="text-2xl md:text-3xl font-bold text-rivamez-navy mb-3">
+                    <h3 className="text-fluid-h3 font-bold text-rivamez-navy mb-3">
                       {milestone.title}
                     </h3>
 
@@ -195,28 +195,28 @@ export default function Timeline() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="mt-20 bg-gradient-to-br from-rivamez-navy to-rivamez-cyan rounded-3xl p-8 md:p-12"
+          className="mt-fluid-block bg-gradient-to-br from-rivamez-navy to-rivamez-cyan rounded-3xl p-fluid-block"
         >
-          <h3 className="text-3xl md:text-4xl font-bold text-white text-center mb-8">
+          <h3 className="text-fluid-h2 font-bold text-white text-center mb-fluid-block">
             Nuestra Trayectoria en Números
           </h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-fluid-gap">
             <div className="text-center">
-              <div className="text-4xl md:text-6xl font-bold text-white mb-2">
-                +10 <span className="text-2xl md:text-4xl">años</span>
+              <div className="text-fluid-h1 font-bold text-white mb-2">
+                +10 <span className="text-fluid-h2">años</span>
               </div>
               <div className="text-white">De empresa formal desde 2015</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl md:text-6xl font-bold text-white mb-2">+50</div>
+              <div className="text-fluid-h1 font-bold text-white mb-2">+50</div>
               <div className="text-white">Proyectos desarrollados</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl md:text-6xl font-bold text-white mb-2">4</div>
+              <div className="text-fluid-h1 font-bold text-white mb-2">4</div>
               <div className="text-white">Certificaciones ISO vigentes</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl md:text-6xl font-bold text-white mb-2">100%</div>
+              <div className="text-fluid-h1 font-bold text-white mb-2">100%</div>
               <div className="text-white">Verificable en línea</div>
             </div>
           </div>
@@ -228,9 +228,9 @@ export default function Timeline() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="text-center mt-12"
+          className="text-center mt-fluid-block"
         >
-          <p className="text-lg text-gray-600 mb-6">
+          <p className="text-fluid-lg text-gray-600 mb-6">
             ¿Listo para ser parte de nuestra próxima historia de éxito?
           </p>
           <a

@@ -78,12 +78,12 @@ export default function Features() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-responsive"
+          className="text-center mb-fluid-block"
         >
           <span className="inline-block px-4 py-2 bg-rivamez-navy/10 text-rivamez-navy text-small font-semibold rounded-full mb-4">
             ¿POR QUÉ ELEGIRNOS?
           </span>
-          <h2 className="heading-xl text-gray-900 mb-responsive">
+          <h2 className="heading-xl text-gray-900 mb-fluid-block">
             Compromiso con la Excelencia
           </h2>
           <p className="text-body text-gray-600 max-w-3xl mx-auto">
@@ -91,8 +91,9 @@ export default function Features() {
           </p>
         </motion.div>
 
-        {/* Features Grid */}
-        <div className="grid-3-cols">
+        {/* Features Grid: grilla intrinseca (grid-auto = auto-fit minmax 18rem); con los
+            gaps fluidos rinde 3 columnas en escritorio y 1024, 2 en tablet y 1 en movil. */}
+        <div className="grid-auto">
           {features.map((feature, index) => (
             <motion.div
               key={feature.id}
@@ -102,7 +103,7 @@ export default function Features() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="group relative"
             >
-              <div className="h-full p-4 sm:p-6 lg:p-8 rounded-2xl border border-gray-200 hover:border-rivamez-cyan hover:shadow-xl hover:shadow-rivamez-cyan/10 hover:-translate-y-2 transition-all duration-500 bg-white">
+              <div className="h-full p-fluid-block rounded-2xl border border-gray-200 hover:border-rivamez-cyan hover:shadow-xl hover:shadow-rivamez-cyan/10 hover:-translate-y-2 transition-all duration-500 bg-white">
                 {/* Icon */}
                 <div className="relative mb-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-rivamez-cyan via-rivamez-navy to-rivamez-green rounded-full flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg">
@@ -140,9 +141,9 @@ export default function Features() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-center mt-responsive"
+          className="text-center mt-fluid-block"
         >
-          <p className="text-body text-gray-600 mb-responsive">¿Listo para iniciar tu proyecto con nosotros?</p>
+          <p className="text-body text-gray-600 mb-fluid-block">¿Listo para iniciar tu proyecto con nosotros?</p>
           <a
             href="#contacto"
             className="inline-flex items-center gap-2 btn-primary bg-gradient-to-r from-rivamez-navy to-rivamez-cyan text-white rounded-xl hover:shadow-2xl hover:shadow-rivamez-cyan/30 hover:scale-105 transition-all duration-300"

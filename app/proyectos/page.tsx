@@ -128,7 +128,7 @@ export default function ProyectosPage() {
   return (
     <div className="pt-20">
         {/* Hero Section */}
-        <section className="relative py-24 px-4 bg-gradient-to-br from-rivamez-navy via-gray-900 to-rivamez-dark text-white overflow-hidden">
+        <section className="relative section-padding bg-gradient-to-br from-rivamez-navy via-gray-900 to-rivamez-dark text-white overflow-hidden">
           {/* Background Pattern */}
           <div className="absolute inset-0 opacity-10">
             <div style={{
@@ -147,10 +147,10 @@ export default function ProyectosPage() {
               <span className="inline-block px-5 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-sm font-semibold mb-6">
                 PORTAFOLIO
               </span>
-              <h1 className="text-5xl md:text-6xl font-bold mb-6">
+              <h1 className="text-fluid-h1 font-bold mb-6">
                 Nuestros Proyectos
               </h1>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p className="text-fluid-lg text-gray-300 max-w-3xl mx-auto">
                 Más de 50 proyectos desarrollados en Huancayo y la región Junín, cada uno con contrato y expediente técnico
               </p>
             </motion.div>
@@ -179,9 +179,9 @@ export default function ProyectosPage() {
         </section>
 
         {/* Projects Grid */}
-        <section className="py-20 px-4 bg-gradient-to-b from-gray-50 to-white">
+        <section className="section-padding bg-gradient-to-b from-gray-50 to-white">
           <div className="container mx-auto max-w-7xl">
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-fluid-gap">
               {filteredProjects.map((project, idx) => (
                 <motion.div
                   key={idx}
@@ -215,7 +215,7 @@ export default function ProyectosPage() {
 
                   {/* Content */}
                   <div className="p-6">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-2 group-hover:text-rivamez-cyan transition-colors">
+                    <h3 className="text-fluid-h3 font-bold text-gray-900 mb-2 group-hover:text-rivamez-cyan transition-colors">
                       {project.title}
                     </h3>
                     <div className="flex items-center text-sm text-gray-600 mb-4">
@@ -271,7 +271,7 @@ export default function ProyectosPage() {
         <CoverageMap />
 
         {/* CTA Section */}
-        <section className="py-20 px-4 bg-gradient-to-r from-rivamez-navy to-rivamez-cyan text-white">
+        <section className="section-padding bg-gradient-to-r from-rivamez-navy to-rivamez-cyan text-white">
           <div className="container mx-auto max-w-4xl text-center">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -279,10 +279,10 @@ export default function ProyectosPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              <h2 className="text-fluid-h2 font-bold mb-6">
                 ¿Tienes un Proyecto en Mente?
               </h2>
-              <p className="text-xl mb-8 text-gray-200">
+              <p className="text-fluid-lg mb-8 text-gray-200">
                 Convierte tu visión en realidad con los expertos de RIVAMEZ
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

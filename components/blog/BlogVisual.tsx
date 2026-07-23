@@ -231,7 +231,7 @@ export default function BlogVisual({ initialPosts = [], initialFeaturedPost = nu
             className="mb-12 pb-12 border-b border-gray-200"
           >
             <Link href={`/blog/${featuredPost.slug.current}`}>
-              <div className="grid lg:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
+              <div className="grid lg:grid-cols-2 gap-fluid-gap">
                 {/* Imagen */}
                 <motion.div
                   whileHover={{ scale: 1.02 }}
@@ -264,7 +264,7 @@ export default function BlogVisual({ initialPosts = [], initialFeaturedPost = nu
                     initial={{ x: 100, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
                     transition={{ delay: 0.3 }}
-                    className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-black text-rivamez-navy mb-2 sm:mb-3 md:mb-4 leading-tight group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-rivamez-navy group-hover:to-rivamez-cyan transition-all duration-500"
+                    className="text-fluid-h1 font-black text-rivamez-navy mb-2 sm:mb-3 md:mb-4 leading-tight group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-rivamez-navy group-hover:to-rivamez-cyan transition-all duration-500"
                   >
                     {featuredPost.title}
                   </motion.h1>
@@ -273,7 +273,7 @@ export default function BlogVisual({ initialPosts = [], initialFeaturedPost = nu
                     initial={{ x: 100, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
                     transition={{ delay: 0.4 }}
-                    className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-700 leading-relaxed font-medium line-clamp-3 sm:line-clamp-none"
+                    className="text-fluid-lg text-gray-700 leading-relaxed font-medium line-clamp-3 sm:line-clamp-none"
                   >
                     {featuredPost.excerpt}
                   </motion.p>
@@ -305,7 +305,7 @@ export default function BlogVisual({ initialPosts = [], initialFeaturedPost = nu
         )}
 
         {/* Layout Principal */}
-        <div className="grid lg:grid-cols-12 gap-6 md:gap-8 lg:gap-10">
+        <div className="grid lg:grid-cols-12 gap-fluid-gap">
           {/* Columna Principal */}
           <div className="lg:col-span-8">
             {/* Top Stories */}
@@ -316,7 +316,7 @@ export default function BlogVisual({ initialPosts = [], initialFeaturedPost = nu
                   Noticias Destacadas
                 </h2>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-fluid-gap">
                   {topPosts.map((post, index) => (
                     <motion.article
                       key={post._id}

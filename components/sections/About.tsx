@@ -65,7 +65,7 @@ export default function About() {
   }, []);
 
   return (
-    <section id="nosotros" ref={sectionRef} className="py-12 md:py-16 lg:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white via-gray-50 to-white relative overflow-hidden">
+    <section id="nosotros" ref={sectionRef} className="py-fluid-section bg-gradient-to-b from-white via-gray-50 to-white relative overflow-hidden">
       {/* Geometric Pattern */}
       <div className="absolute inset-0 opacity-5" style={{
         backgroundImage: `
@@ -80,41 +80,41 @@ export default function About() {
       <div className="absolute bottom-0 right-0 w-48 sm:w-72 lg:w-96 h-48 sm:h-72 lg:h-96 bg-rivamez-navy/10 rounded-full blur-3xl animate-pulse hidden sm:block" style={{ animationDuration: '12s', animationDelay: '2s' }} />
       <div className="absolute top-1/2 left-1/4 w-64 h-64 bg-rivamez-green/8 rounded-full blur-3xl hidden sm:block" />
 
-      <div className="container mx-auto max-w-7xl relative z-10">
+      <div className="container-responsive relative z-10">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center mb-fluid-block"
         >
           <span className="inline-block px-4 py-2 bg-rivamez-navy/10 text-rivamez-navy text-sm font-semibold rounded-full mb-4">
             QUIÉNES SOMOS
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-fluid-h2 font-bold text-gray-900 mb-6">
             Construyendo el Futuro de Huancayo
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-fluid-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Con un equipo de más de 15 años de experiencia profesional, desarrollamos proyectos residenciales y comerciales en la región central del Perú.
           </p>
         </motion.div>
 
         {/* Mission & Vision Grid */}
-        <div className="grid md:grid-cols-2 gap-4 sm:gap-6 mb-12 md:mb-20 p-4 sm:p-6 lg:p-8">
+        <div className="grid-auto mb-fluid-block p-fluid-block">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="bg-white p-4 sm:p-6 lg:p-8 rounded-2xl shadow-xl border border-gray-100 hover:shadow-2xl transition-shadow duration-300"
+            className="bg-white p-fluid-block rounded-2xl shadow-xl border border-gray-100 hover:shadow-2xl transition-shadow duration-300"
           >
             <div className="w-16 h-16 bg-gradient-to-br from-rivamez-cyan to-rivamez-navy rounded-xl flex items-center justify-center mb-6">
               <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
             </div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Nuestra Misión</h3>
+            <h3 className="text-fluid-h3 font-bold text-gray-900 mb-4">Nuestra Misión</h3>
             <p className="text-gray-600 leading-relaxed">
               Transformar la visión de nuestros clientes en realidad, entregando proyectos de construcción de la más alta calidad que superen expectativas y generen valor a largo plazo para la comunidad de Huancayo.
             </p>
@@ -125,7 +125,7 @@ export default function About() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="bg-white p-4 sm:p-6 lg:p-8 rounded-2xl shadow-xl border border-gray-100 hover:shadow-2xl transition-shadow duration-300"
+            className="bg-white p-fluid-block rounded-2xl shadow-xl border border-gray-100 hover:shadow-2xl transition-shadow duration-300"
           >
             <div className="w-16 h-16 bg-gradient-to-br from-rivamez-green to-rivamez-cyan rounded-xl flex items-center justify-center mb-6">
               <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -133,7 +133,7 @@ export default function About() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
               </svg>
             </div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Nuestra Visión</h3>
+            <h3 className="text-fluid-h3 font-bold text-gray-900 mb-4">Nuestra Visión</h3>
             <p className="text-gray-600 leading-relaxed">
               Ser la empresa constructora e inmobiliaria líder en la región central del Perú, reconocida por nuestra innovación, calidad excepcional y compromiso inquebrantable con el desarrollo sostenible.
             </p>
@@ -141,22 +141,22 @@ export default function About() {
         </div>
 
         {/* Values */}
-        <div className="mb-12">
-          <h3 className="text-3xl font-bold text-center text-gray-900 mb-12">Nuestros Valores</h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="mb-fluid-block">
+          <h3 className="text-fluid-h3 font-bold text-center text-gray-900 mb-fluid-block">Nuestros Valores</h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-fluid-gap">
             {values.map((value, index) => (
               <div
                 key={value.id}
                 ref={(el) => (cardsRef.current[index] = el)}
-                className="group bg-white p-4 sm:p-6 lg:p-8 rounded-2xl border border-gray-200 hover:border-rivamez-cyan hover:shadow-xl hover:shadow-rivamez-cyan/10 hover:-translate-y-1 transition-all duration-300 opacity-0"
+                className="group bg-white p-fluid-block rounded-2xl border border-gray-200 hover:border-rivamez-cyan hover:shadow-xl hover:shadow-rivamez-cyan/10 hover:-translate-y-1 transition-all duration-300 opacity-0"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-rivamez-cyan via-rivamez-navy to-rivamez-green rounded-full flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg">
                   <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={value.icon} />
                   </svg>
                 </div>
-                <h4 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-rivamez-navy transition-colors">{value.title}</h4>
-                <p className="text-sm text-gray-600 leading-relaxed">{value.description}</p>
+                <h4 className="text-fluid-lg font-bold text-gray-900 mb-3 group-hover:text-rivamez-navy transition-colors">{value.title}</h4>
+                <p className="text-fluid-small text-gray-600 leading-relaxed">{value.description}</p>
               </div>
             ))}
           </div>
@@ -168,7 +168,7 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-center mt-16"
+          className="text-center mt-fluid-block"
         >
           <a
             href="#contacto"

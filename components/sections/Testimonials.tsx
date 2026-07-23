@@ -95,7 +95,7 @@ export default function Testimonials() {
   }, []);
 
   return (
-    <section id="testimonios" ref={sectionRef} className="py-12 md:py-16 lg:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-100 via-white to-gray-50 relative overflow-hidden">
+    <section id="testimonios" ref={sectionRef} className="py-fluid-section bg-gradient-to-b from-gray-100 via-white to-gray-50 relative overflow-hidden">
       {/* Line Pattern */}
       <div className="absolute inset-0 opacity-10" style={{
         backgroundImage: `repeating-linear-gradient(
@@ -112,33 +112,34 @@ export default function Testimonials() {
       <div className="absolute bottom-0 left-0 w-48 sm:w-72 lg:w-96 h-48 sm:h-72 lg:h-96 bg-rivamez-cyan/8 rounded-full blur-3xl animate-pulse hidden sm:block" style={{ animationDuration: '10s', animationDelay: '2s' }} />
       <div className="absolute top-1/2 right-1/4 w-64 h-64 bg-rivamez-green/5 rounded-full blur-3xl hidden sm:block" />
 
-      <div className="container mx-auto max-w-7xl relative z-10">
+      <div className="container-responsive relative z-10">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center mb-fluid-block"
         >
           <span className="inline-block px-4 py-2 bg-rivamez-navy/10 text-rivamez-navy text-sm font-semibold rounded-full mb-4">
             TESTIMONIOS
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-fluid-h2 font-bold text-gray-900 mb-6">
             Lo Que Dicen Nuestros Clientes
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-fluid-lg text-gray-600 max-w-3xl mx-auto">
             La satisfacción de nuestros clientes es nuestro mayor logro. Conoce sus experiencias trabajando con nosotros.
           </p>
         </motion.div>
 
-        {/* Testimonials Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 mb-12">
+        {/* Testimonials Grid: grilla intrinseca (grid-auto); con los gaps fluidos rinde
+            3 columnas en escritorio y 1024, 2 en tablet y 1 en movil. */}
+        <div className="grid-auto mb-fluid-block">
           {testimonials.map((testimonial, index) => (
             <div
               key={testimonial.id}
               ref={(el) => (cardsRef.current[index] = el)}
-              className="group bg-white p-4 sm:p-6 lg:p-8 rounded-2xl border border-gray-200 hover:border-rivamez-cyan hover:shadow-2xl hover:shadow-rivamez-cyan/10 hover:-translate-y-2 transition-all duration-500 opacity-0"
+              className="group bg-white p-fluid-block rounded-2xl border border-gray-200 hover:border-rivamez-cyan hover:shadow-2xl hover:shadow-rivamez-cyan/10 hover:-translate-y-2 transition-all duration-500 opacity-0"
             >
               {/* Rating */}
               <div className="flex gap-1 mb-4">
@@ -179,12 +180,12 @@ export default function Testimonials() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="p-6 sm:p-8 bg-gradient-to-r from-rivamez-navy to-rivamez-cyan rounded-2xl text-center text-white"
+          className="p-fluid-block bg-gradient-to-r from-rivamez-navy to-rivamez-cyan rounded-2xl text-center text-white"
         >
-          <p className="text-lg sm:text-xl font-semibold mb-2">
+          <p className="text-fluid-lg font-semibold mb-2">
             La confianza se comprueba, no se declara
           </p>
-          <p className="text-sm sm:text-base opacity-90 max-w-2xl mx-auto">
+          <p className="text-body opacity-90 max-w-2xl mx-auto">
             Cada proyecto se entrega con contrato, expediente técnico y respaldo de una empresa
             formal desde 2015, con cuatro certificaciones ISO verificables en línea.
           </p>

@@ -152,7 +152,7 @@ export default function Services() {
     <section
       id="servicios"
       ref={sectionRef}
-      className="section-padding bg-gradient-to-br from-rivamez-dark via-gray-900 to-rivamez-navy text-white relative overflow-hidden"
+      className="py-fluid-section bg-gradient-to-br from-rivamez-dark via-gray-900 to-rivamez-navy text-white relative overflow-hidden"
     >
       {/* Circuit Pattern */}
       <div className="absolute inset-0 opacity-10">
@@ -173,11 +173,11 @@ export default function Services() {
       <div className="absolute top-20 right-20 w-96 h-96 bg-rivamez-cyan/10 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '7s' }} />
       <div className="absolute bottom-20 left-20 w-96 h-96 bg-rivamez-green/10 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '9s', animationDelay: '1s' }} />
       <div className="container-responsive">
-        <div className="text-center mb-responsive">
+        <div className="text-center mb-fluid-block">
           <span className="inline-block px-4 py-2 bg-rivamez-cyan/20 text-rivamez-cyan-lighter text-small font-semibold rounded-full mb-4">
             SERVICIOS PROFESIONALES
           </span>
-          <h2 className="heading-xl mb-responsive">
+          <h2 className="heading-xl mb-fluid-block">
             Soluciones Integrales de Construcción
           </h2>
           <p className="text-gray-400 text-body max-w-3xl mx-auto">
@@ -187,12 +187,12 @@ export default function Services() {
         </div>
 
         {/* Grid de Estadísticas/Contadores */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-6 mt-responsive p-4 sm:p-6 lg:p-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-fluid-gap mt-fluid-block p-fluid-block">
           {stats.map((stat, index) => (
             <div
               key={stat.id}
-              className="text-center card-responsive bg-gray-800 rounded-lg">
-              <div className="text-4xl sm:text-5xl font-bold mb-2">
+              className="text-center p-fluid-block rounded-lg shadow-md bg-gray-800">
+              <div className="text-fluid-h1 font-bold mb-2">
                 <span className="text-blue-400">{stat.prefix}</span>
                 <span
                   ref={(el) => (counterRefs.current[index] = el)}
@@ -200,7 +200,7 @@ export default function Services() {
                 >
                   0
                 </span>
-                <span className="text-blue-400 text-2xl sm:text-3xl">{stat.suffix}</span>
+                <span className="text-blue-400 text-fluid-h2">{stat.suffix}</span>
               </div>
               <p className="text-gray-300 text-body">{stat.label}</p>
             </div>
@@ -208,11 +208,11 @@ export default function Services() {
         </div>
 
         {/* Lista de Servicios */}
-        <div className="mt-responsive grid-3-cols">
+        <div className="mt-fluid-block grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-fluid-gap">
           {services.map((service) => (
             <div
               key={service.id}
-              className={`bg-gradient-to-br from-gray-800 to-gray-900 p-4 sm:p-6 lg:p-8 rounded-2xl hover:shadow-2xl hover:shadow-rivamez-cyan/20 transition-all duration-300 border group ${
+              className={`bg-gradient-to-br from-gray-800 to-gray-900 p-fluid-block rounded-2xl hover:shadow-2xl hover:shadow-rivamez-cyan/20 transition-all duration-300 border group ${
                 service.featured
                   ? 'sm:col-span-2 lg:col-span-3 border-rivamez-cyan/50'
                   : 'border-gray-700 hover:border-rivamez-cyan'
@@ -224,7 +224,7 @@ export default function Services() {
                 </svg>
               </div>
               <h3 className="heading-md mb-3 text-white">{service.title}</h3>
-              <p className="text-gray-400 text-body mb-responsive leading-relaxed">
+              <p className="text-gray-400 text-body mb-fluid-block leading-relaxed">
                 {service.description}
               </p>
               <ul className={service.featured ? 'grid sm:grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-4' : 'space-y-2'}>
@@ -242,7 +242,7 @@ export default function Services() {
         </div>
 
         {/* CTA Button */}
-        <div className="mt-responsive text-center">
+        <div className="mt-fluid-block text-center">
           <a
             href="#contacto"
             className="inline-flex items-center gap-2 btn-primary bg-gradient-to-r from-rivamez-cyan to-rivamez-navy text-white rounded-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"

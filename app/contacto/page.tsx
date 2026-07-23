@@ -94,7 +94,7 @@ export default function ContactoPage() {
   return (
     <div className="pt-20">
       {/* Hero Section */}
-      <section className="relative py-16 sm:py-20 md:py-24 px-4 bg-gradient-to-br from-rivamez-navy via-gray-900 to-rivamez-dark text-white overflow-hidden">
+      <section className="relative section-padding bg-gradient-to-br from-rivamez-navy via-gray-900 to-rivamez-dark text-white overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-10">
           <div style={{
@@ -113,10 +113,10 @@ export default function ContactoPage() {
             <span className="inline-block px-5 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-sm font-semibold mb-6">
               CONTÁCTANOS
             </span>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+            <h1 className="text-fluid-h1 font-bold mb-6">
               Hablemos de Tu Proyecto
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-fluid-lg text-gray-300 max-w-3xl mx-auto">
               Estamos listos para ayudarte a convertir tu visión en realidad. Contáctanos hoy y recibe una cotización personalizada
             </p>
           </motion.div>
@@ -124,9 +124,9 @@ export default function ContactoPage() {
       </section>
 
       {/* Contact Cards */}
-      <section className="py-16 sm:py-20 md:py-24 px-4 bg-gray-50 overflow-hidden">
+      <section className="section-padding bg-gray-50 overflow-hidden">
         <div className="container mx-auto max-w-7xl">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+          <div className="grid-auto mb-16">
             {contactInfo.map((info, idx) => (
               <motion.div
                 key={idx}
@@ -140,7 +140,7 @@ export default function ContactoPage() {
                     {info.icon}
                   </svg>
                 </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-3">{info.title}</h3>
+                <h3 className="text-fluid-lg font-bold text-gray-900 mb-3">{info.title}</h3>
                 {info.details.map((detail, i) => (
                   <p key={i} className="text-gray-600 mb-1">{detail}</p>
                 ))}
@@ -164,9 +164,9 @@ export default function ContactoPage() {
       </section>
 
       {/* Form Section */}
-      <section className="py-16 sm:py-20 md:py-24 px-4 bg-white overflow-hidden">
+      <section className="section-padding bg-white overflow-hidden">
         <div className="container mx-auto max-w-7xl">
-          <div className="grid lg:grid-cols-2 gap-12">
+          <div className="grid lg:grid-cols-2 gap-fluid-gap">
             {/* Form */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
@@ -174,10 +174,10 @@ export default function ContactoPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-fluid-h3 font-bold text-gray-900 mb-4">
                 Solicita una Cotización
               </h2>
-              <p className="text-lg text-gray-600 mb-8">
+              <p className="text-fluid-body text-gray-600 mb-8">
                 Completa el formulario y nos pondremos en contacto contigo en menos de 24 horas
               </p>
 
@@ -192,12 +192,12 @@ export default function ContactoPage() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
-                  <h3 className="text-xl font-bold text-green-900 mb-2">¡Mensaje Enviado!</h3>
+                  <h3 className="text-fluid-lg font-bold text-green-900 mb-2">¡Mensaje Enviado!</h3>
                   <p className="text-green-700">Nos pondremos en contacto contigo pronto</p>
                 </motion.div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid md:grid-cols-2 gap-4 sm:gap-6">
+                  <div className="grid md:grid-cols-2 gap-fluid-gap">
                     <div>
                       <label className="block text-sm font-semibold text-gray-700 mb-2">
                         Nombre Completo *
@@ -307,7 +307,7 @@ export default function ContactoPage() {
               </div>
 
               <div className="bg-gradient-to-br from-rivamez-cyan/10 to-white rounded-2xl p-8 border border-rivamez-cyan/20">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">¿Por qué elegirnos?</h3>
+                <h3 className="text-fluid-h3 font-bold text-gray-900 mb-4">¿Por qué elegirnos?</h3>
                 <ul className="space-y-3">
                   <li className="flex items-start">
                     <svg className="w-6 h-6 text-rivamez-cyan mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -341,7 +341,7 @@ export default function ContactoPage() {
       </section>
 
       {/* Offices */}
-      <section className="py-16 sm:py-20 md:py-24 px-4 bg-gradient-to-b from-gray-50 to-white overflow-hidden">
+      <section className="section-padding bg-gradient-to-b from-gray-50 to-white overflow-hidden">
         <div className="container mx-auto max-w-7xl">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -350,15 +350,15 @@ export default function ContactoPage() {
             transition={{ duration: 0.8 }}
             className="text-center mb-12"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            <h2 className="text-fluid-h2 font-bold text-gray-900 mb-4">
               Nuestras Oficinas
             </h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-fluid-lg text-gray-600">
               Visítanos en cualquiera de nuestras ubicaciones
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-fluid-gap">
             {offices.map((office, idx) => (
               <motion.div
                 key={idx}
@@ -376,7 +376,7 @@ export default function ContactoPage() {
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">{office.name}</h3>
+                  <h3 className="text-fluid-h3 font-bold text-gray-900 mb-4">{office.name}</h3>
                   <div className="space-y-3">
                     <div className="flex items-start">
                       <svg className="w-5 h-5 text-rivamez-cyan mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

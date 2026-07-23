@@ -75,7 +75,7 @@ export default function CoverageMap() {
   ];
 
   return (
-    <section id="cobertura" className="relative py-20 md:py-32 overflow-hidden bg-white">
+    <section id="cobertura" className="relative py-fluid-section overflow-hidden bg-white">
       {/* Background */}
       <div className="absolute inset-0 opacity-30">
         <div className="absolute inset-0" style={{
@@ -84,40 +84,40 @@ export default function CoverageMap() {
         }} />
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative container-responsive">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-fluid-block"
         >
           <span className="inline-block px-4 py-2 bg-rivamez-cyan/10 text-rivamez-cyan rounded-full text-sm font-semibold mb-4">
             PRESENCIA REGIONAL
           </span>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-rivamez-navy mb-6">
+          <h2 className="text-fluid-h1 font-bold text-rivamez-navy mb-6">
             Dónde Construimos
             <span className="block bg-gradient-to-r from-rivamez-cyan to-rivamez-green bg-clip-text text-transparent">
               en Huancayo
             </span>
           </h2>
-          <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-fluid-lg text-gray-600 max-w-3xl mx-auto">
             Atendemos proyectos en siete distritos de Huancayo y el valle del Mantaro, con obra,
             supervisión y gestión de trámites municipales en cada zona.
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-start mb-16">
+        <div className="grid lg:grid-cols-2 gap-fluid-gap items-start mb-fluid-block">
           {/* Map Visualization */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="relative bg-gradient-to-br from-gray-50 to-white rounded-3xl p-8 shadow-xl border border-gray-100"
+            className="relative bg-gradient-to-br from-gray-50 to-white rounded-3xl p-fluid-block shadow-xl border border-gray-100"
           >
-            <h3 className="text-2xl font-bold text-rivamez-navy mb-6 text-center">
+            <h3 className="text-fluid-h3 font-bold text-rivamez-navy mb-6 text-center">
               Mapa de Cobertura
             </h3>
 
@@ -209,7 +209,7 @@ export default function CoverageMap() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h3 className="text-2xl font-bold text-rivamez-navy mb-6">
+            <h3 className="text-fluid-h3 font-bold text-rivamez-navy mb-6">
               Distritos donde trabajamos
             </h3>
 
@@ -251,13 +251,13 @@ export default function CoverageMap() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mb-16"
+          className="mb-fluid-block"
         >
-          <h3 className="text-2xl font-bold text-rivamez-navy text-center mb-8">
+          <h3 className="text-fluid-h3 font-bold text-rivamez-navy text-center mb-fluid-block">
             Tipos de Proyecto que Ejecutamos
           </h3>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-fluid-gap">
             {projectTypes.map((type, index) => (
               <motion.div
                 key={index}
@@ -265,10 +265,10 @@ export default function CoverageMap() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className={`bg-gradient-to-br ${type.color} rounded-2xl p-6 text-white text-center hover:scale-105 transition-transform duration-300`}
+                className={`bg-gradient-to-br ${type.color} rounded-2xl p-fluid-block text-white text-center hover:scale-105 transition-transform duration-300`}
               >
                 <div className="text-5xl mb-3">{type.icon}</div>
-                <div className="text-xl font-bold mb-2">{type.type}</div>
+                <div className="text-fluid-lg font-bold mb-2">{type.type}</div>
                 <div className="text-sm opacity-90">{type.desc}</div>
               </motion.div>
             ))}
@@ -281,12 +281,12 @@ export default function CoverageMap() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="bg-gradient-to-br from-rivamez-navy to-rivamez-cyan rounded-3xl p-8 md:p-12 text-center"
+          className="bg-gradient-to-br from-rivamez-navy to-rivamez-cyan rounded-3xl p-fluid-block text-center"
         >
-          <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h3 className="text-fluid-h2 font-bold text-white mb-4">
             ¿Buscas construir en Huancayo?
           </h3>
-          <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
+          <p className="text-fluid-lg text-white/90 mb-8 max-w-2xl mx-auto">
             Trabajamos en toda la provincia, con contrato, expediente técnico y gestión de los
             trámites municipales que tu obra necesita.
           </p>

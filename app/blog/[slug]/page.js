@@ -117,7 +117,7 @@ export default async function PostPage({ params }) {
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
         {/* Hero del Post */}
-        <article className="max-w-4xl mx-auto px-6 py-16">
+        <article className="max-w-4xl mx-auto px-6 py-fluid-section">
           {/* Breadcrumb */}
           <nav className="flex items-center gap-2 text-sm text-gray-500 mb-8">
             <Link href="/" className="hover:text-rivamez-navy transition-colors">
@@ -145,7 +145,7 @@ export default async function PostPage({ params }) {
           </div>
 
           {/* Título */}
-          <h1 className="text-4xl md:text-5xl font-bold text-rivamez-navy mb-6 leading-tight">
+          <h1 className="text-fluid-h1 font-bold text-rivamez-navy mb-6 leading-tight">
             {post.title}
           </h1>
 
@@ -214,7 +214,7 @@ export default async function PostPage({ params }) {
           {/* Contenido del post */}
           <div className="prose prose-lg max-w-none">
             {post.excerpt && (
-              <p className="text-xl text-gray-700 leading-relaxed mb-8 font-medium border-l-4 border-rivamez-cyan pl-6">
+              <p className="text-fluid-lg text-gray-700 leading-relaxed mb-8 font-medium border-l-4 border-rivamez-cyan pl-6">
                 {post.excerpt}
               </p>
             )}
