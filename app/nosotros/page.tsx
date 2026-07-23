@@ -789,7 +789,7 @@ export default function NosotrosPage() {
                 Solicitar Cotización
               </a>
               <a
-                href="tel:+51943818788"
+                href="tel:+51995060806"
                 className="px-8 py-4 bg-rivamez-dark/30 backdrop-blur-sm border-2 border-white text-white font-semibold rounded-lg hover:bg-rivamez-dark/50 hover:scale-105 transition-all duration-300"
               >
                 Llamar Ahora

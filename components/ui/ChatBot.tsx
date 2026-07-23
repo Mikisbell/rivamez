@@ -55,19 +55,19 @@ export default function ChatBot() {
     // Costos y presupuestos
     costos: {
       keywords: ['costo', 'precio', 'cuanto cuesta', 'cuánto cuesta', 'presupuesto', 'cotizar', 'cotización', 'valor'],
-      response: '💰 Los costos varían según el proyecto:\n\n• Casa (120m²): Desde S/ 180,000\n• Departamento: Desde S/ 150,000\n• Local comercial: Presupuesto personalizado\n• Remodelación: Desde S/ 50,000\n\n📋 ¿Quieres una cotización detallada?\n\n👉 Escribe "cotización" o contáctanos al +51 943 818 788'
+      response: '💰 Los costos varían según el proyecto:\n\n• Casa (120m²): Desde S/ 180,000\n• Departamento: Desde S/ 150,000\n• Local comercial: Presupuesto personalizado\n• Remodelación: Desde S/ 50,000\n\n📋 ¿Quieres una cotización detallada?\n\n👉 Escribe "cotización" o contáctanos al +51 995 060 806'
     },
 
     // Ubicación
     ubicacion: {
       keywords: ['ubicación', 'ubicacion', 'donde', 'dónde', 'dirección', 'direccion', 'encuentran'],
-      response: '📍 Nos ubicamos en:\n\n**Av. Cahuide 298, Huancayo, Perú**\n\n🕒 Horarios:\n• Lun - Vie: 8:00 AM - 6:00 PM\n• Sábados: 9:00 AM - 1:00 PM\n\n📞 Teléfono: +51 943 818 788\n📧 Email: info@rivamez.com'
+      response: '📍 Nos ubicamos en:\n\n**Av. Cahuide 298, Huancayo, Perú**\n\n🕒 Horarios:\n• Lun - Vie: 8:00 AM - 6:00 PM\n• Sábados: 9:00 AM - 1:00 PM\n\n📞 Teléfono: +51 995 060 806\n📧 Email: info@rivamez.com'
     },
 
     // Contacto
     contacto: {
       keywords: ['contacto', 'llamar', 'whatsapp', 'telefono', 'teléfono', 'email', 'correo'],
-      response: '📞 Contáctanos por:\n\n• **WhatsApp**: +51 943 818 788\n• **Teléfono**: +51 943 818 788\n• **Email**: info@rivamez.com\n\n💬 ¿Prefieres que te contactemos nosotros?\nEscribe "contacto" y te llamamos.'
+      response: '📞 Contáctanos por:\n\n• **WhatsApp**: +51 995 060 806\n• **Teléfono**: +51 995 060 806\n• **Email**: info@rivamez.com\n\n💬 ¿Prefieres que te contactemos nosotros?\nEscribe "contacto" y te llamamos.'
     },
 
     // Proyectos anteriores
@@ -103,7 +103,7 @@ export default function ChatBot() {
     // Cotización rápida
     cotizacion: {
       keywords: ['cotización', 'cotizacion', 'solicitar presupuesto', 'quiero presupuesto'],
-      response: '📋 ¡Perfecto! Para una cotización necesito:\n\n1. Tipo de proyecto (casa, depto, local)\n2. Área aproximada (m²)\n3. Ubicación\n4. Tus datos de contacto\n\n🚀 **Opción rápida**: Contáctanos por WhatsApp al +51 943 818 788 y te respondemos en 24h.\n\n¿Prefieres WhatsApp?'
+      response: '📋 ¡Perfecto! Para una cotización necesito:\n\n1. Tipo de proyecto (casa, depto, local)\n2. Área aproximada (m²)\n3. Ubicación\n4. Tus datos de contacto\n\n🚀 **Opción rápida**: Contáctanos por WhatsApp al +51 995 060 806 y te respondemos en 24h.\n\n¿Prefieres WhatsApp?'
     },
 
     // Saludo
@@ -115,12 +115,12 @@ export default function ChatBot() {
     // Agradecimiento
     gracias: {
       keywords: ['gracias', 'graciass', 'thank', 'agradezco'],
-      response: '😊 ¡De nada! Es un placer ayudarte.\n\n¿Hay algo más en lo que pueda asistirte?\n\nSi necesitas hablar con un asesor, contáctanos:\n📞 +51 943 818 788'
+      response: '😊 ¡De nada! Es un placer ayudarte.\n\n¿Hay algo más en lo que pueda asistirte?\n\nSi necesitas hablar con un asesor, contáctanos:\n📞 +51 995 060 806'
     },
 
     // Default - No entiendo
     default: {
-      response: '🤔 No estoy seguro de entender tu pregunta.\n\n💡 Puedo ayudarte con:\n\n• **Servicios**: ¿Qué ofrecemos?\n• **Precios**: ¿Cuánto cuesta?\n• **Tiempos**: ¿Cuánto demora?\n• **Contacto**: ¿Cómo comunicarnos?\n• **Proyectos**: Ver trabajos anteriores\n\n¿O prefieres hablar con un asesor? 👉 +51 943 818 788'
+      response: '🤔 No estoy seguro de entender tu pregunta.\n\n💡 Puedo ayudarte con:\n\n• **Servicios**: ¿Qué ofrecemos?\n• **Precios**: ¿Cuánto cuesta?\n• **Tiempos**: ¿Cuánto demora?\n• **Contacto**: ¿Cómo comunicarnos?\n• **Proyectos**: Ver trabajos anteriores\n\n¿O prefieres hablar con un asesor? 👉 +51 995 060 806'
     }
   };
 

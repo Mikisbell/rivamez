@@ -51,7 +51,7 @@
    - Empresa de remodelación
    
    Dirección exacta: [TU DIRECCIÓN EN HUANCAYO]
-   Teléfono: +51 943 818 788
+   Teléfono: +51 995 060 806
    Sitio web: https://rivamez.com
    
    Horario:
@@ -91,7 +91,7 @@
    
    Cobertura: Huancayo, El Tambo, Chilca, Concepción, Jauja, Tarma.
    
-   📞 Llámanos: +51 943 818 788
+   📞 Llámanos: +51 995 060 806
    ```
 
 4. **Posts semanales en Google Business:**

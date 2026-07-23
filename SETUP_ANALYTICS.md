@@ -257,7 +257,7 @@ Después de configurar todo:
 
 Si necesitas ayuda con la configuración:
 - 📧 Email: soporte@rivamez.com
-- 💬 WhatsApp: +51 943 818 788
+- 💬 WhatsApp: +51 995 060 806
 
 ---
 

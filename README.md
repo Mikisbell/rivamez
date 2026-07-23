@@ -343,7 +343,7 @@ chore: Mantenimiento
 
 **RIVAMEZ - Ingeniería & Arquitectura**
 - 📧 Email: info@rivamez.com
-- 📱 WhatsApp: +51 943 818 788
+- 📱 WhatsApp: +51 995 060 806
 - 🌐 Web: [rivamez.vercel.app](https://rivamez.vercel.app)
 - 📍 Ubicación: Huancayo, Junín, Perú
 

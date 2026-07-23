@@ -52,7 +52,7 @@ export const structuredData = {
     description: 'Constructora en Huancayo y toda la región Junín, empresa formal constituida en 2015. Construcción de casas, departamentos, locales comerciales e industriales, y formalización ante la municipalidad. Certificaciones ISO 9001, ISO 14001, ISO 45001 e ISO 37001.',
     foundingDate: '2015-04-23',
     url: 'https://rivamez.com',
-    telephone: '+51943818788',
+    telephone: '+51995060806',
     email: 'info@rivamez.com',
     priceRange: 'S/. 1,200 - S/. 2,500 por m²',
     paymentAccepted: ['Cash', 'Credit Card', 'Financiamiento directo', 'Mi Vivienda', 'Techo Propio'],

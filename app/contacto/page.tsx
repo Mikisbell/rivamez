@@ -10,9 +10,9 @@ const contactInfo = [
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
     ),
     title: 'Teléfono',
-    details: ['+51 943 818 788', '+51 964 123 456'],
+    details: ['+51 995 060 806'],
     action: 'Llamar ahora',
-    href: 'tel:+51943818788'
+    href: 'tel:+51995060806'
   },
   {
     icon: (
@@ -47,7 +47,7 @@ const offices = [
   {
     name: 'Oficina Principal',
     address: 'Calle Real 456, Huancayo',
-    phone: '+51 943 818 788',
+    phone: '+51 995 060 806',
     email: 'huancayo@rivamez.com',
     hours: 'Lun - Vie: 8:00 AM - 6:00 PM',
     image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80'

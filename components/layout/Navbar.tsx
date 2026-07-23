@@ -301,7 +301,7 @@ export default function NavbarNew() {
 
                 {/* CTA - Botón unificado */}
                 <a
-                  href="https://wa.me/51943818788?text=Hola,%20quiero%20solicitar%20una%20cotización%20para%20mi%20proyecto%20de%20construcción"
+                  href="https://wa.me/51995060806?text=Hola,%20quiero%20solicitar%20una%20cotización%20para%20mi%20proyecto%20de%20construcción"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 px-4 2xl:px-6 py-2.5 min-h-[44px] shrink-0 whitespace-nowrap bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white text-sm 2xl:text-base font-semibold rounded-lg hover:shadow-xl hover:shadow-green-500/30 hover:scale-105 transition-all duration-300"
@@ -502,7 +502,7 @@ export default function NavbarNew() {
                 {/* Mobile CTA - Un solo botón unificado */}
                 <div className="mt-8">
                   <a
-                    href="https://wa.me/51943818788?text=Hola,%20quiero%20solicitar%20una%20cotización%20para%20mi%20proyecto%20de%20construcción"
+                    href="https://wa.me/51995060806?text=Hola,%20quiero%20solicitar%20una%20cotización%20para%20mi%20proyecto%20de%20construcción"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center justify-center gap-3 px-6 py-4 bg-gradient-to-r from-green-500 to-green-600 text-white text-center font-bold rounded-lg hover:from-green-600 hover:to-green-700 hover:shadow-xl shadow-lg transition-all"
